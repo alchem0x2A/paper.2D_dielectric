@@ -1,0 +1,864 @@
+% Created 2017-10-05 Thu 16:11
+% Intended LaTeX compiler: pdflatex
+\documentclass[journal=ancac3,manuscript=article,email=true,hyperref=true,keywords=true]{achemso}
+% \usepackage{minted}
+% \usepackage{graphicx}
+%\usepackage{float}
+%\usepackage{xcolor}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{fontspec}
+%\renewcommand{\figurename}{}
+
+\setkeys{acs}{usetitle = true}
+\renewcommand*{\bibnumfmt}[1]{#1.}
+\usepackage{lineno}
+\linenumbers
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage[T1]{fontenc}
+\renewcommand{\sfdefault}{cmr}
+
+
+\author{Dale Hughes}
+\affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
+\altaffiliation{D. H. and T. T. Contributed equally to this work}
+
+\author{Tian Tian}
+\affiliation{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
+\altaffiliation{D. H. and T. T. Contributed equally to this work}
+
+\author{Declan Scullion}
+\affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
+
+\author{Lu Hua Li}
+\affiliation{Institute for Frontier Materials, Deakin University, Waurn Ponds, Victoria, Australia}
+
+\author{Chih-Jen Shih}
+\affiliation{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
+
+\author{Jonathan N. Coleman}
+\affiliation{School of Physics, Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) and Advanced Materials and BioEngineering Research (AMBER), Trinity College Dublin, Dublin 2, Ireland.}
+
+\author{Manish Chhowalla}
+\affiliation{Materials Science and Engineering, Rutgers University, 607 Taylor Road, Piscataway, New Jersey 08854, USA.}
+
+\author{Elton J. G. Santos}
+\email{e.santos@qub.ac.uk}
+\affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
+\keywords{two-dimensional materials, dielectric constant, screening, first principles calculation, band gap, binding energy, scaling relationships, Moss relation}
+\date{}
+
+\title{Universal Understanding of the Dielectric Constants of Two-Dimensional Materials}
+%Universal Understanding of the Dielectric Constants of Two-Dimensional Materials
+%Unified Understanding of the Dielectric and Electronic Properties of Two-Dimensional Materials
+%Unified Understanding of the Dielectric Constants of Two-Dimensional Materials
+\begin{document}
+
+%\newpage{}
+
+
+\begin{abstract}
+Dielectric constant, which defines the polarization of the media, is a key quantity in condensed matter. It describes to a large degree the electron-electron interaction, 
+which has a crucial effect on band gaps, optical excitations, and screening. 
+Despite its fundamental transcendence, the determination of such quantity 
+in two-dimensional materials is a challenging task because 
+their intrinsic low-dimensionality hampers accurate measurements.  
+Here we show that, for the wide range of known layered crystals, 
+a unifying framework for predicting dielectric constants using a 
+single universal descriptor can be established. 
+A set of scaling relations is found linking dielectric 
+constants and band gaps which results in a general 
+electronic structure despite of the chemical and physical properties of the layer. 
+This points to a Moss-like behavior where novel descriptors 
+for photoconductivity and quantum-capacitance appear naturally. 
+Our results successfully rationalize the available empirical data and lay the foundation of 
+future electronic-dielectric design strategies. 
+
+\end{abstract}
+
+
+\section{Introduction}
+\label{sec:orgb64aacb}
+
+The dielectric constant (also known as the relative permittivity) 
+which characterizes the screening of the electromagnetic field within
+a medium, plays a crucial role in bridging various fundamental material
+properties regarding electron-electron and electron-photon
+interactions, such as electronic polarization, polarizability, optical
+absorption, and exciton binding energy. 
+The central place
+of dielectric constant in physics drives the pursuit for a
+unified model between electronic and dielectric or optical properties of materials. 
+In fact, some pioneering works in the 50's discovered relationships between the dielectric
+constants (high-frequency) $\varepsilon$ and other properties, in particular the bulk band gap
+$E_g$. Moss\cite{Moss_1950_relation,Moss52book,Moss59book} 
+showed that $E_g$ and $\varepsilon$ 
+follow a semi-empirical relationship, known as the Moss relation
+\cite{Moss_1950_relation,Moss52book,Moss59book,Moss_1985_n_Eg}:
+
+\begin{equation}
+\label{eq:Moss-relations}
+\varepsilon^{2} E_{\mathrm{g}} = 95~ eV
+\end{equation}
+which can be related to the high-frequency refractive index $n_{0}$, via $\varepsilon=n_{0}^{2}$,   
+and the long wavelength threshold $\lambda_{c}$ which determines the photoconductivity properties\cite{Moss_1950_relation}:
+
+\begin{equation}
+\label{eq:Moss-wave}
+n_{0}^{4} /\lambda_{c} = 77~ \mu m^{-1}
+\end{equation}
+
+Other similar
+semi-empirical models for the relationship between \(\varepsilon\) and
+\(E_{\mathrm{g}}\) were also proposed
+\cite{Ravindra_1979_eps_Eg,Ravindra_1980_model,Ravindra_2007_Eg_rev}. 
+Despite the minute difference between the formulae used, it is clear that the
+there exist certain general electronic relations in bulk
+semiconductors, which are scaled by the dielectric constant and further
+account for the variation in band gap between different
+materials. The existence of such general relationship is also of high
+practical importance: it is generally more straightforward to measure
+the band gap \(E_{\mathrm{g}}\) than the dielectric constant \(\varepsilon\),
+as the latter is strongly dependent on several critical 
+details on the sample measurements, such as contamination, disorder, 
+and model interpretation. With the Moss
+relationship or other similar models, it is feasible to predict the
+dielectric constant of a bulk semiconductor with a reasonable degree
+of certainty starting from the magnitude of its band gap, 
+as well as identify whether a compound is photoconductor. 
+Indeed, the usage of such relations has spread out across 
+the semiconductor community for more than 60 years. 
+
+Two-dimensional (2D) materials, the atomically-thin crystalline
+layers, are known to have distinct electronic properties from their
+bulk counterparts
+\cite{Ando_1982_electron_2D,Stern_1967_polarizability_2DEG}. One
+important feature of 2D materials is that the electric screening is
+attenuated and anisotropic\cite{Das-Sarma:2011aa,Ando_1982_electron_2D}. 
+The empirical
+relations of dielectric constant in bulk materials, like the Moss
+relation (Eq.\ref{eq:Moss-relations}), is thus invalid within the context of 2D materials, and has
+to be modified. The quest for a general understanding of the
+dielectric constant of 2D materials has even greater importance than
+the bulk materials: the dielectric constant of a 2D material is
+highly influenced by its surrounding environment
+\cite{Keldysh_1979_eps_multi,Trolle_2017_eps_subst} and it has caused
+considerable debate experimentally\cite{Raja:2017aa,Chernikov_2014_EB_MoS2_2D3D}. 
+On the contrary, other
+optoelectronic properties such as the band gap and binding energy can
+be experimentally more easily assessed. 
+The lack of both sufficient
+data bank and sound experimental results requires the force from
+computational chemistry to discover the underlying relation between
+the dielectric constant and other properties of 2D materials. 
+
+Here we show that the dielectric constant provides a unique opportunity for 
+the development of universal scaling relationships between electronic and 
+dielectric properties of different 2D materials. The reduced screening features 
+allow to observe the true nature of the electronic interactions in 
+the 2D-world, which indicates a universal behavior despite the chemical 
+and physical composition of the material. 
+We explicitly obtained scaling 
+relationships between dielectric constant and several 
+other quantities, such as band gaps, and exciton binding 
+energies, which describes a vast library of layered materials. 
+This fundamental understanding can be further explored
+looking for a new descriptor of photoconductivity, 
+where 2D-photoconductors follow a similar pattern on refractive index 
+and absorption edge.    
+Moreover, using multiscale methods we unveil the close relation between quantum-capacitance and dielectric 
+constants, which provides a map of the screening properties in terms of orbital decompositions.  
+This framework is also used to successfully unify the concept of dielectric constant 
+at different dimensionalities as its 2D-magnitude is obtained 
+throughout the knowledge of few details of the 
+3D-bulk electronic structure. The discovery of scaling relationships 
+between electronic and dielectric properties in 
+2D compounds introduces a new and general pathway for the exploration of their complex 
+physical and chemical phenomena, and ultimately pushes the boundary 
+of the understanding of electronic screening in two-dimensions. 
+
+\section{Results}
+\label{sec:org93965d9}
+
+\subsubsection{2D Moss relations}
+We study several types of 2D materials of different electronic and optical properties, 
+including transition metal dichalcogenides (TMDCs, with the formula MX\(_{\text{2}}\),
+where M is a metal in group 4, 6, 10 and X=O, S, Se, Te), metal
+monochalcogenides (GaS, GaSe), cadmium halides (CdX$_2$, X=Cl, I), 
+hexagonal boron nitride (hBN), graphene derivatives (fluorographene (f-graphene), graphane) 
+thin layers of organic-inorganic perovskites (CH$_3$NH$_3$PbBr$_3$),  
+and phosphorene as displayed in Figure \ref{fig-1}{\bf a}. For the TMDCs, we consider 
+2 lattice phases, namely the 2H (P\(\bar{6}\)m2 space group) and 1T (P3m1 space group). 
+The elements contained in the materials involved in our 
+simulations are summarized in the periodic table in Fig. \ref{fig-1}{\bf b}, 
+which are grouped accordingly to their dielectric-electronic scaling 
+relationships as discussed below. 
+%%%Write here PBE data %%%%%%%
+We calculate both the high-frequency dielectric constant tensor  
+$\varepsilon_{\alpha,\beta}$ 
+and band gaps $E_{g}$ at the level of 
+hybrid density functional theory (DFT) using the Heyd-Scuseria-Ernzerhof
+hybrid functionals (HSE06) including spin-orbit 
+coupling to avoid limitations on the description of band gaps 
+and dielectric constants (see {\it Methods} for details). 
+We have also utilized different 
+functionals (e.g. PBE) and approximations, 
+such as many-body $G_0W_0$, which resulted in similar conclusions. 
+See Supplementary Note 1 and Supplementary Figures 1-3 for details. 
+
+
+The in-plane $\varepsilon_{\parallel}$ and out-of-plane $\varepsilon_{\perp}$ 
+components of the dielectric tensor as functions of E$_{g}$
+are plotted in Figure \ref{fig-2}{\bf a-b}, respectively. 
+For the $\varepsilon_{\parallel}-E_{g}$ relation, we notice two distinguished 
+behaviors: a linear (green circles) and a power law (orange squares) 
+variations of $\varepsilon_{\parallel}$ with $E_{g}$. Interestingly, such division 
+is also element-dependent: the
+TMDCs of group 4 and 14, hBN, graphene derivatives, and phosphorene
+belong to the power group, while TMDCs of group 6 and 10, GaS, GaSe,
+and CdI\(_{\text{2}}\) following the linear law (see Fig. \ref{fig-1}{\bf b}). 
+The best fitting of the power group gives the relation: 
+
+\begin{equation}
+\label{Moss-2D-power}
+\varepsilon_{\parallel}=3.68/E_{g}^{0.50}
+\end{equation}
+or in term of the refractive index and long-wavelength:
+
+\begin{equation}
+\label{Moss-2D-power-lambda}
+n_{0}^{4}/\lambda_{c} = 10.92~ \mu m^{-1}
+\end{equation}
+
+The linear group is well fitted with: 
+
+\begin{equation}
+\label{Moss-2D-linear}
+\varepsilon_{\parallel}=7.50-1.37{\rm E}_{g} 
+\end{equation}
+
+We notice that the power law of 2D layers (Eq. \ref{Moss-2D-power}) 
+resembles the 3D Moss relation (Eq. \ref{eq:Moss-relations})
+for bulk materials, however with a much smaller constant, 
+as seen in the comparison in Fig. \ref{fig-2}{\bf a} using Eq. \ref{eq:Moss-relations}. 
+The linear law in turn 
+differs from the original Moss relation, but it is close to other approaches \cite{Ravindra_1979_eps_Eg,Ravindra_1980_model,Ravindra_2007_Eg_rev}.
+Conversely, $\varepsilon_{\perp}-E_{g}$ relations show much less
+variation than the in-plane component: most of the values of 
+$\varepsilon_{\perp}$ are within 1.2 and 1.6, indicating
+that the dielectric screening perpendicular to the 2D plane is greatly
+attenuated. The scattered dots of the power group and the linear group
+overlap with each other in Figure \ref{fig-2}{\bf b}, showing that
+the $\varepsilon_{\perp}$ has almost no material dependence in terms of the band gap. 
+Therefore, it is accurate to state that out-of-plane screening excitations in a monolayer 
+would behave similarly despite of its electronic and optical structures.   
+Moreover, our \emph{ab initio} calculation results show that the in-plane dielectric
+constant of a 2D material is clearly related with its band gap through scaling relations, 
+either linear or non-linear (power-law). %maybe a new paragraph %
+It is worth mentioning very few experimental reports on either $\varepsilon_{\perp}$ or 
+$\varepsilon_{\parallel}$ for 
+monolayer materials\cite{BN-epsilon,Mos2-epsilon,In2Se3-epsilon}. 
+Nevertheless, the available data 
+follows our scaling relations as displayed in Fig. \ref{fig-2}{\bf a}. 
+
+
+The relations between $\varepsilon$ and E$_{g}$
+distinguishes from the 3D Moss equation and other approaches\cite{Ravindra_1979_eps_Eg,Ravindra_1980_model,Ravindra_2007_Eg_rev},  
+which indicates that the underlying mechanism in 2D
+materials may be different from their bulk counterparts. 
+Nevertheless, the possibility to use universal scaling relationships
+that accurately describe a vast library of layered compounds using 
+a single parameter have not been previously demonstrated. We postulate 
+that this is possible because of the reduced screening observed in monolayers, and,
+therefore, the dielectric constant does not depend sensibly 
+on the material geometry. 
+To verify the precision of the $\varepsilon-E_{g}$ relations
+discovered, we compare the dielectric constants computed from the
+linear and power laws using only the \(E_{g}\) values as input, compared with
+the \(\varepsilon\) obtained by time-consuming HSE06 simulations. 
+Figure \ref{fig-3}{\bf a} demonstrates the excellent agreement between our 
+model's predictions and calculated HSE06 \(\varepsilon_{\parallel}\) across a wide variety of 
+2D crystals. The linear correlation of the two sets of
+data show a slope of 0.9976, indicating that the model can 
+represent well the relation between \(\varepsilon_{\parallel}\) and
+\(E_{g}\) by a numerical error smaller than 0.2\%. 
+We perform a similar analysis for the out-of-plane
+dielectric constant $\varepsilon_{\perp}$ in Figure \ref{fig-3}{\bf b}. 
+We notice that the \(\varepsilon_{\perp}\) calculated
+using the model has larger deviation from the \(y=x\) line than
+\(\varepsilon_{\parallel}\). However, the scale utilized corresponds to magnitudes 
+in the range of 1.10 to 1.40, which is 20 times smaller than that at in-plane component. 
+This indicates that the model's prediction for \(\varepsilon_{\parallel}\) would give magnitudes within 0.05-0.12 differences relative to HSE06 calculations, 
+which is in the numerical accuracy of the simulations. 
+The fact that \(\varepsilon_{\perp}\) has
+less dependency on \(E_{g}\) clearly distinguishes from the 3D
+Moss relation, as a result of the attenuated out-of-plane dielectric
+screening in 2D materials. 
+Considering this relatively small dispersion
+of the out of plane component, we may
+conclude that the in-plane dielectric constant of 2D materials has
+much greater impact on other properties as normally assumed in 
+optical measurements\cite{Chernikov_2014_EB_MoS2_2D3D}. 
+For the rest of the discussions we
+will focus on the relation between \(\varepsilon_{\parallel}\) with other
+2D properties.
+It should be noted that simulations carried out at the level of PBE functional resulted in considerably larger 
+differences between the model predictions and calculated \(\varepsilon_{\parallel}\) and \(\varepsilon_{\perp}\) (see Supplementary Figure 3). Deviations from either a purely linear fitting without a finite cumulative factor at the model, or 
+magnitudes that differ by more than $\sim$24\% between simulations 
+and scaling relations are observed. 
+%We have also compared our HSE06 simulation results against 
+%more robust but computationally involved methods, such as many-body 
+%Green's function method ($G_0W_0$) and 
+%Bethe-Salpeter (BSE) equation as show in Supplementary Figure 4. We observe that 
+%some $G_0W_0$ band gaps are overestimated  relative to the HSE06 ones as they do not  
+%not include the electron-hole corrections. Such corrections are included at the level of 
+%$G_0W_0$-BSE which shows a sound agreement with the HSE06 magnitudes. This 
+%fully justifies the choice of an accurate approximation such hybrids in the 
+%description of the electronic-dielectric interplay in 2D materials.  
+
+%The model obtained 
+%using such values give substantial differences from the 
+%calculated PBE data (see (Figure S2 in the {\it Supplementary Information})). 
+%%%
+
+\subsubsection{A descriptor for photoconductivity in two-dimensional materials}
+
+The generality of the Moss' relation was initially used to identify compounds that 
+could develop photoconductivity\cite{Moss_1950_relation,Moss-book1}. 
+One of the key reasons is the rough constant threshold of Eq.\ref{eq:Moss-wave} for a vast 
+library of 3D-bulk materials. This indicates that materials that are photoconductors assume 
+similar pattern over band gaps and dielectric constants. 
+In practice the photoconductivity depends on several factors, such as optical absorption coefficient, 
+mean-free-time, carrier mobility, and thickness. Figure \ref{fig-3}{\bf c} shows, however, 
+that a comparable argument as that used by Moss 
+holds for 2D materials in terms of  
+the behavior of $n_{0}^{4}/\lambda_{c}$ over the entire dataset. 
+We have not separated the materials where photoconductivity has been observed 
+experimentally from those that would need further study. This incidentally could give different 
+line threshold not shown here. It is clear that materials that are photoconductors display 
+similar electronic-dielectric properties via close magnitudes of $ \langle n_{0}^{4}/\lambda_{c} \rangle$ 
+as initially suggested by Moss\cite{Moss_1950_relation,Moss59book,Moss52book,Moss_1985_n_Eg}. 
+On the power-law group, compounds like 2H-SnS$_2$, 
+2H-HfS$_2$, 1T-HfS$_2$, 1T-SnSe$_2$, 1T-SnS$_2$, and phosphorene 
+have been observed photo-conductivity response, even though different groups 
+have reported distinct magnitudes\cite{photo-2Dmaterials,Andres15}. 
+Similarly as observed in the 
+linear-law compounds, the average value $ \langle n_{0}^{4}/\lambda_{c} \rangle=31.22~\mu m^{-1}$
+is larger than that for power-law materials but most of the photoconductors 
+assume close magnitudes of $n_{0}^{4}/\lambda_{c}$. Several layered systems 
+shown in Fig. \ref{fig-3}{\bf c} are still to be explored experimentally 
+to give a thorough picture of the photoconductivity in 2D. However, 
+this simple relation between refractive index and 
+long wavelength seems to give reliable power-prediction 
+on potential layers that could develop such 
+features (see Supplementary Note 2 and Supplementary Figure 5 for additional discussions). 
+
+
+%%%%%Tian you may start writing from here%%%%%%%%%
+
+
+%%%%%%%%%%%
+
+\subsubsection{Correlating quantum-capacitance and dielectric constants}
+
+This multiscale approach can also be used to show that other macroscopic properties are directly
+correlated with the dielectric constant, such as the quantum-capacitance. 
+Similar arguments can be used to link dielectric constants at different dimensionalities, such as between 2D-monolayers and their 3D-bulk counterparts, as well as obtain relations between dielectric constants and details of the electronic structure and exciton biding energies. See Supplementary Notes 3-4 and Supplementary Figures 6-8 for detailed discussions.
+The random phase approximation (RPA) describes the imaginary dielectric function \(\varepsilon_{2}\)
+at long wavelength limit as \cite{Slyom_2008_fundBook,Dressel:2002aa}:
+
+\begin{equation}
+\label{eq:RPA-eps2}
+\epsilon_{2}(\omega) = \frac{1}{4 \pi \epsilon_0} (\frac{2\pi e}{m_{e} \omega})^{2} \sum_{c, v} J_{cv}|P_{cv}|^{2}
+%\varepsilon_{2}(\omega) = (\frac{2 \pi e}{m \omega})^{2} 
+%                     \sum_{l,l'} J_{l,l'}(\omega) < l | \mathbf{\mathit{p}} | l' >^{2}
+\end{equation}
+where $m_e$ is the electron mass, \(\omega\) is frequency, \(c\) and \(v\)
+denote the conduction and valence states, \(J_{cv}\) is the joint density
+of states (JDOS) and $P_{cv}$ is the dipole operator. The
+difference between the \(\varepsilon-E_{\mathrm{g}}\) relations actually
+comes from the forms of JDOS in 2D and 3D systems \cite{Ha_2011_introductry}. 
+For a 3D semiconductor, the JDOS is energy-dependent:
+
+\begin{equation}
+\label{eq:JDOS-3D}
+J^{\mathrm{3D}}(\omega) = \frac{1}{2\pi^{2}} (\frac{2 \mu}{ \hbar ^{2}})^{\frac{3}{2}}
+                        (\hbar \omega - E_{\mathrm{g}})^{\frac{1}{2}}
+\end{equation}
+while on strictly 2D, JDOS is a step function and independent of \(\omega\):
+
+\begin{equation}
+\label{eq:JDOS-2D}
+J^{\mathrm{2D}}(\omega) = 
+                        \begin{cases}
+                        \displaystyle \frac{1}{\pi} \frac{\mu}{\hbar^{2}} & \omega > E_{\mathrm{g}} \\
+                        0                                   & 0 < \omega < E_{\mathrm{g}}
+                        \end{cases}
+\end{equation}
+
+The real dielectric function can be derived using the Kramers-Kronig
+relation \cite{Adachi_1987_dielGaP}:
+
+\begin{equation}
+\label{eq:KKR}
+\varepsilon_{1}(\omega) = 1 + \frac{2}{\pi} \int_{0}^{\infty}
+                     \frac{\omega' \varepsilon_{2}(\omega')}{\omega'^{2} - \omega^{2}} d\omega'
+\end{equation}
+in the \(\omega \to 0\) limit, and assuming that the dipole transition
+matrix $P_{cv}$ is constant we have:
+
+\begin{equation}
+\label{eq:eps1-3D}
+\varepsilon_1^{\mathrm{3D}}(\omega \to 0) = 1 + \frac{e^2 (2 \mu) ^{\frac{3}{2}}}{8\pi \epsilon_0 m_{e}^{2} \hbar^{2}}E_{\mathrm{g}}^{-\frac{3}{2}}P_{cv}^{2}
+%\varepsilon_{1}^{\mathrm{2D}}(\omega \to 0) = 1 + \frac{e^{2} (2 \mu)^{\frac{3}{2}}}{2 m^{2} \hbar}
+%                                  E_{\mathrm{g}}^{-\frac{3}{2}} P^{2}
+\end{equation}
+and
+\begin{equation}
+  \label{eq:Dressel-eps1}
+  \begin{array}{lll}
+  \varepsilon_{1}^{\mathrm{2D}}(\omega \to 0) &= \displaystyle 1 + \frac{2}{\pi} \frac{1}{4 \pi \varepsilon_{0}}
+                         \frac{4 \pi^2  e^2}{m_{e}^{2}}
+                         \frac{\mu}{\pi \hbar^2} P_{cv}^2
+                         \int_{E_{g}/\hbar}^{\infty}
+                      \frac{1}{\omega'(\omega'^{2} - \omega^{2})} \mathrm{d} \omega' \\
+                    &= \displaystyle 1 + \frac{1}{4 \pi \epsilon_{0}} \frac{8 e^2 \pi}{m_{e}^{2}}
+                      \frac{\mu}{\pi \hbar^{2}} \frac{1}{2 \omega^{2}} P_{cv}^{2}
+                      \ln(1 - \frac{\omega^{2}}{\omega'^{2}}) \Big|_{E_{g}/\hbar}^{\infty} \\
+                    &\approx \displaystyle 1 + \frac{1}{4 \pi \varepsilon_{0}}
+                      \frac{4e^2 \pi}{m_{e}^2} \frac{\mu}{\pi \hbar^2}
+                      \frac{\hbar^2 \omega^2}{\omega^2 E_{g}^2} P_{cv}^2\\
+                    &= \displaystyle 1 + \frac{1}{4 \pi \varepsilon_{0}}
+                      \frac{4 e^2 \pi \hbar^2}{m_e^2 E_g^2} J_{cv} P_{cv}^{2}
+  \end{array}
+\end{equation}
+\\
+It shows that, unlike in the 3D system, the 2D dielectric constant
+has direct relation to JDOS and \(E_{\mathrm{g}}\). The JDOS in a free-electron model can be
+written as the combined effect of the density of states (DOS) at both
+conduction and valence bands: $J(E)^{-n} = \mathrm{DOS}_{\mathrm{C}}(E- E_{\mathrm{g}})^{-n} + \mathrm{DOS}_{\mathrm{V}}(E- E_{\mathrm{g}})^{-n}$, where n=2/3 for 3D case and n=1 for 2D case. 
+Note that DOS is essentially the
+quantum capacitance (\(C_{\mathrm{Q}}\)) of a material:
+\(C_{\mathrm{Q}}(E) = \mathrm{DOS}(E) e^{2}\). Indeed, it is natural to look
+into the relation between \(C_{\mathrm{Q}}\) and \(\varepsilon\), which is
+also a characteristic of a material's capacitance. 
+
+In order to extract the \(C_{\mathrm{Q}}\) values, we calculated the DOS of each 2D
+material by averaging the values at a band edge charge cutoff of 5 x10$^{13}$ $e/cm^2$ (see {\it Methods} for details). 
+We first plot \(\varepsilon_{\parallel}\) as a function of \(C_{\mathrm{Q}}\) in the CB for 
+various MX$_2$ materials studied here, as shown in Figure \ref{fig-5}{\bf a}.  Although the   %%%%%%%%%%%%%%%%%%
+dispersion seems too wide to get a universal relation when considering
+all the data together, we find that when categorizing the data by the
+metal element group and lattice type, each $\varepsilon - C_Q$ dataset seems to be following linear
+relations. We therefore performed linear fitting via $y=ax+b$
+for each group of 2D
+materials, and plotted the prediction margin as stripe shaders in
+Fig. \ref{fig-5}{\bf a}. By varying $b$, we also show the 
+prediction margin of each group as stripe shader. 
+The fitting parameters $a$, $b$, the coefficient of determination $R^2$ 
+and the half-span of prediction margin $\Delta b$, can be found in Supplementary Table 2. 
+   
+%Interestingly, although the coefficient of determination
+%vary among the groups (group 14-1T and group 14-2T show \(R^{2}\) higher
+%than 0.95, while group 4-2H and group 6-2H show \(R^{2}\) less than
+%0.8), they all show a similar intercept of ca. 1.70.
+%%\begin{center}
+%\fbox{
+%\begin{minipage}[c]{.8\linewidth}
+%\textbf{\textsf{\textsc{TODO}}} Add the data sheet in SI
+%
+%\end{minipage}
+%}
+%\end{center}
+When \(C_{\mathrm{Q}}\) decays to 0 the 2D materials display an universal dielectric
+constant. The discrepancy between the value of the intercept may
+also be caused by the existence of long-range Coulombic interactions
+in the calculations, similar to the phenomenon seen in Figure
+\ref{fig-4}{\bf a}. The slope of the \(\varepsilon-C_{\mathrm{Q}}\) curve in each
+group indicates that the materials with metals of the same group, have
+similar values of dipole transition matrix \(P\). 
+Note that in Eq.\ref{eq:Dressel-eps1}, \(E_{\mathrm{g}}\) also serves as a variable apart from
+JDOS, we therefore compare the relation between \(\varepsilon_{\parallel}\)
+and \(C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}\), as shown in Figure
+\ref{fig-5}{\bf b}. Better regression results can be observed for almost all
+groups compared with the \(\varepsilon_{\parallel}-C_{\mathrm{Q}}\)
+relations. The slopes are also higher than the corresponding groups in
+the \(\varepsilon-C_{\mathrm{Q}}\) relations, since the majority of the
+materials we studied has \(E_{\mathrm{g}} > 1\) eV. The better
+regression results using \(C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}\) indicates
+the validity of Eq.\ref{eq:Dressel-eps1} in predicting the 2D dielectric constant. 
+Unlike the relation we found for
+\(\varepsilon-E_{\mathrm{g}}\), \(\varepsilon-\alpha\) and
+\(\varepsilon-E_{\mathrm{b}}\), a universal scaling relation between
+\(\varepsilon\) and \(C_{\mathrm{Q}}\) or \(C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}\)
+does not seem to exist, instead the relation is found to be more
+element-specific. We have also examined the \(\varepsilon\) as a function
+of \(C_{\mathrm{Q}}\) or \(C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}\) in the VB,
+as shown in Supplementary Figure 9. However a similar scaling relation seems 
+inexistent. Such difference between the \(C_{\mathrm{Q}}\) in CB and VB
+may imply that the unoccupied orbitals have more influence on the
+dielectric constant of 2D materials. 
+
+%%%%%%%%%%Include tian's text herein 
+Note that most the materials studied here have similar geometry, such
+similarity between the $\varepsilon$ and $C_{\mathrm{Q}}$ (or
+$C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}$) may be explained by the orbitals
+close to the Fermi level. For instance, comparing TMDCs with metal
+atoms from different groups, the change of orbital near the Fermi
+level is mainly due to shift of $d$-orbitals, while the $\sigma$ and
+$\sigma^*$ orbitals with mainly $s$ and $p$ components, show relatively
+less change\cite{Liang84,Kuc14}. Figure \ref{fig-5}\textbf{c} show the
+relative shift of orbitals in group 4, 6 and 10 (semiconducting)
+TMDCs. The $d_{z^2}$ orbital which has a sharp increase of DOS and
+contributes mainly to the CB in group 4, shifts below the Fermi
+level in group 6, with the $d_{xy}$ and $d_{x^2-y^2}$ orbitals
+with a slower DOS increment as the mainly-contributing orbital in the
+CB. When the $d$-orbital occupation number further increases in group
+10, all $d$-orbitals shift below the Fermi level, leaving the
+$\sigma^*$ orbital as the major component of the CB. The shift of the
+$d$-orbital due to increasing occupation has direct effect on the DOS
+shape of CB. As seen in Figure \ref{fig-5}\textbf{d}, the two group 6
+TMDCs (MoS$_{2}$ and WS$_{2}$) show a plateau with relative low DOS of
+0.1 states/eV$^{3}$ at the CB edge, while the group 4 (ZrS$_{2}$
+and HfS$_{2}$) show a much higher DOS plateau of $\sim$0.5 states/eV$^3$. 
+On the other hand, all materials show similar DOS
+shapes at the VB edge. Therefore, the apparent distinction between the states at the
+CB edge can be explained by the shift of $d$-orbital as stated above, which is 
+also consistent with the fact that the slope of regression between
+$\varepsilon$ and $C_{\mathrm{Q}}$ in group 6 is much larger than that in
+group 4. The atomic orbital analysis provides a good explanation for grouped
+behavior of the $\varepsilon$-$C_{\mathrm{Q}}$ regression relations, and
+provides more insights into the origin of the dielectric constant of
+2D materials.
+
+
+%%%Elton's comments%%%%%%%%%%
+%Performing an orbital-based analysis on the states responsible 
+%for the dielectric screening we observe that most 
+%of the $d$-states for group 4, 6 and 10 shift down below the Fermi level with increasing 
+%of the occupation number as displayed schematic in Figure \ref{fig-5}{\bf c}. 
+%The higher DOS at CB for group 4 may be contributed by 
+%the $dz^2$ orbitals; on the other hand the low CB DOS 
+%of group 6 and group 10 may be contributed by other 
+%orbitals with smoother edges. A comparison between group 4 and 6 in terms of a normalized 
+%DOS by $E_g^2$ for illustrative materials (Figure \ref{fig-5}{\bf d}) 
+%reveals the main features at CB for both groups. 
+%Indeed, group 4 has a more continuous CB edge that extends 
+%for several tenths of meV's and larger DOS. This can be translated 
+%in higher magnitudes of \(C_{\mathrm{Q}}\) 
+%over the accumulated charge density $\sigma (E)$ (see {\it Methods} for details), and therefore 
+%less abrupt variation of $\varepsilon_{\parallel}$ as 
+%function of \(C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}\) (Fig. \ref{fig-5}{\bf b}).  
+%Group 6 in its turn shows a step-edge with a small DOS relative to group 4 at the same energy range, which consequently imply low magnitudes of \(C_{\mathrm{Q}}\) and a sudden dependence of 
+%$\varepsilon_{\parallel}$. Group 10 seems to follow a similar description not show here. 
+%Overall this analysis suggests a close correlation between DOS and $\varepsilon_{\parallel}$ 
+%throughout the quantum capacitance, which seems not established so far for 2D-materials. 
+
+%%%%%%%%%%
+
+
+\section{Discussion}
+\label{sec:org621792b}
+
+In summary, our findings reveal a fundamental knowledge of the close link between 
+dielectric, optical and electronic properties of 2D materials. The scaling relationships found
+between dielectric constants and several other important quantities, such band gaps, 
+excitonic binding energies, and quantum capacitance imply that such correlation is unique 
+in the 2D-world. Physical magnitudes apparently with a no 
+clear interdependence in 3D-bulk display a strong connection, which seems to be universal 
+to different types of 2D crystals. One of the main driving 
+forces for such unusual behavior is the reduced screening 
+features present in layered materials, which is not present 
+in bulk compounds. 
+
+We have shown that a 2D-analogous of the famous Moss' 
+relation between band gaps and 
+dielectric constants indeed exists with a similar functional 
+form but different energy constants. 
+Different compounds can also display different scaling relationships, 
+which are accurate enough to reproduce computationally 
+expensive hybrid HSE06 calculations at precisions 
+near 99\% of the simulations just using a single descriptor. 
+This allows to use efficient scaling schemes to quickly explore untouched physical
+properties (e.g. photoconductivity) searching for new descriptors 
+that could help in their identification. 
+
+An in-depth analysis of the dielectric function within the random phase approximation allowed to 
+create a direct relation between quantum capacitance and dielectric constants 
+using band gaps as a scaling parameter. Several materials throughout different 
+groups of the periodic table follow a systematic pattern over the orbital states near the Fermi level, 
+which explains most of the features of the model. A direct inter-relation between 
+dielectric constants at 2D and 3D bulk is found based on the Lindhard formalism. 
+This equation is used to promptly determine the dielectric constant of any 
+2D material using simple arguments from the band structures of its bulk 
+counterpart. This is a clear step towards new methods of materials screening using bulk properties. 
+Our findings pave the way to understand and engineer 
+the electronic and dielectric properties of a large library of vdW materials 
+for different technological applications in an unified and unprecedented way. 
+
+
+%The computational screening performed at the level of HSE06 functional is an instrumental tool 
+%for a reliable description of band gaps and dielectric constants, and consequently crossovers between physical variables. 
+% 
+%
+%The methods presented herein are meant to quickly determine the 
+%dielectric constant of any 2D-material using simple scaling relationships based 
+%on the knowledge of the band gap. 
+
+
+
+
+\section{Methods}
+\label{sec:org3881bef}
+
+\subsubsection{Density functional theory calculations}
+All first-principles density functional theory (DFT) calculations 
+were performed using the VASP code\cite{Kresse_1993,Kresse_1996_1,Kresse_1996_2}. 
+Projector Augmented Wave (PAW) approach\cite{Kresse_1999_pseudopotentials,PAW-1} 
+using the new optimized GW potentials were utilized. Electronic and dielectric properties 
+were initially calculated using generalized gradient approximation 
+using PBE functional\cite{PBE}. The self-consistent field (SCF) convergence was set to 1.0x10$^{-8}$ eV. We also took into account a fractional component of the exact
+exchange $E_x$ from the Hartree-Fock (HF) theory hybridized with the DFT 
+exchange-correlation functional at the level of the range-separated HSE06 hybrid
+functional\cite{HSE03,HSE06}. The exchange-correlation energy is given by: 
+
+\begin{equation}
+E_{xc}^{HSE}=\alpha E_{x}^{HF, SR} (\omega) + (1-\alpha) E_{x}^{\omega PBE, SR}(\omega) + E_{x}^{\omega PBE, LR} (\omega) + E_c^{PBE}
+\end{equation}
+where $E_{x}^{HF, SR}(\omega)$ is the short-range (SR) HF exchange; $E_{x}^{\omega PBE, SR}(\omega)$ and $E_{x}^{\omega PBE, LR}(\omega)$ are the short and long range (LR) components of the PBE 
+exchange functional, respectively; $\omega= 0.20~\AA^{-1}$ is the screening parameter, 
+which defines the separation of the SR and LR exchange energies, and $\alpha$ is the 
+HF mixing factor that controls the amount of exact Fock exchange energy 
+in the functional.\cite{HSE03,HSE06} Note that HSE functional with $\alpha =0$ becomes the
+PBE functional.\cite{PBE} Therefore, any limitation of the exchange and correlation functional in the chemical and physical description of the two-dimensional systems 
+is improved. It is important to point out that 
+such approach is considerably more expensive than 
+the PBE functional, which makes our dataset valuable for 
+further modeling analysis (see Supplementary Table 3). 
+Spin-orbit coupling (SOC) was explicitly included in the calculations. 
+
+The geometries were converged both in cell
+parameters and ionic positions, with forces below 0.001~eV/$\AA$. 
+A vacuum spacing of at least 25 $\AA$ was used for each material. 
+A {\bf k}-point grid of \(7\times7\times1\) was used to relax, with an initial relaxation
+carried out at PBE level and a subsequent relaxation carried out at
+HSE06, allowing both cell parameters and ionic positions to
+relax each time. In VASP, the tag {\sc PREC=High} was used, giving a plane
+wave kinetic energy cutoff of 30\% greater than the highest given in
+the pseudopotentials used in each material, guaranteeing that absolute
+energies were converged to a few meV. A default plane-wave cutoff of 800 eV 
+was used in all simulations. A final HSE06 calculation with SOC was then carried out
+using a \(21\times21\times1\) {\bf k}-point in the unit cell for each system. 
+
+Density functional perturbation theory (DFPT) is used to calculate the ion clamped
+static dielectric tensor showed in the manuscript as\cite{Gajdos:2006aa}:
+ 
+\begin{equation}  
+\varepsilon_{\infty}=1/\varepsilon^{-1}_{\alpha,\beta}(0,0) \equiv 1/\lim_{q \to 0}[\varepsilon^{-1} (\mathbf{q},\mathbf{q+G})]
+\end{equation}
+with $\mathbf{G}=0$. Off-diagonal components of $\varepsilon_{\alpha, \beta}$ ($\alpha \neq \beta$) generally assume 
+negligible magnitudes, with the diagonal components $\varepsilon_{\alpha, \beta}$ ($\alpha = \beta$) being 
+similar in-plane, e.g. $xx=yy$. 
+We assume that the ions do not relax in the
+external electric field at optical frequencies and hence the ionic
+contribution to the dielectric constant is negligible. 
+In fact, this is the case for 2D-materials as recently found\cite{relax-epsilon}. 
+Local field effect corrections are included at the exchange-correlation 
+potential $V_{xc}$ at either PBE or HSE06 levels. 
+
+%\subsubsection{Many-body $G_0W_0$ and $G_0W_0-BSE$ calculations}
+%
+%To benchmark the calculations of band gaps using the HSE06 functional, 
+%we have performed simulations at the level of many-body $G_0W_0$ approximations 
+%plus Bethe-Salpeter equation (BSE). 10 occupied and 86 unoccupied bands were included in the 
+%calculations with SOC included.  
+
+
+%\begin{equation}
+%\varepsilon = 1-\upsilon_{c} \chi_{0} (1-f_{xc} \chi_{0})^{-1}
+%\end{equation}
+%where $\upsilon_{c}$ is the 
+%
+%$f_{xc}$ is the functional derivative of $V_{xc}$ with respect to the electron density as: 
+%
+%\begin{equation}
+%f_{xc}(1,2)=\frac{\delta V_{xc}(1)}{\delta \rho(2)}
+%\end{equation}
+
+
+
+\subsubsection{Quantum capacitance}
+For quantum capacitance analysis, the quantum capacitance
+$C_{\mathrm{Q}}(E)$ at certain energy level $E$ is calculated using
+the relation $C_{\mathrm{Q}}(E)=\mathrm{DOS}(E)e^{2}$, where
+$\mathrm{DOS}(E)$ is the density of states (averaged by cell
+area). The DOS value is calculated at the energy level with a charge
+cutoff such that
+$|\sigma(E)| = 5 \times 10^{13}\ e\cdot\mathrm{cm}^{-2}$, calculated by
+the relation of accumulated charge $\sigma(E)$ at CB or VB:
+
+\begin{equation}
+  \label{eq:method-2}
+  |\sigma(E)| = \left|\int_{E_{\mathrm{BE}}}^{E} \mathrm{DOS}(E')e dE' \right|
+\end{equation}
+where $E_{\mathrm{BE}}$ is the energy of the CB or VB band edge. 
+The DOS's used for the calculation of $C_{\mathrm{Q}}$ 
+for all 2D-materials using HSE06 hybrid functional is shown in Supplementary Figure 8-59. 
+
+%\subsection{Additional information}
+
+\subsubsection{Data Availability}
+
+The data that support the findings of this study 
+are available within the paper and its Supplementary Information.  
+
+\subsubsection{Competing interests}
+The Authors declare no conflict of interests.
+
+%{\bf Supplementary Information} accompanies this paper at
+%http://www.nature.com/naturecommunications 
+
+
+
+\subsubsection{Acknowledgments}
+We acknowledge valuable discussions with Fritz B. Prinz, and Andres Castellanos-Gomez. C.J.S. and T.T. are grateful for financial support from ETH startup funding. L.H.L. thanks the financial support from Australian Research Council (ARC) via Discovery Early Career Researcher Award (DE160100796). E.J.G.S. acknowledges the use of computational resources from the UK national high performance computing service (ARCHER) for which access was obtained via the UKCP consortium (EPSRC grant ref EP/K013564/1); the UK Materials and Molecular Modelling Hub for access to THOMAS supercluster, which is partially funded by EPSRC (EP/P020194/1). The Queen's Fellow Award through the grant number M8407MPH, the Enabling Fund (A5047TSL), and the Department for the Economy (USI 097) are also acknowledged.
+
+\subsubsection{Author Contributions}
+E.J.G.S. designed the research and suggested the 2D-Moss' relation. 
+D.H. and E.J.G.S. performed the first-principles simulations 
+and data analytics. T.T. and C.J.S. developed the capacitor model. L.H.L. and J.C. 
+performed numerical analysis and contributed to the discussions together with M.C.
+E.J.G.S. and T.T. co-wrote the manuscript with inputs from all authors. 
+All authors contributed to this work, read the manuscript, discussed 
+the results, and all agree to the contents of the manuscript. 
+
+\bibliography{refv030318}
+
+%\clearpage 
+\pagebreak{}
+
+%\section{Figures}
+
+
+
+\label{sec:org01da3bf}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.91\linewidth]{fig1_v122017_ink.pdf}
+\caption{\label{fig-1} {\bf Schematic of the studied 2D systems 
+and their separation in power- and linear-law materials.}
+{\bf a}, Schematic of the geometries of the 2D materials included in our database. 
+From dichalcogenides at the most common phases, such as  
+2H (P\(\bar{6}\)m2 space group) and 1T (P3m1 space group), up to different graphene derivatives, phosphorene, h-BN, CdCl$_2$ and popular organic-inorganic perovskites (CH$_3$NH$_3$PbBr$_3$). 
+{\bf b}, Periodic table showing the main elements utilized in our high-throughput screening, and the classification of the groups accordingly to their scaling relationships. 
+}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.67\linewidth]{fig1_v121217dielectric_xx_zz_ink.pdf}
+\caption{\label{fig-2} {\bf 2D Moss relation between dielectric constants and band gaps.} 
+{\bf a-b}, Calculated in-plane $\varepsilon_{\parallel}$ and out-of-plane $\varepsilon_{\perp}$  
+dielectric constants for monolayer vdW materials as a function of the electronic band gap, respectively. 
+The 2D materials are categorized into the linear group (green circles) and the 
+power group (orange squares). Experimental values of dielectric 
+constants and band gaps are show by 
+blue squares for comparison\cite{BN-epsilon,Mos2-epsilon,Chernikov_2014_EB_MoS2_2D3D,In2Se3-epsilon}. 
+Orange and green lines are fits to $\varepsilon_{\parallel}=3.68/E_{g}^{0.50}$ and 
+$\varepsilon_{\parallel}=7.50-1.37E_{g}$, respectively, in {\bf a}. The original 3D-Moss relation, $\varepsilon_{\parallel}=9.74/E_{g}^{0.50}$, between the dielectric constant of bulk semiconductors and band gap is shown as faint blue line. The visible range between 1.7-3.3 eV is highlighted in both panels. 
+Dataset for $\varepsilon_{\perp}$ in {\bf b} follows both straight lines, 
+$\varepsilon_{\perp}=1.34-(0.00068)E_{g}$ (green) and $\varepsilon_{\perp}=1.28-(0.02)E_{g}$ (orange), 
+with small dispersion around $\sim$1.30. The inset in {\bf b} shows the spatial definition of both $\varepsilon_{\perp}$ and $\varepsilon_{\parallel}$. All calculations are at hybrid functional HSE06 level. 
+}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figure3_v011218ink.pdf}
+\caption{\label{fig-3} {\bf Model prediction and a photoconductivity descriptor.}
+{\bf a,b}, Comparison of HSE06-calculated \(\varepsilon_{\parallel}\) and \(\varepsilon_{\perp}\) 
+and model predictions, respectively. The scaling relationships of in-plane ($\varepsilon_{\parallel}=3.68/E_{g}^{0.50}$ and $\varepsilon_{\parallel}=7.50-1.37E_{g}$) and out of plane ($\varepsilon_{\perp}=1.34-(0.00068)E_{g}$ and $\varepsilon_{\perp}=1.28-(0.02)E_{g}$) were utilized with $E_{g}$ as the only external parameter.  
+{\bf c}, Calculated $n_{0}^{4}/\lambda_{c}$ for all materials considered in power- and linear-law (inset). The dashed blue and violet (in the inset) lines shows the average over the entire set of materials at each group. 
+The back dashed line corresponds to Eq.\ref{Moss-2D-power-lambda}. 
+Materials that have shown photoconductivity experimentally are marked with the red star\cite{Andres15,photo-2Dmaterials}. 
+All calculations are using HSE06 hybrid functional. 
+}
+\end{figure}
+
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\linewidth]{fig4_121917_ink.pdf}
+\caption{\label{fig-5}
+{\bf The relation between \(\varepsilon_{\parallel}\) and \(C_{\mathrm{Q}}\) in the CB.} {\bf a} \(\varepsilon_{\parallel}\) as a function of \(C_{\mathrm{Q}}\), and {\bf b}, \(\varepsilon_{\parallel}\) as a function of \(C_{\mathrm{Q}}\)/$E_{g}^{2}$ for the 2D materials studied. Linear fitting is performed for materials of the metal element group and lattice type. The prediction margin of each group is shown in shader. {\bf c}, Scheme of the DOS obtained for each material groups highlighting the main stater near the Fermi level $E_F$. {\bf d}, Calculated DOS/$E_{g}^{2}$ using HSE06 hybrid functional for sample layers from group 4 (2H-ZrS$_2$, 2H-HfS$_2$) and group 6 (2H-MoS$_2$, 2H-WS$_2$). Valence band states (VB) and conduction band states (CB) are marked in faint red and green.
+}
+\end{figure}
+
+
+
+
+
+%%%%%%% Only figures %%%%%%%%%%%
+
+%\label{sec:org01da3bf}
+
+%\setcounter{figure}{0}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=1.0\linewidth]{fig1_v122017_ink.pdf}
+%\caption{\label{fig-1}
+%}
+%\end{figure}
+
+
+%%\setcounter{figure}{0}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.850\linewidth]{fig1_v121217dielectric_xx_zz_ink.pdf}
+%\caption{\label{fig-2}
+% }
+%\end{figure}
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=1.1\linewidth]{figure3_v011218ink.pdf}
+%\caption{\label{fig-3}
+%}
+%\end{figure}
+
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.90\linewidth]{fig_biding_energy_v121917.pdf}
+%\caption{\label{fig-4}
+%}
+%\end{figure}
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.90\linewidth]{fig6_v122317_vertical.pdf}
+%\caption{\label{fig-6}}
+%\end{figure}
+
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=1.1\linewidth]{fig4_121917_ink.pdf}
+%\caption{\label{fig-5}
+%}
+%\end{figure}
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,595 @@
+#+LATEX_CLASS: achemso
+#+LATEX_CLASS_OPTIONS: [journal=ancac3,manuscript=article,email=true,hyperref=true,keywords=true]
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{fontspec}
+
+#+OPTIONS: tex:t toc:nil todo:t author:nil date:nil title:nil ^:t tags:nil
+#+DESCRIPTION:
+
+#+TITLE: Unified Understanding of the Dielectric Constants Nature of Two-Dimensional Materials: A First Principles Study
+
+#+LATEX_HEADER: \author{Dale Hughes} 
+#+LATEX_HEADER: \affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
+#+LATEX_HEADER: \altaffiliation{D. H. and T. T. Contributed equally to this work}
+
+#+LATEX_HEADER: \author{Tian Tian}
+#+LATEX_HEADER:  \affiliation{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
+#+LATEX_HEADER: \altaffiliation{D. H. and T. T. Contributed equally to this work}
+
+#+LATEX_HEADER: \author{Lu Hua Li}
+#+LATEX_HEADER:  \affiliation{Institute for Frontier Materials, Deakin University, Waurn Ponds, Victoria, Australia}
+
+#+LATEX_HEADER: \author{Chih-Jen Shih}
+#+LATEX_HEADER:  \affiliation{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
+
+#+LATEX_HEADER: \author{Jonathan Coleman}
+#+LATEX_HEADER:  \affiliation{School of Physics, Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) and Advanced Materials and BioEngineering Research (AMBER), Trinity College Dublin, Dublin 2, Ireland.}
+
+#+LATEX_HEADER: \author{Fritz B. Prinz}
+#+LATEX_HEADER:  \affiliation{Department of Materials Science and Engineering, Stanford University, Stanford, California 94305, USA}
+
+#+LATEX_HEADER: \author{K. S. Novoselov}
+#+LATEX_HEADER:  \affiliation{School of Physics and Astronomy, University of Manchester, Oxford Road, Manchester M13 9PL, UK}
+
+#+LATEX_HEADER: \author{Elton J. G. Santos}
+#+LATEX_HEADER:  \email{e.santos@qub.ac.uk}
+#+LATEX_HEADER:  \affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
+
+#+LATEX_HEADER: \keywords{two-dimensional materials, dielectric constant, first principles calculation, band gap, binding energy}
+
+
+\newpage{}
+
+#+BEGIN_SRC elisp
+  (setq org-link-file-path-type 'relative)
+#+END_SRC
+
+#+RESULTS:
+: relative
+
+* Introduction
+
+The dielectric constant (also known as the relative permittivity)
+which characterizes the screening of the electromagnetic field within
+a medium, plays an crucial role in bridging various important material
+properties concerning electron-electron and electron-photon
+interactions, such as electronic polarization/polarizability, optical
+absorption, capacitance, and exciton binding energy. The central place
+of dielectric constant in material research drives the pursuit for
+unified model of the dielectric constants of materials. In fact, some
+pioneering works have discovered relationship between the dielectric
+constants and other properties, in particular the band gap of bulk
+materials. Moss showed that the band gap of a bulk semiconductor
+($E_{\mathrm{g}}$) and the dielectric constant follows a
+semi-empirical relationship, known as the Moss relation
+cite:Moss_1950_relation,Moss_1985_n_Eg:
+
+\begin{equation}
+\label{eq:Moss-relations}
+\epsilon^{2} E_{\mathrm{g}} \approx C
+\end{equation}
+
+where the constant $C$ is estimated to be ~ 95 eV. Other similar
+semi-empirical models for the relationship between $\epsilon$ and
+$E_{\mathrm{g}}$ are also proposed
+cite:Ravindra_1979_eps_Eg,Ravindra_1980_model,Ravindra_2007_Eg_rev. Despite
+the minute difference between the formulae used, it is clear that the
+there exists certain general electronic relations in bulk
+semiconductors, which is scaled by the dielectric constant and further
+accounts for the variation in band gap between different
+materials. The existence of such general relationship is also of high
+practical importance: it is generally more straightforward to measure
+the band gap $E_{\mathrm{g}}$ than the dielectric constant $\epsilon$,
+as the latter is strongly dependent on frequency. With the Moss
+relationship or other similar models, it is feasible to predict the
+dielectric constant of a bulk semiconductor with a reasonable degree
+of certainty. 
+
+Two-dimensional (2D) materials, the atomically-thin crystalline
+layers, are known to have distinct electronic properties from their
+bulk counterparts
+cite:Ando_1982_electron_2D,Stern_1967_polarizability_2DEG. One
+important feature of 2D materials is that the electric screening is
+attenuated and anisotropic
+cite:Cudazzo_2010_screen2D,Cudazzo_2011_screening_2D. The empirical
+relations of dielectric constant in bulk materials, like the Moss
+relation, is thus invalid within the context of 2D materials, and has
+to be modified. The pursuit of a general understanding of the
+dielectric constant of 2D materials has even greater importance than
+the bulk materials: the dielectric constant of a 2D materials is
+highly influenced by its surrounding environment
+cite:Keldysh_1979_eps_multi,Trolle_2017_eps_subst, and has caused
+considerable debate experimentally. On the contrary, other
+optoelectronic properties such as the band gap and binding energy can
+be assessed more easily experimentally. The lack of both sufficient
+data bank and sound experimental results requires the force from
+computational chemistry to discover the underlying relation between
+the dielectric constant and other properties of 2D materials. Indeed,
+recent endeavor has been made to uncover the relationship between the
+dielectric constant of 2D materials and band gap
+cite:Rasmussen_2015_database,Petousis_2017_dielectric_database by high
+throughput computational screening. However the relation is not yet
+clear and lacking sound theoretical support. In this letter, we report
+the study of the dielectric constants of **60** types of 2D
+semiconductors by first principle study, 
+*************** TODO Check the final numbers of the materials
+*************** END
+
+and derive their relationship
+with band gap, exciton binding energy, and quantum capacitance. The
+focus of this research is to provide a universal understanding of the
+dielectric constant of 2D materials, which can be further involved for
+the property estimation and prediction of novel 2D materials.
+
+* Results and Discussions
+
+In this letter, we study several types of 2D materials, including
+transition metal dichalcogineides (TMDCs, with the formula MX_{2},
+where M is metal in group 4, 6, 10, and X=S, Se, Te), metal
+monochalcogenides (GaS, GaSe), CdI_{2}, hexagonal boron nitride (hBN),
+fluorographene (F-Gr), and phosphorene. The elements contained in the
+materials involved in this letter is shown in Figure [[ref:fig-1]](a). The
+structures of these 2D materials can also be found in Figure
+[[ref:fig-1]](b). For the TMDCs, we consider 2 lattice phases, namely the
+2H (P\(\bar{6}\)m2 space group) and 1T (P3m1 space group). We
+calculate the static dielectric constant of the selected 2D materials
+using density functional theory (DFT) with Heyd-Scuseria-Ernzerhof
+hybrid functionals (HSE06) in the Vienna Ab Initio Package. The
+details of the calculations is referred in the Theoretical
+Methods. First we examine the relation between the dielectric constant
+$\epsilon$ and band gap $E_{\mathrm{g}}$ at the HSE06 level. The
+\(yy\)- and \(zz\)-components of the dielectric tensor as functions of
+$E_{\mathrm{g}}$ are plotted in Figure [[ref:fig-1]](c) and [[ref:fig-1]](d),
+respectively. For the $\epsilon_{\mathrm{yy}}-E_{\mathrm{g}}$ relation
+in Figure [[ref:fig-1]](c), we notice two distinguished groups: the linear
+law (green circles), and the power law (orange
+squares). Interestingly, such division is also element-dependent: the
+TMDCs of group 4 and 14, hBN, graphene derivatives, and phosphorene
+belong to the power group, while TMDCs of group 6 and 10, GaS, GaSe,
+and CdI_{2} following the linear law. The best fitting of the power
+group gives the relation \(\epsilon_{\mathrm{yy}} = 3.60
+(E_{\mathrm{g}} / \mathrm{eV})^{-0.48}\), or \(\epsilon^{2.08}
+E_{\mathrm{g}} = 14.42\ \mathrm{eV}\). We notice that the power law of
+2D $\epsilon$ resembles the 3D Moss relation, however with a much
+smaller constant, as seen in the comparison in Figure [[ref:fig-1]](c).
+*************** TODO A explanation for the linear group??
+*************** END
+On the other hand, the $\epsilon_{\mathrm{zz}}$ show much less
+variation than $\epsilon_{\mathrm{yy}}$: most of the
+$\epsilon_{\mathrm{zz}}$ values are within 1.2 and 1.6, indicating
+that the dielectric screening perpendicular to the 2D plane is greatly
+attenuated. The scatter dots of the power group and the linear group
+almost overlap with each other in Figure [[ref:fig-1]](d), showing that
+the $\epsilon_{\mathrm{zz}}$ has less element dependency. Clearly, our
+/ab initio/ calculation results show that the in plane dielectric
+constant of a 2D material, is related with its band gap. The relation
+between $\epsilon$ and $E_{\mathrm{g}}$ distinguishes from the 3D Moss
+equation, which indicates that the underlying mechanism in 2D
+materials may be different from their bulk counterparts.
+
+To verify the precision of the $\epsilon-E_{\mathrm{g}}$ relations
+discovered, we compare the dielectric constants calculated from the
+linear and power laws using the $E_{\mathrm{g}}$ values, compared with
+the $\epsilon$ calculated by DFT. Figure [[ref:fig-2]](a) compares the
+in-plane dielectric constant $\epsilon_{\parallel}$ (taken as the
+averaged value of $\epsilon_{\mathrm{xx}}$ and
+$\epsilon_{\mathrm{yy}}$) from the linear and power laws (y-axis) with
+its initial value (x-axis). The linear correlation of the 2 sets of
+data show a slope of 0.9976, indicating that both models can well
+present the relation between $\epsilon_{\parallel}$ and
+$E_{\mathrm{g}}$. We perform a similar analysis for the out-of-plane
+dielectric constant $\epsilon_{\perp}$ (equivalent to
+$\epsilon_{\mathrm{zz}}$) from the model and DFT calculations in
+Figure [[ref:fig-2]](b). We notice that the $\epsilon_{\perp}$ calculated
+using the model has larger deviation from the $y=x$ line than
+$\epsilon_{\parallel}$. The fact that $\epsilon_{\perp}$ has
+less dependency on $E_{\mathrm{g}}$ clearly distinguishes from the 3D
+Moss relation, as a result of the attenuated out-of-plane dielectric
+screening in 2D materials. Considering the relatively small dispersion
+of $\epsilon_{\perp}$ values of the 2D materials considered, we may
+conclude that the in-plane dielectric constant of 2D materials has
+much greater impact on other properties than the out-of-plane
+dielectric constant. For the rest of the discussion in this letter we
+will focus on the relation between $\epsilon_{\parallel}$ with other
+2D properties.
+
+The band gap may not be the only material property that 2D-$\epsilon$
+links to.  The Claussius-Mossotti equation which
+links $\epsilon$ and the molecular polarizability $\alpha$, is
+dependent on the wave vector $q$ in strictly 2D systems
+cite:Cudazzo_2011_screening_2D:
+
+\begin{equation}
+\label{eq:Claussius-Mossotti-2D}
+\epsilon(q) = 1 + 2\pi \alpha q
+\end{equation}
+
+The \(q\)-independent 2D $\epsilon$ is then derived by Olsen et al. as:
+
+\begin{equation}
+\label{eq:eps-Olsen}
+\epsilon = \frac{1}{2}(1 + \sqrt{1 + 32\pi \alpha \mu /3})
+\end{equation}
+where $\mu=(m_{\mathrm{n}}^{-1} + m_{\mathrm{p}}^{-1})^{-1}$ is the
+effective mass of the exciton. We then evaluate the precision of such
+equation compared with the 2D $\epsilon_{\parallel}$ by /ab initio/
+calculations. Figure [[ref:fig-2]](c) shows the comparison between the
+$\epsilon_{\parallel}$ calculated from the polarizability model
+(y-axis) and the DFT-calculated $\epsilon_{\parallel}$ (x-axis). The
+values of $\alpha$ and $\mu$ of the selected 2D materials are adapted
+from the results in Ref. citenum:Rasmussen_2015_database. The
+prediction margin with 90% fidelity is shown in violet
+stripe. Interestingly, we find that the two sets of data show almost a
+linear correlation, with a linearly fitted slope of 0.95. Such results
+indicates that $\epsilon$ does relate to the internal band structures
+of 2D materials, which are reflected by $\alpha$ and $\mu$. We also
+notice that almost all the data points of the $\epsilon$ from the
+polarizability model lie above the line $y=x$, with a fitted
+y-intercept of 1.39. The difference between the model predicted values
+and our calculation may be due to the existence of long-range
+Coulombic interactions in the DFT calculations even with a void
+distance as large as 2 nm, which results in $\epsilon_{\perp}$
+slightly higher than 1. On the other hand, the dielectric screening in
+the z-direction is not included in the polarizability model which is
+based on strictly 2D systems. Nevertheless, the comparison shows that
+the $\epsilon_{\parallel}$ may be estimated from the polarization
+model, with a mean prediction error of less than 1.5 and also
+practically feasible. With the implementation of a truncated Coulombic
+interaction function in the DFT calculations cite:Hueser_2013_2Dvs3D,
+the discrepancy between the model and the DFT calculations may be even
+reduced. 
+
+From the Wannier
+model of exciton in strictly 2D systems, the binding energy
+$E_{\mathrm{b}}$ is scaled by $\epsilon^{2}$ cite:Yang_1991:
+
+\begin{equation}
+\label{eq:Wannier-2D}
+E_{\mathrm{b}}^{\mathrm{2D}} = \frac{2 \mu}{\epsilon^{2}}
+\end{equation}
+
+As shown in Figure [[ref:fig-2]](d), we also compare the $E_{\mathrm{b}}$
+estimated from the 2D Wannier model (y-axis), and binding energies
+calculated using GW method in Ref. cite:Olsen_2016_hydrogen
+(x-axis). Two regimes can be found comparing both sets of data: when
+$E_{\mathrm{b}}$ from GW is smaller than 0.75 eV, both
+$E_{\mathrm{b}}$ values are close and lie along $y=x$; while
+$E_{\mathrm{b}}$ from GW is large than 0.75 eV, the model predicted
+values give larger deviation and higher overestimation. This can be
+explained by the limitation of the current model: the 2D Wannier model
+neglects the contribution from higher quantum numbers, and is more
+accurate for materials with higher $\alpha$ (hence lower
+$E_{\mathrm{b}}$) cite:Olsen_2016_hydrogen. We note that the 2D
+exciton model works relatively good for group 6 and 10 TMDCs, while
+for group 14 materials the deviation is relatively larger. The
+validity of the 2D Wannier exciton model has its practical importance:
+calculation of the exciton binding energy usually involves virtual
+orbitals and solving the Bethe-Salpeter equation (BSE), requiring much
+more computation resources than ground state DFT calculations. The
+relationship between the exciton binding energy favors bidirectional
+prediction of the binding energy and dielectric constant of 2D
+materials: $\epsilon$ can be estimated by $E_{\mathrm{b}}$ assessed by
+spectroscopy experiments, and the computationally-expensive
+$E_{\mathrm{b}}$ can also be predicted by facile obtainable
+$\epsilon$. 
+
+Considering the similarity between the $\epsilon-E_{\mathrm{g}}$ and
+$\epsilon-E_{\mathrm{b}}$ relations, that both are scaled with
+$\epsilon^{2}$, one may guess such scaling relation between $\epsilon$
+and the atomistic energies are of similar origin. In fact, recent
+quantum chemistry studies reveal the existence of a universal linear
+relation between $E_{\mathrm{g}}$ and the exciton binding energy
+$E_{\mathrm{b}}$ in 2D materials
+cite:Choi_linear_2015,Jiang_2017_Eg_Eb, which is distinct from the
+bulk systems where the effective mass is also playing a role. Jiang et
+al. suggested that the 2D polarizability has a simple inverse relation
+with $E_{\mathrm{g}}$ when $\alpha$ is large cite:Jiang_2017_Eg_Eb:
+\(\alpha=N_{\mathrm{g}} e^{2} / (2 \pi E_{\mathrm{g}}) \), where
+$N_{\mathrm{g}}$ is the degeneracy of the bands and normally assumes
+to be 6 for hexagonal symmetry. Combining this with eq
+[[ref:eq:Claussius-Mossotti-2D]] we get the relation between $\epsilon$ and $E_{\mathrm{g}}$:
+
+\begin{equation}
+\label{eq:eps-Eg-derive}
+\epsilon (\epsilon - 1) = \frac{4 N_{\mathrm{g}} \mu}{3 E_{\mathrm{g}}}
+\end{equation}
+
+and in the small band gap regime it may be simplified as $\epsilon =
+\sqrt{4 N_{\mathrm{g}} \mu/ (3 E_{\mathrm{g}})}$, which is also
+equivalent to plugging the linear relation between $E_{\mathrm{g}}$
+and $E_{\mathrm{b}}$, $E_{\mathrm{b}} = 3 E_{\mathrm{g}} / 2
+N_{\mathrm{g}}$, into the 2D Wannier model in eq
+[[ref:eq:Moss-relations]]. The inverse-square relation between $\epsilon$
+and $E_{\mathrm{g}}$ is thus restored. A comparison between the
+$\epsilon$ from eq [[ref:eq:eps-Eg-derive]] and the DFT values, can be
+seen in Figure S1. 
+*************** TODO add the plot in S1
+*************** END
+We note a larger deviation using this model than the polarizability
+model in Figure [[ref:fig-2]](c), as the accumulated error in all the
+assumptions used in such model. Nevertheless, using the quantum
+perturbation theory, it is possible to reveal the general
+inverse-square law between $E_{\mathrm{b}}-\epsilon$ and
+$E_{\mathrm{g}} - \epsilon$.
+
+
+Comparing the 3D Moss relation and the 2D relations we propose in the
+letter which have similar formulae but distinguished coefficient, it
+is worth suggesting that the understanding of $\epsilon$ in both 2D
+and 3D systems, can be unified using similar mechanism. Indeed, the
+random phase approximation describes the imaginary dielectric function $\epsilon_{2}$
+at long wavelength limit as cite:Slyom_2008_fundBook:
+
+\begin{equation}
+\label{eq:RPA-eps2}
+\epsilon_{2}(\omega) = (\frac{2 \pi e}{m \omega})^{2} 
+                     \sum_{l,l'} J_{l,l'}(\omega) < l | \mathbf{\mathit{p}} | l' >^{2}
+\end{equation}
+
+where $m$ is the electron mass, $\omega$ is frequency, $l$ and $l'$
+denote the initial and final states, $J_{l, l'}$ is the joint density
+of states (JDOS) and $\mathbf{\mathit{p}}$ is the dipole operator. The
+difference between the $\epsilon-E_{\mathrm{g}}$ relations actually
+comes from the forms of JDOS in 2D and 3D systems cite:Ha_2011_introductry. For a 3D
+semiconductor, the JDOS is energy-dependent:
+
+\begin{equation}
+\label{eq:JDOS-3D}
+J^{\mathrm{3D}}(\omega) = \frac{1}{2\pi^{2}} (\frac{2 \mu}{ \hbar ^{2}})^{\frac{3}{2}}
+                        (\hbar \omega - E_{\mathrm{g}})^{\frac{1}{2}}
+\end{equation}
+
+while on the other hand the 2D JDOS is a step function and independent of $\omega$:
+
+\begin{equation}
+\label{eq:JDOS-2D}
+J^{\mathrm{2D}}(\omega) = 
+                        \begin{cases}
+                        \displaystyle \frac{1}{\pi} \frac{\mu}{\hbar^{2}} & \omega > E_{\mathrm{g}} \\
+                        0                                   & 0 < \omega < E_{\mathrm{g}}
+                        \end{cases}
+\end{equation}
+ 
+The real dielectric function can be derived using the Kramers-K󠁯önig
+relation cite:Adachi_1987_dielGaP:
+
+\begin{equation}
+\label{eq:KKR}
+\epsilon_{1}(\omega) = 1 + \frac{2}{\pi} \int_{0}^{\infty}
+                     \frac{\omega' \epsilon_{2}(\omega')}{\omega'^{2} - \omega^{2}} d\omega'
+\end{equation}
+in the $\omega \to 0$ limit, and assuming that the dipole transition
+matrix $P(l, l')=<l|p|l'>$ is constant we have:
+
+\begin{equation}
+\label{eq:eps1-3D}
+\epsilon_{1}^{\mathrm{2D}}(\omega \to 0) = 1 + \frac{e^{2} (2 \mu)^{\frac{3}{2}}}{2 m^{2} \hbar}
+                                  E_{\mathrm{g}}^{-\frac{3}{2}} P^{2}
+\end{equation}
+
+and
+
+\begin{equation}
+\label{eq:eps1-2D}
+\epsilon_{1}^{\mathrm{2D}}(\omega \to 0) = 1 + \frac{8 \pi^{2} e^{2} \hbar^{2}}{L m^{2}} 
+                                  \frac{J}{E_{\mathrm{g}}^{2}} P^{2}
+\end{equation} 
+
+It shows that, unlike the in the 3D system, the 2D dielectric constant
+has direct relation to JDOS and $E_{\mathrm{g}}$. The JDOS can be
+written as the combined effect of the density of states (DOS) at both
+conduction and valence bands: $J(E)^{-1} = \mathrm{DOS}_{\mathrm{C}}
+(\frac{E - E_{\mathrm{g}}}{2})^{-1} + \mathrm{DOS}_{\mathrm{V}}
+(\frac{E-E_{\mathrm{g}}}{2})^{-1}$. Note that DOS is essentially the
+quantum capacitance (\(C_{\mathrm{Q}}\)) of a material:
+$C_{\mathrm{Q}}(E) = \mathrm{DOS}(E) e^{2}$, it is natural to look
+into the relation between $C_{\mathrm{Q}}$ and $\epsilon$, which is
+also a characteristics of a material's capacitance. In order to
+extract the $C_{\mathrm{Q}}$ values, we calculated the DOS of each 2D
+material by averaging the values within 0.10 eV at the edges of both
+conduction (CB) and valence (VB) bands. We first plot
+$\epsilon_{\parallel}$ as a function of $C_{\mathrm{Q}}$ in the CB for the 2D
+materials studies, as shown in Figure [[ref:fig-3]](a)  Although the
+dispersion seems too wide to get a universal relation when considering
+all the data together, we find that when categorize the data by the
+metal element group and lattice type, they seem to be following linear
+relations. We therefore performed linear fitting for each group of 2D
+materials, and plotted the prediction margin as stripe shaders in
+[[ref:fig-3]](a). Interesting, although the coefficient of determination
+vary among the groups (group 14-1T and group 14-2T show $R^{2}$ higher
+than 0.95, while group 4-2H and group 6-2H show $R^{2}$ less than
+0.8), they all show a similar intercept of ca. 1.70.
+*************** TODO Add the data sheet in SI
+*************** END
+That is to say, when $C_{\mathrm{Q}}$ decays to 0 (no electron states
+in the bands), 2D materials show an universal dielectric
+constant. This corresponds to the conclusion in eq [[ref:eq:eps1-2D]]:
+once $J \to 0$, $\epsilon^{\mathrm{2D}}_{\parallel}$ will drop
+to 1. The discrepancy between the value of the intercept and 1 may
+also be caused by the existence of long-range Coulombic interactions
+in the calculations, similar to the phenomenon seen in Figure
+[[ref:fig-2]](c). The slope of the $\epsilon-C_{\mathrm{Q}}$ curve in each
+group indicates that the materials with metals of the same group, have
+similar values of dipole transition matrix $P$. Note that in eq
+[[ref:eq:eps1-2D]], $E_{\mathrm{g}}$ also serves as a variable apart from
+JDOS, we therefore compare the relation between $\epsilon_{\parallel}$
+and $C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}$, as shown in Figure
+[[ref:fig-3]](b). Better regression results can be observed for almost all
+groups compared with the $\epsilon_{\parallel}-C_{\mathrm{Q}}$
+relations. The slopes are also higher than the corresponding groups in
+the $\epsilon-C_{\mathrm{Q}}$ relations, since the majority of the
+materials we studied has $E_{\mathrm{g}} > 1$ eV. The better
+regression results using $C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}$ indicates
+the validity of eq [[ref:eq:eps1-2D]] in predicting the 2D
+$\epsilon$. Unlike the relation we found for
+$\epsilon-E_{\mathrm{g}}$, $\epsilon-\alpha$ and
+$\epsilon-E_{\mathrm{b}}$, a universal scaling relation between
+$\epsilon$ and $C_{\mathrm{Q}}$ or $C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}$
+does not seem to exist, instead the relation is found to be more
+element-specific. We have also examined the $\epsilon$ as a function
+of $C_{\mathrm{Q}}$ or $C_{\mathrm{Q}}/E_{\mathrm{g}}^{2}$ in the VB,
+as shown in Figure S2. However the similar scaling relation seems not
+existing. Such difference between the $C_{\mathrm{Q}}$ in CB and VB
+may imply that the unoccupied orbitals have more influence on the
+dielectric constant of 2D materials.
+*************** TODO We don't know if such claim is right or not
+*************** END
+*************** TODO Add the SI figure
+*************** END
+
+Apart from the scaling relations we examines for the 2D materials, it
+is also of high theoretical interest to conclude the 2D - 3D
+transition of dielectric constant. The practical importance is clear:
+it is much easier measuring the dielectric constant of a bulk material
+(by capacitance or absorption measurements) than the corresponding 2D
+material, as stated before. Similar to eq [[ref:eq:RPA-eps2]], the
+Lindhard theory of gives the wave vector \(q\)-dependency of dielectric
+functions in both 2D and 3D systems cite:Slyom_2008_fundBook:
+
+\begin{equation}
+\label{eq:Lindhard-all}
+\epsilon(q, \omega) = 1 - \Psi(q) \sum_{k,l,l'}
+                    \frac{f(k+q, l') - f(k, l)}{E_{k+q, l'} - E_{k,l} - \hbar\omega}
+                    \vert <k+q, l'| e^{iqr} | k,l> \vert ^{2}
+\end{equation}
+where $\Psi$ is the Coulombic potential, $E$ is the energy of the
+state, and $f$ is the Fermi-Dirac distribution function. For
+semiconductors, the state $k+q, l'$ is in the VB, and state $k, l$ is
+in the CB. Using the relation $\sum_{k,l,l'} (E_{k+q, l'} - E_{k,l})
+\vert <k+q, l' \vert e^{iqr} \vert k, l > \vert ^{2} \approx 2 N_{e}
+E_{q}$ cite:Slyom_2008_fundBook, where $N_{e}$ is the electron density
+of the bands, and $E_{q}=\hbar^{2} q^{2} / 2 \mu$ is the energy at
+wavevector \(q\). The Lindhard dielectric function at the long
+wavelength limit ($q \to 0$) can be rewritten as:
+
+\begin{equation}
+\label{eq:Lindhard-derived}
+\epsilon(q, \omega) = 1 + \frac{\Psi(q)}{E_{\mathrm{g}}^{2}}{}2 N_{e} E_{q}
+\end{equation}
+
+The difference between the dimensions is reflected by the difference
+in the form of $\Psi(q)$: the Fourier-transformation of Coulombic
+interaction potential in 2D and 3D systems give:
+\begin{eqnarray}
+\label{eq:Psi-2D-3D}
+ \Psi^{\mathrm{3D}}(q) &= \displaystyle \frac{4 \pi e^{2}}{q^{2} \Omega^{\mathrm{3D}}} \\
+ \Psi^{\mathrm{2D}}(q) &= \displaystyle \frac{2 \pi e^{2}}{q \Omega^{\mathrm{2D}}}
+\end{eqnarray}
+where $\Omega^{\mathrm{3D}}$ and $\Omega^{\mathrm{2D}}$ are unit
+volumes in 3D and 2D systems, respectively. The transition energy from
+VB to CB in semiconductors, $E_{k+q, l'}-E_{k, l}$, can be
+approximated by the band gap $E_{\mathrm{g}}$. When $\omega \to 0$, we
+have:
+\begin{eqnarray}
+\label{eq:eps-Lindhard-3D}
+\epsilon^{\mathrm{3D}}(q) &= 1 + \displaystyle \frac{4 \pi q^{2} e^{2} N_{e}}{\mu \Omega^{\mathrm{3D}}} \frac{E_{q}}{E_{\mathrm{g}}^{2}}
+                          &= 1 + (\displaystyle \frac{\hbar \omega^{\mathrm{3D}}_{p}}{E_{\mathrm{g}}})^{2} \\
+\label{eq:eps-Lindhard-2D}
+\epsilon^{\mathrm{2D}}(q) &= 1 + \displaystyle \frac{2 \pi q e^{2} N_{e}}{\mu \Omega^{\mathrm{2D}}} \frac{E_{q}}{E_{\mathrm{g}}^{2}}
+                          &= 1 + (\displaystyle \frac{\hbar \omega^{\mathrm{2D}}_{p}(q)}{E_{\mathrm{g}}})^{2} \\
+\end{eqnarray}
+
+where $\omega^{3D}$ and $\omega^{\mathrm{2D}}$ are the plasma
+frequencies in 3D and 2D (\(q\)-dependent), respectively.  We therefore
+arrives at the conclusion of \(q\)-dependent dielectric response of 2D
+systems, similar to eq [[ref:eq:Claussius-Mossotti-2D]]. For a 3D material which is composed of stacks of 2D materials with inter-layer distance, L (shown in Figure [[ref:fig-4]](a)), it is
+straightforward comparing eqs [[ref:eq:eps-Lindhard-3D]] and
+[[ref:eq:eps-Lindhard-2D]], that the 2D and 3D dielectric constants are related as:
+
+\begin{equation}
+\label{eq:relation-2D-3D}
+\begin{aligned}
+\epsilon^{\mathrm{2D}}(q) &= 1 + \frac{\Omega^{\mathrm{3D}}}{2 \Omega^{\mathrm{2D}}} (\epsilon^{\mathrm{3D}} - 1)q \\
+                          &= 1 + \frac{L}{2}(\epsilon^{\mathrm{3D}} - 1)q
+\end{aligned}
+\end{equation}
+
+ This conclusion is also supported by the rigorous derivations in
+Ref. citenum:Nazarov_2015_2D_3D, and we also arrive at the relation
+between $\alpha$ and $\epsilon^{\mathrm{3D}}$: $\alpha^{\mathrm{2D}}
+= L/4\pi (\epsilon^{\mathrm{3D}} - 1)$
+cite:Cudazzo_2010_screen2D. Combining with eq [[ref:eq:eps-Olsen]], we
+finally get the relation between the static 2D dielectric constant and
+its 3D counterpart:
+
+\begin{equation}
+\label{eq:eps-2D-3D-final}
+\epsilon^{\mathrm{2D}} = \displaystyle \sqrt{\frac{2}{3} (\epsilon^{\mathrm{3D}} - 1) \mu L}
+\end{equation}
+
+Such relation is relatively simple yet strong, showing that the 2D and
+3D dielectric constants are bridged by the band structure (reflected
+by $\mu$) and geometric structure (reflected by $L$). To examine the
+validity of this relation, we tested the $\epsilon^{\mathrm{2D}}$
+calculated by [[ref:eq:eps-2D-3D-final]] for 21 2D materials with reported
+2D and 3D $\epsilon$, as a comparison with the
+$\epsilon^{\mathrm{2D}}_{\parallel}$ by our DFT calculations, which is
+shown in Figure [[ref:fig-4]](b). Strikingly, the two sets of data show
+relatively good agreement, with a mean average error (MAE) of
+0.551. We notice that such relation works relatively well for TMDC
+materials (such as MoS_{2}, WS_{2}), while showing larger deviation
+for other geometries (such as hBN, phosphorene). Nevertheless, as
+stated before, the existence of such universal relation between
+$\epsilon^{\mathrm{2D}}$ and $\epsilon^{\mathrm{3D}}$ greatly
+facilitates the understanding of the dielectric constants of 2D
+materials, giving prediction values with reasonable precision from its
+3D counterpart.
+
+*************** TODO Do we need to include the $\epsilon$ transition from 2D to 3D as a function of layer numbers ?
+*************** END
+
+
+* Conclusion
+
+* Theoretical Methods
+
+All results calculated for this paper were the result of /ab initio/
+simulations carried out using plane-wave Density Functional Theory
+package VASP cite:Kresse_1993,Kresse_1996_1,Kresse_1996_2 using the
+Projector Augmented Wave (PAW) approach with Kresse’s mainly GW
+Pseudopotentials cite:Kresse_1999_pseudopotentials. Band gaps were
+calculated using the Hybrid functional HSE06, with Spin Orbit Coupling
+explicitly included. The geometries were converged both in cell
+parameters and ionic positions, with forces below 0.04 eV/Å. A vacuum
+spacing of at least 12 Å was used for each material. A K-Point grid of
+\(7\times7\times1\) was used to relax, with an initial relaxation
+carried out at PBE level and a subsequent relaxation carried out at
+HSE06 level, allowing both cell parameters and ionic positions to
+relax each time. In VASP, the tag PREC=High was used, giving a plane
+wave kinetic energy cutoff of 30% greater than the highest given in
+the pseudopotentials used in each material, guaranteeing that absolute
+energies were converged to a few meV and the stress tensor to within a
+few kBar. A final HSE06 calculation with SOC was then carried out
+using a 14x14x1 K-Point grid, from which the density of states was
+taken.
+
+
+[[bibliography:ref.bib]]
+
+* Figures
+#+ATTR_LATEX: :width 0.65\linewidth
+#+CAPTION:  (a) Elements of the 2D materials studied in this letter. (b) Schematic illustrations of the structures of the 2D materials studied in this letter. (c) The \(yy\)-component and (d) the \(zz\)-component of dielectric tensor of selected 2D materials as functions of the band gap, respectively. The materials are categorized into the linear group (green circles) and the power group (orange squares). The Moss relation between the dielectric constant of bulk semiconductors and band gap, is shown as blue line in (d).
+#+NAME: fig-1
+[[file:../img/fig1.pdf]]
+
+#+ATTR_LATEX: :width \linewidth
+#+CAPTION: Comparison between the dielectric constant from /ab initio/ calculations and from various models. (a) In plane dielectric constant $\epsilon_{\parallel}$  and  (b) Out of plane dielectric constant $\epsilon_{\perp}$ from the power and linear law fitting models, compared with the dielectric constants calculated by DFT. (c) $\epsilon_{\parallel}$ from the 2D polarizability model compared with the $\epsilon_{\parallel}$ calculated at the HSE06 level. (d) Exciton binding energies ($E_{\mathrm{b}}$) of selected 2D materials calculated from $\epsilon_{\parallel}$, compared with $E_{\mathrm{b}}$ calculated by GW method.
+#+NAME: fig-2
+[[file:../img/fig2.pdf]]
+
+#+ATTR_LATEX: :width 0.95\linewidth
+#+CAPTION: The relation between $\epsilon_{\parallel}$ and $C_{\mathrm{Q}}$ in the CB. (a) $\epsilon_{\parallel}$ as a function of $C_{\mathrm{Q}}$ and  (b) $\epsilon_{\parallel}$ as a function of $C_{\mathrm{Q}}$ for the 2D materials studied. Linear fitting is performed for materials of the metal element group and lattice type. The prediction margin of each group is shown in shader.
+#+NAME: fig-3
+[[file:../img/fig4.pdf]]
+
+#+ATTR_LATEX: :width 0.95\linewidth
+#+CAPTION: Relationship between the 2D and 3D edielectric constants. (a) Schematic illustration of the structures of monolayer 2D material (left) and the bulk material as a layered stack of 2D materials. The dielectric constant of the 2D material show strong \(q\)-dependency, while the 3D dielectric constant has macroscopic feature. (b) Comparison between the $\epsilon^{\mathrm{2D}}$ predicted from $\epsilon^{\mathrm{3D}}$ (y-axis) and $\epsilon^{\mathrm{2D}}$ from /ab initio/ calculations.
+#+NAME: fig-4
+[[file:../img/fig3.pdf]]
+
+
+
