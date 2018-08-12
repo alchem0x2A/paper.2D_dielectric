@@ -10,7 +10,7 @@
 #+OPTIONS: tex:t toc:nil todo:t author:nil date:nil title:nil ^:t tags:nil
 #+DESCRIPTION:
 
-#+TITLE: Unified Understanding of the Dielectric Constants Nature of Two-Dimensional Materials: A First Principles Study
+#+TITLE: Unified Understanding of the Dielectric Nature of Two-Dimensional Materials
 
 #+LATEX_HEADER: \author{Dale Hughes} 
 #+LATEX_HEADER: \affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
@@ -19,6 +19,10 @@
 #+LATEX_HEADER: \author{Tian Tian}
 #+LATEX_HEADER:  \affiliation{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
 #+LATEX_HEADER: \altaffiliation{D. H. and T. T. Contributed equally to this work}
+
+#+LATEX_HEADER: \author{Declan Scullion}
+#+LATEX_HEADER: \affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
+
 
 #+LATEX_HEADER: \author{Lu Hua Li}
 #+LATEX_HEADER:  \affiliation{Institute for Frontier Materials, Deakin University, Waurn Ponds, Victoria, Australia}
@@ -29,11 +33,11 @@
 #+LATEX_HEADER: \author{Jonathan Coleman}
 #+LATEX_HEADER:  \affiliation{School of Physics, Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) and Advanced Materials and BioEngineering Research (AMBER), Trinity College Dublin, Dublin 2, Ireland.}
 
-#+LATEX_HEADER: \author{Fritz B. Prinz}
-#+LATEX_HEADER:  \affiliation{Department of Materials Science and Engineering, Stanford University, Stanford, California 94305, USA}
+#+LATEX_HEADER: \author{Jonathan N. Coleman}
+#+LATEX_HEADER: \affiliation{School of Physics, Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) and Advanced Materials and BioEngineering Research (AMBER), Trinity College Dublin, Dublin 2, Ireland.}
 
-#+LATEX_HEADER: \author{K. S. Novoselov}
-#+LATEX_HEADER:  \affiliation{School of Physics and Astronomy, University of Manchester, Oxford Road, Manchester M13 9PL, UK}
+#+LATEX_HEADER: \author{Manish Chhowalla}
+#+LATEX_HEADER: \affiliation{Materials Science and Engineering, Rutgers University, 607 Taylor Road, Piscataway, New Jersey 08854, USA.}
 
 #+LATEX_HEADER: \author{Elton J. G. Santos}
 #+LATEX_HEADER:  \email{e.santos@qub.ac.uk}
