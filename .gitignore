@@ -358,3 +358,5 @@ TSWLatexianTemp*
 */_minted*
 img/*.pdf
 .DS_Store
+*_conflict*
+*_tmp*
