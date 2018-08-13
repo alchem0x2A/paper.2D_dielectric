@@ -5,12 +5,13 @@ import matplotlib.pyplot as plt
 from ase.data import covalent_radii
 from scipy.stats import linregress
 import os, os.path
+from scipy.constants import pi, epsilon_0
 
 db_file = "../../data/gpaw_data/c2db.db"
 if not os.path.exists(db_file):
-    warnings.warn(("Please download the c2db data into ../../data/gpaw_data/ folder,"
-                   "from https://cmr.fysik.dtu.dk/_downloads/c2db.db")
-    return
+    raise FileExistsError(("Please download the c2db data into ../../data/gpaw_data/ folder,"
+                   "from https://cmr.fysik.dtu.dk/_downloads/c2db.db"))
+
 
 subset = [l.strip() for l in open("list.txt").readlines() if l != "\n"]
 
@@ -69,38 +70,38 @@ plt.style.use("science")
 
 plt.figure(figsize=(7, 3.5))
 plt.subplot(121)
-plt.plot(Eg_HSE, alpha_x, "o", alpha=0.5)
+plt.plot(Eg_HSE, alpha_x * 4 * pi, "o", alpha=0.5)
 plt.xlabel("$E_{\\rm{g}}$ (eV)")
-plt.ylabel("$\\alpha_{xx}$ ($\\AA$)")
+plt.ylabel("$\\alpha_{xx} / \\epsilon_0$ ($\\AA$)")
 
 plt.subplot(122)
-plt.plot(Eg_HSE, alpha_z, "o", alpha=0.5)
+plt.plot(Eg_HSE, alpha_z * 4 * pi, "o", alpha=0.5)
 plt.xlabel("$E_{\\rm{g}}$ (eV)")
-plt.ylabel("$\\alpha_{zz}$ ($\\AA$)")
+plt.ylabel("$\\alpha_{zz} / \\epsilon_0$ ($\\AA$)")
 
 plt.tight_layout()
 plt.savefig(os.path.join(img_path, "alpha_Eg_subset.svg"))
 
 # x-direction
 plt.figure(figsize=(3.5, 3.5))
-plt.plot(1 / Eg_HSE, alpha_x, "o", alpha=0.5)
-res = linregress(x=1/Eg_HSE, y=alpha_x)
+plt.plot(1 / Eg_HSE, alpha_x * 4 * pi, "o", alpha=0.5)
+res = linregress(x=1/Eg_HSE, y=alpha_x * 4 * pi)
 xx = numpy.linspace(min(1/Eg_HSE), max(1/Eg_HSE))
 yy = res.slope * xx + res.intercept
 plt.plot(xx, yy, "--")
-plt.text(x=0.8, y=4, s="$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
+plt.text(x=0.6, y=40, s="$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
 plt.xlabel("$1/E_{\\rm{g}}$ (1/eV)")
-plt.ylabel("$\\alpha_{xx}$ ($\\AA$)")
+plt.ylabel("$\\alpha_{xx} / \\epsilon_0$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "alpha_xx_1_Eg_subset.svg"))
 
 # z-direction
 plt.figure(figsize=(3.5, 3.5))
-plt.plot(thick, alpha_z, "o", alpha=0.5)
-res = linregress(x=thick, y=alpha_z)
+plt.plot(thick, alpha_z * 4 * pi, "o", alpha=0.5)
+res = linregress(x=thick, y=alpha_z * 4 * pi)
 xx = numpy.linspace(min(thick), max(thick))
 yy = res.slope * xx + res.intercept
 plt.plot(xx, yy, "--")
-plt.text(x=2.5, y=0.40, s="$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
+plt.text(x=2.5, y=5, s="$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
 plt.xlabel("Thickness ($\\AA$)")
-plt.ylabel("$\\alpha_{zz}$ ($\\AA$)")
+plt.ylabel("$\\alpha_{zz} / \\epsilon_0$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "alpha_zz_thick_subset.svg"))
