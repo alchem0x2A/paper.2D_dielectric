@@ -84,9 +84,9 @@ plt.savefig(os.path.join(img_path, "alpha_Eg_subset.svg"))
 
 # x-direction
 plt.figure(figsize=(3.5, 3.5))
-plt.plot(1 / Eg_HSE, alpha_x * 4 * pi, "o", alpha=0.5)
-res = linregress(x=1/Eg_HSE, y=alpha_x * 4 * pi)
-xx = numpy.linspace(min(1/Eg_HSE), max(1/Eg_HSE))
+plt.plot(Eg_HSE, 1 / alpha_x, "o", alpha=0.5)
+res = linregress(x=Eg_HSE, y=1 / alpha_x)
+xx = numpy.linspace(min(Eg_HSE), max(Eg_HSE))
 yy = res.slope * xx + res.intercept
 plt.plot(xx, yy, "--")
 plt.text(x=0.8, y=4, s="$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
