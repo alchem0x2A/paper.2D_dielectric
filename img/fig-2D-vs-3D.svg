@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="294.86255mm"
+   height="116.07228mm"
+   viewBox="0 0 294.86255 116.07228"
+   version="1.1"
+   id="svg52963"
+   inkscape:version="0.92.3 (68fc966a96, 2018-08-01)"
+   sodipodi:docname="fig-2D-vs-3D.svg">
+  <defs
+     id="defs52957" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2238936"
+     inkscape:cx="661.14693"
+     inkscape:cy="175.78677"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g54079"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1315"
+     inkscape:window-x="55"
+     inkscape:window-y="122"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata52960">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Layer 2"
+     transform="translate(5.0720755,1.6458681)">
+    <ellipse
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.75700001;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ff410e;fill-opacity:0.42213117;fill-rule:nonzero;stroke:#ff3e0c;stroke-width:1.02999997;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.81147539;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path54081"
+       cx="88.202118"
+       cy="59.956818"
+       rx="92.759193"
+       ry="53.954594" />
+    <ellipse
+       ry="53.954594"
+       rx="92.759193"
+       cy="59.956818"
+       cx="196.68129"
+       id="ellipse54083"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.75700001;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#0eeaff;fill-opacity:0.22950822;fill-rule:nonzero;stroke:#1dabba;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.93032789;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(5.0720755,1.6458681)">
+    <g
+       aria-label="⬄"
+       transform="scale(1.3505476,0.74044042)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:165.65660095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.76515245px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="text53510" />
+    <text
+       id="text53525"
+       y="86.135475"
+       x="118.87875"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332px"
+         y="86.135475"
+         x="118.87875"
+         id="tspan53523"
+         sodipodi:role="line">Hamaker constant</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="130.59621"
+       y="28.541351"
+       id="text53547"><tspan
+         sodipodi:role="line"
+         id="tspan53545"
+         x="130.59621"
+         y="28.541351"
+         style="stroke-width:0.26458332px">Bandgap</tspan></text>
+    <text
+       id="text53551"
+       y="46.783222"
+       x="113.22604"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332px"
+         y="46.783222"
+         x="113.22604"
+         id="tspan53549"
+         sodipodi:role="line">Exciton binding energy</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="127.45428"
+       y="67.655609"
+       id="text53587"><tspan
+         sodipodi:role="line"
+         id="tspan53585"
+         x="127.45428"
+         y="67.655609"
+         style="stroke-width:0.26458332px">Bohr radius</tspan></text>
+    <g
+       id="g54135">
+      <g
+         transform="translate(48.208509,-48.815379)"
+         id="g54042">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-1.7525812"
+           y="67.172569"
+           id="text53521"><tspan
+             sodipodi:role="line"
+             id="tspan53519"
+             x="-1.7525812"
+             y="67.172569"
+             style="stroke-width:0.26458332px">2D Polarizability</tspan></text>
+        <text
+           id="text53616"
+           y="73.975288"
+           x="-1.8425723"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.11048412px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.4739289px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-size:8.81194687px;stroke-width:0.4739289px"
+             y="73.975288"
+             x="-1.8425723"
+             id="tspan53614"
+             sodipodi:role="line"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.81194687px;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.4739289px"
+               id="tspan53618">α</tspan><tspan
+               style="font-size:5.72776461px;baseline-shift:sub;stroke-width:0.4739289px"
+               id="tspan53622">2D</tspan></tspan></text>
+      </g>
+      <g
+         transform="translate(0.44195086,4.948693)"
+         id="g53790">
+        <text
+           id="text53563"
+           y="56.584415"
+           x="45.859055"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.26458332px"
+             y="56.584415"
+             x="45.859055"
+             id="tspan53561"
+             sodipodi:role="line">2D plasmon frequency</tspan></text>
+        <g
+           id="g53746">
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.44734001px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.41117027px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             x="45.417118"
+             y="65.535866"
+             id="text53642"><tspan
+               style="font-size:7.05555534px;stroke-width:0.41117027px"
+               sodipodi:role="line"
+               id="tspan53640"
+               x="45.417118"
+               y="65.535866"><tspan
+   id="tspan53660"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:Arial;-inkscape-font-specification:'Arial Italic';baseline-shift:baseline;stroke-width:0.41117027px">ω</tspan><tspan
+   style="font-size:4.58611059px;baseline-shift:sub;stroke-width:0.41117027px"
+   id="tspan53704">2D</tspan>=<tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.41117027px"
+   id="tspan53706">ω</tspan><tspan
+   id="tspan53716"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611059px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.41117027px">3</tspan><tspan
+   style="font-size:4.58611059px;baseline-shift:sub;stroke-width:0.41117027px"
+   id="tspan53708">D</tspan><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.41117027px"
+   id="tspan53710">L</tspan><tspan
+   style="font-size:4.58611059px;baseline-shift:super;stroke-width:0.41117027px"
+   id="tspan53712">0.5</tspan></tspan></text>
+          <text
+             id="text53650"
+             y="60.645443"
+             x="51.356575"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.79560089px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.31854376px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               style="font-size:4.41714048px;baseline-shift:sub;stroke-width:0.31854376px"
+               y="60.645443"
+               x="51.356575"
+               id="tspan53648"
+               sodipodi:role="line">p</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.79560089px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.31854376px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             x="66.702408"
+             y="60.645443"
+             id="text53731"><tspan
+               sodipodi:role="line"
+               id="tspan53729"
+               x="66.702408"
+               y="60.645443"
+               style="font-size:4.41714048px;baseline-shift:sub;stroke-width:0.31854376px">p</tspan></text>
+        </g>
+      </g>
+      <g
+         transform="translate(0.83324083,-17.546713)"
+         id="g53833">
+        <g
+           id="g53608"
+           transform="translate(0.61145406,0.91718108)">
+          <text
+             id="text53595"
+             y="102.25188"
+             x="45.247601"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               style="stroke-width:0.26458332px"
+               y="102.25188"
+               x="45.247601"
+               id="tspan53593"
+               sodipodi:role="line">2D optical absorbance</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.707407px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.3144097px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="45.475193"
+           y="108.90012"
+           id="text53750"><tspan
+             sodipodi:role="line"
+             id="tspan53748"
+             x="45.475193"
+             y="108.90012"
+             style="stroke-width:0.3144097px"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.3144097px"
+   id="tspan53770">σ</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.35981464px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.3144097px"
+   id="tspan53948">2D</tspan>(<tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.3144097px"
+   id="tspan53754">ω</tspan>)<tspan
+   style="font-size:8.38425827px;stroke-width:0.3144097px"
+   id="tspan53764">∝</tspan><tspan
+   id="tspan53768"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.707407px;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.3144097px">i</tspan><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.3144097px"
+   id="tspan53756">ωα</tspan><tspan
+   style="font-size:4.35981464px;baseline-shift:sub;stroke-width:0.3144097px"
+   id="tspan53760">2D</tspan>/<tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.3144097px"
+   id="tspan53762">c</tspan></tspan></text>
+      </g>
+      <g
+         transform="translate(0.38568251,6.654201)"
+         id="g53819">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.28574228px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.34151915px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="45.792171"
+           y="41.374714"
+           id="text53630"><tspan
+             sodipodi:role="line"
+             id="tspan53628"
+             x="45.792171"
+             y="41.374714"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan53688">n</tspan><tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan53690">2D</tspan>=<tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan53692">n</tspan><tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan53694">3D</tspan><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan53696">L</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="46.216946"
+           y="34.897839"
+           id="text53555"><tspan
+             sodipodi:role="line"
+             id="tspan53553"
+             x="46.216946"
+             y="34.897839"
+             style="stroke-width:0.26458332px">2D density</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="66.800133"
+         y="3.4253123"
+         id="text54213"><tspan
+           sodipodi:role="line"
+           id="tspan54211"
+           x="66.800133"
+           y="3.4253123"
+           style="font-size:7.05555534px;stroke-width:0.26458332px">2D Properties</tspan></text>
+      <text
+         id="text54217"
+         y="3.4253123"
+         x="184.27516"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:7.05555534px;stroke-width:0.26458332px"
+           y="3.4253123"
+           x="184.27516"
+           id="tspan54215"
+           sodipodi:role="line">3D Properties</tspan></text>
+    </g>
+    <g
+       id="g54179"
+       transform="translate(0,4.4725052)">
+      <g
+         transform="translate(-13.403263,2.4943313)"
+         id="g54051">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="199.5619"
+           y="33.921753"
+           id="text53559"><tspan
+             sodipodi:role="line"
+             id="tspan53557"
+             x="199.5619"
+             y="33.921753"
+             style="stroke-width:0.26458332px">Bulk density</tspan></text>
+        <text
+           id="text53630-9"
+           y="40.815395"
+           x="199.73627"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.28574276px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.34151915px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.34151915px"
+             y="40.815395"
+             x="199.73627"
+             id="tspan53628-0"
+             sodipodi:role="line"><tspan
+               id="tspan53692-6"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.34151915px">n</tspan><tspan
+               id="tspan53694-2"
+               style="font-size:4.73573208px;baseline-shift:sub;stroke-width:0.34151915px">3D</tspan><tspan
+               id="tspan53696-0"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.34151915px" /></tspan></text>
+      </g>
+      <g
+         transform="translate(-15.122794,6.8184281)"
+         id="g54063">
+        <text
+           id="text53567"
+           y="50.408192"
+           x="201.67862"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.26458332px"
+             y="50.408192"
+             x="201.67862"
+             id="tspan53565"
+             sodipodi:role="line">3D plasmon frequency</tspan></text>
+        <g
+           transform="translate(155.93322,-6.8926408)"
+           id="g53746-9">
+          <text
+             id="text53642-0"
+             y="65.535866"
+             x="45.417118"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.44734001px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.41117027px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               y="65.535866"
+               x="45.417118"
+               id="tspan53640-9"
+               sodipodi:role="line"
+               style="font-size:7.05555534px;stroke-width:0.41117027px"><tspan
+                 id="tspan53706-8"
+                 style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.41117027px">ω</tspan><tspan
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611059px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.41117027px"
+                 id="tspan53716-6">3</tspan><tspan
+                 id="tspan53708-1"
+                 style="font-size:4.58611059px;baseline-shift:sub;stroke-width:0.41117027px">D</tspan></tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.79560089px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.31854376px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             x="51.356575"
+             y="60.645443"
+             id="text53650-0"><tspan
+               sodipodi:role="line"
+               id="tspan53648-1"
+               x="51.356575"
+               y="60.645443"
+               style="font-size:4.41714048px;baseline-shift:sub;stroke-width:0.31854376px">p</tspan></text>
+        </g>
+      </g>
+      <g
+         transform="translate(-19.196184,-33.291975)"
+         id="g54079">
+        <text
+           id="text53583"
+           y="114.83791"
+           x="205.53299"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.26458332px"
+             y="114.83791"
+             x="205.53299"
+             id="tspan53581"
+             sodipodi:role="line">3D Conductivity</tspan></text>
+        <text
+           id="text53750-6"
+           y="121.66522"
+           x="205.45734"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.36717796px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.29846147px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.29846147px"
+             y="121.66522"
+             x="205.45734"
+             id="tspan53748-0"
+             sodipodi:role="line"><tspan
+   id="tspan53770-6"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.29846147px">σ<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.13866568px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.29846147px"
+   id="tspan53994">3</tspan></tspan><tspan
+   id="tspan53948-1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.13866568px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.29846147px">D</tspan>(<tspan
+   id="tspan53754-6"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.29846147px">ω</tspan>)<tspan
+   id="tspan53764-8"
+   style="font-size:7.95897245px;stroke-width:0.29846147px">∝</tspan><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.36717796px;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.29846147px"
+   id="tspan53768-6">i</tspan><tspan
+   id="tspan53756-0"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.29846147px">ωε<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.13866568px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub;stroke-width:0.29846147px"
+   id="tspan53996">3</tspan></tspan><tspan
+   id="tspan53760-3"
+   style="font-size:4.13866568px;baseline-shift:sub;stroke-width:0.29846147px">D</tspan>/<tspan
+   id="tspan53762-1"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.29846147px">c</tspan></tspan></text>
+      </g>
+      <g
+         transform="translate(-77.609214,-56.019317)"
+         id="g54034">
+        <text
+           id="text53525-1"
+           y="69.956367"
+           x="263.27792"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.26458332px"
+             y="69.956367"
+             x="263.27792"
+             id="tspan53523-8"
+             sodipodi:role="line">Dielectric function</tspan></text>
+        <text
+           id="text53616-7"
+           y="76.888115"
+           x="263.51254"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.90387917px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.41736928px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="76.888115"
+             x="263.51254"
+             id="tspan53614-9"
+             sodipodi:role="line"
+             style="stroke-width:0.41736928px"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.41736928px"
+               id="tspan54024">ε<tspan
+   id="tspan54085"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64.99999762%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub">3</tspan></tspan><tspan
+               style="font-size:5.78752089px;baseline-shift:sub;stroke-width:0.41736928px"
+               id="tspan54026">D</tspan></tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="138.19023"
+       y="35.852558"
+       id="text54183"><tspan
+         sodipodi:role="line"
+         id="tspan54181"
+         x="138.19023"
+         y="35.852558"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.26458332px">E<tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan54185">g</tspan></tspan></text>
+    <text
+       id="text54191"
+       y="53.315063"
+       x="138.25742"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:Arial;-inkscape-font-specification:'Arial Italic';stroke-width:0.26458332px"
+         y="53.315063"
+         x="138.25742"
+         id="tspan54189"
+         sodipodi:role="line">E<tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan54193">b</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="139.29671"
+       y="74.481728"
+       id="text54199"><tspan
+         sodipodi:role="line"
+         id="tspan54197"
+         x="139.29671"
+         y="74.481728"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:Arial;-inkscape-font-specification:'Arial Italic';baseline-shift:baseline;stroke-width:0.26458332px">r<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64.99999762%;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:sub"
+   id="tspan54201">B</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="138.24243"
+       y="93.789246"
+       id="text54205"><tspan
+         sodipodi:role="line"
+         id="tspan54203"
+         x="138.24243"
+         y="93.789246"
+         style="font-size:7.05555534px;stroke-width:0.26458332px"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+           id="tspan54207">A</tspan><tspan
+           style="font-size:64.99999762%;baseline-shift:sub"
+           id="tspan54209">H</tspan></tspan></text>
+  </g>
+</svg>

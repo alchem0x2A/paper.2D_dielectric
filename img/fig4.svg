@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="265.44916mm"
-   height="71.281044mm"
-   viewBox="0 0 265.44916 71.281044"
+   width="146.17308mm"
+   height="124.58202mm"
+   viewBox="0 0 146.17308 124.58202"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (cdafc079a9, 2018-06-25)"
@@ -292,11 +292,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.68769531"
-     inkscape:cx="451.08888"
-     inkscape:cy="192.52544"
+     inkscape:zoom="0.67829323"
+     inkscape:cx="495.7132"
+     inkscape:cy="347.04731"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g7018"
      showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="687"
@@ -323,10 +323,11 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(93.118,-11.322329)">
+     transform="translate(93.20401,-12.631465)"
+     style="stroke-linecap:butt;stroke-linejoin:round">
     <g
        id="figure_1"
-       transform="matrix(0.35277779,0,0,0.35277779,27.159109,13.784436)"
+       transform="matrix(0.35277779,0,0,0.35277779,-92.202985,68.394544)"
        style="stroke-linecap:butt;stroke-linejoin:round">
       <g
          id="patch_1"
@@ -1747,7 +1748,7 @@
     </g>
     <g
        id="figure_1-7"
-       transform="matrix(0.35277779,0,0,0.35277779,99.679439,13.928864)"
+       transform="matrix(0.35277779,0,0,0.35277779,-19.682655,68.538972)"
        style="stroke-linecap:butt;stroke-linejoin:round">
       <g
          id="patch_1-5"
@@ -3110,7 +3111,7 @@
     </g>
     <g
        id="g7018"
-       transform="translate(0.52916667,4.2333335)"
+       transform="matrix(1.0261459,0,0,1.0261459,2.9509547,2.5984219)"
        style="stroke-linecap:butt;stroke-linejoin:round">
       <image
          width="49.243816"
@@ -3119,12 +3120,12 @@
          style="stroke-linecap:butt;stroke-linejoin:round;image-rendering:optimizeQuality"
          xlink:href="file:///Users/tiantian/polybox/Research/12-2D-dielectric/tmp_img/BN-1.png"
          id="image6234"
-         x="-92.626007"
+         x="-86.953461"
          y="32.030441"
          sodipodi:absref="/Users/tiantian/polybox/Research/12-2D-dielectric/tmp_img/BN-1.png" />
       <g
          style="stroke-linecap:butt;stroke-linejoin:round"
-         transform="matrix(0.76929458,0,0,0.76929458,9.1552924,-0.40152098)"
+         transform="matrix(0.76929458,0,0,0.76929458,19.984656,-0.40152098)"
          id="g6255">
         <image
            width="64.01165"
@@ -3190,44 +3191,44 @@
       <path
          inkscape:connector-curvature="0"
          id="path6257"
-         d="m -42.436508,39.367052 14.407206,-0.25332 v 0"
+         d="m -36.763984,39.367052 14.407206,-0.25332 v 0"
          style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
       <text
          id="text6577"
          y="20.834476"
-         x="-70.66217"
+         x="-64.989624"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="20.834476"
-           x="-70.66217"
+           x="-64.989624"
            style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:round"
            id="tspan6575"
            sodipodi:role="line">2D</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="-6.5912161"
+         x="3.7224569"
          y="20.803471"
          id="text6581"><tspan
            sodipodi:role="line"
            id="tspan6579"
            style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:round"
-           x="-6.5912161"
+           x="3.7224569"
            y="20.803471">Bulk</tspan></text>
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path6585"
-         d="m -25.729434,45.717221 v 4.520684"
+         d="m -15.415754,45.717221 v 4.520684"
          style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-end:url(#marker6621)" />
       <text
          id="text6871"
          y="54.786606"
-         x="-26.264521"
+         x="-15.950838"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="54.786606"
-           x="-26.264521"
+           x="-15.950838"
            style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:round"
            id="tspan6869"
            sodipodi:role="line"><tspan
@@ -3237,7 +3238,7 @@
              style="font-size:64.99999762%;baseline-shift:sub;stroke-linecap:butt;stroke-linejoin:round">Bulk</tspan></tspan></text>
       <g
          style="stroke-linecap:butt;stroke-linejoin:round"
-         transform="translate(-1.9591598,-6.3481965)"
+         transform="translate(3.7133607,-6.3481965)"
          id="g6958">
         <g
            id="g6900"
@@ -3300,7 +3301,7 @@
       </g>
       <g
          style="stroke-linecap:butt;stroke-linejoin:round"
-         transform="translate(-0.99581925)"
+         transform="translate(9.3178546)"
          id="g6972">
         <g
            style="stroke-linecap:butt;stroke-linejoin:round"
@@ -3364,15 +3365,15 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-36.742592"
-       y="39.032375"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.34401751px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.27150109px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-29.474468"
+       y="38.307316"
        id="text7022"><tspan
          sodipodi:role="line"
          id="tspan7020"
-         style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:round"
-         x="-36.742592"
-         y="39.032375">?</tspan></text>
+         style="stroke-width:0.27150109px;stroke-linecap:butt;stroke-linejoin:round"
+         x="-29.474468"
+         y="38.307316">?</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3390,27 +3391,27 @@
        inkscape:transform-center-y="-0.9521809"
        inkscape:transform-center-x="5.168982"
        id="text7030"
-       y="16.372839"
-       x="25.692999"
+       y="70.982948"
+       x="-93.669098"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         y="16.372839"
-         x="25.692999"
+         y="70.982948"
+         x="-93.669098"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05555534px;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:round"
          id="tspan7028"
          sodipodi:role="line">b</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="99.776321"
-       y="16.372839"
+       x="-19.585773"
+       y="70.982948"
        id="text7034"
        inkscape:transform-center-x="5.168982"
        inkscape:transform-center-y="-0.9521809"><tspan
          sodipodi:role="line"
          id="tspan7032"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05555534px;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:round"
-         x="99.776321"
-         y="16.372839">c</tspan></text>
+         x="-19.585773"
+         y="70.982948">c</tspan></text>
   </g>
 </svg>
