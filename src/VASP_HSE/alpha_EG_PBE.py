@@ -49,4 +49,23 @@ plt.xlabel("$E_{\\mathrm{g}}$ (eV)")
 plt.ylabel("$(4 \\pi \\varepsilon_0) / \\alpha^{\parallel}$ ($\\AA^{-1}$)")
 plt.legend()
 plt.savefig("../../tmp_img/compare_alpha_Eg.svg")
+
+
+plt.figure(figsize=(3.5, 3))
+plt.style.use("science")
+direct_diff = (data[:, 1] - data[:, 2]) / 1
+l =  plt.scatter(data[:, 0], 1 / data[:, -2], marker="o",
+                     alpha=0.5, c=direct_diff, cmap="rainbow")
+k, b, r, *_ = linregress(data[:, 0], 1/data[:, -2])
+print(k, b, r)
+plt.plot(xx, k * xx + b, "--")
+cb = plt.colorbar(shrink=0.5)
+cb.ax.set_ylabel("$E_{\\mathrm{g}}^{\\mathrm{direct}} - E_{\\mathrm{g}}^{\\mathrm{min}}$ (eV)")
+
+plt.ylim(0, 1.24)
+
+plt.xlabel("$E_{\\mathrm{g}}$ (eV)")
+plt.ylabel("$(4 \\pi \\varepsilon_0) / \\alpha^{\parallel}$ ($\\AA^{-1}$)")
+plt.tight_layout()
+plt.savefig("../../tmp_img/compare_alpha_HSE_direct_sepa.svg")
     

@@ -35,13 +35,14 @@ ax = [a[0] for e, a, n in res]
 az = [a[1] for e, a, n in res]
 Eg = [e for e, a, n in res]
 
-xx = numpy.arange(0, len(maters)) - 0.5
+xx = numpy.arange(0, len(maters))
 
 ax2.plot(Eg, "o-", markersize=6)
 ax1.bar(xx, ax, color="#FFCC00", alpha=0.7)
 ax1.bar(xx, az, color="#FF5555", alpha=0.5)
-ax1.set_xticks(range(0, 50))
-ax1.set_xticklabels(maters, rotation="vertical")
+ax1.set_xticks(range(0, len(maters)))
+mnames = [n[0] + n[1:].replace("2", "$_{2}$") for n in maters]
+ax1.set_xticklabels(mnames, rotation="vertical")
 plt.tight_layout()
 plt.savefig("../../tmp_img/all_data.svg")
 

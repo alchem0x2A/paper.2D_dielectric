@@ -42,7 +42,7 @@ for row in reader:
     if row[4] != "":
         name, proto = row[: 2]
         print(name, proto)
-        L, E, ex, ey, ez = map(float, row[2:])
+        L, E, ex, ey, ez, *_ = map(float, row[2:])
         if ez < ex:
             eps_z.append(ez)
             materials.append("-".join((name, proto)))
@@ -69,7 +69,7 @@ thick = thick[cond]
 
 colors = {"MoS2": "#AA0000", "CdI2": "#2C5AA0",
           "GaS": "#FFCC00", "BN": "#A05A2C",
-          "P": "#447821"}
+          "P": "#447821", "CH": "#FF6600"}
 
 cs = [colors[mat.split("-")[-1]] for mat in materials]
 
@@ -78,21 +78,31 @@ plt.style.use("science")
 
 plt.figure(figsize=(7, 3.5))
 plt.subplot(121)
-plt.scatter(Eg_HSE, alpha_x * 4 * pi, marker="o", alpha=0.5, c=cs)
+plt.scatter(Eg_HSE, alpha_x, marker="o", alpha=0.5, c=cs)
+def fit_func(x, a,b):
+    return b / x
+
+fit_param, cov = curve_fit(fit_func,
+                      xdata=Eg_HSE, ydata=alpha_x,
+                      p0=(0, 10))
+print(fit_param)
+xx = numpy.linspace(0.5, 8)
+yy = fit_func(xx, *fit_param)
+plt.plot(xx, yy, "--")
 plt.xlabel("$E_{\\rm{g}}$ (eV)")
-plt.ylabel("$\\alpha_{xx}/\\varepsilon_0$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\\parallel}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
 
 plt.subplot(122)
-plt.scatter(Eg_HSE, alpha_z * 4 * pi, marker="o", alpha=0.5, c=cs)
+plt.scatter(Eg_HSE, alpha_z, marker="o", alpha=0.5, c=cs)
 plt.xlabel("$E_{\\rm{g}}$ (eV)")
-plt.ylabel("$\\alpha_{zz} / \\varepsilon_0$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\\perp} / (4 \pi \\varepsilon_0)$ ($\\AA$)")
 
 plt.tight_layout()
-plt.savefig(os.path.join(img_path, "alpha_Eg_HSE.pdf"))
+plt.savefig(os.path.join(img_path, "alpha_Eg_HSE.svg"))
 
 plt.figure(figsize=(3.5, 3.5))
 def fit_func(x, a,b):
-    return a+b / x
+    return b / x
 
 fit_param, cov = curve_fit(fit_func,
                       xdata=Eg_HSE, ydata=alpha_x,

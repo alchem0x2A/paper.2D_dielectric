@@ -361,3 +361,4 @@ img/*.pdf
 *_conflict*
 *_tmp*
 *.gpw
+data/distance/*/*.svg

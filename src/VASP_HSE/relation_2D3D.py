@@ -67,7 +67,7 @@ for row in reader:
     if row[4] != "":
         name, proto = row[: 2]
         print(name, proto)
-        L, E, ex, ey, ez = map(float, row[2:])
+        L, E, ex, ey, ez, *_ = map(float, row[2:])
         if ez < ex:
             e_xy = numpy.sqrt(ex * ey)
             ax = (e_xy - 1) / (4 * pi) * L
@@ -110,6 +110,8 @@ def fit_func(x, a,b):
 
 
 # x-direction
+MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
+print(MAE)
 plt.figure(figsize=(3, 2.8))
 plt.scatter(eps_x_3D[:, 1], eps_x_3D[:, 0],
             c=Eg_HSE,
