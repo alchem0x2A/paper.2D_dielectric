@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[T1]{fontenc}
-\usepackage{longtable}
+\usepackage{ltablex}
 \usepackage{footnote}
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 
@@ -665,17 +665,24 @@ example shows excellently how the quantities in both dimensions are
 related to each other.
 
 \section{Raw data from first principles calculations}
+\subsection{Quantities from First Principles Calculation}
 \label{sec:raw}
 
-TBD.
+\input{raw_data}
+
+\subsection{Density of States (DOS) plots for the materials studied}
+\label{sec:DOS}
 
 
+\input{DOS_figs}
+
+\subsection{Bandstructures of 2D Materials Calculated}
+\label{sec:bs}
+
+\input{BS_figures}
 
 
-
-
-
-
+\clearpage{}
 \section*{}
 \label{sec:ref}
 \bibliography{ref}
