@@ -614,26 +614,37 @@ unified and unprecedented way.
 \section{Theoretical Methods}
 \label{sec:org8457dbb}
 
-All results calculated for this paper were the result of \emph{ab initio}
-simulations carried out using plane-wave Density Functional Theory
-package VASP \cite{Kresse_1993,Kresse_1996_1,Kresse_1996_2} using the
-Projector Augmented Wave (PAW) approach with Kresse’s mainly GW
+All results calculated for this paper were the result of \emph{ab
+  initio} simulations carried out using plane-wave Density Functional
+Theory (DFT) package VASP
+\cite{Kresse_1993,Kresse_1996_1,Kresse_1996_2} using the Projector
+Augmented Wave (PAW) approach with Kresse’s mainly GW
 Pseudopotentials \cite{Kresse_1999_pseudopotentials}. Band gaps were
-calculated using the Hybrid functional HSE06, with Spin Orbit Coupling
-explicitly included. The geometries were converged both in cell
-parameters and ionic positions, with forces below 0.04 eV/Å. A vacuum
-spacing of at least 12 Å was used for each material. A K-Point grid of
-\(7\times7\times1\) was used to relax, with an initial relaxation
-carried out at PBE level and a subsequent relaxation carried out at
-HSE06 level, allowing both cell parameters and ionic positions to
-relax each time. In VASP, the tag PREC=High was used, giving a plane
-wave kinetic energy cutoff of 30\% greater than the highest given in
-the pseudopotentials used in each material, guaranteeing that absolute
-energies were converged to a few meV and the stress tensor to within a
-few kBar. A final HSE06 calculation with SOC was then carried out
-using a 14x14x1 K-Point grid, from which the density of states was
-taken.
-\todo{add more notes here}
+calculated using the Heyd-Scuseria-Ernzerhof hybrid functional (HSE06)
+\cite{Heyd_2003,HSE_2006}, with Spin Orbit Coupling (SOC) explicitly
+included. The geometries were converged both in cell parameters and
+ionic positions, with forces below 0.04 eV/\AA. To ensure the accuracy
+of dielectric property of monolayer, a vacuum spacing of $>$ 15 \AA is
+used. A k-point grid of \(7\times7\times1\) was used to relax the
+superlattice, with an initial relaxation carried out at the
+Perdew-Burke-Ernzerhof
+(PBE)\cite{Perdew_1996,Ernzerhof_1999,Paier_2005_PBE}
+exchange-correlation functional level and a subsequent relaxation
+carried out at HSE06 level, allowing both cell parameters and ionic
+positions to relax each time. In VASP, the tag PREC=High was used,
+giving a plane wave kinetic energy cutoff of 30\% greater than the
+highest given in the pseudopotentials used in each material,
+guaranteeing that absolute energies were converged to a few meV and
+the stress tensor to within a few kBar.  Calculation of the
+macroscopic ion-clamped dielectric tensor were carried out with an
+18$\times$18$\times$1 k-grid and electric field strength of 0.001
+eV/\AA. Bulk layered materials were constructed by relaxing the c-axis
+length of corresponding monolayer material with the interlayer van der
+Waals (vdW) interactions calculated by non-local vdW correlation
+functional\cite{Lee_2010_vdFD2}. The dielectric properties of bulk
+layered materials were calculated at PBE level with
+18$\times$18$\time$6 k-grid with same parameter as for monolayer.
+
 
 
 \bibliography{ref}

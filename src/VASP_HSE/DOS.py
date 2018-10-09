@@ -18,7 +18,8 @@ for m in materials:
 data = numpy.array(data)
 # plt.plot(data[:, 0], data[:, 2], "o")  # 2D
 # plt.plot(data[:, 2], data[:, 1], "o")  # 2D
-plt.plot(data[:, 3] ** -1, data[:, 1], "o")  # 2D
+plt.plot(data[:, 3], data[:, 1], "o")  # 2D
+plt.yscale("log")
 # plt.xlim(0, 2)
 
 plt.savefig("../../tmp_img/test_alpha_QC.pdf")
