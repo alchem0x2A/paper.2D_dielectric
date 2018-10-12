@@ -5,6 +5,9 @@ from scipy.constants import pi, k, epsilon_0, e
 
 data = json.load(open("../../data/HSE-data/all_data.json", "r"))
 
+def model_alpha(x, ratio=0.1657):
+    return 1 / ( ratio * x - 0.0243)
+
 maters = []
 alpha = []
 Eg = []
@@ -31,11 +34,16 @@ ax2 = ax1.twinx()
 
 res = sorted(zip(Eg, alpha, maters))
 maters = [n for e, a, n in res]
-ax = [a[0] for e, a, n in res]
+ax = [max(a[0], 1/1.2) for e, a, n in res]
 az = [a[1] for e, a, n in res]
 Eg = [e for e, a, n in res]
 
 xx = numpy.arange(0, len(maters))
+
+for r in numpy.linspace(0.12, 0.20, 100):
+    a_model = model_alpha(numpy.array(Eg), r)
+    ax1.plot(xx +0.5, a_model, color="cyan",
+             alpha=0.2)
 
 ax2.plot(Eg, "o-", markersize=6)
 ax1.bar(xx, ax, color="#FFCC00", alpha=0.7)
@@ -43,6 +51,7 @@ ax1.bar(xx, az, color="#FF5555", alpha=0.5)
 ax1.set_xticks(range(0, len(maters)))
 mnames = [n[0] + n[1:].replace("2", "$_{2}$") for n in maters]
 ax1.set_xticklabels(mnames, rotation="vertical")
+ax1.set_ylim(0, 13)
 plt.tight_layout()
 plt.savefig("../../tmp_img/all_data.svg")
 

@@ -16,10 +16,7 @@ import csv
 Extract the alpha from the HSE xlsx files
 """
 
-db_file = "../../data/gpaw_data/c2db.db"
-if not os.path.exists(db_file):
-    raise FileExistsError(("Please download the c2db data into ../../data/gpaw_data/ folder,"
-                   "from https://cmr.fysik.dtu.dk/_downloads/c2db.db"))
+db_file = "../../data/2D-bulk/bulk.db"
 
 
 db = ase.db.connect(db_file)
@@ -41,25 +38,42 @@ def get_thick(atom_row):
     zmax = numpy.max(pos + diff) - numpy.min(pos - diff)
     return zmax
 
-def get_bulk(name, proto):
+def get_bulk(name, proto, id=None):
     # Get bulk properties
-    dir_root = os.path.join("../../data/2D-bulk/{}-{}".format(name, proto))
-    gpw_file = os.path.join(dir_root, "gs.gpw")
-    traj_file = os.path.join(dir_root, "{}-{}_relax.traj".format(name, proto))
-    eps_file = os.path.join(dir_root, "eps_df.npz")
-    if (not os.path.exists(gpw_file)) or (not os.path.exists(eps_file)):
-        return None
-    else:
-        try:
-            d = Trajectory(traj_file)[-1].cell[-1][-1]
-        except Exception:
+    if id is None:
+        res = list(db.select(formula=name, prototype=proto))
+        if len(res) == 0:
             return None
-            # calc = GPAW(gpw_file)
-            # d = calc.get_atoms().cell[-1][-1]
-        f = numpy.load(eps_file)
-        eps_xx = f["eps_x"][0].real
-        eps_zz = f["eps_z"][0].real
-        return d, eps_xx, eps_zz
+        r = res[0]
+    else:
+        r = db.get(id)    
+    try:
+        L = r.bulk_L
+        eps_para = (r.bulk_eps_x + r.bulk_eps_y) / 2
+        eps_perp = r.bulk_eps_z
+        if eps_para < 0 or eps_perp < 0:
+            return None
+    except Exception:
+        return None
+    return L, eps_para, eps_perp
+    
+    # dir_root = os.path.join("../../data/2D-bulk/{}-{}".format(name, proto))
+    # gpw_file = os.path.join(dir_root, "gs.gpw")
+    # traj_file = os.path.join(dir_root, "{}-{}_relax.traj".format(name, proto))
+    # eps_file = os.path.join(dir_root, "eps_df.npz")
+    # if (not os.path.exists(gpw_file)) or (not os.path.exists(eps_file)):
+    #     return None
+    # else:
+    #     try:
+    #         d = Trajectory(traj_file)[-1].cell[-1][-1]
+    #     except Exception:
+    #         return None
+    #         # calc = GPAW(gpw_file)
+    #         # d = calc.get_atoms().cell[-1][-1]
+    #     f = numpy.load(eps_file)
+    #     eps_xx = f["eps_x"][0].real
+    #     eps_zz = f["eps_z"][0].real
+    #     return d, eps_xx, eps_zz
 
 reader = csv.reader(open("../../data/HSE-data/2D_HSE.csv", encoding="utf8"))
 next(reader)                    # skip line1
@@ -84,15 +98,39 @@ for row in reader:
                 eps_x_3D.append((ex_3D, ex_simu))
                 eps_z_3D.append((ez_3D, ez_simu))
                 Eg_HSE.append(E)
-            mol = list(db.select(formula=name, prototype=proto))[0]
-            thick.append(get_thick(mol))
+            # mol = list(db.select(formula=name, prototype=proto))[0]
+            # thick.append(get_thick(mol))
 
 alpha_x = numpy.array(alpha_x)
 alpha_z = numpy.array(alpha_z)
 eps_x_3D = numpy.array(eps_x_3D)
 eps_z_3D = numpy.array(eps_z_3D)
 Eg_HSE = numpy.array(Eg_HSE)
-thick = numpy.array(thick)
+# thick = numpy.array(thick)
+
+eps_x_gpaw = []
+eps_z_gpaw = []
+for db_id in range(1, db.count() + 1):  # db index starts with 1
+    mol = db.get(db_id)
+    # if any(hasattr(mol, key) is False for key in ["alphax", "alphay", "alphaz",
+                                         # "bulk_L", "bulk_eps_x", "bulk_eps_y",
+                                         # "bulk_eps_z"]):
+        # continue
+    # if mol.bulk_calculated is False:
+        # continue
+    try:
+        ax = (mol.alphax +  mol.alphay) / 2
+        az = mol.alphaz
+        L, ex, ez = get_bulk(None, None, db_id)
+        ex_simu = 1 + 4 * pi * ax / L
+        ez_simu = 1 / (1 - 4 * pi * az / L)
+        eps_x_gpaw.append((ex, ex_simu))
+        eps_z_gpaw.append((ez, ez_simu))
+    except Exception:
+        continue
+eps_x_gpaw = numpy.array(eps_x_gpaw)
+eps_z_gpaw = numpy.array(eps_z_gpaw)
+print(eps_x_gpaw.shape, eps_z_gpaw.shape)
 
 # cond = numpy.where(Eg_HSE > 0.6)
 # Eg_HSE = Eg_HSE[cond]
@@ -110,9 +148,11 @@ def fit_func(x, a,b):
 
 
 # x-direction
-MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
-print(MAE)
+# MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
+# print(MAE)
 plt.figure(figsize=(3, 2.8))
+plt.plot(eps_x_gpaw[:, 1], eps_x_gpaw[:, 0], "s",
+         alpha=0.2, color="grey")
 plt.scatter(eps_x_3D[:, 1], eps_x_3D[:, 0],
             c=Eg_HSE,
             alpha=0.5,
@@ -129,6 +169,9 @@ plt.savefig(os.path.join(img_path, "eps_3D_xx.svg"))
 
 # z-direction
 plt.figure(figsize=(3, 2.8))
+plt.plot(eps_z_gpaw[:, 1], eps_z_gpaw[:, 0],
+         "s",
+         alpha=0.2, color="brown")
 plt.scatter(eps_z_3D[:, 1],
             eps_z_3D[:, 0], alpha=0.5,
             c=Eg_HSE,

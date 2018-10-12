@@ -7,6 +7,7 @@ from scipy.stats import linregress
 from scipy.optimize import curve_fit
 import os, os.path
 from scipy.constants import pi, epsilon_0
+from gpaw_data import get_data
 import scipy
 import csv
 
@@ -49,6 +50,7 @@ for row in reader:
             e_xy = numpy.sqrt(ex * ey)
             ax = (e_xy - 1) / (4 * pi) * L
             az = (1 - 1/ez) * L / (4 * pi)
+            ax = max(1 / 1.2, ax)
             eps_x.append(e_xy); eps_z.append(ez)
             alpha_x.append(ax); alpha_z.append(az)
             Eg_HSE.append(E)
@@ -81,7 +83,7 @@ plt.subplot(121)
 plt.scatter(Eg_HSE, alpha_x, marker="o", alpha=0.5, c=cs)
 def fit_func(x, a,b):
     return b / x
-
+'''
 fit_param, cov = curve_fit(fit_func,
                       xdata=Eg_HSE, ydata=alpha_x,
                       p0=(0, 10))
@@ -113,39 +115,54 @@ yy = fit_func(xx, *fit_param)
 plt.plot(Eg_HSE, alpha_x, "o", alpha=0.5)
 plt.plot(xx, yy, "--")
 plt.savefig(os.path.join(img_path, "alpha_fit_naive.pdf"))
+'''
 
-
+gp_data = get_data()
 
 # x-direction
-plt.figure(figsize=(3.5, 3.5))
-plt.scatter(Eg_HSE, 1 / (alpha_x), marker="o",
+fig = plt.figure(figsize=(3, 3))
+ax = fig.add_subplot(111)
+# gpaw
+ax.scatter(gp_data[2], 1 / gp_data[0], marker="s", alpha=0.1,
+           c="#7289af")
+# hse
+ax.scatter(Eg_HSE, 1 / (alpha_x), marker="o",
             edgecolors=None, alpha=0.5,
             c=cs)
 res = linregress(x=Eg_HSE, y=1 / (alpha_x))
 print(res)
-xx = numpy.linspace(min(Eg_HSE), max(Eg_HSE))
+xx = numpy.linspace(min(gp_data[2]), max(gp_data[2]))
 yy = res.slope * xx + res.intercept
 # for mat, x, y in zip(materials, Eg_HSE ** -p, alpha_x):
     # plt.text(x=x, y=y * 4 * pi, s=mat)
-plt.plot(xx, yy, "--")
-plt.title("$y={0:.4f}x+{1:.4f},\ R^2={2:.4f}$".format(res.slope, res.intercept, res.rvalue))
-plt.xlabel("$E_{\\rm{g}}$ (eV)")
-plt.ylabel("$1/\\alpha_{xx} \\varepsilon_0$ ($1/\\AA$)")
-plt.savefig(os.path.join(img_path, "alpha_xx_1_Eg_HSE.svg"))
+ax.plot(xx, yy, "--")
+ax.set_title("$y={0:.4f}x+{1:.4f},\ R^2={2:.4f}$".format(res.slope, res.intercept, res.rvalue))
+ax.set_xlabel("$E_{\\rm{g}}$ (eV)")
+ax.set_ylabel("$1/\\alpha_{xx} \\varepsilon_0$ ($1/\\AA$)")
+ax.set_xlim(0, 8)
+# ax.set_xticks([1,3,5,7])
+fig.tight_layout()
+fig.savefig(os.path.join(img_path, "alpha_xx_1_Eg_HSE.svg"))
 
 # z-direction
-plt.figure(figsize=(3.5, 3.5))
-plt.scatter(thick, alpha_z, marker="o",
+fig = plt.figure(figsize=(3, 3))
+ax = fig.add_subplot(111)
+# gpaw
+ax.scatter(gp_data[3], gp_data[1], marker="s", alpha=0.1,
+           c="#cca384")
+# hse
+ax.scatter(thick, alpha_z, marker="o",
             edgecolors=None,
             alpha=0.5, c=cs)
 res = linregress(x=thick, y=alpha_z)
 print(res)
-xx = numpy.linspace(min(thick), max(thick))
+xx = numpy.linspace(min(gp_data[3]), max(gp_data[3]))
 yy = res.slope * xx + res.intercept
-plt.plot(xx, yy, "--")
+ax.plot(xx, yy, "--")
 # plt.colorbar()
-plt.title("$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
-plt.xlabel("Thickness ($\\AA$)")
-plt.ylabel("$\\alpha_{zz} / \\varepsilon_0$ ($\\AA$)")
-plt.savefig(os.path.join(img_path, "alpha_zz_thick_HSE.svg"))
+ax.set_title("$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
+ax.set_xlabel("Thickness ($\\AA$)")
+ax.set_ylabel("$\\alpha_{zz} / \\varepsilon_0$ ($\\AA$)")
+fig.tight_layout()
+fig.savefig(os.path.join(img_path, "alpha_zz_thick_HSE.svg"))
 
