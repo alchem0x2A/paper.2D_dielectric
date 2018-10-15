@@ -30,6 +30,7 @@ def get_thick(atom_row):
 
 def get_data():
     candidates = db.select(selection="gap_gw>0.5")
+    candidates = db.select(selection="gap_gw>0.05")
     materials = []
     alpha_x = []
     alpha_z = []

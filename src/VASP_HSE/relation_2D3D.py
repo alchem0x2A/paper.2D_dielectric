@@ -38,7 +38,7 @@ def get_thick(atom_row):
     zmax = numpy.max(pos + diff) - numpy.min(pos - diff)
     return zmax
 
-def get_bulk(name, proto, id=None):
+def get_bulk(name, proto, id=None, method="gpaw"):
     # Get bulk properties
     if id is None:
         res = list(db.select(formula=name, prototype=proto))
@@ -48,9 +48,17 @@ def get_bulk(name, proto, id=None):
     else:
         r = db.get(id)    
     try:
-        L = r.bulk_L
-        eps_para = (r.bulk_eps_x + r.bulk_eps_y) / 2
-        eps_perp = r.bulk_eps_z
+        if method.lower() == "gpaw":
+            L = r.bulk_L
+            eps_para = (r.bulk_eps_x + r.bulk_eps_y) / 2
+            eps_perp = r.bulk_eps_z
+        # VASP version below:
+        elif method.lower() == "vasp":
+            L = r.bulk_L_vasp
+            eps_para = (r.bulk_eps_x_vasp + r.bulk_eps_y_vasp) / 2
+            eps_perp = r.bulk_eps_z_vasp
+        else:
+            return None
         if eps_para < 0 or eps_perp < 0:
             return None
     except Exception:
@@ -86,7 +94,7 @@ for row in reader:
             e_xy = numpy.sqrt(ex * ey)
             ax = (e_xy - 1) / (4 * pi) * L
             az = (1 - 1/ez) * L / (4 * pi)
-            bulk_res = get_bulk(name, proto)
+            bulk_res = get_bulk(name, proto, method="vasp")
             if bulk_res is not None:
                 materials.append("-".join((name, proto)))
                 eps_x.append(e_xy); eps_z.append(ez)
@@ -121,7 +129,7 @@ for db_id in range(1, db.count() + 1):  # db index starts with 1
     try:
         ax = (mol.alphax +  mol.alphay) / 2
         az = mol.alphaz
-        L, ex, ez = get_bulk(None, None, db_id)
+        L, ex, ez = get_bulk(None, None, db_id, method="gpaw")
         ex_simu = 1 + 4 * pi * ax / L
         ez_simu = 1 / (1 - 4 * pi * az / L)
         eps_x_gpaw.append((ex, ex_simu))
@@ -145,12 +153,22 @@ plt.style.use("science")
 def fit_func(x, a,b):
     return a+b / x
 
-
+cond = numpy.where(eps_x_gpaw[:, 0] < 25)
+cond2 = numpy.where(eps_x_3D[:, 0] < 25)
 
 # x-direction
 # MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
 # print(MAE)
+# MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
+# print(MAE)
 plt.figure(figsize=(3, 2.8))
+res = linregress(eps_x_gpaw[:, 1][cond], eps_x_gpaw[:, 0][cond])
+print(res)
+res2 = linregress(eps_x_3D[:, 1][cond2], eps_x_3D[:, 0][cond2])
+print(res2)
+xx = numpy.linspace(0, 30)
+yy = res.slope * xx + res.intercept
+plt.plot(xx, yy, "-.")
 plt.plot(eps_x_gpaw[:, 1], eps_x_gpaw[:, 0], "s",
          alpha=0.2, color="grey")
 plt.scatter(eps_x_3D[:, 1], eps_x_3D[:, 0],
@@ -168,19 +186,29 @@ plt.tight_layout()
 plt.savefig(os.path.join(img_path, "eps_3D_xx.svg"))
 
 # z-direction
+cond = numpy.where((eps_z_gpaw[:, 0] < 11) & (eps_z_gpaw[:, 1] > 0) & (eps_z_gpaw[:, 1] <10))
+cond2 = numpy.where((eps_z_3D[:, 0] < 10) & (0 < eps_z_3D[:, 1]) & (eps_z_3D[:, 1] < 10))
 plt.figure(figsize=(3, 2.8))
-plt.plot(eps_z_gpaw[:, 1], eps_z_gpaw[:, 0],
+res = linregress(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond])
+print(res)
+res2 = linregress(eps_z_3D[:, 1][cond2], eps_z_3D[:, 0][cond2])
+print(res2)
+xx = numpy.linspace(0, 10)
+yy = res.slope * xx + res.intercept
+plt.plot(xx, yy, "-.")
+plt.plot(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond],
          "s",
          alpha=0.2, color="brown")
-plt.scatter(eps_z_3D[:, 1],
-            eps_z_3D[:, 0], alpha=0.5,
-            c=Eg_HSE,
+plt.scatter(eps_z_3D[:, 1][cond2],
+            eps_z_3D[:, 0][cond2], alpha=0.5,
+            c=Eg_HSE[cond2],
             cmap="jet"
 )
+
 plt.plot(numpy.linspace(0, 10), numpy.linspace(0, 10), "--")
 plt.ylim(0, 10)
 plt.xlim(0, 10)
-cb = plt.colorbar()
+# cb = plt.colorbar()
 cb.ax.set_title("$E_{\mathrm{g}}$ (eV)")
 plt.ylabel("eps bulk zz from DFT")
 plt.xlabel("eps bulk zz from alpha")
