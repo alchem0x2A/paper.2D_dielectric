@@ -88,7 +88,7 @@ next(reader)                    # skip line1
 for row in reader:
     if row[4] != "":
         name, proto = row[: 2]
-        print(name, proto)
+        # print(name, proto)
         L, E, ex, ey, ez, *_ = map(float, row[2:])
         if ez < ex:
             e_xy = numpy.sqrt(ex * ey)
@@ -100,9 +100,10 @@ for row in reader:
                 eps_x.append(e_xy); eps_z.append(ez)
                 alpha_x.append(ax); alpha_z.append(az)
                 L_3D, ex_3D, ez_3D = bulk_res
-                print(L_3D, ex_3D, ez_3D)
+                # print(L_3D, ex_3D, ez_3D)
                 ex_simu = 1 + 4 * pi * ax / L_3D
                 ez_simu = 1 / (1 - 4 * pi * az / L_3D)
+                print(name, proto, ex_3D, ex_simu)
                 eps_x_3D.append((ex_3D, ex_simu))
                 eps_z_3D.append((ez_3D, ez_simu))
                 Eg_HSE.append(E)
@@ -153,15 +154,16 @@ plt.style.use("science")
 def fit_func(x, a,b):
     return a+b / x
 
-cond = numpy.where(eps_x_gpaw[:, 0] < 25)
-cond2 = numpy.where(eps_x_3D[:, 0] < 25)
+upper = 25
+cond = numpy.where(eps_x_gpaw[:, 0] < upper)
+cond2 = numpy.where(eps_x_3D[:, 0] < upper)
 
 # x-direction
 # MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
 # print(MAE)
 # MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
 # print(MAE)
-plt.figure(figsize=(3, 2.8))
+plt.figure(figsize=(2.8, 2.5))
 res = linregress(eps_x_gpaw[:, 1][cond], eps_x_gpaw[:, 0][cond])
 print(res)
 res2 = linregress(eps_x_3D[:, 1][cond2], eps_x_3D[:, 0][cond2])
@@ -169,15 +171,17 @@ print(res2)
 xx = numpy.linspace(0, 30)
 yy = res.slope * xx + res.intercept
 plt.plot(xx, yy, "-.")
-plt.plot(eps_x_gpaw[:, 1], eps_x_gpaw[:, 0], "s",
+plt.plot(eps_x_gpaw[:, 1][cond], eps_x_gpaw[:, 0][cond], "s",
          alpha=0.2, color="grey")
-plt.scatter(eps_x_3D[:, 1], eps_x_3D[:, 0],
-            c=Eg_HSE,
+
+plt.scatter(eps_x_3D[:, 1][cond2], eps_x_3D[:, 0][cond2],
+            c=Eg_HSE[cond2],
             alpha=0.5,
             cmap="jet")
-plt.plot(numpy.linspace(0, 30), numpy.linspace(0, 30), "--")
-plt.xlim(0, 30)
-plt.ylim(0, 30)
+print()
+plt.plot(numpy.linspace(1, upper), numpy.linspace(1, upper), "--")
+plt.xlim(1, upper)
+plt.ylim(1, upper)
 cb = plt.colorbar()
 cb.ax.set_title("$E_{\mathrm{g}}$ (eV)")
 plt.ylabel("eps bulk xx from DFT")
@@ -186,14 +190,15 @@ plt.tight_layout()
 plt.savefig(os.path.join(img_path, "eps_3D_xx.svg"))
 
 # z-direction
-cond = numpy.where((eps_z_gpaw[:, 0] < 11) & (eps_z_gpaw[:, 1] > 0) & (eps_z_gpaw[:, 1] <10))
-cond2 = numpy.where((eps_z_3D[:, 0] < 10) & (0 < eps_z_3D[:, 1]) & (eps_z_3D[:, 1] < 10))
-plt.figure(figsize=(3, 2.8))
+upper = 10
+cond = numpy.where((eps_z_gpaw[:, 0] < upper) & (eps_z_gpaw[:, 1] > 0) & (eps_z_gpaw[:, 1] < upper))
+cond2 = numpy.where((eps_z_3D[:, 0] < upper) & (0 < eps_z_3D[:, 1]) & (eps_z_3D[:, 1] < upper))
+plt.figure(figsize=(2.8, 2.5))
 res = linregress(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond])
 print(res)
 res2 = linregress(eps_z_3D[:, 1][cond2], eps_z_3D[:, 0][cond2])
 print(res2)
-xx = numpy.linspace(0, 10)
+xx = numpy.linspace(1, upper)
 yy = res.slope * xx + res.intercept
 plt.plot(xx, yy, "-.")
 plt.plot(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond],
@@ -205,10 +210,10 @@ plt.scatter(eps_z_3D[:, 1][cond2],
             cmap="jet"
 )
 
-plt.plot(numpy.linspace(0, 10), numpy.linspace(0, 10), "--")
-plt.ylim(0, 10)
-plt.xlim(0, 10)
-# cb = plt.colorbar()
+plt.plot(numpy.linspace(1, upper), numpy.linspace(1, upper), "--")
+plt.ylim(1, upper)
+plt.xlim(1, upper)
+cb = plt.colorbar()
 cb.ax.set_title("$E_{\mathrm{g}}$ (eV)")
 plt.ylabel("eps bulk zz from DFT")
 plt.xlabel("eps bulk zz from alpha")
