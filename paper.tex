@@ -247,58 +247,149 @@ we will reveal the universal Moss-like relation of 2D materials.
 \subsection{Universal Relations for 2D Polarizabilities}
 \label{sec:first-principles}
 
-In this letter, We study several types of 2D materials of different
-electronic and optical properties, including transition metal
-dichalcogenides (TMDCs, with the formula MX\(_{\text{2}}\), where M is
-a metal in group 4, 6, 10 and X=O, S, Se, Te), metal monochalcogenides
-(Ga$_{2}$S$_{2}$, Ga$_{2}$Se$_{2}$), cadmium halides (CdX$_2$, X=Cl,
-I), hexagonal boron nitride (BN), graphene derivatives (fluorographene
-(C$_{2}$F$_{2}$), graphane (C$_{2}$H$_{2}$)) and phosphorene (P$4$).
-For the TMDCs, we consider 2 lattice phases, namely the 2H
-(P\(\bar{6}\)m2 space group) and 1T (P3m1 space group).  The elements
-involved in this study and the structures of the 2D materials are
-shown in Figure \ref{fig-2}a and \ref{fig-2}b, respectively. The
-static 2D polarizabilities are calculated from the static dielectric
-response of the selected 2D materials using density functional theory
-(DFT) with Heyd-Scuseria-Ernzerhof hybrid functionals (HSE06) in the
-Vienna Ab Initio Simulation Package (VASP) including spin-orbit
-coupling to avoid limitations on the description of band gaps and
-dielectric functions. Further details for the first principle
-calculations please refer to \textit{Methods}.
+We study several types of 2D materials of different electronic and
+optical properties, including transition metal dichalcogenides (TMDCs,
+with the formula MX\(_{\text{2}}\), where M is a metal in group 4, 6,
+10 and X=O, S, Se, Te), metal monochalcogenides (Ga$_{2}$S$_{2}$,
+Ga$_{2}$Se$_{2}$), cadmium halides (CdX$_2$, X=Cl, I), hexagonal boron
+nitride (BN), graphene derivatives (fluorographene (C$_{2}$F$_{2}$),
+graphane (C$_{2}$H$_{2}$)) and phosphorene (P$_{4}$).  For the TMDCs,
+we consider 2 lattice phases, namely the 2H (P\(\bar{6}\)m2 space
+group) and 1T (P3m1 space group).  The structures and elements of the
+2D materials are shown in Figure \ref{fig-2}a and \ref{fig-2}b,
+respectively. The static 2D polarizabilities are calculated from the
+static dielectric response of the selected 2D materials using density
+functional theory (DFT) with the Heyd-Scuseria-Ernzerhof hybrid
+functionals (HSE06) using the Vienna Ab Initio Simulation Package (VASP)
+including spin-orbit coupling to avoid limitations on the description
+of band gaps and dielectric functions. Further details for the first
+principle calculations please refer to \textit{Methods}.
 
-Figure \ref{fig-3}a shows the calculated $E_{\mathrm{g}}$ (blue dots)
-and polarizabilities (bar plots) of all the 2D materials investigated,
-covering a wide bandgap range of over 6 eV. The 2D polarizability
-$\alpha $has the unit of Farad, and is more intuitive to be expressed
-in the form $\alpha/(4 \pi \varepsilon_{0})$, which has the unit of
-[Length] (similar to the molecular polarizability, which has the unit
-of $4\pi \varepsilon_{0}\times$[Volume] \cite{Israelachvili_2011}). We
-find that $\alpha^{\parallel}$ has a general descending trend when
-$E_{\mathrm{g}}$ increases. On the other hand, no apparent trend
-between $\alpha^{\perp}$ and $E_{\mathrm{g}}$ is observed (more
-details see Supplementary Figure SXX \todo{TBD}). Recently, it is
-found that the exciton binding energy $E_{\mathrm{b}}$ of 2D materials
-exhibits universal linear relation with $E_{\mathrm{g}}$
-\cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}. Combine
-with the fact that the $E_{\mathrm{b}}$ is roughly inversely
-proportional to $\alpha^{\parallel}$ \cite{Pulci_2014}, it is
-reasonable to guess that a general linear correlation between
-$E_{\mathrm{g}}$ and $1/\alpha^{\parallel}$ may exist for 2D
-materials. Figure \ref{fig-3}c shows
-$(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ (in \AA{}) as a function
-of $E_{\mathrm{g}}$ (in eV) for the 2D materials investigated, with a
-linear regression slope of ~0.166 and $R^{2}$ of 0.84. We observe that
-materials with lower $E_{\mathrm{g}}$ (<4 eV) generally lie close to
-the regression line, while the deviation becomes greater for materials
-with $E_{\mathrm{g}}>$4 eV, which has also been observed in the
-$E_{\mathrm{b}}-E_{\mathrm{g}}$ relation of 2D materials
-\cite{Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}. We also observe that
-$E_{\mathrm{g}}$ calculated on the HSE06 level shows better linear
-correlation with $1/\alpha^{\parallel}$ compared with the bandgap
-calculated using the Perdew–Burke–Ernzerhof (PBE) method (details see
-Supplementary Information SXX \todo{TBD}). This can be explained by
-the fact that the HSE06 hybrid functionals generally have a better
-prediction for the bandgap of a material than the PBE method
+Figure \ref{fig-3}a shows the calculated bandgap $E_{\mathrm{g}}$
+(blue dots) and polarizabilities (bar plots) of all the 2D materials
+investigated, covering a wide bandgap range from far infrared to
+ultraviolet. From dimension analysis, it is more intuitive to express
+the polarizability as $\alpha/(4 \pi \varepsilon_{0})$, which has unit
+of \AA. We find that $\alpha^{\parallel}$ has a general descending
+trend when $E_{\mathrm{g}}$ increases. On the other hand, no apparent
+trend between $\alpha^{\perp}$ and $E_{\mathrm{g}}$ is observed (more
+details see Supplementary Section S2.2).  Combining recent theoretical
+findings of the universal linear relation between exciton binding
+energy $E_{\mathrm{b}}$ and bandgap $E_{\mathrm{b}}$ of 2D materials
+\cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
+fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
+$\alpha^{\parallel}$ \cite{Pulci_2014}, it is reasonable to guess that
+a general Moss-like relation between $E_{\mathrm{g}}$ and
+$1/\alpha^{\parallel}$ may exist for 2D materials. On the other hand,
+the bandgap-independent relation of $\alpha^{\perp}$ resembles
+molecular polarizabilities of conjugate molecules \cite{Davies_1952},
+fullerenes \cite{Sabirov_2014} and carbon nanotubes
+\cite{Benedict_1995}, which are shown to be geometry-dependent. Next
+we show that the universal Moss-like relations exist for both
+$\alpha^{\parallel}$ and $\alpha^{\perp}$.
+
+Similar to the treatment of quantum wells (QW), the wavefunction of an
+isolated 2D material $\psi(\mathbf{r})$ can be separated into the in-
+and out-of-plane components \cite{davies_physics_1997}
+$\psi^{\parallel}(\mathbf{\rho})$ and $\psi^{\perp}(z)$, such that
+$\psi=\psi^{\parallel}\psi^{\perp}$, where $\mathbf{\rho}=(x, y)$ is
+the in-plane coordinate. Using the Bloch theorem, the periodic
+$\psi^{\parallel}(\mathbf{\rho})$ can be further expressed as
+$\psi^{\parallel}(\mathbf{\rho})=e^{ik\rho}u(\rho)$, where $k$ is the
+in-plane wave vector and $u(\rho)$ is periodic function in the
+xy-planeAccording to the random phase approximation (RPA)
+theory\cite{Adler_1962}, $\varepsilon_{\mathrm{SL}}$ is the
+$\mathbf{q} \to 0$ and $\omega \to 0$ limits of the non-interacting
+dielectric function $\varepsilon(\mathbf{q}, \omega)$, where
+$\mathbf{q}$ is the momentum transfer and $\omega$ is the frequency:
+\begin{equation}
+  \label{eq:RPA-eps2}
+  \varepsilon_{\mathrm{SL}}
+  = \lim_{\mathbf{q} \to 0} 1 + \frac{2e^{2}}{\varepsilon_{0} |q|^{2} \Omega}
+  \sum_{\mathrm{k, c, v}}
+  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
+  \left[f(\psi_{\mathrm{c}}) - f(\psi_{\mathrm{v}})\right]
+\end{equation}
+where $e$ is the unit charge, c, v are the conduction and valence
+bands, $E$ is the eigenenergy of individual bands, and $f$ is the
+Fermi-Dirac distribution function. Taking the limit that $L\to\infty$,
+when $\varepsilon^{\perp}_{\mathrm{SL}} \approx 1$, we have
+$1-1/\varepsilon^{\perp}_{\mathrm{SL}} \approx
+(\varepsilon_{\mathrm{SL}}^{\perp} - 1)$. Combine this with
+Eqs. \ref{eq:alpha-para-def}, \ref{eq:alpha-perp-def} and
+\ref{eq:RPA-eps2}, and taking the difference between the properties of
+in-plane and out-of-plane polarizabilities, we derive the expressions
+for $\alpha^{\parallel}$ and $\alpha^{\perp}$ under small perturbation
+(details see Supplementary Section SXX \todo{mark!}):
+\begin{subequations}
+  \begin{eqnarray}
+  \label{eq:alpha_para_RPA}
+  & \alpha^{\parallel} &= \frac{2e^{2}}
+  {(2 \pi)^{2}} \int d^{2}\mathbf{k} \sum_{\mathrm{c, v}}
+  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}}
+                         {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
+  \label{eq:alpha_perp_RPA}
+  & \alpha^{\perp} &= \frac{2e^{2}}{(2 \pi) ^{2}} \int d^{2}\mathbf{k}
+  \sum_{\mathrm{c, v}}
+  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|z|\psi_{\mathrm{c}}(\mathbf{k})>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
+  \end{eqnarray}
+\end{subequations}
+where the integral is performed within the first Brillouin Zone (BZ)
+in the reciprocal $\mathbf{k}$-plane. Although they only differ by the
+numerator inside the integral, the distinct behaviors of $u(\rho)$
+(periodic function) and $\psi(z)$ (confined to the 2D material) give
+rise to the different relations of $\alpha^{\parallel}$ and
+$\alpha^{\perp}$. Using the $\mathbf{k} \cdot \mathbf{p}$ theory,
+Eq. \ref{eq:alpha_para_RPA} is evaluated to be
+$\alpha^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$, where $N$ is the
+degeneracy associated with the minimal bandgap
+\cite{Jiang_2017_Eg_Eb}. On the contrary, $\psi(z)$ is the solution to
+the Schr\"{o}dinger equation Hamiltonian
+$\mathcal{H} = -\hbar^{2}/2m^{*} \nabla^{2} + V(z)$, where $\hbar$ is
+the reduced Planck constant, $m^{*}$ is reduced mass and $V(z)$ is the
+confined Coulombic potential along the z-direction created by the
+nuclei \cite{davies_physics_1997,ihn_semiconductor_2009}. Using a
+simple particle-in-well model, we show that both the numerator and
+denominator parts of Eq. \ref{eq:alpha_perp_RPA} are independent of
+$E_{g}$ but instead modulated by the size of the potential confinement
+(details see Supplementary Section SXX\todo{note}). We further prove,
+using both quantum mechanical and fundamental electrostatic models,
+that $\alpha^{\perp}$ is actually proportional to the size of
+potential confinement (details see Supplementary Section
+SXX\todo{note}), which we may relate with the thickness $\delta$ of
+the 2D material. Now we may finally propose the 2D analog of the Moss
+relation with both in- and out-of-plane polarizations:
+\begin{subequations}
+\begin{eqnarray}
+\label{eq:2D-Moss-para}
+  &\alpha^{\parallel} &\propto E_{g}^{-1} \\
+  \label{eq:2D-Moss-perp}
+  &\alpha^{\perp} & \propto \delta
+\end{eqnarray}
+\end{subequations}
+which form the main conclusion of this work.
+
+
+
+
+
+Figure \ref{fig-3}c
+shows $(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ (in \AA{}) as a
+function of $E_{\mathrm{g}}$ (in eV) for the 2D materials
+investigated, with a linear regression slope of ~0.166 and $R^{2}$ of
+0.84. We observe that materials with lower $E_{\mathrm{g}}$ (<4 eV)
+generally lie close to the regression line, while the deviation
+becomes greater for materials with $E_{\mathrm{g}}>$4 eV, which has
+also been observed in the $E_{\mathrm{b}}-E_{\mathrm{g}}$ relation of
+2D materials \cite{Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}. We also
+observe that $E_{\mathrm{g}}$ calculated on the HSE06 level shows
+better linear correlation with $1/\alpha^{\parallel}$ compared with
+the bandgap calculated using the Perdew–Burke–Ernzerhof (PBE) method
+(details see Supplementary Information SXX \todo{TBD}). This can be
+explained by the fact that the HSE06 hybrid functionals generally have
+a better prediction for the bandgap of a material than the PBE method
 \todo{some reference?}. It should be noted that although even more
 accurate estimation of both $\varepsilon$ and $E_{\mathrm{g}}$ can be
 achieved via many-body Green’s function method (GW) together with the
@@ -353,6 +444,8 @@ apparent correlations are found (details see Supplementary Section SXX
 \todo{note}). In the next section, we will show the theoretical
 backgrounds of such universal relations of 2D polarizabilities.
 
+
+\iffalse
 \subsection{Theoretical Explanations}
 \label{sec:theory}
 
@@ -497,6 +590,7 @@ we are able to quantitatively predict and design the dielectric nature
 of a new 2D material by engineering the bandgap and geometry, which
 can greatly enhance our understanding and application of 2D materials.
 
+\fi
 
 
 \subsection{Bridging the 2D and 3D Dielectric Properties}
