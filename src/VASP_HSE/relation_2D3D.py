@@ -103,6 +103,7 @@ for row in reader:
                 # print(L_3D, ex_3D, ez_3D)
                 ex_simu = 1 + 4 * pi * ax / L_3D
                 ez_simu = 1 / (1 - 4 * pi * az / L_3D)
+                # ez_simu = 4 * pi * az / L_3D
                 print(name, proto, ex_3D, ex_simu)
                 eps_x_3D.append((ex_3D, ex_simu))
                 eps_z_3D.append((ez_3D, ez_simu))
@@ -119,6 +120,8 @@ Eg_HSE = numpy.array(Eg_HSE)
 
 eps_x_gpaw = []
 eps_z_gpaw = []
+alpha_z_gpaw = []
+L_gpaw = []
 for db_id in range(1, db.count() + 1):  # db index starts with 1
     mol = db.get(db_id)
     # if any(hasattr(mol, key) is False for key in ["alphax", "alphay", "alphaz",
@@ -133,12 +136,18 @@ for db_id in range(1, db.count() + 1):  # db index starts with 1
         L, ex, ez = get_bulk(None, None, db_id, method="gpaw")
         ex_simu = 1 + 4 * pi * ax / L
         ez_simu = 1 / (1 - 4 * pi * az / L)
+        # ez_simu = 4 * pi * az / L
         eps_x_gpaw.append((ex, ex_simu))
         eps_z_gpaw.append((ez, ez_simu))
+        alpha_z_gpaw.append(az)
+        L_gpaw.append(L)
     except Exception:
         continue
 eps_x_gpaw = numpy.array(eps_x_gpaw)
 eps_z_gpaw = numpy.array(eps_z_gpaw)
+alpha_z_gpaw = numpy.array(alpha_z_gpaw)
+L_gpaw = numpy.array(L_gpaw)
+print(eps_x_3D.shape)
 print(eps_x_gpaw.shape, eps_z_gpaw.shape)
 
 # cond = numpy.where(Eg_HSE > 0.6)
@@ -191,7 +200,7 @@ plt.savefig(os.path.join(img_path, "eps_3D_xx.svg"))
 
 # z-direction
 upper = 10
-cond = numpy.where((eps_z_gpaw[:, 0] < upper) & (eps_z_gpaw[:, 1] > 0) & (eps_z_gpaw[:, 1] < upper))
+cond = numpy.where((eps_z_gpaw[:, 0] < upper) & (eps_z_gpaw[:, 1] > 0) & (eps_z_gpaw[:, 1] < upper) )
 cond2 = numpy.where((eps_z_3D[:, 0] < upper) & (0 < eps_z_3D[:, 1]) & (eps_z_3D[:, 1] < upper))
 plt.figure(figsize=(2.8, 2.5))
 res = linregress(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond])
@@ -200,6 +209,16 @@ res2 = linregress(eps_z_3D[:, 1][cond2], eps_z_3D[:, 0][cond2])
 print(res2)
 xx = numpy.linspace(1, upper)
 yy = res.slope * xx + res.intercept
+
+ez = eps_z_gpaw[cond]; az = alpha_z_gpaw[cond]; ll = L_gpaw[cond]
+
+def model(X, A, B, C):
+    a = X[:, 0]; L = X[:, 1]
+    return A - B / (1 + 4 * pi * a / L - C)
+
+from scipy.optimize import curve_fit
+# xx = numpy.hstack()
+# res = curve_fit(model, az)
 plt.plot(xx, yy, "-.")
 plt.plot(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond],
          "s",
@@ -212,6 +231,7 @@ plt.scatter(eps_z_3D[:, 1][cond2],
 
 plt.plot(numpy.linspace(1, upper), numpy.linspace(1, upper), "--")
 plt.ylim(1, upper)
+# plt.xlim(1, 2)
 plt.xlim(1, upper)
 cb = plt.colorbar()
 cb.ax.set_title("$E_{\mathrm{g}}$ (eV)")
