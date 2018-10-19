@@ -206,12 +206,14 @@ $\boldsymbol{E}_{\mathrm{loc}}^{\perp}=\boldsymbol{E}^{\perp}+\boldsymbol{\mu}^{
 Eqs. \ref{eq:def-eps-1} and \ref{eq:def-eps-2}, we derive the
 expressions for the in-plane and out-of-plane 2D polarizabilities,
 $\alpha^{\parallel}$ and $\alpha^{\perp}$, respectively:
+\begin{subequations}
 \begin{eqnarray}
   \label{eq:alpha-para-def}
   &\alpha^{\parallel} &= \varepsilon_{0}(\varepsilon_{\mathrm{SL}}^{\parallel} - 1)L\\
   \label{eq:alpha-perp-def}
     &\alpha^{\perp} &= \varepsilon_{0}\left(1 - {\displaystyle \frac{1}{\varepsilon_{\mathrm{SL}}^{\perp}}}\right)L
 \end{eqnarray}
+\end{subequations}
 The bottom panels of Figure \ref{fig-1}b and \ref{fig-1}c show the
 $\alpha^{\parallel}$ and $\alpha^{\perp}$ of the TMDCs as functions of
 $L$, calculated using Eqs. \ref{eq:alpha-para-def} and
@@ -220,10 +222,10 @@ $\alpha^{\perp}$ remain almost constant when $L>$15 \AA{}. In
 addition, by varying the value of $\alpha^{\parallel}$ and
 $\alpha^{\perp}$, we can nicely reproduce the $L$-dependence of
 $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
-$\varepsilon_{\mathrm{SL}}^{\perp}$, respectively (Figure \ref{fig-1}b
-and \ref{fig-1}c insets). These findings indicate that the 2D
-polarizability, instead of the dielectric constant, is the true
-descriptor of the dielectric properties of 2D materials.
+$\varepsilon_{\mathrm{SL}}^{\perp}$, respectively (Figure \ref{fig-1}d
+and \ref{fig-1}e). These findings indicate that the 2D polarizability,
+instead of the dielectric constant, is the true descriptor of the
+dielectric properties of 2D materials.
 
 We note that the dielectric properties of 2D materials are also often
 modeled using an effect medium approach, which treats the 2D material
@@ -354,11 +356,11 @@ nuclei \cite{davies_physics_1997,ihn_semiconductor_2009}. Using a
 simple particle-in-well model, we show that both the numerator and
 denominator parts of Eq. \ref{eq:alpha_perp_RPA} are independent of
 $E_{g}$ but instead modulated by the size of the potential confinement
-(details see Supplementary Section SXX\todo{note}). We further prove,
+(details see Supplementary Section S4). We further prove,
 using both quantum mechanical and fundamental electrostatic models,
 that $\alpha^{\perp}$ is actually proportional to the size of
 potential confinement (details see Supplementary Section
-SXX\todo{note}), which we may relate with the thickness $\delta$ of
+S4), which we may relate with the thickness $\delta$ of
 the 2D material. Now we may finally propose the 2D analog of the Moss
 relation with both in- and out-of-plane polarizations:
 \begin{subequations}
@@ -501,71 +503,88 @@ $E_{\mathrm{g}}$, a 2D version of the Moss-relation.
 \subsection{Bridging the 2D and 3D Dielectric Properties}
 \label{sec:2D-3D}
 
-Apart from the universal relations we propose for the 2D materials, it
-is also of high theoretical interest to model the transition of
-dielectric properties from the 2D world to the 3D world. In other
-words, can we describe the dielectric constants of a bulk layered
-material from the polarizabilities of the monolayer (see Figure
-\ref{fig-4}a)? The static dielectric constants
-$\varepsilon_{\mathrm{bulk}}$ for a bulk material with equilibrium
-interlayer distance $L_{\mathrm{bulk}}$, can be expressed using the
-polarizabilities of the individual layers in the bulk material
-$\alpha_{\mathrm{bulk}}$:
+Apart from the universal Moss-like relations we propose for the
+dielectric nature of 2D materials, it is also of high theoretical
+interest to model the 2D-3D transition of dielectric properties. In
+other words, can we describe the dielectric constants
+$\varepsilon^{\parallel}_{\mathrm{Bulk}}$ and
+$\varepsilon^{\perp}_{\mathrm{Bulk}}$ of a bulk layered material from
+$\alpha^{\parallel}$ and $\alpha^{\perp}$ of the monolayer (see Figure
+\ref{fig-4}a)? First, we see that the 2D polarizabilities for
+individual layers in the bulk materials
+$\alpha_{\mathrm{Bulk}}^{\parallel}$ and
+$\alpha_{\mathrm{Bulk}}^{\perp}$, can be calculated using
+Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def}, when $L$
+becomes the bulk interlayer distance $L_{\mathrm{Bulk}}$. The
+dielectric constants of the bulk material are then expressed as:
+\begin{subequations}
 \begin{eqnarray}
   \label{eq:3D-para}
-  &\varepsilon^{\parallel}_{\mathrm{bulk}} &= 1 + {\displaystyle \frac{\alpha_{\mathrm{bulk}}^{\parallel}}{\varepsilon_{0} L_{\mathrm{bulk}}}}\\
+  &\varepsilon^{\parallel}_{\mathrm{Bulk}} &= 1 + {\displaystyle \frac{\alpha_{\mathrm{bulk}}^{\parallel}}{\varepsilon_{0} L_{\mathrm{Bulk}}}}\\
   \label{eq:3D-perp}
-  &\varepsilon^{\perp}_{\mathrm{bulk}} &= \left(1 - \frac{\alpha_{\mathrm{bulk}}^{\perp}}{\varepsilon_{0} L_{\mathrm{bulk}}}\right)^{-1}
+  &\varepsilon^{\perp}_{\mathrm{Bulk}} &= \left(1 - \frac{\alpha_{\mathrm{Bulk}}^{\perp}}{\varepsilon_{0} L_{\mathrm{Bulk}}}\right)^{-1}
 \end{eqnarray}
-Note that $\alpha_{\mathrm{bulk}}$ may not essentially be the same as
-$\alpha$ of isolated layer. Nevertheless we will first see how good
-the predictions can be made when assuming
-$\alpha_{\mathrm{bulk}}=\alpha$. Figure \ref{fig-4}b and \ref{fig-4}c
-show the comparison between the
+\end{subequations}
+Note that $\alpha_{\mathrm{Bulk}}^{\parallel}$ and
+$\alpha_{\mathrm{Bulk}}^{\perp}$ may not essentially be the same as
+$\alpha$ of isolated layer, but still quite close as seen in Figure
+\ref{fig-3}b and \ref{fig-3}c. Nevertheless we will first see how good
+we can predict $\varepsilon_{\mathrm{Bulk}}^{\parallel}$ and
+$\varepsilon_{\mathrm{Bulk}}^{\perp}$, when assuming
+$\alpha_{\mathrm{bulk}}=\alpha$. We compare
 $\varepsilon_{\mathrm{bulk}}^{\parallel}$ and
 $\varepsilon_{\mathrm{bulk}}^{\perp}$ from first principles DFT
 calculations compared with the values predicted using Eqs
-\ref{eq:3D-para} and \ref{eq:3D-perp}, respectively. We observe that
-such approach provides good estimation of
-$\varepsilon_{\mathrm{bulk}}^{\parallel}$, with the mean average error
-(MAE) of 1.35. On the other hand, we observe the predicted values of
+\ref{eq:3D-para} and \ref{eq:3D-perp}, as show in Figure \ref{fig-4}b
+and \ref{fig-4}c, respectively. Data calculated at both HSE06 and PBE
+levels which give almost identical trends, indicating the generality
+of such approach. Note although the stacking order is not considered
+in Eqs. \ref{eq:3D-para} and \ref{eq:3D-perp}, we found that the
+influence of stacking is minor (see Supplementary Figure SXX
+\todo{Wait for Declan's data}). We observe that the majority of
+predicted $\varepsilon_{\mathrm{bulk}}^{\parallel}$ values align along
+the line $y=x$ , with a linear regression slope of 1.01 and $R^2$ of
+0.97, indicating that such method indeed captures the transition from
+$\alpha^{\parallel}$ to $\varepsilon_{\mathrm{Bulk}}^{\parallel}$. On
+the other hand, we observe the predicted values of
 $\varepsilon_{\mathrm{bulk}}^{\perp}$ has good agreement with the DFT
 values when $E_{\mathrm{g}}>4$ eV, while the deviation becomes larger
-when $E_{\mathrm{g}}$ reduces. Such results means that the
-$\alpha^{\parallel}$ in a bulk layered material can generally be
-estimated from its 2D counterpart, while $\alpha^{\perp}$ differs from
-the values of monolayer, as also observed in other studies
-\cite{Andersen_2015_dielec_vdWH,Laturia_2018}. Two factors contribute
-to the discrepancy: (i) the overlap between induced dipoles is larger
-perpendicular to the plane than parallel to the plane, and (ii) the
-interlayer coupling is larger for 2D materials with smaller
-bandgap. If we have an accuracy approach to model
-$\alpha_{\mathrm{bulk}}$ as function of $\alpha$ and the degree of
-interlayer coupling $\eta$ \cite{Tkatchenko_2012}, the dielectric
-transition from 2D to 3D would be smoothly described.
+when $E_{\mathrm{g}}$ reduces. The difference for the prediction of
+$\varepsilon^{\parallel}$ and $\varepsilon^{\perp}$ means that
+$\alpha^{\parallel}_{\mathrm{Bulk}}$ can generally be estimated from
+its 2D counterpart, while $\alpha^{\perp}_{\mathrm{Bulk}}$ differs due
+to interlayout coupling and overlap between induced dipoles, as also
+observed in Figure \ref{fig-3}b, \ref{fig-3}c, and other studies
+\cite{Andersen_2015_dielec_vdWH,Laturia_2018}. With a better model
+describing $\alpha_{\mathrm{bulk}}^{\perp}$ as function of
+$\alpha^{\perp}$ and the degree of interlayer coupling $\eta$
+\cite{Tkatchenko_2012}, the dielectric transition from 2D to 3D would
+be smoothly described. 
 
-Next we will show how the relation between dielectric properties
-transforms from 2D to 3D. Extend the approach for modeling
-$\alpha^{\parallel}$ in Eq. \ref{eq:alpha_perp_RPA} to the bulk
-material, and use the Bloch presentation for wavefunctions in all
-dimensions, we get:
+As described in the previous section, the 2D Moss-like relation
+between $\alpha^{\parallel}$ and $E_{g}$ is similar to the 3D Moss
+relation between $\varepsilon$ and $E_{g}$, with a different power
+law. Such difference in the power law can indeed be explained by
+modern theory of dielectric properties.  Extend the approach
+Eq. \ref{eq:alpha_perp_RPA} to the bulk material, and use the Bloch
+presentation for wavefunctions in all dimensions, we derive (detailed
+procedure see Supplementary Section S4):
 \begin{equation}
   \label{eq:alpha-Eg-3D}
-  \varepsilon_{\mathrm{bulk}} = 1 + \frac{2e^{2}}{\varepsilon_{0}(2\pi)^{3}}\int d^{3}\mathbf{k}
+  \begin{aligned}[t]
+  \varepsilon_{\mathrm{bulk}} &= 1 + \frac{2e^{2}}{\varepsilon_{0}(2\pi)^{3}}\int d^{3}\mathbf{k}
   \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(k)>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
+  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
+  &\propto E_{g}^{-\frac{1}{2}},\ \mathrm{when}\ \varepsilon_{\mathrm{Bulk}} \gg 1
+\end{aligned}
 \end{equation}
-Using a similar treatment for
-$|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(k)>|^{2}$ as in
-Ref. \citenum{Jiang_2017_Eg_Eb} we end up with the relation
-$\alpha_{\mathrm{bulk}} \propto 1/\sqrt{E_{\mathrm{g}}}$ (details see
-Supplementary Section SXX \todo{note}), which recovers the Moss
-relation under rigorous treatment \cite{Finkenrath_1988}. Therefore,
-the universal $\alpha^{\perp}-E_{\mathrm{g}}$ relation is indeed the
-Moss relation in 2D world, while the power law of $E_{\mathrm{g}}$ and
-independence of effective mass is dominated by the confinement
-perpendicular to the 2D plane.
+which recovers the 3D Moss relation. Therefore, the universal
+$\alpha^{\parallel}-E_{\mathrm{g}}$ relation is indeed the Moss relation
+in 2D world, while the power law of $E_{\mathrm{g}}$ and independence
+of effective mass is a result of the confinement perpendicular to the
+2D plane.
 
+\todo{First leave this part untouched}
 Finally, we would like to comment on the generality of the dielectric
 nature between the 2D and 3D worlds. As schematically shown in Figure
 \ref{fig-2D-3D}, the physical quantities related to the dielectric
@@ -618,19 +637,19 @@ dimension-dependent and dimension-independent quantities.
 \section{Conclusion}
 \label{sec:org5fd1f1a}
 
-To sum up, using first principles calculation for over 50 kinds of 2D
-materials, we reveal the universal relation between the dielectric
-nature of 2D materials and other physical quantities via the 2D
-polarizability. The in-plane polarizability of a 2D material is found
-to be inversely proportional to the minimal bandgap, while the
-out-of-plane polarizability is the characteristic thickness of the 2D
-material. Such universal scaling relation is explained by a quantum
-mechanical model combining the polarizability in both directions. Our
-universal scaling relation bridges the gap between 2D and 3D
-dielectric properties with good accuracy of prediction.  Our numerical
-findings and theoretical analysis pave the way to understand and
-engineer the electronic and dielectric properties of a large library
-of 2D materials for different technological applications in an
+To sum up, using first principles calculation for a large set of 2D
+materials, we reveal the universal relation of the dielectric nature
+of 2D materials using the 2D polarizability, as an analog to the Moss
+relation for bulk semiconductors. The in-plane polarizability of a 2D
+material is found to be inversely proportional to the minimal bandgap,
+while the out-of-plane polarizability is the characteristic thickness
+of the 2D material. Such universal scaling relation is explained by a
+quantum mechanical model combining the polarizability in both
+directions. Our universal scaling relation bridges the gap between 2D
+and 3D dielectric properties with good accuracy of prediction.  Our
+numerical findings and theoretical analysis pave the way to understand
+and engineer the electronic and dielectric properties of a large
+library of 2D materials for different technological applications in an
 unified and unprecedented way.
 
 \section{Theoretical Methods}
@@ -660,12 +679,17 @@ guaranteeing that absolute energies were converged to a few meV and
 the stress tensor to within a few kBar.  Calculation of the
 macroscopic ion-clamped dielectric tensor were carried out with an
 18$\times$18$\times$1 k-grid and electric field strength of 0.001
-eV/\AA. Bulk layered materials were constructed by relaxing the c-axis
-length of corresponding monolayer material with the interlayer van der
-Waals (vdW) interactions calculated by non-local vdW correlation
-functional\cite{Lee_2010_vdFD2}. The dielectric properties of bulk
-layered materials were calculated at PBE level with
-18$\times$18$\times$6 k-grid with same parameter as for monolayer.
+eV/\AA. The materials in C2DB database for comparison were choses with
+the GW bandgap larger than 0.05 eV. Bulk layered materials were
+constructed by relaxing the c-axis length of corresponding monolayer
+material with the interlayer van der Waals (vdW) interactions
+calculated by non-local vdW correlation
+functional\cite{Lee_2010_vdFD2}.  The dielectric properties of bulk
+layered materials using VASP were calculated at HSE06 level with
+18$\times$18$\times$6 k-grid with same parameter as for monolayer,
+while the dielectric properties of bulk counterparts of the C2DB
+database are calculated at PBE level with a k-point density of 10
+\AA$^{-1}$.
 
 
 
@@ -675,56 +699,58 @@ layered materials were calculated at PBE level with
 \label{sec:org34cbe74}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.90\linewidth]{img/fig1.pdf}
-\caption{\label{fig-1} The macroscopic dielectric constant and
-  microscopic polarizability of a 2D material. \textbf{a}. Left: 2D
-  material in a superlattice with length $L$ in the z-direction. The
-  periodic images of the 2D material are shown below and above the
-  superlattice. Right: simplied presentation of the dielectric
-  constants $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
-  $\varepsilon_{\mathrm{SL}}^{\perp}$ of the superlattice as a
-  combined effect of the 2D polarizabilities $\alpha^{\parallel}$ and
-  $\alpha^{\perp}$ and the vacuum. \textbf{b}. Change of spatial
-  charge density $\Delta \rho(z)$ in the z-direction for a layer of
-  2H-MoS$_{2}$ under external eletric field of 0.01 V/\AA{}. The green
-  and red regions represent negative and positive induced charges,
-  respectively. \textbf{c}. $\varepsilon^{\parallel}_{\mathrm{SL}}$
-  (left) and $\alpha_{\mathrm{SL}}^{\parallel}$ (right) as functions
-  of $L$ for a 2H-MoS$_{2}$
-  layer. \textbf{d}. $\varepsilon^{\perp}_{\mathrm{SL}}$ (left) and
-  $\alpha_{\mathrm{SL}}^{\perp}$ (right) as functions of $L$ for a
-  2H-MoS$_{2}$ layer. The polarizabilities in \textbf{c} and
-  \textbf{d} are constant when $L>$15 \AA{}.}
+\includegraphics[width=0.75\linewidth]{img/fig1.pdf}
+\caption{\label{fig-1} \textbf{2D polarizability as the true
+    descriptor of the dielectric nature of 2D materials.}
+  \textbf{a}. 3D illustration of the spatial distribution of the
+  charge density change $\Delta \rho(z)$ along the z-direction for
+  monolayer 2H-MoS$_{2}$ in a periodic superlattice under external
+  eletric field of 0.01 V/\AA{}.  The green and red regions represent
+  negative and positive induced charges, respectively. The macroscopic
+  $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
+  $\varepsilon_{\mathrm{SL}}^{\perp}$ are influenced by the lattice
+  size $L$, while the 2D polarizabilities $\alpha^{\parallel}$ and
+  $\alpha^{\perp}$ are invariant with lattice size \textbf{b}.
+  $\varepsilon^{\parallel}_{\mathrm{SL}}$ (top) and
+  $\alpha_{\mathrm{SL}}^{\parallel}$ (bottom) as functions of $L$ for
+  the 2H TMDCs. \textbf{c}.  $\varepsilon^{\perp}_{\mathrm{SL}}$ (top)
+  and $\alpha_{\mathrm{SL}}^{\perp}$ (bottom) as functions of $L$ for
+  the 2H TMDCs. The polarizabilities in \textbf{b} and \textbf{c} are
+  constant when $L>$15 \AA{}, compared with the $L$-dependence of
+  $\varepsilon_{\mathrm{SL}}$. \textbf{d} and \textbf{e}: modeled
+  $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
+  $\varepsilon_{\mathrm{SL}}^{\perp}$ corresponding with \textbf{b}
+  and \textbf{c}, from Eqs. \ref{eq:alpha-para-def} and
+  \ref{eq:alpha-perp-def}, respectively.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{./img/fig2.pdf}
-\caption{\label{fig-2} The 2D materials investigated. \textbf{a}. The
-  elements that involved in this study. \textbf{b} 3D structures of
-  the 2D materials investigated in this study.}
+\caption{\label{fig-2} The elements and 3D structures of the 2D
+  materials investigated in this study.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.95\linewidth]{./img/fig3.pdf}
-\caption{\label{fig-3} The universal scaling relation of the
-  dielectric nature of 2D materials. \textbf{a}. $\alpha^{\parallel}$,
-  $\alpha^{\perp}$ (bar plots) and $E_{\mathrm{g}}$ (blue dots) for
-  all the 2D materials studied.  $\alpha^{\parallel}$ is observed to
-  descend with increasing $E_{\mathrm{g}}$, while no apparent relation
-  between $\alpha^{\perp}$ and $E_{\mathrm{g}}$ is
+\caption{\label{fig-3} \textbf{The universal scaling relation of the
+    dielectric nature of 2D
+    materials}. \textbf{a}. $\alpha^{\parallel}$, $\alpha^{\perp}$
+  (bar plots) and $E_{\mathrm{g}}$ (blue dots) for all the 2D
+  materials studied.  $\alpha^{\parallel}$ is observed to descend with
+  increasing $E_{\mathrm{g}}$, while no apparent relation between
+  $\alpha^{\perp}$ and $E_{\mathrm{g}}$ is
   observed. \textbf{b}. $(4\pi \varepsilon_{0})/\alpha^{\parallel}$
-  (in \AA{}) as a function of $E_{\mathrm{g}}$, showing a linear
+  (in \AA{}$^{-1}$) as a function of $E_{\mathrm{g}}$, showing a linear
   correlation between each other. The energy range of visible light is
   shown in the
   background. \textbf{c}. $\alpha^{\perp}/(4\pi\varepsilon_{0})$ (in
-  \AA{}) as a function of the covalent thickness, showing a perfect
-  linear relation with slope very close to $1/4\pi$. The materials in
-  \textbf{b} and \textbf{c} are grouped by their prototyes, including
-  1T-TMDCs and cadmium halide (1T-MX$_{2}$), 2H-TMDCs (2H-MX$_{2}$),
-  boron nitride (BN), phosphorene (P), monochalcogenides (GaS) and
-  graphene derivatives (CH).}
+  \AA{}) as a function of $\delta_{\mathrm{cov}}$ (definition
+  schematically shown in the inset), showing a perfect linear relation
+  with slope very close to $1/4\pi$. The universal scaling relation is
+  also revealed using the C2DB database (squares), as superimposed on \textbf{b}
+  and \textbf{c}.}
 \end{figure}
 
 % \begin{figure}[htbp]
@@ -738,10 +764,10 @@ layered materials were calculated at PBE level with
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{./img/fig4.pdf}
-\caption{\label{fig-4} Transition of dielectric properties from 2D to
-  3D systems. \textbf{a}. Scheme for the 2D-3D transition. $\alpha$ in
-  the 2D material is essentially equivalent to $\varepsilon$ in its
-  bulk counterpart. \textbf{b}
+\caption{\label{fig-4} \textbf{Transition of dielectric properties
+    from 2D to 3D systems}. \textbf{a}. Scheme for the 2D-3D
+  transition. $\alpha$ in the 2D material is essentially equivalent to
+  $\varepsilon$ in its bulk counterpart. \textbf{b}
   $\varepsilon_{\mathrm{bulk}}^{\parallel}$ calculated from DFT
   (y-axis) compared with the predicted value from 2D
   $\alpha^{\parallel}$ (x-axis), showing good correlation. \textbf{c}
@@ -749,7 +775,8 @@ layered materials were calculated at PBE level with
   compared with the predicted value from 2D $\alpha^{\parallel}$
   (x-axis). The predicted value is in good aggreement with the DFT
   calculation when $E_{\mathrm{g}}>4$ eV, due to minimal interlayer
-  coupling. }
+  coupling. The comparisons in \textbf{b} and \textbf{c} are made
+  based on both HSE06 (circles) and PBE (squares) levels.}
 \end{figure}
 
 \begin{figure}[htbp]
