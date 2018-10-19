@@ -38,7 +38,7 @@ for i, item in enumerate(g):
         # data = data[1: , :]
         L = data[:, 0]
         eps_SL = data[:, 1]
-        fig = plt.figure(figsize=(2.5, 2.5))
+        fig = plt.figure(figsize=(2, 2))
         ax = fig.add_subplot(111)
         # ax2 = ax.twinx()
         ax.plot(L, eps_SL, "o")
@@ -53,7 +53,7 @@ for i, item in enumerate(g):
             )
             LL = numpy.linspace(10, 70)
             ax.plot(LL, fit_para(LL, *param), "--")
-            ax.set_title("{2}, ${{\\epsilon_{{2D}}^{{\\parallel}} }}={1:.3f}$ ${{d}}={0:.3f}\\ \\AA$".format(*param, tags[names[i]]))
+            ax.set_title("{2}, ${{\\epsilon_{{2D}}^{{\\parallel}} }}={1:.3f}$ ${{\\delta}}={0:.3f}\\ \\AA$".format(*param, tags[names[i]]))
             ax.set_ylabel("$\\epsilon_{\\parallel}$")
             # ax.set_title("{} parallel".format(names[i]))
             ax.set_ylabel("$\\epsilon^{\\parallel}_{\mathrm{SL}}$")
@@ -69,7 +69,7 @@ for i, item in enumerate(g):
             LL = numpy.linspace(10, 70)
             ax.plot(LL, fit_vert(LL, *param), "--")
             ax.set_ylabel("$\\epsilon^{\\perp}_{\mathrm{SL}}$")
-            ax.set_title("{2}, ${{\\epsilon_{{2D}}^{{\\perp}} }}={1:.3f}$ ${{d}}={0:.3f}\\ \\AA$".format(*param, tags[names[i]]))
+            ax.set_title("{2}, ${{\\epsilon_{{2D}}^{{\\perp}} }}={1:.3f}$ ${{\\delta}}={0:.3f}\\ \\AA$".format(*param, tags[names[i]]))
             # ax.set_title("{} perp".format(names[i]))
             # ax.set_ylim(0, 1)
             fig.savefig(os.path.join(item[0], "{}-fit-perp-SL.svg".format(names[i])))

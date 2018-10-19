@@ -25,7 +25,7 @@ def plot_eps_perp(ax, alpha_0, dev, trans=0.7):
     return
 
 plt.style.use("science")
-fig = plt.figure(figsize=(4, 2))
+fig = plt.figure(figsize=(5, 1.6))
 ax = fig.add_subplot(121)
 ax2 = fig.add_subplot(122)
 L = numpy.linspace(10, 60, 100)
