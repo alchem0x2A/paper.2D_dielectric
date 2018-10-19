@@ -434,21 +434,21 @@ close match between the linear slope in Figure \ref{fig-3}c and
 $1/4\pi$. In other wordst, the universal scaling relation for
 $\alpha^{\perp}$ indicates the quantity
 $\alpha^{\perp}/\varepsilon_{0}$, is the dielectric characteristic
-thickness of a 2D material. We propose that the well-established
-experimental protocol for measuring the electronic polarizability of
-isolated molecules \cite{Antoine_1999}, can also be extended to
-measure $\alpha^{\perp}$ of a 2D material, as a direct estimation of
-it thickness, in comparison with the optical ellipsometry techniques
-\cite{Weber_2010} widely used to estimate the thickness of 2D
-materials, which requires empirical optical model and parameter
-fitting.
+thickness of a 2D material. We propose that the experimental
+measurment of the electronic polarizability
+\cite{Antoine_1999,Cherniavskaya_2003,Krauss_1999_EFM}, can also be
+extended to measure $\alpha^{\perp}$ of a 2D material, as a direct
+estimation of it thickness, in comparison with the optical
+ellipsometry techniques \cite{Weber_2010} widely used to estimate the
+thickness of 2D materials, which requires empirical optical model and
+parameter fitting.
 
 To rule out the possibility that our conclusion is limited by the
 number of materials used, we further validate our proposed 2D
 Moss-like relations on the recently-published C2DB database
 \cite{Haastrup_2018}, from which we extracted the dielectric
 properties of over 230 2D materials calculated at the PBE level, and
-overlap them with our results in Figure \ref{fig-3}b and \ref{fig3-c}
+overlap them with our results in Figure \ref{fig-3}b and \ref{fig-3}c
 (further details see Supplementary Section S3). Althought the
 dielectric properties may be overestimated at PBE level due to
 underestimation of the bandgap compared with the more accurate HSE06
@@ -462,157 +462,40 @@ and total atomic polarizabilities, while no apparent correlations are
 found (details see Supplementary Section S3). 
 
 In short, we have revealed the 2D analog of the Moss relation for both
-polarization direction by using the 2D polarizability: $\alpha^{\parallel}$ is inversely proportional
-to the minimal bandgap $E_{\mathrm{g}}$, while $\alpha^{\perp}$ is the
-characteristic thickness of the 2D material. 
-
-
-\iffalse
-\subsection{Theoretical Explanations}
-\label{sec:theory}
-
-Similar to the treatment of quantum wells (QW), the wavefunction of an
-isolated 2D material $\psi(\mathbf{r})$ can be separated into the in-
-and out-of-plane components \cite{davies_physics_1997}
-$\psi^{\parallel}(\mathbf{\rho})$ and $\psi^{\perp}(z)$, such that
-$\psi=\psi^{\parallel}\psi^{\perp}$, where $\mathbf{\rho}=(x, y)$ is
-the in-plane coordinate. According to the Bloch theorem, the periodic
-in-plane wavefunction can be further expressed as
-$\psi^{\parallel}(\mathbf{\rho})=e^{ik\rho}u(\rho)$, where $k$ is the
-in-plane wave vector and $u(\rho)$ is periodic function in the
-xy-plane. According to the random phase approximation theory
-\cite{Adler_1962}, $\varepsilon_{\mathrm{SL}}$ can be calculated by
-taking the $\mathbf{q} \to 0$ and $\omega \to 0$ limits of the
-non-interacting dielectric function $\varepsilon(\mathbf{q}, \omega)$,
-where $\mathbf{q}$ is the momentum transfer and $\omega$ is the
-frequency:
-\begin{equation}
-  \label{eq:RPA-eps2}
-  \varepsilon_{\mathrm{SL}}
-  = \varepsilon_{\mathrm{SL}}(\mathbf{q} \to 0)
-  = 1 + \frac{2e^{2}}{\varepsilon_{0} |q|^{2} \Omega}
-  \sum_{\mathrm{k, c, v}}
-  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
-  \left[f(\psi_{\mathrm{c}}) - f(\psi_{\mathrm{v}}))\right]
-\end{equation}
-where $e$ is the unit charge, c, v are the conduction and valence
-bands, $f$ is the Fermi-Dirac distribution, $E$ is the eigenenergy of
-individual bands, and $f$ is the Fermi-Dirac distribution. Taking the
-limit that $L\to\infty$, when
-$\varepsilon^{\perp}_{\mathrm{SL}} \approx 1$, we have
-$1-1/\varepsilon^{\perp}_{\mathrm{SL}} \approx
-(\varepsilon_{\mathrm{SL}}^{\perp} - 1)$. Therefore $\alpha^{\parallel}$ and $\alpha^{\perp}$ at 0 K can be unified by the same equation:
-\begin{equation}
-  \label{eq:alpha-RPA}
-  \alpha = \frac{2e^{2}}{|q|^{2}A} \sum_{\mathrm{k,c,v}}
-  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
-\end{equation}
-where the direction is determined by $\mathbf{q}$. For
-$\alpha^{\parallel}$, $e^{-i\mathbf{qr}}$ is independent of
-$z$. Further combining with the Bloch wave representation and the k-p
-theory\cite{Jiang_2017_Eg_Eb}, we have:
-\begin{equation}
-  \label{eq:alpha_para_RPA}
-  \alpha^{\parallel} = \frac{2e^{2}}
-  {(2 \pi)^{2}} \int d^{2}\mathbf{k}
-  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(k)>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
-\end{equation}
-the final expression for Eq. \ref{eq:alpha_para_RPA} is shown to be
-$\alpha^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$ by
-Ref. \citenum{Jiang_2017_Eg_Eb}, where $N$ is degeneracy of bands
-associated with the minimal bandgap. This explains the linear
-correlation we observe between $1/\alpha^{\parallel}$ and
-$E_{\mathrm{g}}$. When $\alpha^{\parallel}$ is measured in
-$(4 \pi \varepsilon_{0})\cdot \mathrm{\AA}$ and $E_{\mathrm{g}}$
-measured in eV, the linear regression slope in Figure \ref{fig-3}b is
-predicted to be
-$8\pi^{2}\varepsilon_{0} \mathrm{\AA}/(eN) \approx 0.436/N$. The
-observed value of $\sim$0.166 corresponds to $N$ between 2 and 3,
-which is reasonable for the 2D materials studied.
-
-On the other hand, the $E_{\mathrm{g}}$ independence and correlation
-with the covalent thickness of $\alpha^{\perp}$, can also be explained
-using the same quantum framework. Generally speaking, $\psi^{\perp}$
-follows the Hamiltonian in z-direction, such that:
-\begin{equation}
-  \label{eq:Hamil-z}
-  \left[-\frac{\hbar^{2}}{2 m^{\perp}}\nabla^{2} + V(z)\right] \psi^{\perp}(z) = E \psi^{\perp}
-\end{equation}
-where $\hbar$ is the reduced Planck constant and $m^{\perp}$ is the
-effective mass in the perpendicular direction. $V(z)$ is the potential
-created by the 2D material, and confined within a region of length
-$\delta$. For simplicity we use plane wave to model the in-plane
-wavefunction, that
-$\psi^{\parallel}(\mathbf{\rho}) \propto
-e^{i\mathbf{k\rho}}$. Inserting into Eq. \ref{eq:alpha-RPA} and
-perform the Taylor expansion of $e^{-i\mathbf{qr}}$, we can eliminate
-the contribution from the in-plane
-wavefunctions\cite{davies_physics_1997} and get:
-\begin{equation}
-  \label{eq:alpha_perp_RPA}
-  \alpha^{\perp} = \frac{2e^{2}}{(2 \pi) ^{2}} \int d^{2}\mathbf{k}
-  \sum_{\mathrm{c, v}}
-  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|z|\psi_{\mathrm{c}}(\mathbf{k}>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
-\end{equation}
-where the integration over $\mathbf{k}$ is done in the $k_{x}-k_{y}$
-part of the Brillouin Zone. In a confined 1D system, the matrix
-element
-$<\psi_{\mathrm{v}}(\mathbf{k})|z|\psi_{\mathrm{c}}(\mathbf{k})>$ is
-usually proportional to the length of confinement $\delta$, while the
-eigenenergy difference $E_{\mathrm{c}}-E_{\mathrm{v}}$ is correlated
-with $\delta^{-2}$, while independent of
-$\mathbf{k}$\cite{Benedict_1995}. Therefore the integrated
-$\alpha^{\perp}$ is also independent of the bandgap $E_{\mathrm{g}}$,
-which would instead greatly influence $\alpha^{\parallel}$. Using a
-simplified particle-in-box model, we evaluated the integration of
-Eq. \ref{eq:alpha_perp_RPA} and show that $\alpha^{\parallel}$ is
-related with the geometric parameter $\delta$ (details see Supplementary Section SXX \todo{add note}), the confinement of
-electrons in the z-direction, which nicely explains our finding of
-correlation between $\alpha^{\perp}$ and
-$\delta^{\mathrm{cov}}_{\mathrm{2D}}$.
-
-Based on unit analysis of the 2D polarizability, its in- and
-out-of-plane components can be described as the characteristic
-lengthes in both directions. In fact, such characteristic length is
-just the dielectric screening length. The potential from a point
-charge inside the 2D material generates an in-plane potential
-$V(\rho)$ as function of distance $\rho$ from the point charge, in the
-Keldysh form \cite{Keldysh_1979_eps_multi,Pulci_2014}:
-\begin{equation}
-  \label{eq:Keldysh}
-  V(\rho) = \frac{e}{4 \alpha^{\parallel}}
-  \left[H_{0}(\frac{2\varepsilon_{0}\rho}{\alpha^{\parallel}})
-    - Y_{0}(2 \varepsilon_{0}\frac{\rho}{\alpha^{\parallel}})\right]
-\end{equation}
-The length $r^{\parallel}_{0} = \alpha^{\parallel}/(2\varepsilon_{0})$
-determines the degree of in-plane dielectric screening: the charges
-feel strong screening when $\rho/r^{\parallel}_{0} \ll 1$ while the
-screening for $\rho/r^{\parallel}_{0} \gg 1$ reduces to the case of
-vacuum. In other words, the quantity
-$\alpha^{\parallel}/(2\varepsilon_{0})$ characterizes the radius of
-localized in-plane screened potential. Combining with the result that
-the thickness of 2D material is characterized by
-$\alpha^{\perp}/\varepsilon_{0}$, we have drawn a generalized picture
-of the dielectric nature of 2D materials via the 2D polarizability:
-the dielectric screening of a point charge sitting in the middle of a
-2D material can be viewed as an ellipsoid with the length of
-principle axes to be $\alpha^{\parallel}/(2 \varepsilon_{0})$ and
-$\alpha^{\perp}/(2 \varepsilon_{0})$, respectively. Beyond the
-boundary the ellipsoid the dielectric screening gradually reduced to
-the vacuum situation. Note such radius is not essentially the 2D
-exciton radius, which is still related with the effective mass
-\cite{Chernikov_2014_EB_MoS2_2D3D}. Nevertheless, with the universal
-relation between $\alpha^{\parallel}-E_{\mathrm{g}}$ and
-$\alpha^{\perp}-\delta_{\mathrm{2D}}^{\mathrm{cov}}$ for 2D materials,
-we are able to quantitatively predict and design the dielectric nature
-of a new 2D material by engineering the bandgap and geometry, which
-can greatly enhance our understanding and application of 2D materials.
-
-\fi
+polarization direction by using the 2D polarizability:
+$\alpha^{\parallel}$ is inversely proportional to the minimal bandgap
+$E_{\mathrm{g}}$, while $\alpha^{\perp}$ is the characteristic
+thickness of the 2D material. Although their apparent forms in
+Eq. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} seem different, we
+will show the 2D Moss-like relations stem from the same origin. In
+merit of the unit analysis, $\alpha^{\parallel}$ and $\alpha^{\perp}$
+both have unit of $4\pi\varepsilon_{0} \cdot$[Length]. Specifically,
+$\alpha^{\parallel}$ and $\alpha^{\perp}$ corresponds to
+characteristic lengthes in- and out-of-plane, respectively. The
+in-plane screened electrostatic potential $V(r)$ from a point charge
+in an 2D plane, as a function of distance $r$,
+\cite{Keldysh_1979_eps_multi,Pulci_2014}:
+$V(r) = {\displaystyle \frac{e}{4 \alpha^{\parallel}}}
+\left[H_{0}({\displaystyle \frac{2\varepsilon_{0}
+      r}{\alpha^{\parallel}}}) - Y_{0}( {\displaystyle \frac{2
+      \varepsilon_{0}r}{\alpha^{\parallel}}})\right]$, where $H_{0}$
+is the Struve function and $Y_{0}$ is the Bessel function of second
+kind, is assciated with the in-plane screening radius
+$r_{0}^{\parallel}=\alpha^{\parallel}/(2 \varepsilon_{0})$, such that
+$V(r,r/r^{\parallel}_{0} \gg 1)$ reduces to the simple Coulombic
+potential in vacuum. Combining with the result that the thickness of
+2D material is characterized by $\alpha^{\perp}/\varepsilon_{0}$, we
+have drawn a generalized picture of the dielectric nature of 2D
+materials via the 2D polarizability: the dielectric screening of a
+point charge sitting in the middle of a 2D material can be viewed as
+an ellipsoid with the length of principle axes to be
+$\alpha^{\parallel}/(2 \varepsilon_{0})$ and
+$\alpha^{\perp}/(2 \varepsilon_{0})$, respectively, analog to the
+polarizability ellipsoid picture of molecules used in spectroscopy
+\cite{Banwell_1994}. The in-plane screening length is generally larger
+for a smaller bandgap semiconductor, which qualitatively explains the
+inverse propotional relation between $\alpha^{\parallel}$ and
+$E_{\mathrm{g}}$, a 2D version of the Moss-relation.
 
 
 \subsection{Bridging the 2D and 3D Dielectric Properties}
@@ -844,13 +727,13 @@ layered materials were calculated at PBE level with
   graphene derivatives (CH).}
 \end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.5\linewidth]{img/fig-delta.pdf}
-\caption{\label{fig-delta} Scheme for the determination of the
-  covalent thickness of one-atom-thick (left) and few-atom-thick
-  (right) 2D materials.}
-\end{figure}
+% \begin{figure}[htbp]
+% \centering
+% \includegraphics[width=0.5\linewidth]{img/fig-delta.pdf}
+% \caption{\label{fig-delta} Scheme for the determination of the
+  % covalent thickness of one-atom-thick (left) and few-atom-thick
+  % (right) 2D materials.}
+% \end{figure}
 
 \begin{figure}[htbp]
 \centering
