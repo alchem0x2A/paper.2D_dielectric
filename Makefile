@@ -6,13 +6,13 @@ GS_TAG= -sDEVICE=pdfwrite -dQUIET -sBATCH -dNOPAUSE
 
 
 
-all: main SI
+all: main SI compress transfer
 
-main: $(TEX_FILE) $(BIB_FILE)
-	latexmk -f -pdf -quiet -view=none -pdflatex='xelatex -interaction=nonstopmode --shell-escape' $(TEX_FILE)
+main:
+	latexmk -f -pdf -quiet -view=none -pdflatex='pdflatex -interactive=nonstopmode' $(TEX_FILE)
 
-SI: $(SI_FILE) $(BIB_FILE) DOS_figs.tex raw_data.tex BS_figures.tex 
-	latexmk -f -pdf -quiet -view=none -pdflatex='xelatex -interaction=nonstopmode --shell-escape' $(SI_FILE)
+SI:
+	latexmk -f -pdf -quiet -view=none -pdflatex='pdflatex -interactive=nonstopmode' $(SI_FILE)
 
 compress:
 	gs $(GS_TAG) -sOutputFile="paper-compak.pdf" paper.pdf
@@ -29,6 +29,5 @@ Clean:
 
 
 clean-all:
-	clean
 	latexmk -C
 	rm -f $(IMG_PATH)/*.pdf	#clean up pdf

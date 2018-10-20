@@ -28,11 +28,10 @@ def convert_pdf(infile, outdir="./img"):
     outfile = outfile.replace(".svg", ".pdf")
     print(outfile)
     program = "inkscape"
-    params = ["--without-gui", "--export-area-drawing",
+    params = ["--without-gui", "--export-area-page",
     ]
     io = ["--file={}".format(infile),
           "--export-pdf={}".format(outfile)]
-    
     success = subprocess.call([program, *params, *io])
     if success != 0:
         warnings.warn(TColors.FAIL + "File {} cannot be converted!".format(infile) + TColors.ENDC)

@@ -113,21 +113,20 @@ understanding of electronic screening in both dimensions.
 \subsection{Dielectric Nature of 2D Materials}
 \label{sec:2d}
 
-In persuit of the Moss-like relation of 2D materials, a accurate
+In persuit of the Moss-like relation of 2D materials, an accurate
 description of the dielectric properties of 2D materials needs to be
-established. One known issue is that the concept of macroscopic
+established. One challenge is that the concept of macroscopic
 dielectric constant is ill-defined for 2D materials
 \cite{Cudazzo_2010_screen2D,Cudazzo_2011_screening_2D,Nazarov_2015_2D_3D}. As
 shown in Figure \ref{fig-1}a \todo{I'll change upon your change of Fig
   1a}, in first principles calculations, an isolated 2D material is
-placed at the xy-plane of a periodically repeating superlattice (SL)
-with a length $L$ along the z-direction large enough to prevent the
-interactions between periodic images. The macroscopic dielectric
+placed in the xy-plane of a periodically repeating superlattice (SL)
+with a length $L$ along the z-direction. The macroscopic dielectric
 tensor from the superlattice $\varepsilon_{\mathrm{SL}}$, from
 fundamental electrostatics, is determined by the response of
 volumetric dipole density $\boldsymbol{P}^{p}$, under small perturbative
 external field $\boldsymbol{E}^{q}$, where $p$, $q$ are the
-directions in $(x, y, z)$,such that:
+directions in $(x, y, z)$, such that:
 \begin{subequations}
   \begin{eqnarray}
       \label{eq:def-eps-1}
@@ -147,8 +146,8 @@ density, $\Omega=AL$ is the volume of the SL, $A$ is the xy-plane area
 of the SL and $\varepsilon_{0}$ is vacuum permittivity. For the
 majority of 2D semiconductors, the off-diagonal elements of the
 dielectric tensor ($p \neq q$) tend to be negligible.  Consider that
-the 2D material is placed in vacuum, such that $\kappa^{pp} \equiv 1$
-and $\kappa^{pq} \equiv 0$, we can distinguish two components of the
+the 2D material is placed in vacuum, such that $\kappa^{pp} = 1$
+and $\kappa^{pq} = 0$, we can distinguish two components of the
 SL dielectric tensor, namely the in-plane
 ($\varepsilon_{\mathrm{SL}}^{\parallel}$) and out-of-plane
 ($\varepsilon_{\mathrm{SL}}^{\perp}$) dielectric constants, where
@@ -163,7 +162,7 @@ difference between zero and finite electric fields,
 $\Delta \rho=\rho(\boldsymbol{E}) - \rho(\boldsymbol{E}=0)$ along the
 z-axis for an isolated 2H-MoS$_{2}$ layer under
 $|\boldsymbol{E}_{z}|=0.01 \mathrm{V\cdot \AA}^{-1}$, which only
-extends to ~12 \AA{} along the z-direction inside the SL. When $L$ is
+extends to ~12 \AA{} along the z-direction. When $L$ is
 large enough that the induced dipoles from periodic images do not
 overlap, the total dipole moments $\boldsymbol{u}$ of the SL in
 Eq. \ref{eq:def-eps-2} is independent of $L$. As a consequence, we can
@@ -174,7 +173,7 @@ show this by plotting $\epsilon^{\parallel}_{\mathrm{SL}}$ and
 $\epsilon^{\perp}_{\mathrm{SL}}$ as functions of $L$ for 2H-type group
 6 transitional metal dichalcogenides (TMDCs, 2H-MX$_{2}$, where M=Mo,
 W and X=S, Se, Te), in the top panels of Figure \ref{fig-1}b and
-\ref{fig-1}c \todo{change order!}, respectively. We can also observe
+\ref{fig-1}c \todo{change order!}, respectively. We also observe
 that neither $\varepsilon^{\parallel}_{\mathrm{SL}}$ nor
 $\varepsilon^{\perp}_{\mathrm{SL}}$ converges with the superlattice
 length $L$ due to fact that the long-range Coulomb interaction could
@@ -188,8 +187,8 @@ discussed previous, since the total dipole moments $\mathbf{u}$ remain
 constant with $L$, we can define the surface or sheet polarization
 density matrix $\boldsymbol{\mu}$, by multiplying
 Eq. \ref{eq:def-eps-2} with $L$, that
-$\boldsymbol{\mu}^{p} = \boldsymbol{P}_{p}L = \int_{\mathrm{SL}}
-\rho(\boldsymbol{r}) \boldsymbol{r}_{p}d^{3} \boldsymbol{r}/A$,
+$\boldsymbol{\mu}^{p} = \boldsymbol{P}^{p}L = \int_{\mathrm{SL}}
+\rho(\boldsymbol{r}) \boldsymbol{r}^{p}d^{3} \boldsymbol{r}/A$,
 independent of the superlattice size. Similar to the definition of
 molecular polarizability \cite{Israelachvili_2011}, the sheet
 polarization density $\boldsymbol{\mu}$ is associated with the 2D
@@ -222,8 +221,8 @@ $\alpha^{\perp}$ remain almost constant when $L>$15 \AA{}. In
 addition, by varying the value of $\alpha^{\parallel}$ and
 $\alpha^{\perp}$, we can nicely reproduce the $L$-dependence of
 $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
-$\varepsilon_{\mathrm{SL}}^{\perp}$, respectively (Figure \ref{fig-1}d
-and \ref{fig-1}e). These findings indicate that the 2D polarizability,
+$\varepsilon_{\mathrm{SL}}^{\perp}$ of the TMDCs, as shown Figure \ref{fig-1}d
+and \ref{fig-1}e, respectively. These findings indicate that the 2D polarizability,
 instead of the dielectric constant, is the true descriptor of the
 dielectric properties of 2D materials.
 
@@ -307,7 +306,7 @@ $\mathbf{q}$ is the momentum transfer and $\omega$ is the frequency:
 \begin{equation}
   \label{eq:RPA-eps2}
   \varepsilon_{\mathrm{SL}}
-  = \lim_{\mathbf{q} \to 0} 1 + \frac{2e^{2}}{\varepsilon_{0} |q|^{2} \Omega}
+  = \lim_{\mathbf{q} \to 0} 1 + \frac{2e^{2}}{\varepsilon_{0} |\boldsymbol{q}|^{2} \Omega}
   \sum_{\mathrm{k, c, v}}
   \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
   {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
@@ -323,7 +322,7 @@ Eqs. \ref{eq:alpha-para-def}, \ref{eq:alpha-perp-def} and
 \ref{eq:RPA-eps2}, and taking the difference between the properties of
 in-plane and out-of-plane polarizabilities, we derive the expressions
 for $\alpha^{\parallel}$ and $\alpha^{\perp}$ under small perturbation
-(details see Supplementary Section SXX \todo{mark!}):
+(details see Supplementary Section S4):
 \begin{subequations}
   \begin{eqnarray}
   \label{eq:alpha_para_RPA}
@@ -348,7 +347,7 @@ Eq. \ref{eq:alpha_para_RPA} is evaluated to be
 $\alpha^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$, where $N$ is the
 degeneracy associated with the minimal bandgap
 \cite{Jiang_2017_Eg_Eb}. On the contrary, $\psi(z)$ is the solution to
-the Schr\"{o}dinger equation Hamiltonian
+the Schr\"{o}dinger equation with Hamiltonian
 $\mathcal{H} = -\hbar^{2}/2m^{*} \nabla^{2} + V(z)$, where $\hbar$ is
 the reduced Planck constant, $m^{*}$ is reduced mass and $V(z)$ is the
 confined Coulombic potential along the z-direction created by the
@@ -377,9 +376,9 @@ We now validate Eq. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp}
 using the polarizabilities calculated by first principle
 calculations. Figure \ref{fig-3}b shows
 $(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ (in \AA{}) as a function
-of $E_{\mathrm{g}}$ (in eV) for the 2D materials investiaged (circle dots), with a
-linear regression slope of ~0.182 and $R^{2}$ of 0.84. From
-Ref. \cite{Jiang_2017_Eg_Eb}, the slope between
+of $E_{\mathrm{g}}$ (in eV) for the 2D materials investiaged (circle
+dots), with a linear regression slope of ~0.182 and $R^{2}$ of
+0.84. From Ref. \citenum{Jiang_2017_Eg_Eb}, the slope between
 $(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ and $E_{g}$ is
 $8\pi^{2}\varepsilon_{0} \mathrm{\AA}/(eN) \approx 0.436/N$, which
 yields $N$ betweem 2 and 3, which is reasonable for the 2D materials
@@ -414,10 +413,10 @@ defined as the longest distance along the z-direction between any two
 atom nuclei plus their covalent radii:
 \begin{equation}
   \label{eq:cov-thick}
-  \delta_{\mathrm{cov}} = \mathrm{max}(|z_{i} - z_{j}|
-  + r_{i}^{\mathrm{cov}} + r_{j}^{\mathrm{cov}})
+  \delta_{\mathrm{cov}} = \mathrm{max}(|z^{i} - z^{j}|
+  + r^{i}_{\mathrm{cov}} + r^{j}_{\mathrm{cov}})
 \end{equation}
-where i, j are two atoms in the 2D material and $r^{\mathrm{cov}}_{i}$
+where i, j are two atoms in the 2D material and $r_{\mathrm{cov}}^{i}$
 is the covalent radius of atom i (Figure \ref{fig-3}c). As shown in
 Figure \ref{fig-3}b, $\alpha^{\perp}/(4 \pi \varepsilon_{0})$ indeed
 shows an excellent linear correlation with $\delta_{\mathrm{cov}}$,
@@ -433,7 +432,7 @@ thickness of the electron cloud of the 2D material. The fact that the
 thickness of the electron cloud of a 2D material can be approximated
 by the extension of valence states in the z-direction, explains the
 close match between the linear slope in Figure \ref{fig-3}c and
-$1/4\pi$. In other wordst, the universal scaling relation for
+$1/4\pi$. In other words, the universal scaling relation for
 $\alpha^{\perp}$ indicates the quantity
 $\alpha^{\perp}/\varepsilon_{0}$, is the dielectric characteristic
 thickness of a 2D material. We propose that the experimental
@@ -475,14 +474,14 @@ both have unit of $4\pi\varepsilon_{0} \cdot$[Length]. Specifically,
 $\alpha^{\parallel}$ and $\alpha^{\perp}$ corresponds to
 characteristic lengthes in- and out-of-plane, respectively. The
 in-plane screened electrostatic potential $V(r)$ from a point charge
-in an 2D plane, as a function of distance $r$,
-\cite{Keldysh_1979_eps_multi,Pulci_2014}:
+in an 2D plane, as a function of distance $r$:
 $V(r) = {\displaystyle \frac{e}{4 \alpha^{\parallel}}}
 \left[H_{0}({\displaystyle \frac{2\varepsilon_{0}
       r}{\alpha^{\parallel}}}) - Y_{0}( {\displaystyle \frac{2
-      \varepsilon_{0}r}{\alpha^{\parallel}}})\right]$, where $H_{0}$
-is the Struve function and $Y_{0}$ is the Bessel function of second
-kind, is assciated with the in-plane screening radius
+      \varepsilon_{0}r}{\alpha^{\parallel}}})\right]$
+\cite{Keldysh_1979_eps_multi,Pulci_2014}, where $H_{0}$ is the Struve
+function and $Y_{0}$ is the Bessel function of second kind, is
+assciated with the in-plane screening radius
 $r_{0}^{\parallel}=\alpha^{\parallel}/(2 \varepsilon_{0})$, such that
 $V(r,r/r^{\parallel}_{0} \gg 1)$ reduces to the simple Coulombic
 potential in vacuum. Combining with the result that the thickness of
@@ -494,10 +493,11 @@ an ellipsoid with the length of principle axes to be
 $\alpha^{\parallel}/(2 \varepsilon_{0})$ and
 $\alpha^{\perp}/(2 \varepsilon_{0})$, respectively, analog to the
 polarizability ellipsoid picture of molecules used in spectroscopy
-\cite{Banwell_1994}. The in-plane screening length is generally larger
-for a smaller bandgap semiconductor, which qualitatively explains the
-inverse propotional relation between $\alpha^{\parallel}$ and
-$E_{\mathrm{g}}$, a 2D version of the Moss-relation.
+\cite{Banwell_1994} (see Supplementary Figure S12). The in-plane
+screening length is generally larger for a smaller bandgap
+semiconductor, which qualitatively explains the inverse propotional
+relation between $\alpha^{\parallel}$ and $E_{\mathrm{g}}$, a 2D
+version of the Moss-relation.
 
 
 \subsection{Bridging the 2D and 3D Dielectric Properties}
