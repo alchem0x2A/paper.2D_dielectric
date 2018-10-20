@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="196.51768mm"
+   height="110.5412mm"
+   viewBox="0 0 196.51768 110.5412"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (cdafc079a9, 2018-06-25)"
+   sodipodi:docname="SI-ellipsoid.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1146"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1144"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1118"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1116"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path843"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.69042969"
+     inkscape:cx="547.06075"
+     inkscape:cy="162.49616"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1280"
+     inkscape:window-height="687"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.15568192,-0.37551335)">
+    <image
+       sodipodi:absref="/Users/tiantian/polybox/Research/12-2D-dielectric/tmp_img/polarizability_ellipsoid.png"
+       y="0.37551335"
+       x="-0.15568192"
+       id="image823"
+       xlink:href="file:///Users/tiantian/polybox/Research/12-2D-dielectric/tmp_img/polarizability_ellipsoid.png"
+       style="image-rendering:optimizeQuality"
+       preserveAspectRatio="none"
+       height="110.5412"
+       width="196.51768" />
+    <path
+       style="opacity:0.51200005;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.61242223;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1146)"
+       d="m 102.85689,40.628853 74.33461,4.21537 v 0"
+       id="path826"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path830"
+       d="m 102.85689,40.628853 v 0 l 8.80477,-27.974729"
+       style="opacity:0.51200005;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.61242223;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1118)"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="opacity:0.50499998;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.6879167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 102.85689,40.628853 -0.0594,-7.760111"
+       id="path832"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="106.49725"
+       y="9.2051792"
+       id="text1180"><tspan
+         sodipodi:role="line"
+         id="tspan1178"
+         x="106.49725"
+         y="9.2051792"
+         style="font-size:8.46666622px;stroke-width:0.26458332px"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan1188">α</tspan><tspan
+   style="font-size:7.05555534px;baseline-shift:super"
+   id="tspan1182">‖</tspan>/2<tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan1190">ε</tspan><tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan1186">0</tspan></tspan></text>
+    <text
+       id="text1202"
+       y="46.246849"
+       x="176.3472"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:8.46666622px;stroke-width:0.26458332px"
+         y="46.246849"
+         x="176.3472"
+         id="tspan1200"
+         sodipodi:role="line"><tspan
+   id="tspan1192"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'">α</tspan><tspan
+   id="tspan1194"
+   style="font-size:7.05555534px;baseline-shift:super">‖</tspan>/2<tspan
+   id="tspan1196"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'">ε</tspan><tspan
+   id="tspan1198"
+   style="font-size:64.99999762%;baseline-shift:sub">0</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="87.447159"
+       y="30.371847"
+       id="text1214"><tspan
+         sodipodi:role="line"
+         id="tspan1212"
+         x="87.447159"
+         y="30.371847"
+         style="font-size:8.46666622px;stroke-width:0.26458332px"><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan1204">α</tspan><tspan
+   id="tspan1220"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:super">⟂</tspan>/2<tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
+   id="tspan1208">ε</tspan><tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan1210">0</tspan></tspan></text>
+  </g>
+</svg>

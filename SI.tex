@@ -1,6 +1,7 @@
 % Created 2017-10-05 Thu 16:11
 % Intended LaTeX compiler: pdflatex
 \documentclass[manuscript=suppinfo,email=true,hyperref=true,keywords=false]{achemso}
+\usepackage{times}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -45,18 +46,20 @@
 \label{sec:2D-3D-rescale}
 
 From literatures, it is often desired to extract the ``dielectric
-constant'' of a 2D material from the 3D macroscopic dielectric constant
-\cite{Matthes_2016,Laturia_2018}. As discussed in the main text and
-other studies\cite{Cudazzo_2010_screen2D,Cudazzo_2011_screening_2D},
-the definition of the 2D ``dielectric constant'' (in particular, its
+constant'' of a 2D material from the 3D macroscopic dielectric
+constant of the superlattice, where the layers are periodic along of
+x,y directions but separated by a vacuum layer between its images
+\cite{Matthes_2016,Laturia_2018}. As discussed in the main text, the
+definition of the 2D ``dielectric constant'' (in particular, its
 in-plane components) is questionable, due to the locality of
-electrostatic screening of the 2D materials. Here we show that, in
-addition to the ambiguous definition of the 2D dielectric constant,
-such approach requires the precise determination of the 2D layer
-thickness $\delta_{\mathrm{2D}}$, which makes it impractical.
+electrostatic screening of the 2D materials
+\cite{Cudazzo_2010_screen2D,Cudazzo_2011_screening_2D}. Here we show
+that, in addition to the ambiguous definition of the 2D dielectric
+constant, such approach requires the precise determination of the 2D
+layer thickness $\delta_{\mathrm{2D}}$, which makes it impractical.
 
 In brief, the hypothetical 2D dielectric constant
-$\varepsilon_{\mathrm{2D}}$ comes from the planar limit of the
+$\varepsilon$ comes from the planar limit of the
 Maxwell-Garnett effective medium theory \cite{Markel_2016}, and can be
 expressed by means of the macroscopic dielectric constant
 $\varepsilon_{\mathrm{SL}}$ of the superlattice:
@@ -65,17 +68,17 @@ $\varepsilon_{\mathrm{SL}}$ of the superlattice:
   \label{eq:MG-effect-1}
   &\varepsilon_{\mathrm{SL}}^{\parallel} &= f \varepsilon_{\mathrm{2D}}^{\parallel} + (1 - f)\\
   \label{eq:MG-effect-2}
-  &(\varepsilon_{\mathrm{SL}}^{\perp})^{-1} &= f (\varepsilon_{\mathrm{2D}}^{\perp})^{-1} + (1-f)
+  &(\varepsilon_{\mathrm{SL}}^{\perp})^{-1} &= f /\varepsilon_{\mathrm{2D}}^{\perp} + (1-f)
 \end{eqnarray}
-where $f=\delta_{\mathrm{2D}}/L$ is the volume fraction of the 2D
+where $f=\delta/L$ is the volume fraction of the 2D
 material in the superlattice. The major issue when using such rescale
-relations comes from the determination of $\delta_{\mathrm{2D}}$,
-which is not well defined for a 2D material. To eliminate the modeling
-error caused by the \texttt{a priori} parameter selection of
-$\delta_{\mathrm{2D}}$, we perform the calculation of
-$\varepsilon_{\mathrm{SL}}$ of group 6 TMDCs against different $L$, and use
-least-square fitting to extract both $\varepsilon_{\mathrm{2D}}$ and
-$\delta_{\mathrm{2D}}$, as shown in Figure \ref{fig:rescale-prb}.
+relations comes from the determination of $\delta_{\mathrm{2D}}$. To
+eliminate the modeling error caused by the \textit{a priori} parameter
+selection of $\delta$, we perform the calculation of
+$\varepsilon_{\mathrm{SL}}$ of group 6 TMDCs against different $L$,
+and use least-square fitting to extract both
+$\varepsilon$ and $\delta$, as shown in
+Figure \ref{fig:rescale-prb}.
 
 \begin{figure}[htbp]
   \centering
@@ -86,7 +89,7 @@ $\delta_{\mathrm{2D}}$, as shown in Figure \ref{fig:rescale-prb}.
     \textbf{a}. MoS$_{2}$. \textbf{b}. MoSe$_{2}$. \textbf{c}.
     MoTe$_{2}$. \textbf{d}. WS$_{2}$. \textbf{e}. WSe$_{2}$. \textbf{f}.
     WTe$_{2}$. The extracted values of $\varepsilon_{\mathrm{2D}}$ and
-    $\delta_{\mathrm{2D}}$ are shown in each subfigure.}
+    $\delta$ are shown in each subfigure.}
   \label{fig:rescale-prb}
 \end{figure}
 
@@ -201,8 +204,7 @@ in addition to the main text.
 
 We study the polarizabilties of group 6 TMDCs to demonstrate the
 dependency between the 2D polarizability $\alpha$ and the superlattice
-length $L$, which is shown in Figure \ref{fig:eps-L-all} \todo{Which
-  method?}.  In all cases, we observe that the calculated
+length $L$, which is shown in Figure \ref{fig:eps-L-all}.  In all cases, we observe that the calculated
 polarizability converges when $L>$15 \AA{}, in good agreement with our
 conclusion in main text. The lower bound of $L_{\mathrm{min}}$ for the
 convergence of $\alpha$ can be viewed as the minimal distance that
@@ -210,7 +212,7 @@ overlap of induced charge density from image layers is negligible. In
 practice, any superlattice size larger than $L_{\mathrm{min}}$ can be
 used for calculating the intrinsic 2D dielectric nature through the
 polarizability, however to reduce the computational cost, especially
-at the HSE level, we typically choose a superlattice size no larger
+at the HSE06 level, we typically choose a superlattice size no larger
 than 35 \AA{}.
 
 \begin{figure}[htbp]
@@ -219,13 +221,14 @@ than 35 \AA{}.
   \caption{Calculated value of $\varepsilon_{\mathrm{SL}}^{\parallel}$
     (top left axis), $\varepsilon_{\mathrm{SL}}^{\perp}$ (bottom left
     axis), $\alpha^{\parallel}$ (top right axis) and $\alpha^{\perp}$
-    (bottom right axis) of various group 6 TMDCs. In all cases, the
-    polarizability  converges when $L>$15 \AA{}}
+    (bottom right axis) of various group 6 TMDCs corresponding to
+    Figure 1 in main text. In all cases, the polarizability converges
+    when $L>$15 \AA{}}
   \label{fig:eps-L-all}
 \end{figure}
 
 
-\subsection{Depdence of bandgap}
+\subsection{Dependence of bandgap}
 \label{sec:pol-2D-2}
 
 In this section we further look into the bandgap dependency of the 2D
@@ -256,15 +259,13 @@ apparent correlation.
 
 We also investigate the relation of 2D polarizabilities with
 difference choices of \textit{ab initio} bandgaps. It is widely
-accepted that the PBE method, while gives quantitative predictions of
-the dielectric response of 2D and layered materials, tends to
-underestimate the bangap
-\cite{Kumar_2016_PRB,Kumar_2016_jpcc}. \todo{complete the discussion
-  for HSE?}  Indeed, changing the choice of $E_{\mathrm{g}}$ yields
-different regression relation with $1/\alpha^{\parallel}$, as shown in
-Figure \ref{fig:alpha-Eg-diff}. We see that due to the underestimation
-of PBE bandgap, the slope of linear regression is larger than that
-from HSE-bandgap. We also observe that the $1/\alpha-E_{\mathrm{g}}$
+accepted that the PBE exchange correlation, tends to underestimate the
+bangap \cite{Heyd_2005,Kumar_2016_PRB,Kumar_2016_jpcc}.  Indeed,
+changing the choice of $E_{\mathrm{g}}$ yields different regression
+relation with $1/\alpha^{\parallel}$, as shown in Figure
+\ref{fig:alpha-Eg-diff}. We see that due to the underestimation of PBE
+bandgap, the slope of linear regression is larger than that from
+HSE-bandgap. We also observe that the $1/\alpha-E_{\mathrm{g}}$
 relation is better presented by using the minimal HSE bandga than the
 minimal PBE bandgap, due to higher regression $R^{2}$ coefficient of
 the former. We note that the higher $R^{2}$ coefficient observed using
@@ -297,32 +298,31 @@ analysis of the Computational 2D Materials Database (C2DB)
   \includegraphics[width=0.8\linewidth]{img/SI-gpaw-data.pdf}
   \caption{Validation the linear relation between \textbf{a}
     $1/\alpha^{\parallel}-E_{\mathrm{g}}(\mathrm{HSE})$ and \textbf{b}
-    $\alpha^{\perp}-\delta_{\mathrm{2D}}^{\mathrm{cov}}$ on the C2DB
-    2D material database. }
+    $\alpha^{\perp}-\delta_{\mathrm{cov}}$ on the C2DB 2D material
+    database, corresponding to Figure 3b and 3c in main text.}
   \label{fig:gpaw-alpha-relation}
 \end{figure}
 
 Due to the high computation complexity of dielectric response
 calculations on the HSE level, our 2D material database is limited to
 about 50 types of materials. It is desirable to validate our proposed
-relations on a even larger scale database. \todo{Add comments for the
-  C2DB database}. We select 210 semiconducting 2D materials from the
-C2DB database with a HSE bandgap larger than 0.5 eV and extracted the
-2D polarizabilities calculated on the PBE level. The propsed linear
-relations between $1/\alpha^{\parallel}-E_{\mathrm{g}}(\mathrm{HSE})$
-and $\alpha^{\perp}-\delta_{\mathrm{2D}}^{\mathrm{cov}}$ are also
-valid, as shown in Figure \ref{fig:gpaw-alpha-relation}. Excellent
-linear correlation is observed in both cases, with the $R^{2}$
-coefficient larger than 0.9, indicating the existence of the universal
-description of 2D dielectric nature through the proposed relations
-with the 2D polarizabilities. We note that the slope of linear
-regression is slightly different from the our proposed relation from
-the dielectric response on HSE level, due to the fact that the
-macroscopic dielectric constant $\varepsilon_{\mathrm{SL}}$ calculated
-on the PBE level is about 5\% lower. Despite the minor deviation of
-the slope of linear regression, the analysis on the C2DB database
-supports our understanding of the universal dielectric nature of 2D
-materials.
+relations on a even larger scale database. We select over 230
+semiconducting 2D materials from the C2DB database with a GW bandgap
+larger than 0.05 eV and extracted the 2D polarizabilities calculated
+on the PBE level. The propsed linear relations between
+$1/\alpha^{\parallel}-E_{\mathrm{g}}(\mathrm{HSE})$ and
+$\alpha^{\perp}-\delta_{\mathrm{cov}}$ are also valid,
+as shown in Figure \ref{fig:gpaw-alpha-relation}. Excellent linear
+correlation is observed in both cases, with the $R^{2}$ coefficient
+larger than 0.9, indicating the existence of the universal description
+of 2D dielectric nature through the proposed relations with the 2D
+polarizabilities. We note that the slope of linear regression is
+slightly different from the our proposed relation from the dielectric
+response on HSE06 level, due to the fact that the macroscopic
+dielectric constant $\varepsilon_{\mathrm{SL}}$ calculated on the PBE
+level is about slightly difference. Despite the minor deviation of the
+slope of linear regression, the analysis on the C2DB database supports
+our understanding of the universal dielectric nature of 2D materials.
 
 \subsection{Choice of bandgap}
 \label{sec:gpaw-2}
@@ -331,7 +331,7 @@ Next we investigate the influence of choice of $E_{\mathrm{g}}$ on the
 regression of $\alpha^{\parallel}-E_{\mathrm{g}}$ relation. Figure
 \ref{fig:SI-gpaw-alpha-Eg-all} shows $1/\alpha^{\parallel}$ from the
 C2DB database as a function of minimal and direct bandgap calculated
-on PBE, HSE and GW levels.\todo{to be more specific?} We observe,
+on PBE, HSE06 and GW levels. We observe,
 although the regression $R^{2}$ coefficient in all cases are around
 0.9, the $\alpha^{\parallel}-E_{\mathrm{g}}$ is better described using
 the HSE and GW bandgaps than the PBE bandgaps. On the other hand,
@@ -439,21 +439,41 @@ From Figures \ref{fig:gpaw-2D-quantities-1} to
 \ref{fig:gpaw-2D-quantities-3} we can see that none of the above
 quantities have apparent relation with the 2D polarizabilities, as
 compared with the bandgap and covalent thickness proposed in the main
-text. \todo{add some more explanation}
-
-
+text. 
 
 
 \section{More theoretical analysis}
 \label{eq:MG-effect-1}
 
-\subsection{Detailed derivations from Eq. 10}
+\subsection{Detailed derivations for Eq. 5a and 5b}
 \label{sec:theory-1}
 
-Here we will first show how Eq. 10 in the main text is
-derived. Treating the in-plane wavefunctions as plane wave with form
-$\psi^{\parallel}(\rho) \propto e^{i \mathbf{k \rho}}$, the matrix
-element of
+Here we will first show how Eq. 5a and 5b in the main text are
+derived. Taking the limit that $L\to\infty$, when
+$\varepsilon^{\perp}_{\mathrm{SL}} \approx 1$, we have
+$1-1/\varepsilon^{\perp}_{\mathrm{SL}} \approx
+(\varepsilon_{\mathrm{SL}}^{\perp} - 1)$. Therefore
+$\alpha^{\parallel}$ and $\alpha^{\perp}$ at 0 K can be unified by the
+same equation:
+\begin{equation}
+  \label{eq:alpha-RPA}
+  \alpha = \frac{2e^{2}}{|q|^{2}A} \sum_{\mathrm{k,c,v}}
+  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
+\end{equation}
+where the direction is determined by $\mathbf{q}$.
+
+For the in-plane component, $\alpha^{\parallel}$, $e^{-i\mathbf{qr}}$
+is independent of $z$, therefore the integral in
+$|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}$
+becomes the independent of $\psi^{\perp}$, due to the
+orthogonality. Present the summation of k-space into integral, and further
+combining with the Bloch wave representation and the k-p
+theory\cite{Jiang_2017_Eg_Eb}, we arrive at Eq. 5a.
+
+For Eq. 5b, treating the in-plane wavefunctions as plane wave with
+form $\psi^{\parallel}(\rho) \propto e^{i \mathbf{k \rho}}$, the
+matrix element of
 $<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{qr}}|\psi_{\mathrm{c}}(\mathbf{k+q})>$,
 when $\mathbf{q}=(0, 0, q_{z})$, becomes\cite{Hybertsen_1987}:
 \begin{equation}
@@ -479,9 +499,9 @@ $e^{-i\mathbf{qr}} \approx 1 - i\mathbf{qr}$, we get:
     &= -iq_{z} <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>
    \end{aligned}
 \end{equation}
-plug this into Eq. 7 in main text and express the summation over
+plug this into Eq. \ref{eq:alpha-RPA} and express the summation over
 $k_{x}$ and $k_{y}$ in a continuous form within the Brillouin Zone, we
-arrive at Eq. 10 in main text.
+arrive at Eq. 5b in main text.
 
 Although the exact form for $\psi^{\perp}$ depends on the exact
 distribution of $V(z)$, without loss of generality we can assume the
@@ -503,7 +523,7 @@ hand, the numerator
 $<\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>$
 is proportional to the confinement length $\delta$ (can be seen using
 particle-in-box solution\cite{davies_physics_1997}). In combination,
-the individual terms of the summation in the right hand of Eq. 10 is
+the individual terms of the summation in the right hand of Eq. 5b is
 independent of neither $E_{\mathrm{g}}$ nor \textbf{k}, proving that
 $\alpha^{\perp}$ is independent of the band gap.
 
@@ -544,7 +564,7 @@ that the strongest transition comes from the lowest bands
 \cite{davies_physics_1997}, we can finally show:
 \begin{equation}
   \label{eq:alpha-perp-L}
-  \alpha^{\perp} \propto m^{\parallel} \delta^{2}
+  \alpha^{\perp} \propto \delta^{2}
 \end{equation}
 Apart from the power of $\delta$, this explains our observation
 $\alpha^{\perp}$ is related with the thickness of a 2D material. We
@@ -562,12 +582,65 @@ tedious. Nevertheless the simple model presented here still captures
 the bandgap-indepent and thickness-related feature of
 $\alpha^{\perp}$, supporting our findings in the main text.
 
-\subsection{Detailed discussion for main text Eq. 14 }
+The dependency of $\alpha^{\perp}$ on the thickness of a 2D material,
+can also be regarded using fundamental electrostatic model. Consider
+the smallest repeating unit of the 2D material with xy-plane area $A$,
+under small perturbation field $E$ along the z-direction.  Note that
+the surface bound charge $\sigma_{\mathrm{b}}=n e /A$, where $n$ is
+the number of unit charges contributes to the bound charges, comes
+only from the dipoles of the outer-most atoms, since the induced
+charges from inner atoms are cancel out (see Figure \ref{fig:classic-model}).
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\linewidth]{img/SI-classic.pdf}
+  \caption{Fundamental electrostatic model for the
+    thickness-dependency of $\alpha^{\perp}$, using 2H-MoS2 as an
+    example. Left: induced dipoles from individual atoms along the
+    z-direction. The positive and negative induced charges from inner
+    atoms cancel out. Right: simplied model for the thickness
+    dependency of $\alpha^{\perp}$, where the surface dipole density
+    $\boldsymbol{\mu}$ comes only from the outer-most atoms.}
+  \label{fig:classic-model}
+\end{figure}
+From the definition of
+$\alpha^{\perp}$, we have:
+\begin{equation}
+  \label{eq:alpha-classic}
+  \alpha^{\perp} = \frac{\boldsymbol{u}_{z}}{E_{\mathrm{loc}} A}
+  = \frac{(d_{\mathrm{max}} + r_{\mathrm{cov}}^{i} + r_{\mathrm{cov}}^{j}) \sigma_{\mathrm{b}}}{E}
+\end{equation}
+where $r_{\mathrm{cov}}^{i}$ and $r_{\mathrm{cov}}^{j}$ are the
+covalent radii of the outer-most atoms, the characteristic length of
+the dipole extension in z-direction, and $d_{\mathrm{max}}$ is the
+z-distance between the nuclei of such atoms.  The field $E$
+counterbalances the field from the surface bound charges and equals
+$E = \sigma_{\mathrm{b}}/\varepsilon_{0}$. Therefore we have:
+\begin{equation}
+  \label{eq:alpha-classic-2}
+  \alpha^{\perp} = (d_{\mathrm{max}} + r_{\mathrm{cov}}^{i} + r_{\mathrm{cov}}^{j})\varepsilon_{0}
+                = \delta_{\mathrm{cov}} \varepsilon_{0}
+\end{equation}
+which explains the linear relation seen in Figure 3c of main text. We
+can see that such simple model nicely captures the thickness feature
+of $\alpha^{\perp}$, and reproduces the right coefficient between
+$\delta_{\mathrm{cov}}$ and $\alpha^{\perp}$. Finally, the schematic
+drawing of the polarizability ellipsoid for a 2D material, is drawn in
+Figure \ref{fig:ellipsoid}.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\linewidth]{img/SI-ellipsoid.pdf}
+  \caption{Polarizability ellipsoid of a 2D material, the long axis
+    equals $\alpha^{\parallel}/2\varepsilon_{0}$ and the short axis
+    equals  $\alpha^{\perp}/2\varepsilon_{0}$}
+  \label{fig:ellipsoid}
+\end{figure}
+
+\subsection{Detailed discussion for main text Eq. 9}
 \label{sec:theory-2}
 
-Eq. 14 is the detailed form of Eq. 6 considering wavefunctions in all
+Eq. 9 is the detailed form of Eq. 6 considering wavefunctions in all
 directions are periodic which can be written in the form of Block
-waves. The solution for Eq. 14 in main text is derived as follows. For
+waves. The solution for Eq. 9 in main text is derived as follows. For
 simplicity we consider that the effective mass $m^{*}$ is uniform,
 which is generally a good assumption for bulk materials. Considering
 only one pair of valence-conduction transition, and take the result
@@ -590,18 +663,17 @@ k-space. Let $\hbar^{2}/(2 m^{*})=A$, the integral becomes:
 \begin{equation}
   \begin{aligned}
     \label{eq:integral-BZ-bulk}
-    \alpha^{\perp} &\propto {\displaystyle \frac{2 \pi
+    \varepsilon_{\mathrm{Bulk}} &\propto {\displaystyle \frac{2 \pi
         \mathrm{arctan}(\sqrt{Ak^{2}/E_{\mathrm{g}}})}{\sqrt{E_{\mathrm{g}}A^{3}}}
         - \frac{2\pi k}{A(A+E_{\mathrm{g}}k^{2})}
       } \bigg\rvert_{0}^{k_{\mathrm{BZ}}}\\
-      &\propto \sqrt{\frac{m^{*}}{E_{\mathrm{g}}}}
+      &\propto 1/\sqrt{E_{\mathrm{g}}}
   \end{aligned}
 \end{equation}
-since generally
+when $\varepsilon_{\mathrm{Bulk}} \gg 1$. since generally
 $\hbar^{2}k_{\mathrm{BZ}}^{2}/(2m^{*}) \gg E_{\mathrm{g}}$. When
-$\varepsilon_{\mathrm{bulk}} \gg 1$ and assuming the difference
-between $m^{*}$ in different semiconductors is small
-\cite{Finkenrath_1988}, it is the Moss relation of bulk semiconductors.
+$\varepsilon_{\mathrm{bulk}} \gg 1$ \cite{Finkenrath_1988}, it is the
+Moss relation of bulk semiconductors.
 
 \subsection{Static 2D polarizability and 2D plasma frequency}
 \label{sec:omega-p}
