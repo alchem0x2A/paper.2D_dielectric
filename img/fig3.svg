@@ -2661,11 +2661,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="401.30458"
-     inkscape:cy="118.36203"
+     inkscape:zoom="1.979899"
+     inkscape:cx="481.62057"
+     inkscape:cy="214.77125"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -9083,7 +9083,9 @@
            id="tspan3727"
            style="font-size:3.52777767px;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:round"
            x="170.41258"
-           y="143.7113">P</tspan></text>
+           y="143.7113">P<tspan
+   style="font-size:3.09828594px;baseline-shift:sub"
+   id="tspan4297">4</tspan></tspan></text>
       <g
          transform="matrix(0.35277777,0,0,0.35277777,122.14956,91.002787)"
          id="g3579"
