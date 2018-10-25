@@ -52,43 +52,30 @@ def get_bulk(name, proto, id=None, method="gpaw"):
             L = r.bulk_L
             eps_para = (r.bulk_eps_x + r.bulk_eps_y) / 2
             eps_perp = r.bulk_eps_z
+            e = r.gap_hse
         # VASP version below:
         elif method.lower() == "vasp":
             L = r.bulk_L_vasp
             eps_para = (r.bulk_eps_x_vasp + r.bulk_eps_y_vasp) / 2
             eps_perp = r.bulk_eps_z_vasp
+            if r.bulk_gap < 0:
+                e = r.gap_hse
+            else:
+                e = r.bulk_gap
         else:
             return None
         if eps_para < 0 or eps_perp < 0:
             return None
     except Exception:
         return None
-    return L, eps_para, eps_perp
-    
-    # dir_root = os.path.join("../../data/2D-bulk/{}-{}".format(name, proto))
-    # gpw_file = os.path.join(dir_root, "gs.gpw")
-    # traj_file = os.path.join(dir_root, "{}-{}_relax.traj".format(name, proto))
-    # eps_file = os.path.join(dir_root, "eps_df.npz")
-    # if (not os.path.exists(gpw_file)) or (not os.path.exists(eps_file)):
-    #     return None
-    # else:
-    #     try:
-    #         d = Trajectory(traj_file)[-1].cell[-1][-1]
-    #     except Exception:
-    #         return None
-    #         # calc = GPAW(gpw_file)
-    #         # d = calc.get_atoms().cell[-1][-1]
-    #     f = numpy.load(eps_file)
-    #     eps_xx = f["eps_x"][0].real
-    #     eps_zz = f["eps_z"][0].real
-    #     return d, eps_xx, eps_zz
+    return L, eps_para, eps_perp, e
 
 reader = csv.reader(open("../../data/HSE-data/2D_HSE.csv", encoding="utf8"))
 next(reader)                    # skip line1
 for row in reader:
     if row[4] != "":
         name, proto = row[: 2]
-        # print(name, proto)
+        print(name, proto)
         L, E, ex, ey, ez, *_ = map(float, row[2:])
         if ez < ex:
             e_xy = numpy.sqrt(ex * ey)
@@ -99,8 +86,8 @@ for row in reader:
                 materials.append("-".join((name, proto)))
                 eps_x.append(e_xy); eps_z.append(ez)
                 alpha_x.append(ax); alpha_z.append(az)
-                L_3D, ex_3D, ez_3D = bulk_res
-                # print(L_3D, ex_3D, ez_3D)
+                L_3D, ex_3D, ez_3D, e = bulk_res
+                print(L_3D, ex_3D, ez_3D)
                 ex_simu = 1 + 4 * pi * ax / L_3D
                 ez_simu = 1 / (1 - 4 * pi * az / L_3D)
                 # ez_simu = 4 * pi * az / L_3D
@@ -121,6 +108,7 @@ Eg_HSE = numpy.array(Eg_HSE)
 eps_x_gpaw = []
 eps_z_gpaw = []
 alpha_z_gpaw = []
+Eg_gpaw = []
 L_gpaw = []
 for db_id in range(1, db.count() + 1):  # db index starts with 1
     mol = db.get(db_id)
@@ -133,7 +121,7 @@ for db_id in range(1, db.count() + 1):  # db index starts with 1
     try:
         ax = (mol.alphax +  mol.alphay) / 2
         az = mol.alphaz
-        L, ex, ez = get_bulk(None, None, db_id, method="gpaw")
+        L, ex, ez, e = get_bulk(None, None, db_id, method="gpaw")
         ex_simu = 1 + 4 * pi * ax / L
         ez_simu = 1 / (1 - 4 * pi * az / L)
         # ez_simu = 4 * pi * az / L
@@ -141,13 +129,18 @@ for db_id in range(1, db.count() + 1):  # db index starts with 1
         eps_z_gpaw.append((ez, ez_simu))
         alpha_z_gpaw.append(az)
         L_gpaw.append(L)
+        Eg_gpaw.append(e)
     except Exception:
         continue
 eps_x_gpaw = numpy.array(eps_x_gpaw)
 eps_z_gpaw = numpy.array(eps_z_gpaw)
 alpha_z_gpaw = numpy.array(alpha_z_gpaw)
+Eg_gpaw = numpy.array(Eg_gpaw)
 L_gpaw = numpy.array(L_gpaw)
-print(eps_x_3D.shape)
+print(Eg_HSE.shape)
+print(eps_x_3D.shape, eps_z_3D.shape)
+
+print(Eg_gpaw.shape)
 print(eps_x_gpaw.shape, eps_z_gpaw.shape)
 
 # cond = numpy.where(Eg_HSE > 0.6)
@@ -155,87 +148,88 @@ print(eps_x_gpaw.shape, eps_z_gpaw.shape)
 # alpha_x = alpha_x[cond]
 # alpha_z = alpha_z[cond]
 # thick = thick[cond]
+if __name__ == "__main__":
 
-img_path = "../../tmp_img/"
-plt.style.use("science")
+    img_path = "../../tmp_img/"
+    plt.style.use("science")
 
 
-def fit_func(x, a,b):
-    return a+b / x
+    def fit_func(x, a,b):
+        return a+b / x
 
-upper = 25
-cond = numpy.where(eps_x_gpaw[:, 0] < upper)
-cond2 = numpy.where(eps_x_3D[:, 0] < upper)
+    upper = 25
+    cond = numpy.where(eps_x_gpaw[:, 0] < upper)
+    cond2 = numpy.where(eps_x_3D[:, 0] < upper)
 
-# x-direction
-# MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
-# print(MAE)
-# MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
-# print(MAE)
-plt.figure(figsize=(2.8, 2.5))
-res = linregress(eps_x_gpaw[:, 1][cond], eps_x_gpaw[:, 0][cond])
-print(res)
-res2 = linregress(eps_x_3D[:, 1][cond2], eps_x_3D[:, 0][cond2])
-print(res2)
-xx = numpy.linspace(0, 30)
-yy = res.slope * xx + res.intercept
-plt.plot(xx, yy, "-.")
-plt.plot(eps_x_gpaw[:, 1][cond], eps_x_gpaw[:, 0][cond], "s",
-         alpha=0.2, color="grey")
+    # x-direction
+    # MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
+    # print(MAE)
+    # MAE=numpy.mean(numpy.abs(eps_x_3D[:, 1][eps_x_3D[:, 0] < 30] - eps_x_3D[:, 0][eps_x_3D[:, 0]<30]))
+    # print(MAE)
+    plt.figure(figsize=(2.8, 2.5))
+    res = linregress(eps_x_gpaw[:, 1][cond], eps_x_gpaw[:, 0][cond])
+    print(res)
+    res2 = linregress(eps_x_3D[:, 1][cond2], eps_x_3D[:, 0][cond2])
+    print(res2)
+    xx = numpy.linspace(0, 30)
+    yy = res.slope * xx + res.intercept
+    plt.plot(xx, yy, "-.")
+    plt.plot(eps_x_gpaw[:, 1][cond], eps_x_gpaw[:, 0][cond], "s",
+             alpha=0.2, color="grey")
 
-plt.scatter(eps_x_3D[:, 1][cond2], eps_x_3D[:, 0][cond2],
-            c=Eg_HSE[cond2],
-            alpha=0.5,
-            cmap="jet")
-print()
-plt.plot(numpy.linspace(1, upper), numpy.linspace(1, upper), "--")
-plt.xlim(1, upper)
-plt.ylim(1, upper)
-cb = plt.colorbar()
-cb.ax.set_title("$E_{\mathrm{g}}$ (eV)")
-plt.ylabel("eps bulk xx from DFT")
-plt.xlabel("eps bulk xx from alpha")
-plt.tight_layout()
-plt.savefig(os.path.join(img_path, "eps_3D_xx.svg"))
+    plt.scatter(eps_x_3D[:, 1][cond2], eps_x_3D[:, 0][cond2],
+                c=Eg_HSE[cond2],
+                alpha=0.5,
+                cmap="jet")
+    print()
+    plt.plot(numpy.linspace(1, upper), numpy.linspace(1, upper), "--")
+    plt.xlim(1, upper)
+    plt.ylim(1, upper)
+    cb = plt.colorbar()
+    cb.ax.set_title("$E_{\mathrm{g}}$ (eV)")
+    plt.ylabel("eps bulk xx from DFT")
+    plt.xlabel("eps bulk xx from alpha")
+    plt.tight_layout()
+    plt.savefig(os.path.join(img_path, "eps_3D_xx.svg"))
 
-# z-direction
-upper = 10
-cond = numpy.where((eps_z_gpaw[:, 0] < upper) & (eps_z_gpaw[:, 1] > 0) & (eps_z_gpaw[:, 1] < upper) )
-cond2 = numpy.where((eps_z_3D[:, 0] < upper) & (0 < eps_z_3D[:, 1]) & (eps_z_3D[:, 1] < upper))
-plt.figure(figsize=(2.8, 2.5))
-res = linregress(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond])
-print(res)
-res2 = linregress(eps_z_3D[:, 1][cond2], eps_z_3D[:, 0][cond2])
-print(res2)
-xx = numpy.linspace(1, upper)
-yy = res.slope * xx + res.intercept
+    # z-direction
+    upper = 10
+    cond = numpy.where((eps_z_gpaw[:, 0] < upper) & (eps_z_gpaw[:, 1] > 0) & (eps_z_gpaw[:, 1] < upper) )
+    cond2 = numpy.where((eps_z_3D[:, 0] < upper) & (0 < eps_z_3D[:, 1]) & (eps_z_3D[:, 1] < upper))
+    plt.figure(figsize=(2.8, 2.5))
+    res = linregress(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond])
+    print(res)
+    res2 = linregress(eps_z_3D[:, 1][cond2], eps_z_3D[:, 0][cond2])
+    print(res2)
+    xx = numpy.linspace(1, upper)
+    yy = res.slope * xx + res.intercept
 
-ez = eps_z_gpaw[cond]; az = alpha_z_gpaw[cond]; ll = L_gpaw[cond]
+    ez = eps_z_gpaw[cond]; az = alpha_z_gpaw[cond]; ll = L_gpaw[cond]
 
-def model(X, A, B, C):
-    a = X[:, 0]; L = X[:, 1]
-    return A - B / (1 + 4 * pi * a / L - C)
+    def model(X, A, B, C):
+        a = X[:, 0]; L = X[:, 1]
+        return A - B / (1 + 4 * pi * a / L - C)
 
-from scipy.optimize import curve_fit
-# xx = numpy.hstack()
-# res = curve_fit(model, az)
-plt.plot(xx, yy, "-.")
-plt.plot(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond],
-         "s",
-         alpha=0.2, color="brown")
-plt.scatter(eps_z_3D[:, 1][cond2],
-            eps_z_3D[:, 0][cond2], alpha=0.5,
-            c=Eg_HSE[cond2],
-            cmap="jet"
-)
+    from scipy.optimize import curve_fit
+    # xx = numpy.hstack()
+    # res = curve_fit(model, az)
+    plt.plot(xx, yy, "-.")
+    plt.plot(eps_z_gpaw[:, 1][cond], eps_z_gpaw[:, 0][cond],
+             "s",
+             alpha=0.2, color="brown")
+    plt.scatter(eps_z_3D[:, 1][cond2],
+                eps_z_3D[:, 0][cond2], alpha=0.5,
+                c=Eg_HSE[cond2],
+                cmap="jet"
+    )
 
-plt.plot(numpy.linspace(1, upper), numpy.linspace(1, upper), "--")
-plt.ylim(1, upper)
-# plt.xlim(1, 2)
-plt.xlim(1, upper)
-cb = plt.colorbar()
-cb.ax.set_title("$E_{\mathrm{g}}$ (eV)")
-plt.ylabel("eps bulk zz from DFT")
-plt.xlabel("eps bulk zz from alpha")
-plt.tight_layout()
-plt.savefig(os.path.join(img_path, "eps_3D_zz.svg"))
+    plt.plot(numpy.linspace(1, upper), numpy.linspace(1, upper), "--")
+    plt.ylim(1, upper)
+    # plt.xlim(1, 2)
+    plt.xlim(1, upper)
+    cb = plt.colorbar()
+    cb.ax.set_title("$E_{\mathrm{g}}$ (eV)")
+    plt.ylabel("eps bulk zz from DFT")
+    plt.xlabel("eps bulk zz from alpha")
+    plt.tight_layout()
+    plt.savefig(os.path.join(img_path, "eps_3D_zz.svg"))
