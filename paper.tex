@@ -242,67 +242,30 @@ such approaches, $\varepsilon_{\mathrm{2D}}$ and $\delta$ have to be
 determined by fitting the $L$-dependent data of
 $\varepsilon_{\mathrm{SL}}$, which is not only computational
 expensive, but also fails to capture the anisotropy of the 2D
-dielectric properties (see Supplementary Section S1). On the
-other hand, calculating 2D polarizabilities requires no knowledge of
+dielectric properties (see Supplementary Section S1). On the other
+hand, calculating 2D polarizabilities requires no knowledge of
 $\delta$ (see Eqs. \ref{eq:alpha-para-def} and
 \ref{eq:alpha-perp-def}), and correctly presents the anisotropy of 2D
 dielectric nature that $\alpha^{\parallel} > \alpha^{\perp}$.  With
 the polarizability as the true descriptor of 2D dielectric properties,
-we will reveal the universal Moss-like relation of 2D materials.
+we will reveal the universal Moss-like relation of 2D materials from
+both theoretical and first principles studies.
 
-\subsection{2D Moss Relations}
-\label{sec:first-principles}
-
-We study several types of 2D materials of different electronic and
-optical properties as show in Figure \ref{fig-2}, including transition
-metal dichalcogenides (TMDCs, with the formula MX\(_{\text{2}}\),
-where M is a metal in group 4, 6, 10 and X=O, S, Se, Te), metal
-monochalcogenides (Ga$_{2}$S$_{2}$, Ga$_{2}$Se$_{2}$), cadmium halides
-(CdX$_2$, X=Cl, I), hexagonal boron nitride (BN), graphene derivatives
-(fluorographene (C$_{2}$F$_{2}$), graphane (C$_{2}$H$_{2}$)),
-phosphorene (P$_{4}$) and thin layer organic-inorganic perovskites
-(ABX$_{3}$).  For the TMDCs, we consider 2 lattice phases, namely the
-2H (P\(\bar{6}\)m2 space group) and 1T (P3m1 space group).  The static
-2D polarizabilities are calculated from the static dielectric response
-of the selected 2D materials using density functional theory (DFT)
-with the Heyd-Scuseria-Ernzerhof hybrid functionals (HSE06) using the
-Vienna Ab Initio Simulation Package (VASP) including spin-orbit
-coupling to avoid limitations on the description of band gaps and
-dielectric functions (see Methods for details).
-
-Figure \ref{fig-3}a shows the calculated bandgap $E_{\mathrm{g}}$
-(blue dots) and polarizabilities (bar plots) of all the 2D materials
-investigated, covering a wide spectrum range from far infrared to
-ultraviolet. From dimension analysis, it is more intuitive to express
-the polarizability as $\alpha/(4 \pi \varepsilon_{0})$, which has unit
-of \AA. We find that $\alpha^{\parallel}$ has a general descending
-trend when $E_{\mathrm{g}}$ increases. On the other hand, no apparent
-trend between $\alpha^{\perp}$ and $E_{\mathrm{g}}$ is observed (see
-Supplementary Section S2.2).  Combining recent theoretical findings of
-the universal linear relation between exciton binding energy
-$E_{\mathrm{b}}$ and bandgap $E_{\mathrm{g}}$ of 2D materials
-\cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
-fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
-$\alpha^{\parallel}$ \cite{Pulci_2014}, it is reasonable to guess that
-a general Moss-like relation between $E_{\mathrm{g}}$ and
-$1/\alpha^{\parallel}$ may exist for 2D materials. On the other hand,
-the bandgap-independent relation of $\alpha^{\perp}$ resembles
-molecular polarizabilities of conjugate molecules \cite{Davies_1952},
-fullerenes \cite{Sabirov_2014} and carbon nanotubes
-\cite{Benedict_1995}, which are shown to be geometry-dependent. Next
-we show that the universal Moss-like relations exist for both
-$\alpha^{\parallel}$ and $\alpha^{\perp}$.
-
-Similar to the treatment of quantum wells (QW), the wavefunction of an
-isolated 2D material $\psi(\mathbf{r})$ can be separated into the in-
-and out-of-plane components \cite{davies_physics_1997}
-$\psi^{\parallel}(\mathbf{\rho})$ and $\psi^{\perp}(z)$, such that
-$\psi=\psi^{\parallel}\psi^{\perp}$, where $\mathbf{\rho}=(x, y)$ is
-the in-plane coordinate. Using the Bloch theorem, the periodic
-$\psi^{\parallel}(\mathbf{\rho})$ can be further expressed as
-$\psi^{\parallel}(\mathbf{\rho})=e^{ik\rho}u(\rho)$, where $k$ is the
-in-plane wave vector and $u(\rho)$ is periodic function in the
-xy-plane. According to the random phase approximation (RPA)
+\subsection{Polarizability-Based Theoretical Model}
+In this section we theoretically investigate the existence of the 2D
+Moss-like relations, based on the 2D polarizability.  Due to its
+highly anisotropic nature, the wavefunction of an isolated 2D material
+$\psi(\mathbf{r})$ can be separated into the in- and out-of-plane
+components, similar to the treatment of quantum wells
+(QW),\cite{davies_physics_1997} such that
+$\psi^{\parallel}(\boldsymbol{\rho})$ and $\psi^{\perp}(z)$, such that
+$\psi=\psi^{\parallel}\psi^{\perp}$, where $\boldsymbol{\rho}=(x, y)$
+is the in-plane coordinate. Using the Bloch theorem, the periodic
+$\psi^{\parallel}(\boldsymbol{\rho})$ can be further expressed as
+$\psi^{\parallel}(\boldsymbol{\rho})=e^{i\mathbf{k} \cdot
+  \boldsymbol{\rho}}u(\boldsymbol{\rho})$, where $\mathbf{k}$ is the
+in-plane wave vector and $u(\boldsymbol{\rho})$ is periodic function
+in the xy-plane. According to the random phase approximation (RPA)
 theory\cite{Adler_1962}, $\varepsilon_{\mathrm{SL}}$ is the
 $\mathbf{q} \to 0$ and $\omega \to 0$ limits of the non-interacting
 dielectric function $\varepsilon(\mathbf{q}, \omega)$, where
@@ -352,20 +315,20 @@ $\alpha^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$, where $N$ is the
 degeneracy associated with the minimal bandgap
 \cite{Jiang_2017_Eg_Eb}. On the contrary, $\psi(z)$ is the solution to
 the Schr\"{o}dinger equation with Hamiltonian
-$\mathcal{H} = -\hbar^{2}/2m^{*} \nabla^{2} + V(z)$, where $\hbar$ is
-the reduced Planck constant, $m^{*}$ is reduced mass and $V(z)$ is the
-confined Coulombic potential along the z-direction created by the
+$\mathcal{H} = -\hbar^{2} \nabla^{2}/2m_{e} + V(z)$, where $\hbar$ is
+the reduced Planck constant, $m_{e}$ is electron mass and $V(z)$ is
+the confined Coulombic potential along the z-direction created by the
 nuclei \cite{davies_physics_1997,ihn_semiconductor_2009}. Using a
-simple particle-in-well model, we show that both the numerator and
+simple particle-in-box model, we show that both the numerator and
 denominator parts of Eq. \ref{eq:alpha_perp_RPA} are independent of
 $E_{g}$ but instead modulated by the size of the potential confinement
-(details see Supplementary Section S4). We further prove,
-using both quantum mechanical and fundamental electrostatic models,
-that $\alpha^{\perp}$ is actually proportional to the size of
-potential confinement (details see Supplementary Section
-S4), which we may relate with the thickness $\delta$ of
-the 2D material. Now we may finally propose the 2D analog of the Moss
-relation with both in- and out-of-plane polarizations:
+(details see Supplementary Section S4). We further prove, using both
+quantum mechanical and fundamental electrostatic models, that
+$\alpha^{\perp}$ is actually proportional to the size of potential
+confinement (details see Supplementary Section S4), which we may
+relate with the thickness $\delta$ of the 2D material. Now we may
+finally propose the 2D analog of the Moss relation with both in- and
+out-of-plane polarizations:
 \begin{subequations}
 \begin{eqnarray}
 \label{eq:2D-Moss-para}
@@ -374,7 +337,54 @@ relation with both in- and out-of-plane polarizations:
   &\alpha^{\perp} & \propto \delta
 \end{eqnarray}
 \end{subequations}
-which form the main conclusion of this work.
+which form the main conclusion of this work. Next, we will validate
+the proposed 2D Moss-like relations using first principle
+calculations.
+
+
+\subsection{2D Moss Relations}
+\label{sec:first-principles}
+We study several types of 2D materials of different electronic and
+optical properties as show in Figure \ref{fig-2}, including transition
+metal dichalcogenides (TMDCs, with the formula MX\(_{\text{2}}\),
+where M is a metal in group 4, 6, 10 and X=O, S, Se, Te), metal
+monochalcogenides (Ga$_{2}$S$_{2}$, Ga$_{2}$Se$_{2}$), cadmium halides
+(CdX$_2$, X=Cl, I), hexagonal boron nitride (BN), graphene derivatives
+(fluorographene (C$_{2}$F$_{2}$), graphane (C$_{2}$H$_{2}$)),
+phosphorene (P$_{4}$) and thin layer organic-inorganic perovskites
+(ABX$_{3}$).  For the TMDCs, we consider 2 lattice phases, namely the
+2H (P\(\bar{6}\)m2 space group) and 1T (P3m1 space group).  The static
+2D polarizabilities are calculated from the static dielectric response
+of the selected 2D materials using density functional theory (DFT)
+with the Heyd-Scuseria-Ernzerhof hybrid functionals (HSE06) using the
+Vienna Ab Initio Simulation Package (VASP) including spin-orbit
+coupling to avoid limitations on the description of band gaps and
+dielectric functions (see Methods for details).
+
+Figure \ref{fig-3}a shows the calculated bandgap $E_{\mathrm{g}}$
+(blue dots) and polarizabilities (bar plots) of all the 2D materials
+investigated, covering a wide spectrum range from far infrared to
+ultraviolet. From dimension analysis, it is more intuitive to express
+the polarizability as $\alpha/(4 \pi \varepsilon_{0})$, which has unit
+of \AA. We find that $\alpha^{\parallel}$ has a general descending
+trend when $E_{\mathrm{g}}$ increases. On the other hand, no apparent
+trend between $\alpha^{\perp}$ and $E_{\mathrm{g}}$ is observed (see
+Supplementary Section S2.2).  Combining recent theoretical findings of
+the universal linear relation between exciton binding energy
+$E_{\mathrm{b}}$ and bandgap $E_{\mathrm{g}}$ of 2D materials
+\cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
+fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
+$\alpha^{\parallel}$ \cite{Pulci_2014}, it is reasonable to guess that
+a general Moss-like relation between $E_{\mathrm{g}}$ and
+$1/\alpha^{\parallel}$ may exist for 2D materials. On the other hand,
+the bandgap-independent relation of $\alpha^{\perp}$ resembles
+molecular polarizabilities of conjugate molecules \cite{Davies_1952},
+fullerenes \cite{Sabirov_2014} and carbon nanotubes
+\cite{Benedict_1995}, which are shown to be geometry-dependent. Next
+we show that the universal Moss-like relations exist for both
+$\alpha^{\parallel}$ and $\alpha^{\perp}$.
+
+
 
 We now validate Eq. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp}
 using the polarizabilities calculated by first principle
