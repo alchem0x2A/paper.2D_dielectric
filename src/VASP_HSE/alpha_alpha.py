@@ -134,6 +134,18 @@ A = 52.0; B = 18.2
 # cnt_r = numpy.linspace(2.0, 8.0, 8)
 # cnt_data = numpy.array([(eg, get_cnt(eg, r)) for eg in cnt_eg for r in cnt_r])
 
+def anisotropy(data):
+    a_max = numpy.max(data, axis=1)
+    a_min = numpy.min(data, axis=1)
+    return a_min / a_max
+
+def anis_from_file(file_name):
+    data = numpy.genfromtxt(file_name, delimiter=",",
+                            comments="#")  # csv ending
+    Eg = data[:, 1]
+    anis = anisotropy(data[:, 2:5])
+    return Eg, anis
+
 cnt_eg = numpy.sqrt(cnt_r * B / (cnt_x - A))
 # gpaw
 ax.scatter(gp_data[2], gp_data[1] / gp_data[0], marker="^", alpha=0.1,
@@ -158,9 +170,13 @@ ax.scatter(bulk.Eg_gpaw, numpy.min([bulk.eps_z_gpaw[:, 0] / bulk.eps_x_gpaw[:, 0
 
 # ax.scatter(cnt_data[:, 0], cnt_data[:, 1], alpha=0.5,
            # marker="*", label="CNT-1D")
-ax.scatter(cnt_eg, cnt_z / cnt_x, alpha=0.2,
-           marker="*", label="CNT-1D")
+# ax.scatter(cnt_eg, cnt_z / cnt_x, alpha=0.2,
+           # marker="*", label="CNT-1D")
 
+for f in ["CNT", "covalent", "polyacene", "molecule", "fullerene"]:
+    f_name = "../../data/other_dimension/{}.csv".format(f)
+    Eg, anis = anis_from_file(f_name)
+    ax.scatter(Eg, anis, label=f)
 
 xx = yy = numpy.linspace(0, 8, 100)
 ax.plot(xx, numpy.ones_like(xx), "--")
