@@ -139,6 +139,20 @@ Eg_2D, Eg_3D, eta_2D, eta_3D = get_2D3D()
 ax.scatter(Eg_2D, eta_2D, marker="^", alpha=0.1)
 ax.scatter(Eg_3D, eta_3D, marker="s", alpha=0.1)
 
+# LinearSVM classification
+from sklearn.svm import LinearSVC
+svc = LinearSVC(C=1,
+                max_iter=100000,
+                class_weight={1:1, 2:3})
+class_feature = numpy.vstack([list(zip(Eg_2D, eta_2D)), list(zip(Eg_3D, eta_3D))])
+print(class_feature.shape)
+class_tag = numpy.append(1 * numpy.ones_like(Eg_2D), 2 * numpy.ones_like(Eg_3D))
+svc.fit(class_feature, class_tag)
+xx, yy = numpy.meshgrid(numpy.linspace(0, 8, 30), numpy.linspace(0, 1, 30))
+xy = numpy.vstack([xx.ravel(), yy.ravel()]).T
+zz = svc.decision_function(xy).reshape(xx.shape)
+ax.contour(xx, yy, zz, levels=[0])
+
 def anisotropy(data):
     a_max = numpy.max(data, axis=1)
     a_min = numpy.min(data, axis=1)
@@ -150,6 +164,7 @@ def anis_from_file(file_name):
     Eg = data[:, 1]
     anis = anisotropy(data[:, 2:5])
     return Eg, anis
+
 
 for f in ["CNT", "covalent", "polyacene", "molecule", "fullerene"]:
     f_name = "../../data/other_dimension/{}.csv".format(f)
