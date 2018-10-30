@@ -42,8 +42,7 @@ compress:
 
 transfer:
 	cp $(TEX_FILE) $(SI_FILE) $(BIB_FILE) DOS_figs.tex raw_data.tex BS_figures.tex ./collab
-	cp paper-compak.pdf ./collab/paper.pdf
-	cp SI-compak.pdf ./collab/SI.pdf
+	cp paper*.pdf SI*.pdf ./collab
 	rsync -ahvz --exclude="*.png" --exclude="*converted-to.pdf" img collab/
 
 Clean:
