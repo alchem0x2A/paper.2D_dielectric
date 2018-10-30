@@ -736,8 +736,54 @@ oversimplification of single Lorentz oscillator. Nevertheless, this
 example shows excellently how the quantities in both dimensions are
 related to each other.
 
+\subsection{Comparing dielectric anisotropy}
+The dielectric anisotropy $\eta$ proposed in the main text is also
+applied to other dimensions. Similar to the case of 2D and bulk
+layered materials, $\epsilon$ is used to compare the anisotropy when
+the material is periodic in all dimensions (bulk covalent materials),
+while the polarizability $\alpha$ is used for reduced dimensional
+materials.
+
+The following types materials are chosen for comparison:
+\begin{itemize}
+\item Bulk covalent materials.  \\
+  The list of materials and bandgap are chosen according to
+  Ref. \citenum{sze_appendix_2006}, including IV-IV, III-V, II-VI, and
+  IV-VI semiconductors. All these materials have isotropic dielectric
+  properties.
+\item Planar OSc \\
+  The planar OScs include metal phthanocyanines, disk-like polycyclic
+  aromatic hydrocarbon (PAHs), and benzene derivatives. The
+  dimensionality of these materials are close to 2D materials due to
+  their planar shape. The bandgap values (mostly at B3LYP density
+  functional with 6-31G** basis sets) are extracted from the NIST
+  Computational Chemistry Comparison and Benchmark Database
+  (http://cccdb.nist.gov, Release 19, April 2018) and the
+  polarizability values are obtained from
+  Refs. \citenum{Miller_1990,Ramprasad_2006}.
+\item Carbon nanotubes (CNT) \\
+  Like 2D materials, CNTs are periodic along the 1D directions, and
+  shoudl be treated in a similar way to get the polarizability
+  proportional to [Length]$^{2}$ \cite{Benedict_1995}. Semiconducting
+  zigzag and armchair CNTs are considered, with their electronic
+  properties obtained from Refs
+  \citenum{Benedict_1995,Matsuda_2010}. and dielectric properties
+  obtained from
+  Refs. \citenum{Benedict_1995,Jensen_2000,Brothers_2008}.
+\item Linear OSc \\
+  We choose the polyacenes (linear PAHs from benznene to nonacene) as
+  a model system of linear OScs. The bandgaps are obtained from
+  \citenum{Salzner_1998} and the polarizabilities are obtained from
+  \citenum{Hinchliffe_2005}.
+\item Fullerenes \\
+  The bandgap of fullerens (C$_{n}$ where $n=60*m^{2}$ where
+  $m=1\sim{}7$) are taken from \citenum{Lin_1994} and the
+  polarizabilities are taken from \citenum{Martin_2008}. All these
+  materials have isotropic polarizability due to the high symmetry.
+\end{itemize}
+
 \section{Raw data from first principles calculations}
-\subsection{Quantities from First Principles Calculation}
+\subsection{Quantities from first principles calculation}
 \label{sec:raw}
 
 \input{raw_data}
@@ -748,7 +794,7 @@ related to each other.
 
 \input{DOS_figs}
 
-\subsection{Bandstructures of 2D Materials Calculated}
+\subsection{Bandstructures of 2D materials calculated}
 \label{sec:bs}
 
 \input{BS_figures}
