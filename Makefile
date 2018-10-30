@@ -29,6 +29,10 @@ diff:
 	cp ./SI.tex.bak SI.tex
 	latexdiff $(DIFF_TAG) paper_old.tex paper.tex > paper_change.tex
 	latexdiff $(DIFF_TAG) SI_old.tex SI.tex > SI_change.tex
+	dos2unix paper_change.tex
+	dos2unix SI_change.tex
+	sed -e "s///" paper_change.tex > tmp.tex && mv tmp.tex paper_change.tex
+	sed -e "s///" SI_change.tex > tmp.tex && mv tmp.tex SI_change.tex
 	latexmk $(LATEXMK_TAG) paper_change.tex
 	latexmk $(LATEXMK_TAG) SI_change.tex
 
