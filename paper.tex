@@ -593,17 +593,16 @@ anisotropy. The dielectric anisotropy index $\eta$ is defined as:
 \end{equation}
 $\eta=1$ indicates the material has isotropic dielectric properties
 while $\eta \to 0$ means the dielectric property is highly
-anisotropic. Figure XX \todo{TBD} shows the phase diagram of $\eta$ as
-function of $E_{\mathrm{g}}$ for 2D materials and their bulk
-counterparts. Interestingly, the 2D materials (\todo{marker shape})
-can be clearly distinguished from the layered bulk materials
-(\todo{marker shape}). The boundary separating the 2D and layered bulk
-materials is determined using an least-square support vector machine
-(LS-SVM) classification algorithm, and can be linearly approximated by
-the equation \todo{TBD}. The much lower $\eta$ values of 2D materials
-compared with their bulk counterparts indicates a high dielectric
-anisotropy, which is responsible for the unique 2D optoelectronic
-properties, such as electrostatic transparency
+anisotropic. Figure \ref{fig:aniso} shows the phase diagram of $\eta$
+as function of $E_{\mathrm{g}}$ for 2D materials and their bulk
+counterparts. Interestingly, the 2D materials (blue triangle) can be
+clearly distinguished from the bulk layered materials (orange
+square). The boundary separating the 2D and layered bulk materials is
+determined using an linear support vector machine (SVM) classification
+algorithm to be $y=0.048x+0.087$. The much lower $\eta$ values of 2D
+materials compared with their bulk counterparts indicates a high
+dielectric anisotropy, which is responsible for the unique 2D
+optoelectronic properties, such as electrostatic transparency
 \cite{Liluhua_2014,Tian_2016,Li_2018} and large exciton binding energy
 \cite{Pulci_2014,Tran_2014,Chernikov_2014_EB_MoS2_2D3D,Berkelbach_2013}. We
 also observe that $\eta$ of 2D materials increase almost linearly with
@@ -619,7 +618,23 @@ values calculated from $\alpha^{\perp}$ of monolayer due to interlayer
 coupling (Figure \ref{fig-4}c), gives rise to larger $\eta$ for
 layered bulk materials compared with the corresponding monolayer, and
 making it possible to separate the 2D and layered bulk materials from
-the $\eta-E_{\mathrm{g}}$ phase diagram.
+the $\eta-E_{\mathrm{g}}$ phase diagram. For comparison, we also
+superimpose the dielectric anisotropy $\eta$ of common semiconducting
+materials in other dimensions (details see Supplementary Section SXX
+\todo{TBD}) on the phase diagram in Figure \ref{fig:aniso}. Bulk
+covalent materials (3D, e.g. GaN) and fullerenes (0D, e.g. C$_{60}$)
+show isotropic dielectric property, scattered on the line $\eta=1$. On
+the other hand, reduced dimensionality increases the dielectric
+anisotropy of materials such as planar organic semiconductor (OSc,
+1D-2D, e.g. CuPc), carbon nanotube (CNT, 1D) and linear OSc (0D-1D,
+e.g. polyacene). Interestingly, these materials also scatter along the
+boundary line $y=0.048x+0.087$, indicating the criteria distinguishing
+2D (more anisotropic) and bulk layered materials (more isotropic) from
+the $\eta-E_{\mathrm{g}}$ diagram, can also be applied to other
+dimensions. From the phase diagram, we can see that 2D and bulk
+layered materials (also including 2D van der Waals heterostructure
+(vdWH) \cite{Novoselov_2016}), provides more flexibility in
+controlling the dielectric and electronic properties, compared with semiconductors in other dimensions.
 
 
 \todo[inline]{I have some doubt how to handle the next paragraph, keep the status quo}
@@ -841,6 +856,28 @@ database are calculated at PBE level with a k-point density of 10
   calculation when $E_{\mathrm{g}}>4$ eV, due to minimal interlayer
   coupling. The comparisons in \textbf{b} and \textbf{c} are made
   based on both HSE06 (circles) and PBE (squares) levels.}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\linewidth]{img/fig5.pdf}
+  \caption{\textbf{Phase diagram of dielectric anisotropy $\eta$ as
+      function of bandgap $E_{\mathrm{g}}$}. The
+    $\eta$-$E_{\mathrm{g}}$ values of 2D materials (blue triangle) and
+    their bulk counterparts (orange square) can be distinguished by
+    the line $y=0.048x+0.087$. $\eta-E_{\mathrm{g}}$ values of
+    semiconducting materials in other dimensions are also superimposed
+    for comparison. Isotropic dielectric property is observed for bulk
+    covalent materials (3D, red triangle) and fullerenes (0D, green
+    star), while reduced dimensional materials, including planar
+    organic semiconductor(OSc, 1D-2D, brown triangle), carbon nanotube
+    (CNT, magenta circle) and linear OSc (0D-1D, violet pentagon) are
+    scattered along the boundary line. The dimensionality and
+    structure of typical materials are shown along the axis on the
+    right. Compared with other materials, 2D materials and their bulk
+    counterparts provide more flexibility of controlling the
+    dielectric anisotropy.}
+  \label{fig:aniso}
 \end{figure}
 
 \begin{figure}[htbp]
