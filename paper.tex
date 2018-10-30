@@ -513,14 +513,40 @@ version of the Moss-relation.
 \subsection{Bridging the 2D and 3D Dielectric Properties}
 \label{sec:2D-3D}
 
-Apart from the universal Moss-like relations we propose for the
-dielectric nature of 2D materials, it is also of high theoretical
-interest to model the 2D-3D transition of dielectric properties. In
-other words, can we describe the dielectric constants
-$\varepsilon^{\parallel}_{\mathrm{Bulk}}$ and
+The universal Moss-like relation shown in the previous sections
+provides general understanding of the dielectric nature of 2D
+materials. Moreover, the underlying physical mechanism allows us to
+further bridge the 2D and 3D dielectric and electronic properties. As
+described in the previous section, the 2D Moss-like relation between
+$\alpha^{\parallel}$ and $E_{g}$ is similar to the 3D Moss relation
+between $\varepsilon$ and $E_{g}$, with a different power law. Such
+difference in the power law can indeed be explained by modern theory
+of dielectric properties.  Extend the approach
+Eq. \ref{eq:alpha_perp_RPA} to the bulk material, and use the Bloch
+presentation for wavefunctions in all dimensions, we derive (detailed
+procedure see Supplementary Section S4):
+\begin{equation}
+  \label{eq:alpha-Eg-3D}
+  \begin{aligned}[t]
+  \varepsilon_{\mathrm{bulk}} &= 1 + \frac{2e^{2}}{\varepsilon_{0}(2\pi)^{3}}\int d^{3}\mathbf{k}
+  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(k)>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
+  &\propto E_{g}^{-\frac{1}{2}},\ \mathrm{when}\ \varepsilon_{\mathrm{Bulk}} \gg 1
+\end{aligned}
+\end{equation}
+which recovers the 3D Moss relation. Therefore, the universal
+$\alpha^{\parallel}-E_{\mathrm{g}}$ relation is indeed the Moss
+relation in 2D world, while the power law of $E_{\mathrm{g}}$ and
+independence of effective mass is a result of the confinement
+perpendicular to the 2D plane. 
+
+The relation between 2D polarizability and 3D dielectric constant
+shown in Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def} can
+be further used to reconstruct the dielectric
+constants $\varepsilon^{\parallel}_{\mathrm{Bulk}}$ and
 $\varepsilon^{\perp}_{\mathrm{Bulk}}$ of a bulk layered material from
 $\alpha^{\parallel}$ and $\alpha^{\perp}$ of the monolayer (see Figure
-\ref{fig-4}a)? First, we see that the 2D polarizabilities for
+\ref{fig-4}a). First, we see that the 2D polarizabilities for
 individual layers in the bulk materials
 $\alpha_{\mathrm{Bulk}}^{\parallel}$ and
 $\alpha_{\mathrm{Bulk}}^{\perp}$, can be calculated using
@@ -636,30 +662,6 @@ layered materials (also including 2D van der Waals heterostructure
 (vdWH) \cite{Novoselov_2016}), provides more flexibility in
 controlling the dielectric and electronic properties, compared with semiconductors in other dimensions.
 
-
-\todo[inline]{I have some doubt how to handle the next paragraph, keep the status quo}
-As described in the previous section, the 2D Moss-like relation
-between $\alpha^{\parallel}$ and $E_{g}$ is similar to the 3D Moss
-relation between $\varepsilon$ and $E_{g}$, with a different power
-law. Such difference in the power law can indeed be explained by
-modern theory of dielectric properties.  Extend the approach
-Eq. \ref{eq:alpha_perp_RPA} to the bulk material, and use the Bloch
-presentation for wavefunctions in all dimensions, we derive (detailed
-procedure see Supplementary Section S4):
-\begin{equation}
-  \label{eq:alpha-Eg-3D}
-  \begin{aligned}[t]
-  \varepsilon_{\mathrm{bulk}} &= 1 + \frac{2e^{2}}{\varepsilon_{0}(2\pi)^{3}}\int d^{3}\mathbf{k}
-  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(k)>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
-  &\propto E_{g}^{-\frac{1}{2}},\ \mathrm{when}\ \varepsilon_{\mathrm{Bulk}} \gg 1
-\end{aligned}
-\end{equation}
-which recovers the 3D Moss relation. Therefore, the universal
-$\alpha^{\parallel}-E_{\mathrm{g}}$ relation is indeed the Moss
-relation in 2D world, while the power law of $E_{\mathrm{g}}$ and
-independence of effective mass is a result of the confinement
-perpendicular to the 2D plane. 
 
 
 
