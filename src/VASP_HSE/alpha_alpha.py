@@ -136,8 +136,10 @@ fig = plt.figure(figsize=(3, 3))
 ax = fig.add_subplot(111)
 
 Eg_2D, Eg_3D, eta_2D, eta_3D = get_2D3D()
-ax.scatter(Eg_2D, eta_2D, marker="^", alpha=0.1)
-ax.scatter(Eg_3D, eta_3D, marker="s", alpha=0.1)
+ax.scatter(Eg_2D, eta_2D, marker="^", alpha=0.1, s=40,
+           linewidth=0)
+ax.scatter(Eg_3D, eta_3D, marker="s", alpha=0.1, s=40,
+           linewidth=0)
 
 # LinearSVM classification
 from sklearn.svm import LinearSVC
@@ -166,10 +168,18 @@ def anis_from_file(file_name):
     return Eg, anis
 
 
-for f in ["CNT", "covalent", "polyacene", "molecule", "fullerene"]:
+marks = {"CNT": "o",
+         "polyacene": "p",
+         "MPc": "<",
+         "covalent": ">",
+         "fullerene": "*"}
+for f in ["CNT", "covalent", "polyacene", "MPc", "fullerene"]:
     f_name = "../../data/other_dimension/{}.csv".format(f)
     Eg, anis = anis_from_file(f_name)
-    ax.scatter(Eg, anis, label=f)
+    ax.scatter(Eg, anis, label=f,
+               marker=marks[f], s=40,
+               alpha=0.6,
+               linewidth=0)
 
 xx = yy = numpy.linspace(0, 8, 100)
 ax.plot(xx, numpy.ones_like(xx), "--")
