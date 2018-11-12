@@ -41,7 +41,7 @@
 
 % \section{Introduction}
 % \label{sec:org2ea169d}
-\linenumbers{}
+% \linenumbers{}
 
 {\bfseries Dielectric constant, which defines the polarization of the
   media, is a key quantity in condensed matter. Here we show that
@@ -118,12 +118,13 @@ relations for 2D materials, depend both on the electronic and
 structural information: the in-plane polarizability
 $\alpha^{\parallel}$ is inversely proportional to the minimal bandgap
 $E_{\mathrm{g}}$, while the out-of-plane polarizability
-$\alpha^{\perp}$ is directly related with the intrinsic thickness of
-2D materials. We further introduce the concept of dielectric
-anisotropy index, to unify 2D and 3D dielectric property. The proposed
-universal dielectric scaling relationships of 2D compounds introduce a
-general pathway for the exploration of their complex physical and
-chemical phenomena well beyond the currently possible applications.
+$\alpha^{\perp}$ is directly related with the thickness
+$\delta$ of a 2D materials. We further introduce the concept of
+dielectric anisotropy index, to unify 2D and 3D dielectric
+property. The proposed universal dielectric scaling relationships of
+2D compounds introduce a general pathway for the exploration of their
+complex physical and chemical phenomena well beyond the currently
+possible applications.
 % Based on this
 % framework, we further unify the concept of dielectric properties of
 % any material dimension, by the dielectric anisotropy index, 
@@ -145,24 +146,25 @@ chemical phenomena well beyond the currently possible applications.
 \subsection{Dielectric Nature of 2D Materials}
 \label{sec:2d}
 
-In persuit of the Moss-like relation of 2D materials, an accurate
-description of the dielectric properties of 2D materials needs to be
-established. One challenge is that the concept of macroscopic
-dielectric constant is ill-defined for 2D materials
+In pursuit of the Moss-like relation for 2D materials, an accurate
+description of their dielectric properties needs to be established,
+since the concept of macroscopic dielectric constant is ill-defined
+for 2D materials
 \cite{Cudazzo_2010_screen2D,Cudazzo_2011_screening_2D,Nazarov_2015_2D_3D}. As
 shown in Figure \ref{fig-1}a, in routine first principles
 calculations, an isolated 2D material is placed in the xy-plane of a
 periodically repeating superlattice (SL) with a length $L$ along the
 z-direction separating the cell images. The macroscopic dielectric
-tensor from the superlattice $\varepsilon_{\mathrm{SL}}$, is
+tensor from the superlattice $\varepsilon_{\mathrm{SL}}^{pq}$, is
 determined through fundamental electrostatics by the response of the
-polarization density $\boldsymbol{P}^{p}$, under small
-perturbative external field $\boldsymbol{E}^{q}$, where $p$, $q$ are
-the directions in $(x, y, z)$, such that:
+polarization density $\boldsymbol{P}^{p}$ under small perturbative
+external field $\boldsymbol{E}^{q}$, where $p$, $q$ are the directions
+of polarization and electric field,
+respectively\cite{Dressel_2001_electrodynamics}:
 \begin{subequations}
   \begin{eqnarray}
       \label{eq:def-eps-1}
-    &\varepsilon^{p} &= \kappa^{pq} +
+    &\varepsilon^{pq} &= \kappa^{pq} +
                                  {\displaystyle \frac{\partial \boldsymbol{P}^{p}}
                                  {\varepsilon_{0} \partial \boldsymbol{E}^{q}}} \\
           \label{eq:def-eps-2}
@@ -173,33 +175,34 @@ the directions in $(x, y, z)$, such that:
   \end{eqnarray}
 \end{subequations}
 where $\kappa$ is the dielectric tensor of the environment,
-$\boldsymbol{u}$ is the total dipole moments of the SL, $\rho$ is the
-spatial charge density, $\Omega=AL$ is the volume, $A$ is the xy-plane
-area of the SL and $\varepsilon_{0}$ is vacuum permittivity. For the
-majority of 2D semiconductors, the off-diagonal elements of the
-dielectric tensor ($p \neq q$) tend to be negligible.  Considering
-that the 2D material is placed in vacuum, such that $\kappa^{pp} = 1$
-and $\kappa^{pq} = 0$, we can distinguish two components of the SL
-dielectric tensor, namely the in-plane
+$\boldsymbol{u} = {\displaystyle \int_{\mathrm{SL}}
+  \rho(\boldsymbol{r}) \boldsymbol{r}^{p} d^{3}\boldsymbol{r}}$ is the
+total dipole moments of the SL, $\rho$ is the spatial charge density,
+$\Omega=AL$ is the volume, $A$ is the xy-plane area of the SL and
+$\varepsilon_{0}$ is vacuum permittivity. For the majority of 2D
+semiconductors, the off-diagonal elements of the dielectric tensor
+($p \neq q$) tend to be negligible.  Considering that the 2D material
+is placed in vacuum ($\kappa^{pp} = 1$ and $\kappa^{pq} = 0$), we can
+distinguish two components, namely the in-plane
 ($\varepsilon_{\mathrm{SL}}^{\parallel}$) and out-of-plane
 ($\varepsilon_{\mathrm{SL}}^{\perp}$) dielectric constants, where
 $\varepsilon_{\mathrm{SL}}^{\parallel} =
 (\varepsilon_{\mathrm{SL}}^{xx} + \varepsilon_{\mathrm{SL}}^{yy})/2$
 and
 $\varepsilon_{\mathrm{SL}}^{\perp} =
-\varepsilon_{\mathrm{SL}}^{zz}$. Due to the absence of bonding along
-the z-direction, the induced charge density of a 2D material is highly
-confined in the xy-plane but delocalised along of the
-z-direction. Figure \ref{fig-1}a shows the charge density difference
+\varepsilon_{\mathrm{SL}}^{zz}$. The absense of bonding perpendicular
+to the 2D plane confines the induced dipoles along the
+\textit{z}-direction: as shown in Figure \ref{fig-1}a and
+Supplementary Figure SXX \todo{check}, the charge density difference
 between zero and finite electric fields,
 $\Delta \rho=\rho(\boldsymbol{E}) - \rho(\boldsymbol{E}=0)$ along the
 z-axis for an isolated 2H-MoS$_{2}$ layer under
-$|\boldsymbol{E}_{z}|=0.01 \mathrm{V\cdot \AA}^{-1}$, which extends to
-$\sim{}$12 \AA{} along the z-direction. When $L$ is large enough, the
-induced dipoles from periodic images do not overlap, and the total
-dipole moments $\boldsymbol{u}$ of the SL in Eq. \ref{eq:def-eps-2} is
-independent of $L$. As a consequence, we can see from
-Eqs. \ref{eq:def-eps-1} and \ref{eq:def-eps-2}, that both
+$|\boldsymbol{E}_{z}|=0.01 \mathrm{V\cdot \AA}^{-1}$ only extends to
+$\sim{}$12 \AA{} along the z-direction. When $L$ is large enough that
+the induced dipoles from periodic images do not interact,
+$\boldsymbol{u}$ equals the total dipole moments of a monolayer 2D
+materials and independent of the SL size. As a consequence, we can see
+from Eqs. \ref{eq:def-eps-1} and \ref{eq:def-eps-2}, that both
 $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
 $\varepsilon^{\perp}_{\mathrm{SL}}$ depend on $L$. We show this by
 plotting $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
@@ -207,90 +210,101 @@ $\varepsilon^{\perp}_{\mathrm{SL}}$ calculated from density functional
 theory (DFT) as functions of $L$ for P$\bar{6}$m2 (2H) transitional
 metal dichalcogenides (TMDCs, 2H-MX$_{2}$, where M=Mo, W and X=S, Se,
 Te), in the top panels of Figure \ref{fig-1}b and \ref{fig-1}c,
-respectively. We observe that neither
-$\varepsilon^{\parallel}_{\mathrm{SL}}$ nor
-$\varepsilon^{\perp}_{\mathrm{SL}}$ converges with $L$ due to fact
-that the long-range Coulomb interaction could not be completed
-screened within the range of magnitudes computationally accessible
-\cite{Hueser_2013_2Dvs3D}. The $L$-dependency of macroscopic
-dielectric constant makes it erroneous to use
-$\varepsilon_{\mathrm{SL}}$ to represent the dielectric nature of a 2D
-material. Therefore, we need to find a $L$-independent quantity to
-present the intrinsic dielectric properties of the 2D materials. As
-discussed previously, since the total dipole moments $\mathbf{u}$
-remain constant with $L$, we can define the surface or sheet
-polarization density matrix $\boldsymbol{\mu}$, by multiplying
-Eq. \ref{eq:def-eps-2} with $L$, such that
-$\boldsymbol{\mu}^{p} = \boldsymbol{P}^{p}L = \int_{\mathrm{SL}}
-\rho(\boldsymbol{r}) \boldsymbol{r}^{p}d^{3} \boldsymbol{r}/A$, which
-is independent of the superlattice size. Similar to the definition of
-molecular polarizability \cite{Israelachvili_2011}, the sheet
-polarization density $\boldsymbol{\mu}$ is associated with the 2D
-polarizability tensor $\alpha$ through:
-$\boldsymbol{\mu}^{p} = \sum_{q} \alpha^{pq}
-\mathbf{E}_{\mathrm{loc}}^{q}$ \cite{T_bik_2004}, where
-$E_{\mathrm{loc}}$ is the local electric field. In the in-plane
-direction, the continuity of electric field gives
-$\mathbf{E}^{\parallel}_{\mathrm{loc}}=\mathbf{E}^{\parallel}$
+respectively.
+% We observe that neither
+% $\varepsilon^{\parallel}_{\mathrm{SL}}$ nor
+% $\varepsilon^{\perp}_{\mathrm{SL}}$ converges with $L$ due to fact
+% that the long-range Coulomb interaction could not be completed
+% screened within the range of magnitudes computationally accessible
+% \cite{Hueser_2013_2Dvs3D}.
+As a result, the $L$-dependency of $\varepsilon_{\mathrm{SL}}$ makes
+it impractical to represent the dielectric nature of a 2D material
+both theoretically and experimentally, because the size of vacuum
+layer must always be considered. To solve this problem, we need to
+find the $L$-independent alternative of
+$\varepsilon_{\mathrm{SL}}$. As described before, by multiplying
+Eq. \ref{eq:def-eps-2} with $L$ we get the sheet polarization density
+of a 2D material $\boldsymbol{\mu}_{\mathrm{2D}}$, such that
+$\boldsymbol{\mu}_{\mathrm{2D}}^{p} = \boldsymbol{P}^{p}L =
+\boldsymbol{u}^{p}/A$, which is dependent with $L$ due to the invariablity
+of $\boldsymbol{u}$ and $A$. Similar to the definition of molecular
+polarizability \cite{Israelachvili_2011},
+$\boldsymbol{\mu}_{\mathrm{2D}}$ is associated with the 2D
+polarizability $\alpha_{\mathrm{2D}}$ through:
+$\boldsymbol{\mu}^{p} = \sum_{q} \alpha_{\mathrm{2D}}^{pq}
+\boldsymbol{E}_{\mathrm{loc}}^{q}$ \cite{T_bik_2004}, where
+$\boldsymbol{E}_{\mathrm{loc}}$ is the local electric field. In the
+in-plane direction, the continuity of electric field gives
+$\boldsymbol{E}^{\parallel}_{\mathrm{loc}}=\boldsymbol{E}^{\parallel}$
 \cite{Markel_2016}. Perpendicular to the 2D plane, the dipole
 screening yields
-$\boldsymbol{E}_{\mathrm{loc}}^{\perp}=\boldsymbol{E}^{\perp}+\boldsymbol{\mu}^{\perp}/L$
+$\boldsymbol{E}_{\mathrm{loc}}^{\perp}=\boldsymbol{E}^{\perp}+\boldsymbol{\mu}_{\mathrm{2D}}^{\perp}/L$
 \cite{Meyer_2001_dipole_slab,T_bik_2004}. Combining with
 Eqs. \ref{eq:def-eps-1} and \ref{eq:def-eps-2}, we derive the
 expressions for the in-plane and out-of-plane 2D polarizabilities,
-$\alpha^{\parallel}$ and $\alpha^{\perp}$, respectively:
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$, respectively:
 \begin{subequations}
 \begin{eqnarray}
   \label{eq:alpha-para-def}
-  &\alpha^{\parallel} &= \varepsilon_{0}(\varepsilon_{\mathrm{SL}}^{\parallel} - 1)L\\
+  &\alpha_{\mathrm{2D}}^{\parallel} &= \varepsilon_{0}(\varepsilon_{\mathrm{SL}}^{\parallel} - 1)L\\
   \label{eq:alpha-perp-def}
-    &\alpha^{\perp} &= \varepsilon_{0}\left(1 - {\displaystyle \frac{1}{\varepsilon_{\mathrm{SL}}^{\perp}}}\right)L
+  &\alpha_{\mathrm{2D}}^{\perp} &= \varepsilon_{0}\left(1 - {\displaystyle \frac{1}{\varepsilon_{\mathrm{SL}}^{\perp}}}\right)L
 \end{eqnarray}
 \end{subequations}
 The bottom panels of Figure \ref{fig-1}b and \ref{fig-1}c show the
-$\alpha^{\parallel}$ and $\alpha^{\perp}$ of the TMDCs as functions of
-$L$, calculated using Eqs. \ref{eq:alpha-para-def} and
-\ref{eq:alpha-perp-def}. We observe that both $\alpha^{\parallel}$ and
-$\alpha^{\perp}$ remain almost constant when $L>$15 \AA{}. In
-addition, by varying the value of $\alpha^{\parallel}$ and
-$\alpha^{\perp}$, we can nicely reproduce the $L$-dependence of
-$\varepsilon_{\mathrm{SL}}^{\parallel}$ and
-$\varepsilon_{\mathrm{SL}}^{\perp}$ of the TMDCs, as shown Figure \ref{fig-1}d
-and \ref{fig-1}e, respectively. These findings indicate that the 2D polarizability,
-instead of the dielectric constant, is the true descriptor of the
-dielectric properties of 2D materials.
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
+of the TMDCs as functions of $L$, calculated using
+Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def}. We observe
+that both $\alpha_{\mathrm{2D}}^{\parallel}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$ remain almost constant when $L>$15
+\AA{}. In addition, as shown Figure \ref{fig-1}d and \ref{fig-1}e,
+respectivel, the model-predicted
+$\varepsilon_{\mathrm{SL}}^{\parallel}-L$ and
+$\varepsilon_{\mathrm{SL}}^{\perp}-L$ relations from Eqs.
+\ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def} nicely reproduce
+the trends from Figures \ref{fig-1}b and \ref{fig-1}c. These findings
+indicate that the 2D polarizability, instead of the dielectric
+constant, is the true descriptor of the dielectric properties of 2D
+materials. More discussion about the choice of the 2D polarizability
+and comparison with other methods can be find in Supplementary Section
+SXX \todo{xxx}.
 
-It is also worth mentioning that the dielectric properties of 2D
-materials are also often modeled using an effective medium approach,
-which treats the 2D material as a slab with effective permittivity
-$\varepsilon_{\mathrm{2D}}$ and thickness $\delta$
-\cite{Sharma_1985,Cudazzo_2011_screening_2D,Matthes_2016,Trolle_2017_eps_subst,Laturia_2018}. Such
-methods require \textit{a priori} determination of $\delta$, a
-quantity with controversial definitions \cite{Mas_Ballest__2011}. In
-such approaches, $\varepsilon_{\mathrm{2D}}$ and $\delta$ have to be
-determined by fitting the $L$-dependent data of
-$\varepsilon_{\mathrm{SL}}$, which is not only computational
-expensive, but also fails to capture the anisotropy of the 2D
-dielectric properties (see Supplementary Section S1). On the other
-hand, calculating 2D polarizabilities requires no knowledge of
-$\delta$ (see Eqs. \ref{eq:alpha-para-def} and
-\ref{eq:alpha-perp-def}), and correctly presents the anisotropy of 2D
-dielectric nature that $\alpha^{\parallel} > \alpha^{\perp}$.  With
-the polarizability as the true descriptor of 2D dielectric properties,
-we will reveal the universal Moss-like relation of 2D materials from
-both theoretical and first principles studies.
 
+% It is also worth mentioning that the dielectric properties of 2D
+% materials are also often modeled using an effective medium approach,
+% which treats the 2D material as a slab with effective permittivity
+% $\varepsilon_{\mathrm{2D}}$ and thickness $\delta$
+% \cite{Sharma_1985,Cudazzo_2011_screening_2D,Matthes_2016,Trolle_2017_eps_subst,Laturia_2018}. Such
+% methods require \textit{a priori} determination of $\delta$, a
+% quantity with controversial definitions \cite{Mas_Ballest__2011}. In
+% such approaches, $\varepsilon_{\mathrm{2D}}$ and $\delta$ have to be
+% determined by fitting the $L$-dependent data of
+% $\varepsilon_{\mathrm{SL}}$, which is not only computational
+% expensive, but also fails to capture the anisotropy of the 2D
+% dielectric properties (see Supplementary Section S1). On the other
+% hand, calculating 2D polarizabilities requires no knowledge of
+% $\delta$ (see Eqs. \ref{eq:alpha-para-def} and
+% \ref{eq:alpha-perp-def}), and correctly presents the anisotropy of 2D
+% dielectric nature that $\alpha^{\parallel} > \alpha^{\perp}$.  With
+% the polarizability as the true descriptor of 2D dielectric properties,
+% we will reveal the universal Moss-like relation of 2D materials from
+% both theoretical and first principles studies.
+
+\iffalse
 \subsection{Polarizability-Based Theoretical Model}
-In this section we theoretically investigate the existence of the 2D
-Moss-like relations, based on the 2D polarizability.  Due to its
-highly anisotropic nature, the wavefunction of an isolated 2D material
-$\psi(\mathbf{r})$ can be separated into the in- and out-of-plane
-components, similar to the treatment of quantum wells
-(QW),\cite{davies_physics_1997} such that
-$\psi^{\parallel}(\boldsymbol{\rho})$ and $\psi^{\perp}(z)$, such that
-$\psi=\psi^{\parallel}\psi^{\perp}$, where $\boldsymbol{\rho}=(x, y)$
-is the in-plane coordinate. Using the Bloch theorem, the periodic
-$\psi^{\parallel}(\boldsymbol{\rho})$ can be further expressed as
+\todo[inline]{In case of Nat. Nanotechnol., I would like to move all
+  theoretical information to SI}.
+Based on the 2D polarizability, we
+then theoretically investigate the potential existence of the
+Moss-like relations for 2D materials.  Due to its highly anisotropic
+nature, the wavefunction of an isolated 2D material $\psi(\mathbf{r})$
+can be separated into the in- and out-of-plane components, similar to
+the treatment of quantum wells (QW),\cite{davies_physics_1997} such
+that $\psi^{\parallel}(\boldsymbol{\rho})$ and $\psi^{\perp}(z)$, such
+that $\psi=\psi^{\parallel}\psi^{\perp}$, where
+$\boldsymbol{\rho}=(x, y)$ is the in-plane coordinate. Using the Bloch
+theorem, the periodic $\psi^{\parallel}(\boldsymbol{\rho})$ can be
+further expressed as
 $\psi^{\parallel}(\boldsymbol{\rho})=e^{i\mathbf{k} \cdot
   \boldsymbol{\rho}}u(\boldsymbol{\rho})$, where $\mathbf{k}$ is the
 in-plane wave vector and $u(\boldsymbol{\rho})$ is periodic function
@@ -369,9 +383,10 @@ out-of-plane polarizations:
 which form the main conclusion of this work. Next, we will validate
 the proposed 2D Moss-like relations using first principle
 calculations.
+\fi
 
 
-\subsection{2D Moss Relations}
+\subsection{2D Moss Relations Based on 2D Polarizabilities}
 \label{sec:first-principles}
 We study several types of 2D materials of different electronic and
 optical properties as show in Figure \ref{fig-2}, including transition
@@ -809,7 +824,7 @@ database are calculated at PBE level with a k-point density of 10
 \label{sec:org34cbe74}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.75\linewidth]{img/fig1.pdf}
+\includegraphics[width=0.75\linewidth]{img/fig1_v110418i.pdf}
 \caption{\label{fig-1} \textbf{2D polarizability as the true
     descriptor of the dielectric nature of 2D materials.}
   \textbf{a}. 3D illustration of the spatial distribution of the
@@ -834,16 +849,16 @@ database are calculated at PBE level with a k-point density of 10
   \ref{eq:alpha-perp-def}, respectively.}
 \end{figure}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.8\linewidth]{./img/fig2.pdf}
-\caption{\label{fig-2} The elements and 3D structures of the 2D
-  materials investigated in this study.}
-\end{figure}
+% \begin{figure}[htbp]
+% \centering
+% \includegraphics[width=0.8\linewidth]{./img/fig2.pdf}
+% \caption{\label{fig-2} The elements and 3D structures of the 2D
+  % materials investigated in this study.}
+% \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\linewidth]{./img/fig3.pdf}
+\includegraphics[width=0.65\linewidth]{img/fig2_v110418.pdf}
 \caption{\label{fig-3} \textbf{The universal scaling relation of the
     dielectric nature of 2D
     materials}. \textbf{a}. $\alpha^{\parallel}$, $\alpha^{\perp}$
@@ -873,7 +888,7 @@ database are calculated at PBE level with a k-point density of 10
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\linewidth]{./img/fig4.pdf}
+\includegraphics[width=0.75\linewidth]{./img/fig4.pdf}
 \caption{\label{fig-4} \textbf{Transition of dielectric properties
     from 2D to 3D systems}. \textbf{a}. Scheme for the 2D-3D
   transition. $\alpha$ in the 2D material is essentially equivalent to
