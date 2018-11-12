@@ -240,15 +240,24 @@ $\boldsymbol{E}^{\parallel}_{\mathrm{loc}}=\boldsymbol{E}^{\parallel}$
 screening yields
 $\boldsymbol{E}_{\mathrm{loc}}^{\perp}=\boldsymbol{E}^{\perp}+\boldsymbol{\mu}_{\mathrm{2D}}^{\perp}/L$
 \cite{Meyer_2001_dipole_slab,T_bik_2004}. Combining with
-Eqs. \ref{eq:def-eps-1} and \ref{eq:def-eps-2}, we derive the
-expressions for the in-plane and out-of-plane 2D polarizabilities,
-$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$, respectively:
+Eqs. \ref{eq:def-eps-1} and \ref{eq:def-eps-2}, we can relate the 2D polarizabilities,
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$ with $\varepsilon_{\mathrm{SL}}^{\parallel}$ and $\varepsilon_{\mathrm{SL}}^{\perp}$, respectively:
+\iffalse
 \begin{subequations}
 \begin{eqnarray}
   \label{eq:alpha-para-def}
   &\alpha_{\mathrm{2D}}^{\parallel} &= \varepsilon_{0}(\varepsilon_{\mathrm{SL}}^{\parallel} - 1)L\\
   \label{eq:alpha-perp-def}
   &\alpha_{\mathrm{2D}}^{\perp} &= \varepsilon_{0}\left(1 - {\displaystyle \frac{1}{\varepsilon_{\mathrm{SL}}^{\perp}}}\right)L
+\end{eqnarray}
+\end{subequations}
+\fi
+\begin{subequations}
+\begin{eqnarray}
+  \label{eq:alpha-para-def}
+  &\varepsilon_{\mathrm{SL}}^{\parallel} &= 1 + \frac{\alpha_{\mathrm{2D}}^{\parallel}}{\varepsilon_{0}L}\\
+  \label{eq:alpha-perp-def}
+  &\varepsilon_{\mathrm{SL}}^{\perp} &= \left(1 - {\displaystyle \frac{\alpha_{\mathrm{2D}}^{\perp}}{\varepsilon_{\mathrm{0}} L}} \right)^{-1}
 \end{eqnarray}
 \end{subequations}
 The bottom panels of Figure \ref{fig-1}b and \ref{fig-1}c show the
@@ -386,66 +395,96 @@ calculations.
 \fi
 
 
-\subsection{2D Moss Relations Based on 2D Polarizabilities}
+\subsection{2D Moss-like  Relations}
 \label{sec:first-principles}
-We study several types of 2D materials of different electronic and
-optical properties as show in Figure \ref{fig-2}, including transition
-metal dichalcogenides (TMDCs, with the formula MX\(_{\text{2}}\),
-where M is a metal in group 4, 6, 10 and X=O, S, Se, Te), metal
-monochalcogenides (Ga$_{2}$S$_{2}$, Ga$_{2}$Se$_{2}$), cadmium halides
-(CdX$_2$, X=Cl, I), hexagonal boron nitride (BN), graphene derivatives
-(fluorographene (C$_{2}$F$_{2}$), graphane (C$_{2}$H$_{2}$)),
-phosphorene (P$_{4}$) and thin layer organic-inorganic perovskites
-(ABX$_{3}$).  For the TMDCs, we consider 2 lattice phases, namely the
-2H (P\(\bar{6}\)m2 space group) and 1T (P3m1 space group).  The static
-2D polarizabilities are calculated from the static dielectric response
-of the selected 2D materials using density functional theory (DFT)
-with the Heyd-Scuseria-Ernzerhof hybrid functionals (HSE06) using the
+Based on the 2D polarizabilities, we then investigate the potential
+Moss-like relations for 2D materials. By evaluating the expressions
+for $\alpha_{\mathrm{2D}}^{\parallel}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$ using Random Phase Approximation (RPA)
+theory \cite{Adler_1962} with $\mathbf{k} \cdot \mathbf{p}$
+treatment\cite{kittel_2005_introduction} (details see Supplementary
+Section SXX) \todo{note}, we show that
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
+have simple relation with the electronic  and structural information of a 2D
+material, respectively:
+\begin{subequations}
+\begin{eqnarray}
+\label{eq:2D-Moss-para}
+  &\alpha^{\parallel} &\propto E_{g}^{-1} \\
+  \label{eq:2D-Moss-perp}
+  &\alpha^{\perp} & \propto \delta
+\end{eqnarray}
+\end{subequations}
+where $E_{\mathrm{g}}$ is the minimal electronic bandgap of the 2D
+material, and $\delta$ is its intrinsic
+thickness. Eqs. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} are
+the main conclusions of this work.
+
+To validate such relations, we study several types of 2D materials as
+show in Figure \ref{fig-3}a, including transition metal
+dichalcogenides (TMDCs, with the formula MX\(_{\text{2}}\), where M is
+a metal in group 4, 6, 10 and X=O, S, Se, Te), metal monochalcogenides
+(Ga$_{2}$S$_{2}$, Ga$_{2}$Se$_{2}$), cadmium halides (CdX$_2$, X=Cl,
+I), hexagonal boron nitride (BN), graphene derivatives (fluorographene
+(C$_{2}$F$_{2}$), graphane (C$_{2}$H$_{2}$)), phosphorene (P$_{4}$)
+and thin layer organic-inorganic perovskites (ABX$_{3}$).  For the
+TMDCs, we consider 2 lattice phases, namely the 2H (P\(\bar{6}\)m2
+space group) and 1T (P3m1 space group).  The static 2D
+polarizabilities are calculated from the static dielectric response of
+the selected 2D materials using density functional theory (DFT) with
+the Heyd-Scuseria-Ernzerhof hybrid functionals (HSE06) using the
 Vienna Ab Initio Simulation Package (VASP) including spin-orbit
 coupling to avoid limitations on the description of band gaps and
-dielectric functions (see Methods for details).
-
-Figure \ref{fig-3}a shows the calculated bandgap $E_{\mathrm{g}}$
-(blue dots) and polarizabilities (bar plots) of all the 2D materials
-investigated, covering a wide spectrum range from far infrared to
-ultraviolet. Note from dimension analysis, it is more intuitive to
-express the polarizability as $\alpha/(4 \pi \varepsilon_{0})$, which
-has unit of \AA. We find that $\alpha^{\parallel}$ has a general
+dielectric functions (see Methods for details). Figure \ref{fig-3}b
+shows the calculated $E_{\mathrm{g}}$ (blue dots) and polarizabilities
+(bar plots) of all the 2D materials investigated, covering a wide
+spectrum range from far infrared to ultraviolet. Note from dimension
+analysis, it is more intuitive to express the polarizability as
+$\alpha_{\mathrm{2D}}/(4 \pi \varepsilon_{0})$, which has unit of
+\AA. We find that $\alpha_{\mathrm{2D}}^{\parallel}$ has a general
 descending trend when $E_{\mathrm{g}}$ increases. On the other hand,
-no apparent trend between $\alpha^{\perp}$ and $E_{\mathrm{g}}$ is
-observed (see Supplementary Section S2.2), which appears to be in good
-agreement with our polarizability-based theoretical model. We now
-validate Eq. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} using the
+no apparent correlation between $\alpha_{\mathrm{2D}}^{\perp}$ and
+$E_{\mathrm{g}}$ is observed (see Supplementary Section S2.2), which
+appears to be in good agreement with our polarizability-based
+theoretical model (Supplementary Section SXX \todo{note}). We then
+examine Eqs. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} using the
 polarizabilities calculated by first principle calculations. Figure
-\ref{fig-3}b shows $(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ (in
-\AA{}) as a function of $E_{\mathrm{g}}$ (in eV) for the 2D materials
-investiaged (circle dots), with a linear regression slope of ~0.182
-and $R^{2}$ of 0.84. From Ref. \citenum{Jiang_2017_Eg_Eb}, the slope
-between $(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ and $E_{g}$ is
-$8\pi^{2}\varepsilon_{0} \mathrm{\AA}/(eN) \approx 0.436/N$, which
-yields $N$ betweem 2 and 3, which is reasonable for the 2D materials
-studied. We observe that materials with lower $E_{\mathrm{g}}$ ($<$4
-eV) generally lie close to the regression line, while the deviation
-becomes greater for materials with $E_{\mathrm{g}}>$4 eV, which has
-also been observed in the $E_{\mathrm{b}}-E_{\mathrm{g}}$ relation of
-2D materials \cite{Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}. We also
-discover that the linearity between
-$(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ and $E_{\mathrm{g}}$ is
-better when the bandgap is calculated using the HSE06 hybrid
-functionals, compared with that from the Perdew--Burk--Ernzerhof (PBE)
-exchange correlations (details see Supplementary Section S2 and
-Supplementary Figure S5), which can be explained by the fact that the
-electronic structure, in particular the bandgap, is generally better
-predicted at HSE06 level than PBE level \cite{Heyd_2005}. It should be
-noted that although even more accurate estimation of both
-$\varepsilon$ and $E_{\mathrm{g}}$ can be achieved via many-body
-Green’s function method (GW) together with the Bethe-Salpeter equation
-(BSE), the convergence of such method is known to be highly affected
-by the dielectric screening of 2D materials
+\ref{fig-3}b shows
+$(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ (in
+\AA{}$^{-1}$) as a function of $E_{\mathrm{g}}$ (in eV) for the 2D
+materials investiaged (circle dots), with a linear regression
+coefficient of regression $R^{2}$ of 0.84, and a slope of 0.18, which
+corresponds well with theoretical investigations
+\citenum{Jiang_2017_Eg_Eb} (details see Supplementary Section SXX
+\todo{format Jiang's paper into SI}).
+% From Ref. \citenum{Jiang_2017_Eg_Eb}, the slope between
+% $(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ and $E_{g}$ is
+% $8\pi^{2}\varepsilon_{0} \mathrm{\AA}/(eN) \approx 0.436/N$, which
+% yields $N$ betweem 2 and 3, which is reasonable for the 2D materials
+% studied.
+% We observe that materials with lower $E_{\mathrm{g}}$ ($<$4
+% eV) generally lie close to the regression line, while the deviation
+% becomes greater for materials with $E_{\mathrm{g}}>$4 eV, which has
+% also been observed in the $E_{\mathrm{b}}-E_{\mathrm{g}}$ relation of
+% 2D materials \cite{Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}.
+We also discover that the linearity between
+$(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ and $E_{\mathrm{g}}$
+(measured by the $R^{2}$ value) is higher when the bandgap is
+calculated using the HSE06 hybrid functionals, compared with that from
+the Perdew--Burk--Ernzerhof (PBE) exchange correlations (details see
+Supplementary Section S2 and Supplementary Figure S5), which can be
+explained by the fact that the electronic structure, in particular the
+bandgap, is generally better predicted at HSE06 level than PBE level
+\cite{Heyd_2005}. It should be noted that although even more accurate
+estimation of both dielectric properties and bandgap can be achieved
+via many-body Green’s function method (GW) together with the
+Bethe-Salpeter equation (BSE), the convergence of such method is known
+to be highly affected by the dielectric screening of 2D materials
 \cite{Hueser_2013_2Dvs3D}. Combining the accuracy, computational
 effort and convergence, the choice of the HSE06 hybrid functional may
 be most suitable to present the true 2D Moss-like relationship between
-$\alpha^{\parallel}$ and $E_{\mathrm{g}}$. 
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $E_{\mathrm{g}}$.
+\todo[inline]{check the values for optical bandgap}
 
 We further examine the relation between $\alpha^{\perp}$ and the
 thickness of a 2D material proposed in
@@ -460,36 +499,33 @@ plus their covalent radii:
 \end{equation}
 where i, j are two atoms in the 2D material and $r_{\mathrm{cov}}^{i}$
 is the covalent radius of atom i (Figure \ref{fig-3}c inset). As shown
-in Figure \ref{fig-3}c, $\alpha^{\perp}/(4 \pi \varepsilon_{0})$
-indeed shows an excellent linear correlation with
-$\delta_{\mathrm{cov}}$, with $R^{2}=0.98$, and the slope very close
-to $1/4\pi$. In addition to our theoretical predictions discussed
-above, the perfect linear correlation between $\alpha^{\perp}$ and
-$\delta_{\mathrm{cov}}$ has its strong physical meaning. Similar to
-the molecular polarizability which characterizes the volume of
-electron cloud of an isolated molecule \cite{Israelachvili_2011}, the
-2D polarizability also characterizes the volume of the electron cloud
-per unit area (from its definition), and naturally represents the
-thickness of the electron cloud of the 2D material. The fact that the
-thickness of the electron cloud can be approximated by the extension
-of valence states in the z-direction, explains the close match between
-the linear slope in Figure \ref{fig-3}c and $1/4\pi$ (see
-Supplementary Section S4.1). In other words, the universal scaling
-relation for $\alpha^{\perp}$ indicates the quantity
-$\alpha^{\perp}/\varepsilon_{0}$, is the dielectric characteristic
-thickness of a 2D material. We propose that the experimental
-measurment of the electronic polarizability
-\cite{Antoine_1999,Cherniavskaya_2003,Krauss_1999_EFM}, can also be
-extended to measure $\alpha^{\perp}$ of a 2D material, as a direct
-estimation of it thickness, in comparison with the optical
-ellipsometry techniques \cite{Weber_2010} widely used to estimate the
-thickness of 2D materials, which requires empirical optical model and
-parameter fitting.
+in Figure \ref{fig-3}c,
+$\alpha_{\mathrm{2D}}^{\perp}/(4 \pi \varepsilon_{0})$ indeed shows an
+excellent linear correlation with $\delta_{\mathrm{cov}}$, with
+$R^{2}=0.98$, and the slope very close to $1/4\pi$. In other words,
+$\alpha_{\mathrm{2D}}^{\perp} / \varepsilon_{0}$ is almost identical
+to $\delta_{\mathrm{cov}}$, which has its strong physical
+meaning. Similar to the molecular polarizability which characterizes
+the volume of electron cloud of an isolated molecule
+\cite{Israelachvili_2011},
+$\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ is also related to the
+volume of the electron cloud per unit area (from its definition), and
+is naturally proportional to the electron cloud thickness of the 2D
+material (see Supplementary Section SXX). In fact, the universal
+scaling relation for $\alpha^{\perp}$ in Figure \ref{fig-3}c indicates
+that the quantity $\alpha^{\perp}/\varepsilon_{0}$ measurable via
+electronic approaches
+\cite{Antoine_1999,Cherniavskaya_2003,Krauss_1999_EFM}, is indeed the
+(dielectric) characteristic thickness of a 2D material, and can be
+used to resolve the long-existing controversy about the experimental
+thickness of 2D materials, such as graphene \cite{Shearer_2016}.
 
-The universal relations of 2D polarizabilities are not
-coincidence. Combining recent theoretical findings of the linear
-relation between exciton binding energy $E_{\mathrm{b}}$ and
-$E_{\mathrm{g}}$ of 2D materials
+\iffalse
+The universal relations for $\alpha_{\mathrm{2D}}^{\parallel}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$ revealed by Eqs. \ref{eq:2D-Moss-para}
+and \ref{eq:2D-Moss-perp} are not coincidence. Combining recent
+theoretical findings of the linear relation between exciton binding
+energy $E_{\mathrm{b}}$ and $E_{\mathrm{g}}$ of 2D materials
 \cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
 fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
 $\alpha^{\parallel}$ \cite{Pulci_2014}, it is reasonable to have a
@@ -498,60 +534,69 @@ $1/\alpha^{\parallel}$. Moreover, the bandgap-independent relation of
 2D $\alpha^{\perp}$ resembles molecular polarizabilities of conjugate
 molecules \cite{Davies_1952}, fullerenes \cite{Sabirov_2014} and
 carbon nanotubes \cite{Benedict_1995}, which are also shown to be
-geometry-dependent. To rule out the possibility that our conclusion is
-limited by the number of materials used, we further validate our
-proposed 2D Moss-like relations on the recently-published C2DB
-database \cite{Haastrup_2018}, from which we extracted the dielectric
+geometry-dependent.
+\fi
+
+To rule out the possibility that our conclusion is limited by the
+number of materials used, we further validate our proposed 2D
+Moss-like relations on the recently-published C2DB database
+\cite{Haastrup_2018}, from which we extracted the dielectric
 properties of over 230 2D materials calculated at the PBE level, and
-overlap them with our results in Figure \ref{fig-3}b and \ref{fig-3}c
-(further details see Supplementary Section S3). Althought the
-dielectric properties may be overestimated at PBE level due to
-underestimation of the bandgap compared with the more accurate HSE06
-functionals, apparent linear trends can be observed for both
-$\alpha^{\parallel}$ and $\alpha^{\perp}$, with the linear coefficient
-very close to the HSE06 results. Therefore, the proposed universal 2D
-Moss-like relations are confirmed.  We have also tested the potential
-relation between the 2D polarizabilities with other physical
-quantities, including the effective carrier mass, quantum capacitance
-and total atomic polarizabilities, while no apparent correlations are
-found (details see Supplementary Section S3).
+superimpose with our results in Figure \ref{fig-3}b and \ref{fig-3}c
+(details see Supplementary Section S3). Althought the dielectric
+properties may be overestimated at PBE level due to underestimation of
+the bandgap compared with the more accurate HSE06 functionals
+\cite{Van_Dyck_2017}, similar linear trends can be observed for both
+$\alpha^{\parallel}_{\mathrm{2D}}$ and $\alpha_{\mathrm{2D}}^{\perp}$,
+with the linear coefficient very close to the HSE06 results. We have
+also tested the potential relation between the 2D polarizabilities
+with other physical quantities, including the effective carrier mass,
+quantum capacitance and total atomic polarizabilities, while no
+apparent correlations are found (details see Supplementary Section
+S3).
 
 In short, we have revealed the 2D analog of the Moss relation by both
 theoretical modeling and first principles calculations:
-$\alpha^{\parallel}$ is inversely proportional to the minimal bandgap
-$E_{\mathrm{g}}$, while $\alpha^{\perp}$ is the characteristic
-thickness of the 2D material. Although their apparent forms in
-Eq. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} seem different, we
-will show the 2D Moss-like relations stem from the same origin. In
-merit of the unit analysis, $\alpha^{\parallel}$ and $\alpha^{\perp}$
-both have unit of $4\pi\varepsilon_{0} \cdot$[Length]. Specifically,
-$\alpha^{\parallel}$ and $\alpha^{\perp}$ corresponds to
-characteristic lengthes in- and out-of-plane, respectively. The
-in-plane screened electrostatic potential $V(r)$ from a point charge
-in an 2D plane, as a function of distance $r$:
+$\alpha_{\mathrm{2D}}^{\parallel}$ is inversely proportional to the
+minimal bandgap $E_{\mathrm{g}}$, while $\alpha_{\mathrm{2D}}^{\perp}$
+is the characteristic thickness of the 2D material. Next we show,
+despite their different forms, both 2D Moss-like relations stem from
+the same origin. In merit of the unit analysis,
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
+both have unit of $4\pi\varepsilon_{0} \cdot$[Length], or in other
+words, $\alpha_{\mathrm{2D}}^{\parallel}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$ correspond to in- and out-of-plane
+characteristic lengthes, respectively. The in-plane screened
+electrostatic potential $V(r)$ from a point charge in an 2D plane, as
+a function of distance $r$:
 $V(r) = {\displaystyle \frac{e}{4 \alpha^{\parallel}}}
 \left[H_{0}({\displaystyle \frac{2\varepsilon_{0}
       r}{\alpha^{\parallel}}}) - Y_{0}( {\displaystyle \frac{2
       \varepsilon_{0}r}{\alpha^{\parallel}}})\right]$
 \cite{Keldysh_1979_eps_multi,Pulci_2014}, where $H_{0}$ is the Struve
 function and $Y_{0}$ is the Bessel function of second kind, is
-assciated with the in-plane screening radius
-$r_{0}^{\parallel}=\alpha^{\parallel}/(2 \varepsilon_{0})$, such that
-$V(r,r/r^{\parallel}_{0} \gg 1)$ reduces to the simple Coulombic
-potential in vacuum. Combining with the result that the thickness of
-2D material is characterized by $\alpha^{\perp}/\varepsilon_{0}$, we
-have drawn a generalized picture of the dielectric nature of 2D
-materials via the 2D polarizability: the dielectric screening of a
-point charge sitting in the middle of a 2D material can be viewed as
-an ellipsoid with the length of principle axes to be
-$\alpha^{\parallel}/(2 \varepsilon_{0})$ and
-$\alpha^{\perp}/(2 \varepsilon_{0})$, respectively, analog to the
-polarizability ellipsoid picture of molecules used in spectroscopy
-\cite{Banwell_1994} (see Supplementary Figure S12). The in-plane
-screening length is generally larger for a smaller bandgap
-semiconductor, which qualitatively explains the inverse propotional
-relation between $\alpha^{\parallel}$ and $E_{\mathrm{g}}$, a 2D
-version of the Moss-relation.
+associated with the in-plane screening radius
+$r_{0}^{\parallel}=\alpha_{\mathrm{2D}}^{\parallel}/(2
+\varepsilon_{0})$, such that $V(r,r/r^{\parallel}_{0} \gg 1)$ reduces
+to the simple Coulombic potential in vacuum. Combining with the result
+that $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ characterizes the
+thickness of a 2D material, we have drawn a generalized picture of the
+dielectric nature of 2D materials via the 2D polarizability: the
+dielectric screening of a point charge sitting in the middle of a 2D
+material can be viewed as an ellipsoid with the length of principle
+axes to be
+$r_{0}^{\parallel} = \alpha_{\mathrm{2D}}^{\parallel}/(2
+\varepsilon_{0})$ and
+$r_{0}^{\perp} = \alpha^{\perp}_{\mathrm{2D}}/(2 \varepsilon_{0})$,
+respectively, analog to the polarizability ellipsoid picture of
+molecules used in spectroscopy \cite{Banwell_1994} (see Supplementary
+Figure S12). The polarizability ellipsoid for a 2D material is in
+general ultra flat, with $r_{0}^{\parallel} \gg r_{0}^{\perp}$, as
+can be seen from the group 6 TMDCs in Table \ref{tbl:radii}.
+Moreover, $r_{0}^{\parallel}$ is generally larger for a smaller
+bandgap semiconductor, which qualitatively explains the inverse
+propotional relation between $\alpha^{\parallel}$ and
+$E_{\mathrm{g}}$, a 2D version of the Moss-relation.
 
 
 \subsection{Bridging the 2D and 3D Dielectric Properties}
@@ -884,7 +929,29 @@ database are calculated at PBE level with a k-point density of 10
 % \caption{\label{fig-delta} Scheme for the determination of the
   % covalent thickness of one-atom-thick (left) and few-atom-thick
   % (right) 2D materials.}
-% \end{figure}
+  % \end{figure}
+\begin{table}[htbp]
+  \centering
+  \caption{In-plane ($r_{0}^{\parallel}$) and out-of-plane
+    ($r_{0}^{\perp}$) radii of the polarizability ellipsoid of
+    selected 2D materials calculated from first principles
+    simulations. $r_{0}^{\parallel}$ is in general much larger than
+    $r_{0}^{\perp}$, which accounts for the highly anisotropic
+    dielectric nature of 2D materials.}
+  \label{tbl:radii}  
+  \begin{tabular}[htbp]{lcc}
+    \hline
+    Material & $r_{0}^{\parallel} = \alpha_{\mathrm{2D}}^{\parallel}/2\varepsilon_{0}$ (\AA{}) &  $r_{0}^{\perp} = \alpha_{\mathrm{2D}}^{\perp}/2\varepsilon_{0}$ (\AA{})\\
+    \hline
+    2H-MoS$_{2}$ & 40.0 & 2.50 \\
+    2H-MoSe$_{2}$ & &  \\
+    2H-MoTe$_{2}$ & 58.1 & 3.07  \\
+    2H-WS$_{2}$ & 35.7 & 2.46  \\
+    2H-WSe$_{2}$ & 41.0 & 2.71 \\
+    2H-WTe$_{2}$ & 53.5 &  3.17\\
+    \hline
+  \end{tabular}
+\end{table}
 
 \begin{figure}[htbp]
 \centering
