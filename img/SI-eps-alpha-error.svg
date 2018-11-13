@@ -15,7 +15,7 @@
    viewBox="0 0 83.433739 79.848907"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (cdafc079a9, 2018-06-25)"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="SI-eps-alpha-error.svg">
   <defs
      id="defs2"
@@ -59,9 +59,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.97641503"
-     inkscape:cx="213.16802"
-     inkscape:cy="83.796902"
+     inkscape:zoom="1.3808594"
+     inkscape:cx="-206.56955"
+     inkscape:cy="312.87916"
      inkscape:document-units="mm"
      inkscape:current-layer="axes_1"
      showgrid="false"
@@ -69,8 +69,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1280"
-     inkscape:window-height="687"
+     inkscape:window-width="2218"
+     inkscape:window-height="1352"
      inkscape:window-x="31"
      inkscape:window-y="23"
      inkscape:window-maximized="0" />
@@ -82,7 +82,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -8357,6 +8357,17 @@
              style="fill:#ff1e00;fill-opacity:1;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:round"
              x="152.3074"
              y="93.041229">y=1</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="174.8911"
+           y="217.51733"
+           id="text1905"><tspan
+             sodipodi:role="line"
+             id="tspan1903"
+             style="font-size:5px;baseline-shift:sub;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:round"
+             x="174.8911"
+             y="217.51733">2D</tspan></text>
       </g>
     </g>
   </g>

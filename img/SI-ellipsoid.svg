@@ -15,7 +15,7 @@
    viewBox="0 0 196.51768 110.5412"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (cdafc079a9, 2018-06-25)"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="SI-ellipsoid.svg">
   <defs
      id="defs2">
@@ -72,9 +72,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.69042969"
-     inkscape:cx="547.06075"
-     inkscape:cy="162.49616"
+     inkscape:zoom="1.3808594"
+     inkscape:cx="366.30176"
+     inkscape:cy="347.36547"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -83,8 +83,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1280"
-     inkscape:window-height="687"
+     inkscape:window-width="2385"
+     inkscape:window-height="1379"
      inkscape:window-x="0"
      inkscape:window-y="23"
      inkscape:window-maximized="0" />
@@ -96,7 +96,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -144,28 +144,32 @@
          y="9.2051792"
          style="font-size:8.46666622px;stroke-width:0.26458332px"><tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-   id="tspan1188">α</tspan><tspan
+   id="tspan1188">r<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64.99999762%;font-family:arial;-inkscape-font-specification:arial;baseline-shift:sub"
+   id="tspan858">0</tspan>=α</tspan><tspan
    style="font-size:7.05555534px;baseline-shift:super"
-   id="tspan1182">‖</tspan>/2<tspan
+   id="tspan1182">‖ </tspan>/2<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
    id="tspan1190">ε</tspan><tspan
    style="font-size:64.99999762%;baseline-shift:sub"
    id="tspan1186">0</tspan></tspan></text>
     <text
        id="text1202"
-       y="46.246849"
-       x="176.3472"
+       y="39.404751"
+       x="158.05644"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-size:8.46666622px;stroke-width:0.26458332px"
-         y="46.246849"
-         x="176.3472"
+         y="39.404751"
+         x="158.05644"
          id="tspan1200"
          sodipodi:role="line"><tspan
    id="tspan1192"
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'">α</tspan><tspan
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'">r<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64.99999762%;font-family:arial;-inkscape-font-specification:arial;baseline-shift:sub"
+   id="tspan872">0</tspan>=α</tspan><tspan
    id="tspan1194"
-   style="font-size:7.05555534px;baseline-shift:super">‖</tspan>/2<tspan
+   style="font-size:7.05555534px;baseline-shift:super">‖ </tspan>/2<tspan
    id="tspan1196"
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'">ε</tspan><tspan
    id="tspan1198"
@@ -182,12 +186,80 @@
          y="30.371847"
          style="font-size:8.46666622px;stroke-width:0.26458332px"><tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-   id="tspan1204">α</tspan><tspan
+   id="tspan1204">r<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64.99999762%;font-family:arial;-inkscape-font-specification:arial;baseline-shift:sub"
+   id="tspan868">0</tspan>=α</tspan><tspan
    id="tspan1220"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:Arial;-inkscape-font-specification:Arial;baseline-shift:super">⟂</tspan>/2<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
    id="tspan1208">ε</tspan><tspan
    style="font-size:64.99999762%;baseline-shift:sub"
    id="tspan1210">0</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.30401134px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.45650071px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="111.26884"
+       y="6.3206501"
+       id="text878"><tspan
+         sodipodi:role="line"
+         id="tspan876"
+         x="111.26884"
+         y="6.3206501"
+         style="stroke-width:0.45650071px">‖</tspan></text>
+    <text
+       id="text882"
+       y="36.483147"
+       x="162.59805"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.30401134px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.45650071px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.45650071px"
+         y="36.483147"
+         x="162.59805"
+         id="tspan880"
+         sodipodi:role="line">‖</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.51364231px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40710264px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="92.248444"
+       y="27.041332"
+       id="text886"><tspan
+         sodipodi:role="line"
+         id="tspan884"
+         x="92.248444"
+         y="27.041332"
+         style="stroke-width:0.40710264px">⟂</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.38176727px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39886045px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="124.12418"
+       y="9.6044283"
+       id="text890"><tspan
+         sodipodi:role="line"
+         id="tspan888"
+         x="124.12418"
+         y="9.6044283"
+         style="font-size:4.14814806px;baseline-shift:sub;stroke-width:0.39886045px">2D</tspan></text>
+    <text
+       id="text894"
+       y="30.771093"
+       x="105.07417"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.38176727px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39886045px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:4.14814806px;baseline-shift:sub;stroke-width:0.39886045px"
+         y="30.771093"
+         x="105.07417"
+         id="tspan892"
+         sodipodi:role="line">2D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.38176727px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39886045px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="175.98257"
+       y="39.766926"
+       id="text898"><tspan
+         sodipodi:role="line"
+         id="tspan896"
+         x="175.98257"
+         y="39.766926"
+         style="font-size:4.14814806px;baseline-shift:sub;stroke-width:0.39886045px">2D</tspan></text>
   </g>
 </svg>

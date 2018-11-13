@@ -10,12 +10,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="200.47298mm"
+   width="204.06448mm"
    height="62.398136mm"
-   viewBox="0 0 200.47298 62.398136"
+   viewBox="0 0 204.06449 62.398136"
    version="1.1"
    id="svg7076"
-   inkscape:version="0.92.3 (cdafc079a9, 2018-06-25)"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="SI-classic.svg">
   <defs
      id="defs7070">
@@ -317,14 +317,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.48820751"
-     inkscape:cx="270.07126"
-     inkscape:cy="151.44179"
+     inkscape:zoom="1.3808594"
+     inkscape:cx="327.4859"
+     inkscape:cy="60.986467"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="687"
+     inkscape:window-width="2128"
+     inkscape:window-height="1149"
      inkscape:window-x="28"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
@@ -689,7 +689,7 @@
            height="56.486565"
            x="614.11035"
            y="147.76437" /></flowRegion><flowPara
-         id="flowPara12282"></flowPara></flowRoot>    <path
+         id="flowPara12282" /></flowRoot>    <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
        d="M 184.60808,55.191042 V 27.024706"
        id="path12286"
@@ -705,7 +705,11 @@
          id="tspan12518"
          x="187.8654"
          y="40.054031"
-         style="stroke-width:0.26458332px">μ</tspan></text>
+         style="stroke-width:0.26458332px"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:arial;-inkscape-font-specification:'arial Italic'"
+           id="tspan974">μ</tspan><tspan
+           style="font-size:64.99999762%;baseline-shift:sub"
+           id="tspan976">2D</tspan></tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker12538)"
        d="M 93.121357,41.778499 H 114.96464"

@@ -15,7 +15,7 @@
    viewBox="0 0 175.99879 90.860695"
    version="1.1"
    id="svg4077"
-   inkscape:version="0.92.3 (cdafc079a9, 2018-06-25)"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="SI-alpha_EG_raw_HSE.svg">
   <defs
      id="defs4071"
@@ -1910,9 +1910,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3433596"
-     inkscape:cx="266.54632"
-     inkscape:cy="167.82016"
+     inkscape:zoom="1.8997974"
+     inkscape:cx="241.63712"
+     inkscape:cy="283.5226"
      inkscape:document-units="mm"
      inkscape:current-layer="line2d_16-0"
      showgrid="false"
@@ -1920,8 +1920,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1280"
-     inkscape:window-height="687"
+     inkscape:window-width="2170"
+     inkscape:window-height="1242"
      inkscape:window-x="7"
      inkscape:window-y="23"
      inkscape:window-maximized="0" />
@@ -1933,7 +1933,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4785,9 +4785,9 @@
                    id="tspan45494">∥</tspan>
                 <tspan
                    style="font-size:7.5px;font-family:Arial;stroke-linecap:butt;stroke-linejoin:round"
-                   x="9.3051729 11.388914 13.886472 29.671085"
+                   x="9.3051729 9.3051729 11.388914 13.886472 29.671085"
                    y="-0.91203123"
-                   id="tspan45496">/(4)</tspan>
+                   id="tspan45496">/ (4)</tspan>
                 <tspan
                    style="font-size:5.25px;font-family:Arial;stroke-linecap:butt;stroke-linejoin:round"
                    x="26.377928"
@@ -4824,6 +4824,30 @@
                y="35.060467">y=7.295x<tspan
    style="font-size:64.99999762%;baseline-shift:super;stroke-linecap:butt;stroke-linejoin:round;fill:#358bc7;fill-opacity:1;"
    id="tspan46827">-1</tspan></tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.13575649px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.63348478px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             x="-125.22424"
+             y="15.763874"
+             id="text5413"
+             transform="rotate(-90)"><tspan
+               sodipodi:role="line"
+               id="tspan5411"
+               style="font-size:4.22323227px;baseline-shift:sub;stroke-width:0.63348478px;stroke-linecap:butt;stroke-linejoin:round"
+               x="-125.22424"
+               y="15.763874">2D</tspan></text>
+          <text
+             transform="rotate(-90)"
+             id="text5417"
+             y="261.76385"
+             x="-128.22424"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.13575649px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.63348478px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               y="261.76385"
+               x="-128.22424"
+               style="font-size:4.22323227px;baseline-shift:sub;stroke-width:0.63348478px;stroke-linecap:butt;stroke-linejoin:round"
+               id="tspan5415"
+               sodipodi:role="line">2D</tspan></text>
         </g>
         <g
            style="stroke-linecap:butt;stroke-linejoin:round"

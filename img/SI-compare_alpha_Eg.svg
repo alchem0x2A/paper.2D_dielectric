@@ -16,7 +16,7 @@
    width="230.125pt"
    id="svg18609"
    sodipodi:docname="SI-compare_alpha_Eg.svg"
-   inkscape:version="0.92.3 (cdafc079a9, 2018-06-25)">
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
   <metadata
      id="metadata18613">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -38,13 +38,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1127"
-     inkscape:window-height="648"
+     inkscape:window-width="2424"
+     inkscape:window-height="1179"
      id="namedview18611"
      showgrid="false"
-     inkscape:zoom="1.6404877"
-     inkscape:cx="149.84215"
-     inkscape:cy="194.80448"
+     inkscape:zoom="1.16"
+     inkscape:cx="-23.978248"
+     inkscape:cy="198.38757"
      inkscape:window-x="0"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
@@ -1525,6 +1525,18 @@
              y="67.257935">y=0.192x-0.099 R<tspan
    style="font-size:64.99999762%;baseline-shift:super;fill:#2c9f2c;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:round"
    id="tspan22330">2</tspan>=0.77</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-94.455566"
+           y="17.968018"
+           id="text1116"
+           transform="rotate(-90)"><tspan
+             sodipodi:role="line"
+             id="tspan1114"
+             style="font-size:5px;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:round"
+             x="-94.455566"
+             y="17.968018">2D</tspan></text>
       </g>
     </g>
   </g>
