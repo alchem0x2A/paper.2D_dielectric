@@ -41,7 +41,7 @@
 
 % \section{Introduction}
 % \label{sec:org2ea169d}
-% \linenumbers{}
+\linenumbers{}
 
 {\bfseries Dielectric constant, which defines the polarization of the
   media, is a key quantity in condensed matter. Here we show that
@@ -595,7 +595,7 @@ general ultra flat, with $r_{0}^{\parallel} \gg r_{0}^{\perp}$, as
 can be seen from the group 6 TMDCs in Table \ref{tbl:radii}.
 Moreover, $r_{0}^{\parallel}$ is generally larger for a smaller
 bandgap semiconductor, which qualitatively explains the inverse
-propotional relation between $\alpha^{\parallel}$ and
+propotional relation between $\alpha_{\mathrm{2D}}^{\parallel}$ and
 $E_{\mathrm{g}}$, a 2D version of the Moss-relation.
 
 
@@ -605,85 +605,88 @@ $E_{\mathrm{g}}$, a 2D version of the Moss-relation.
 The universal Moss-like relation shown in the previous sections
 provides general understanding of the dielectric nature of 2D
 materials. Moreover, the underlying physical mechanism allows us to
-further bridge the 2D and 3D dielectric and electronic properties. As
-described in the previous section, the 2D Moss-like relation between
-$\alpha^{\parallel}$ and $E_{g}$ is similar to the 3D Moss relation
-between $\varepsilon$ and $E_{g}$, with a different power law. Such
-difference in the power law can indeed be explained by modern theory
-of dielectric properties.  Extend the approach
-Eq. \ref{eq:alpha_perp_RPA} to the bulk material, and use the Bloch
-presentation for wavefunctions in all dimensions, we derive (detailed
-procedure see Supplementary Section S4):
-\begin{equation}
-  \label{eq:alpha-Eg-3D}
-  \begin{aligned}[t]
-  \varepsilon_{\mathrm{bulk}} &= 1 + \frac{2e^{2}}{\varepsilon_{0}(2\pi)^{3}}\int d^{3}\mathbf{k}
-  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(k)>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
-  &\propto E_{g}^{-\frac{1}{2}},\ \mathrm{when}\ \varepsilon_{\mathrm{Bulk}} \gg 1
-\end{aligned}
-\end{equation}
-which recovers the 3D Moss relation. Therefore, the universal
-$\alpha^{\parallel}-E_{\mathrm{g}}$ relation is indeed the Moss
-relation in 2D world, while the power law of $E_{\mathrm{g}}$ and
-independence of effective mass is a result of the confinement
-perpendicular to the 2D plane. 
+further bridge the 2D and 3D dielectric and electronic properties in
+various ways. Using the similar appraoch as we derive the 2D Moss-like
+relations, we show that the
+$\alpha_{\mathrm{2D}}^{\parallel} \propto E_{\mathrm{g}}^{-1}$
+relation for a 2D material naturally transforms to
+$\varepsilon \propto E_{\mathrm{g}}^{-\frac{1}{2}}$ for a bulk
+semiconductor, which is the original Moss relation (details see
+Supplementary Section SXX \todo{note}). In other words, the proposed
+$\alpha_{\mathrm{2D}}^{\parallel}-E_{\mathrm{g}}$ relation is indeed
+the Moss relation in 2D world, while the different power law for
+$E_{\mathrm{g}}$ is caused by the electronic confinement.
 
-The relation between 2D polarizability and 3D dielectric constant
-shown in Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def} can
-be further used to reconstruct the dielectric
-constants $\varepsilon^{\parallel}_{\mathrm{Bulk}}$ and
-$\varepsilon^{\perp}_{\mathrm{Bulk}}$ of a bulk layered material from
-$\alpha^{\parallel}$ and $\alpha^{\perp}$ of the monolayer (see Figure
-\ref{fig-4}a). First, we see that the 2D polarizabilities for
-individual layers in the bulk materials
-$\alpha_{\mathrm{Bulk}}^{\parallel}$ and
-$\alpha_{\mathrm{Bulk}}^{\perp}$, can be calculated using
-Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def}, when $L$
-becomes the bulk interlayer distance $L_{\mathrm{Bulk}}$. The
-dielectric constants of the bulk material are then expressed as:
+% As described in the previous section, the 2D Moss-like relation
+% between $\alpha^{\parallel}$ and $E_{g}$ is similar to the 3D Moss
+% relation between $\varepsilon$ and $E_{g}$, with a different power
+% law. Such difference in the power law can indeed be explained by
+% modern theory of dielectric properties.  Extend the approach
+% Eq. \ref{eq:alpha_perp_RPA} to the bulk material, and use the Bloch
+% presentation for wavefunctions in all dimensions, we derive (detailed
+% procedure see Supplementary Section S4):
+% \begin{equation}
+  % \label{eq:alpha-Eg-3D}
+  % \begin{aligned}[t]
+  % \varepsilon_{\mathrm{bulk}} &= 1 + \frac{2e^{2}}{\varepsilon_{0}(2\pi)^{3}}\int d^{3}\mathbf{k}
+  % \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(k)>|^{2}}
+  % {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
+  % &\propto E_{g}^{-\frac{1}{2}},\ \mathrm{when}\ \varepsilon_{\mathrm{Bulk}} \gg 1
+% \end{aligned}
+% \end{equation}
+% which recovers the 3D Moss relation.
+
+The dielectric constant $\varepsilon$, although not well-defined for
+monolayer 2D material, becomes applicable when the 2D layers are
+stacked. \todo[inline]{I would appreciate for polishing this sentence}
+In a bulk layered materil stacked by layers with equilibrium
+inter-layer distance $L_{\mathrm{Bulk}}$, we define the polarizability
+of individual layer $\alpha_{\mathrm{2D}}(L=L_{\mathrm{Bulk}})$ as
+$\alpha_{\mathrm{Bulk}}$. Inspired by Eqs. \ref{eq:alpha-para-def} and
+\ref{eq:alpha-perp-def}, the dielectric constants
+$\varepsilon^{\parallel}_{\mathrm{Bulk}}$ and
+$\varepsilon^{\perp}_{\mathrm{Bulk}}$ of a bulk layered material, can
+be reconstructed by $\alpha_{\mathrm{Bulk}}^{\parallel}$ and
+$\alpha_{\mathrm{Bulk}}^{\perp}$ (see Figure \ref{fig-4}a):
 \begin{subequations}
-\begin{eqnarray}
+\begin{align}
   \label{eq:3D-para}
-  &\varepsilon^{\parallel}_{\mathrm{Bulk}} &= 1 + {\displaystyle \frac{\alpha_{\mathrm{bulk}}^{\parallel}}{\varepsilon_{0} L_{\mathrm{Bulk}}}}\\
+  \varepsilon^{\parallel}_{\mathrm{Bulk}}
+  &= 1 + \frac{\alpha_{\mathrm{bulk}}^{\parallel}}{\varepsilon_{0} L_{\mathrm{Bulk}}}
+  \approx 1 + \frac{\alpha_{\mathrm{2D}}^{\parallel}}{\varepsilon_{0} L_{\mathrm{Bulk}}} \\
   \label{eq:3D-perp}
-  &\varepsilon^{\perp}_{\mathrm{Bulk}} &= \left(1 - \frac{\alpha_{\mathrm{Bulk}}^{\perp}}{\varepsilon_{0} L_{\mathrm{Bulk}}}\right)^{-1}
-\end{eqnarray}
+  \varepsilon^{\perp}_{\mathrm{Bulk}}
+  &= \left(1 - \frac{\alpha_{\mathrm{Bulk}}^{\perp}}{\varepsilon_{0} L_{\mathrm{Bulk}}}\right)^{-1}
+  \approx \left(1 - \frac{\alpha_{\mathrm{2D}}^{\perp}}{\varepsilon_{0} L_{\mathrm{Bulk}}}\right)^{-1}
+\end{align}
 \end{subequations}
-Note that $\alpha_{\mathrm{Bulk}}^{\parallel}$ and
-$\alpha_{\mathrm{Bulk}}^{\perp}$ may not essentially be the same as
-$\alpha$ of isolated layer, but still quite close as seen in Figure
-\ref{fig-3}b and \ref{fig-3}c. Nevertheless we will first see how good
-we can predict $\varepsilon_{\mathrm{Bulk}}^{\parallel}$ and
-$\varepsilon_{\mathrm{Bulk}}^{\perp}$, when assuming
-$\alpha_{\mathrm{bulk}}=\alpha$. We compare
+The approximations come from the fact that
+$\alpha_{\mathrm{Bulk}} \approx \alpha_{\mathrm{2D}}$, which can be
+seen from the results of Figure \ref{fig-3}b and \ref{fig-3}c.  Note
+that the effect of stacking is not considered in Eqs. \ref{eq:3D-para}
+and \ref{eq:3D-perp}. We compare the values of
 $\varepsilon_{\mathrm{bulk}}^{\parallel}$ and
-$\varepsilon_{\mathrm{bulk}}^{\perp}$ from first principles DFT
-calculations compared with the values predicted using Eqs
-\ref{eq:3D-para} and \ref{eq:3D-perp}, as show in Figure \ref{fig-4}b
-and \ref{fig-4}c, respectively. Data calculated at both HSE06 and PBE
-levels which give almost identical trends, indicating the generality
-of such approach. Note although the stacking order is not considered
-in Eqs. \ref{eq:3D-para} and \ref{eq:3D-perp}, we found that the
-influence of stacking is minor (see Supplementary Figure SXX
-\todo{Wait for Declan's data}). We observe that the majority of
-predicted $\varepsilon_{\mathrm{bulk}}^{\parallel}$ values align along
-the line $y=x$ , with a linear regression slope of 1.01 and $R^2$ of
-0.97, indicating that such method indeed captures the transition from
-$\alpha^{\parallel}$ to $\varepsilon_{\mathrm{Bulk}}^{\parallel}$. On
-the other hand, we observe the predicted values of
-$\varepsilon_{\mathrm{bulk}}^{\perp}$ has good agreement with the DFT
-values when $E_{\mathrm{g}}>4$ eV, while the deviation becomes larger
-when $E_{\mathrm{g}}$ reduces. The difference for the prediction of
+$\varepsilon_{\mathrm{bulk}}^{\perp}$ from DFT calculations (y-axis)
+with those predicted using Eqs \ref{eq:3D-para} and \ref{eq:3D-perp}
+(x-axis), as show in Figure \ref{fig-4}b and \ref{fig-4}c,
+respectively, with data calculated at both HSE06 and PBE levels give
+almost identical trends. We observe that
+$\varepsilon_{\mathrm{bulk}}^{\parallel}$ values calculated by DFT and
+predicted by Eq. \ref{eq:3D-para} align along the line $y=x$ , with a
+linear regression slope of 1.01 and $R^2$ of 0.97. On the other hand,
+$\varepsilon_{\mathrm{bulk}}^{\perp}$ values predicted from
+Eq. \ref{eq:3D-perp} agree well with the DFT-calculated values when
+$E_{\mathrm{g}}>4$ eV, while the deviation becomes larger when
+$E_{\mathrm{g}}$ reduces. The difference for the prediction of
 $\varepsilon^{\parallel}$ and $\varepsilon^{\perp}$ means that
 $\alpha^{\parallel}_{\mathrm{Bulk}}$ can generally be estimated from
 its 2D counterpart, while $\alpha^{\perp}_{\mathrm{Bulk}}$ differs due
-to interlayout coupling and overlap between induced dipoles, as also
-observed in Figure \ref{fig-3}b, \ref{fig-3}c, and other studies
-\cite{Andersen_2015_dielec_vdWH,Laturia_2018}. With a better model
-describing $\alpha_{\mathrm{bulk}}^{\perp}$ as function of
-$\alpha^{\perp}$ and the degree of interlayer coupling \cite{Tkatchenko_2012}, the dielectric transition from 2D to 3D would
-be smoothly described. 
+to interlayout coupling and overlap between induced
+dipoles\cite{Andersen_2015_dielec_vdWH,Laturia_2018}, as also observed
+in Figure \ref{fig-3}b, \ref{fig-3}c . With a better model describing
+$\alpha_{\mathrm{bulk}}^{\perp}$ as function of $\alpha^{\perp}$ and
+the degree of interlayer coupling, the dielectric transition from 2D
+to 3D would be smoothly described.
 
 Although we have extensively shown that the treatment for the
 dielectric nature differs in 2D (polarizability) and 3D (dielectric
