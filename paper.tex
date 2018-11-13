@@ -672,27 +672,24 @@ with those predicted using Eqs \ref{eq:3D-para} and \ref{eq:3D-perp}
 respectively, with data calculated at both HSE06 and PBE levels give
 almost identical trends. We observe that
 $\varepsilon_{\mathrm{bulk}}^{\parallel}$ values calculated by DFT and
-predicted by Eq. \ref{eq:3D-para} align along the line $y=x$ , with a
-linear regression slope of 1.01 and $R^2$ of 0.97. On the other hand,
+predicted by Eq. \ref{eq:3D-para} are in good agreement, with a linear
+regression slope of 1.01 and $R^2$ of 0.97. On the other hand,
 $\varepsilon_{\mathrm{bulk}}^{\perp}$ values predicted from
 Eq. \ref{eq:3D-perp} agree well with the DFT-calculated values when
 $E_{\mathrm{g}}>4$ eV, while the deviation becomes larger when
-$E_{\mathrm{g}}$ reduces. The difference for the prediction of
-$\varepsilon^{\parallel}$ and $\varepsilon^{\perp}$ means that
+$E_{\mathrm{g}}$ reduces. The above results indicate that
 $\alpha^{\parallel}_{\mathrm{Bulk}}$ can generally be estimated from
 its 2D counterpart, while $\alpha^{\perp}_{\mathrm{Bulk}}$ differs due
 to interlayout coupling and overlap between induced
 dipoles\cite{Andersen_2015_dielec_vdWH,Laturia_2018}, as also observed
 in Figure \ref{fig-3}b, \ref{fig-3}c . With a better model describing
-$\alpha_{\mathrm{bulk}}^{\perp}$ as function of $\alpha^{\perp}$ and
+$\alpha_{\mathrm{bulk}}^{\perp}$ as function of $\alpha_{\mathrm{2D}}^{\perp}$ and
 the degree of interlayer coupling, the dielectric transition from 2D
 to 3D would be smoothly described.
 
-Although we have extensively shown that the treatment for the
-dielectric nature differs in 2D (polarizability) and 3D (dielectric
-constant) scenarios, a general picture of the dielectric properties in
-both dimensions can still be drawn by studying the dielectric
-anisotropy. The dielectric anisotropy index $\eta$ is defined as:
+Finally, we show that a general picture of the dielectric properties in
+both dimensions can be drawn by studying the dielectric
+anisotropy. We define the dielectric anisotropy index $\eta$ as:
 \begin{equation}
   \label{eq:anisotropy}
   \begin{aligned}[t]
@@ -714,50 +711,55 @@ while $\eta \to 0$ means the dielectric property is highly
 anisotropic. Figure \ref{fig:aniso} shows the phase diagram of $\eta$
 as function of $E_{\mathrm{g}}$ for 2D materials and their bulk
 counterparts. Interestingly, the 2D materials (blue triangle) can be
-clearly distinguished from the bulk layered materials (orange
-square). The boundary separating the 2D and layered bulk materials is
-determined using an linear support vector machine (SVM) classification
-algorithm to be $y=0.048x+0.087$. The much lower $\eta$ values of 2D
-materials compared with their bulk counterparts indicates a high
-dielectric anisotropy, which is responsible for the unique 2D
-optoelectronic properties, such as electrostatic transparency
-\cite{Liluhua_2014,Tian_2016,Li_2018} and large exciton binding energy
-\cite{Pulci_2014,Tran_2014,Chernikov_2014_EB_MoS2_2D3D,Berkelbach_2013}. We
-also observe that $\eta$ of 2D materials increase almost linearly with
-$E_{\mathrm{g}}$, while such trend is absent for layered bulk
-materials. The observations above can be explained by the principles
-presented in thie work. As a result from the limited layer thickness
-(mostly 3--10 \AA{}), $\alpha^{\perp}$ of a monolayer 2D material
-varies much less than $\alpha^{\parallel}$ (Figure \ref{fig-3}b and
-\ref{fig-3}c), which explains the domination of $E_{\mathrm{g}}$ in
-$\eta$ of 2D materials. On the other hand, the fact that
-$\varepsilon^{\perp}_{\mathrm{Bulk}}$ is generally larger than the
-values calculated from $\alpha^{\perp}$ of monolayer due to interlayer
-coupling (Figure \ref{fig-4}c), gives rise to larger $\eta$ for
-layered bulk materials compared with the corresponding monolayer, and
-making it possible to separate the 2D and layered bulk materials from
-the $\eta-E_{\mathrm{g}}$ phase diagram. For comparison, we also
-superimpose the dielectric anisotropy $\eta$ of common semiconducting
-materials in other dimensions (details see Supplementary Section S4.5)
-on the phase diagram in Figure \ref{fig:aniso}. Bulk covalent
-materials (3D, e.g. GaN) and fullerenes (0D, e.g. C$_{60}$) show
-isotropic dielectric property, scattered on the line $\eta=1$. On the
-other hand, reduced dimensionality increases the dielectric anisotropy
-of materials such as planar organic semiconductor (OSc, 1D-2D,
-e.g. CuPc), carbon nanotube (CNT, 1D) and linear OSc (0D-1D,
-e.g. polyacene). Interestingly, these materials also scatter along the
-boundary line $y=0.048x+0.087$, indicating the criteria distinguishing
-2D (more anisotropic) and bulk layered materials (more isotropic) from
-the $\eta-E_{\mathrm{g}}$ diagram, can also be applied to other
-dimensions. From the phase diagram, we can see that 2D and bulk
-layered materials (also including 2D van der Waals heterostructure
-(vdWH) \cite{Novoselov_2016}), provides more flexibility in
-controlling the dielectric and electronic properties, compared with
-semiconductors in other dimensions.
+clearly distinguished from the bulk layered materials (orange square)
+with the boundary line determined to be
+$\eta =0.048 (E_{\mathrm{g}}/ \mathrm{eV})+0.087$. The much lower
+$\eta$ values for 2D materials compared with their bulk counterparts
+indicates a high dielectric anisotropy, which is responsible for the
+unique 2D optoelectronic properties, such as electrostatic
+transparency \cite{Liluhua_2014,Tian_2016,Li_2018} and large exciton
+binding energy
+\cite{Pulci_2014,Tran_2014,Chernikov_2014_EB_MoS2_2D3D,Berkelbach_2013}. From
+Eqs. \ref{eq:2D-Moss-para}, \ref{eq:2D-Moss-perp} and
+\ref{eq:anisotropy} we can see $\eta$ is roughly proportional to
+$\delta \cdot E_{\mathrm{g}}$, which explains the observation that
+$\eta$ for 2D materials increase almost linearly with
+$E_{\mathrm{g}}$, since the layer thickness $\delta$ (mostly 3--10
+\AA{}) of the 2D materials investigated varies much less than
+$E_{\mathrm{g}}$ (0.1--7 eV) (Figure \ref{fig-3}b and
+\ref{fig-3}c). Further analysis shows that the dielectric anisotropy
+index of any bulk layered material $\eta_{\mathrm{Bulk}}$ obeys
+$\eta_{\mathrm{Bulk}} \geq {\displaystyle \frac{4
+    \eta_{\mathrm{2D}}}{(\eta_{\mathrm{2D}}+1)^{2}}} \geq
+\eta_{\mathrm{2D}}$, where $\eta_{\mathrm{2D}}$ is the anisotropy index
+of corresponding 2D layer (details see Supplementary Section SXX
+\todo{note}), which is the basis for the separation of bulk and 2D
+regimes in the $\eta-E_{\mathrm{g}}$ phase diagram.  For comparison,
+we also superimpose the dielectric anisotropy indices $\eta$ of common
+semiconducting materials in other dimensions (details see
+Supplementary Section S4.5) on the phase diagram in Figure
+\ref{fig:aniso}. Bulk covalent (3D, e.g. Si, GaN) and 0D (fullerenes)
+semiconductors show isotropic dielectric properties, scattered on the
+line $\eta=1$. On the other hand, reduced dimensionality increases the
+dielectric anisotropy of materials such as planar organic
+semiconductor (OSc, 1D-2D, e.g. CuPc), carbon nanotube (CNT, 1D),
+linear OSc (0D-1D, e.g. polyacene and polyacetylene). Interestingly,
+most of these materials also scatter along the boundary line
+separating the bulk and 2D regimes, indicating the criteria
+distinguishing 2D (more anisotropic) and bulk layered materials (more
+isotropic) from the $\eta-E_{\mathrm{g}}$ diagram, can also be applied
+to other dimensions. From the phase diagram, we can see that 2D and
+bulk layered materials (also including 2D van der Waals
+heterostructure (vdWH) \cite{Novoselov_2016}), provides more
+flexibility in controlling the dielectric and electronic properties,
+compared with semiconductors in other dimensions.  \todo[inline]{I
+  leave this section to be freely modified}
 
 
 
 \subsection{Implications for Experiments}
+\todo[inline]{Wait for comments from JC and MC.}
+\iffalse
 Finally, we would like to comment on the implications of this work for
 the experiments concerning the dielectric properties of 2D materials.
 As schematically shown in Figure \ref{fig-2D-3D}, the physical
@@ -805,6 +807,7 @@ heterostructures, one has to distinguish between the 2D and 3D
 properties, and choose a suitable relation with the
 dimension-dependent and dimension-independent quantities.
 \todo[inline]{I plan to use the original section for the ``implication for experiments''. Please help to add more on this part.}
+\fi
 
 
 \section{Conclusion}
@@ -870,7 +873,7 @@ database are calculated at PBE level with a k-point density of 10
 
 % \section{Figures}
 \label{sec:org34cbe74}
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.75\linewidth]{img/fig1_v110418i.pdf}
 \caption{\label{fig-1} \textbf{2D polarizability as the true
@@ -904,7 +907,7 @@ database are calculated at PBE level with a k-point density of 10
   % materials investigated in this study.}
 % \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.65\linewidth]{img/fig2_v110418.pdf}
 \caption{\label{fig-3} \textbf{The universal scaling relation of the
@@ -933,7 +936,7 @@ database are calculated at PBE level with a k-point density of 10
   % covalent thickness of one-atom-thick (left) and few-atom-thick
   % (right) 2D materials.}
   % \end{figure}
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \caption{In-plane ($r_{0}^{\parallel}$) and out-of-plane
     ($r_{0}^{\perp}$) radii of the polarizability ellipsoid of
@@ -942,7 +945,7 @@ database are calculated at PBE level with a k-point density of 10
     $r_{0}^{\perp}$, which accounts for the highly anisotropic
     dielectric nature of 2D materials.}
   \label{tbl:radii}  
-  \begin{tabular}[htbp]{lcc}
+  \begin{tabular}{lcc}
     \hline
     Material & $r_{0}^{\parallel} = \alpha_{\mathrm{2D}}^{\parallel}/2\varepsilon_{0}$ (\AA{}) &  $r_{0}^{\perp} = \alpha_{\mathrm{2D}}^{\perp}/2\varepsilon_{0}$ (\AA{})\\
     \hline
@@ -956,7 +959,7 @@ database are calculated at PBE level with a k-point density of 10
   \end{tabular}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.75\linewidth]{./img/fig4.pdf}
 \caption{\label{fig-4} \textbf{Transition of dielectric properties
@@ -974,7 +977,7 @@ database are calculated at PBE level with a k-point density of 10
   based on both HSE06 (circles) and PBE (squares) levels.}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.95\linewidth]{img/fig5.pdf}
   \caption{\textbf{Phase diagram of dielectric anisotropy $\eta$ as
