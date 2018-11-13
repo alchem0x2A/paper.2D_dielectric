@@ -104,7 +104,7 @@ for i, data in enumerate((Eg_HSE, Eg_PBE, Eg_GW)):
     plt.plot(xx, yy, "--", color=l2.get_c())
     plt.xlabel("$E_{\\rm{g}}$ (eV)")
     plt.title(candidates[i])
-    plt.ylabel("$(4 \\pi \\varepsilon_0)/\\alpha_{\parallel}$ ($\\AA^{-1}$)")
+    plt.ylabel("$(4 \\pi \\varepsilon_0)/\\alpha^{\\parallel}_{\\rm{2D}}$ ($\\AA^{-1}$)")
     plt.legend()
     plt.savefig(os.path.join(img_path, "gpaw_alphaxx_all_Eg_{}.svg").format(candidates[i]))
 

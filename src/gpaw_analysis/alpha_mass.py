@@ -81,28 +81,28 @@ plt.xlim(0.05, 1.5)
 
 l2, *_ = plt.plot(emass, alpha_x, "o", alpha=0.4)
 plt.xlabel("$m_{e}^{*}/m_0$ ")
-plt.ylabel("$\\alpha^{\parallel}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\parallel}_{\\rm{2D}}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "gpaw_alphaxx_emass.svg"))
 
 plt.figure(figsize=(3.5, 3.5))
 plt.xlim(0.05, 1.5)
 l2, *_ = plt.plot(hmass, alpha_x, "o", alpha=0.4)
 plt.xlabel("$m_{h}^{*}/m_0$ ")
-plt.ylabel("$\\alpha^{\parallel}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\parallel}_{\\rm{2D}}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "gpaw_alphaxx_hmass.svg"))
 
 plt.figure(figsize=(3.5, 3.5))
 plt.xlim(0.05, 1.5)
 l2, *_ = plt.plot(emass, alpha_z, "o", alpha=0.4)
 plt.xlabel("$m_{e}^{*}/m_0$ ")
-plt.ylabel("$\\alpha^{\perp}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\perp}_{\\rm{2D}}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "gpaw_alphazz_emass.svg"))
 
 plt.figure(figsize=(3.5, 3.5))
 plt.xlim(0.05, 1.5)
 l2, *_ = plt.plot(hmass, alpha_z, "o", alpha=0.4)
 plt.xlabel("$m_{h}^{*}/m_0$ ")
-plt.ylabel("$\\alpha^{\perp}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\perp}_{\\rm{2D}}/(4 \\pi \\varepsilon_0)$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "gpaw_alphazz_hmass.svg"))
 
 

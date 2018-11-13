@@ -47,6 +47,6 @@ yy = k * xx + b
 plt.xlim(0, 8)
 plt.plot(xx, yy, "--")
 plt.xlabel("$E_{\\rm{g}}^{\\rm{opt}}$ (eV)")
-plt.ylabel("$(4 \\pi \\varepsilon_0)/\\alpha_{\parallel}$ ($\\AA^{-1}$)")
+plt.ylabel("$(4 \\pi \\varepsilon_0)/\\alpha^{\parallel}_{\\rm{2D}}$ ($\\AA^{-1}$)")
 plt.savefig(os.path.join(img_path, "alpha_x_E_opt.svg"))
 

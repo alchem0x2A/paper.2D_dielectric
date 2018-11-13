@@ -102,7 +102,7 @@ xx = numpy.linspace(0.3, 8)
 yy = k * xx + b
 plt.plot(xx, yy, "--")
 plt.xlabel("$E_{\\rm{g}}$ (eV)")
-plt.ylabel("$(4 \\pi \\varepsilon_0)/\\alpha_{\parallel}$ ($\\AA^{-1}$)")
+plt.ylabel("$(4 \\pi \\varepsilon_0)/\\alpha^{\parallel}_{\\rm{2D}}$ ($\\AA^{-1}$)")
 plt.savefig(os.path.join(img_path, "alpha_xx_1_Eg.svg"))
 
 # z-direction
@@ -117,7 +117,7 @@ yy = k * xx + b
 plt.plot(xx, yy, "--")
 # plt.plot(xx, yyy, "--")
 plt.xlabel("Thickness ($\\AA$)")
-plt.ylabel("$\\alpha_{\\perp} / (4 \pi \\varepsilon_0)$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\\perp}_{\\rm{2D}} / (4 \pi \\varepsilon_0)$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "alpha_zz_thick.svg"))
 
 #x-direction
@@ -131,9 +131,9 @@ plt.plot(polar, alpha_z, "o", alpha=0.5)
 # yyy = 1 / (4 * pi) * xx - 0.05
 # plt.plot(xx, yy, "--")
 # plt.plot(xx, yyy, "--")
-plt.text(x=2, y=10, s="$\\alpha^{\\perp} = \\frac{\\hbar^2 e^2 \\rho_e}{m_e E_{\mathrm{g}}^2}$")
+plt.text(x=2, y=10, s="$\\alpha^{\\perp}_{\\rm{2D}} = \\frac{\\hbar^2 e^2 \\rho_e}{m_e E_{\mathrm{g}}^2}$")
 plt.xlabel("Total Atomic Polarizability per Area (Bohr$^3$)")
-plt.ylabel("$\\alpha^{\\perp} / (4 \pi \\varepsilon_0)$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\\perp}_{\\rm{2D}} / (4 \pi \\varepsilon_0)$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "alpha_zz_polar.svg"))
 
 # z-direction with atomic polarizability
@@ -148,7 +148,7 @@ print(k, b, r)
 # plt.plot(xx, yy, "--")
 # plt.plot(xx, yyy, "--")
 plt.xlabel("Total Atomic Polarizability per Area (Bohr$^3$)")
-plt.ylabel("$\\alpha_{\\parallel} / (4 \pi \\varepsilon_0)$ ($\\AA$)")
+plt.ylabel("$\\alpha^{\\parallel}_{\\rm{2D}} / (4 \pi \\varepsilon_0)$ ($\\AA$)")
 plt.savefig(os.path.join(img_path, "alpha_xx_polar.svg"))
 
 
