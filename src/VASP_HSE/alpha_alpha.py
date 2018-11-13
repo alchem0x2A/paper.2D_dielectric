@@ -172,8 +172,9 @@ marks = {"CNT": "o",
          "polyacene": "p",
          "MPc": "<",
          "covalent": ">",
-         "fullerene": "*"}
-for f in ["CNT", "covalent", "polyacene", "MPc", "fullerene"]:
+         "fullerene": "*",
+         "polyacetylene": "D"}
+for f in ["CNT", "covalent", "polyacene", "MPc", "fullerene", "polyacetylene"]:
     f_name = "../../data/other_dimension/{}.csv".format(f)
     Eg, anis = anis_from_file(f_name)
     ax.scatter(Eg, anis, label=f,
