@@ -920,8 +920,9 @@ The following types materials are chosen for comparison:
   obtained from
   Refs. \citenum{Benedict_1995,Jensen_2000,Brothers_2008}.
 \item Linear OSc \\
-  We choose the polyacenes (linear PAHs from benznene to nonacene) as
-  a model system of linear OScs. The bandgaps are obtained from
+  We choose the linear polyacenes (linear PAHs from benznene to
+  nonacene) and zigzag polyacetylene (1--9 repeating units) as model
+  systems of linear OScs. The bandgaps are obtained from
   \citenum{Salzner_1998} and the polarizabilities are obtained from
   \citenum{Hinchliffe_2005}.
 \item Fullerenes \\
@@ -1012,12 +1013,69 @@ when $\eta_{\mathrm{2D}}$ is much smaller than 1. Therefore the
 separation between the 2D and 3D regimes in the Figure
 \ref{main-fig:aniso} is explained.
 
-\section{}
+\subsection{The relation between 2D and 3D physical quantities}
+As schematically shown in Figure \ref{fig-2D-3D}, the physical
+quantities related to the dielectric properties can be categorized
+into (i) strictly 2D (microscopic), (ii) strictly 3D (macroscopic) and
+(iii) valid both 2D and 3D.  $\alpha_{\mathrm{2D}}$ and $\varepsilon$ are the
+starting point for the strictly 2D and 3D quantities, which require
+distinct definitions when dimensionality changes. Such quantities
+include (but not limited to):
+\begin{enumerate}
+\item The densities $n_{\mathrm{2D}}$ and $n_{\mathrm{3D}}$ for
+  charge, polarization, electronic states, etc.
+  
+\item The plasma frequencies $\omega^{\mathrm{p}}_{\mathrm{2D}}$ and
+  $\omega^{\mathrm{p}}_{\mathrm{2D}}$\cite{Nazarov_2015_2D_3D} (see
+  Section \ref{ssec:omega-p} and Figure \ref{fig:plasma}).
+
+\item The optical conductivity $\sigma_{\mathrm{2D}}$ and
+  $\sigma_{\mathrm{3D}}$\cite{Bechstedt_2012,Matthes_2016}.
+\end{enumerate}
+These quantities have distinct units in both dimensions, and related
+by $L$ (for density and optical conductivity) or $\sqrt{L}$ (for
+plasma frequency), which requires prudent interpretation of
+theoretical and experimental results. For instance, the experimentally
+observed ``dielectric constant'' of monolayer 2D materials
+\cite{Ning_2015,Li_2014,Yao_2014,Wu_2015} would be questionable
+without considering the effect of mix ted medium. Instead, the 2D slab
+polarizability, either transformed from the vacuum-containing
+macroscopic dielectric constant, or predicted from the bandgap and
+geometry as proposed here, will be a better descriptor for the true 2D
+dielectric nature. On the other hand, there are also
+dimension-independent quantities that valid for both 2D and 3D
+systems, for instance the bandgap $E_{\mathrm{g}}$, exciton binding
+energy $E_{\mathrm{b}}$, Bohr radius $r_{\mathrm{B}}$ of the exciton
+as well as the Hamaker constant of van der Waals interaction
+$A_{\mathrm{H}}$. All these quantities are well-defined and can be
+measured in both dimensions, while their relation with the dielectric
+property varies with dimensionality. The well-known examples are the
+different Wannier-Mott laws for exciton binding energy
+\cite{Olsen_2016_hydrogen}, the dielectric-bandgap relation
+proposed here, and the distinct power laws for van der Waals
+interactions \cite{Gobre_2013}. To get a accuracy description of
+dielectric-related properties of the 2D materials and their
+heterostructures, one has to distinguish between the 2D and 3D
+properties, and choose a suitable relation with the
+dimension-dependent and dimension-independent quantities.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\linewidth]{img/fig-2D-vs-3D.pdf}
+\caption{\label{fig-2D-3D} Dielectric-related physical quantities in
+  both 2D (red circle) and 3D (cyan circle) systems. The
+  dimension-dependent quantities can be related with $\alpha_{\mathrm{2D}}$ and
+  $\varepsilon$, respectively. The intersection between the circles
+  present the quantities are well-defined in both dimensions, but may have a
+  different scaling relation with others quantities.}
+\end{figure}
 
 \section{Raw data from first principles calculations}
 \subsection{Quantities from first principles calculation}
 \label{sec:raw}
-
+\todo[inline]{I think showing the $\alpha$ values is enough since
+  whoever interested in calculating the $r_{0}$ values can simply
+  multiply them by $2 \pi$. }
 \input{raw_data}
 
 \subsection{Density of States (DOS) plots for the materials studied}
