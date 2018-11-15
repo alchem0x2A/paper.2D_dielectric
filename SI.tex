@@ -494,18 +494,20 @@ text.
 \subsection{Polarizability-Based Theoretical Model}
 \label{ssec:theory-1}
 The universal relations for $\alpha_{\mathrm{2D}}^{\parallel}$ and
-$\alpha_{\mathrm{2D}}^{\perp}$ revealed by Eqs. \ref{eq:2D-Moss-para}
-and \ref{eq:2D-Moss-perp} are not coincidence. Combining recent
-theoretical findings of the linear relation between exciton binding
-energy $E_{\mathrm{b}}$ and $E_{\mathrm{g}}$ of 2D materials
+$\alpha_{\mathrm{2D}}^{\perp}$ revealed by main text
+Eqs. \ref{main-eq:2D-Moss-para} and \ref{main-eq:2D-Moss-perp} are not
+coincidence. Combining recent theoretical findings of the linear
+relation between exciton binding energy $E_{\mathrm{b}}$ and
+$E_{\mathrm{g}}$ of 2D materials
 \cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
 fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
-$\alpha_{\mathrm{2D}}^{\parallel}$ \cite{Pulci_2014}, it is reasonable to have a
-general Moss-like relation between $E_{\mathrm{g}}$ and
-$1/\alpha_{\mathrm{2D}}^{\parallel}$. Moreover, the bandgap-independent relation of
-2D $\alpha_{\mathrm{2D}}^{\perp}$ resembles molecular polarizabilities of conjugate
-molecules \cite{Davies_1952}, fullerenes \cite{Sabirov_2014} and
-carbon nanotubes \cite{Benedict_1995}, which are also shown to be
+$\alpha_{\mathrm{2D}}^{\parallel}$ \cite{Pulci_2014}, it is reasonable
+to have a general Moss-like relation between
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $E_{\mathrm{g}}^{-1}$. Moreover,
+the bandgap-independent relation of 2D $\alpha_{\mathrm{2D}}^{\perp}$
+resembles molecular polarizabilities of conjugate molecules
+\cite{Davies_1952}, fullerenes \cite{Sabirov_2014} and carbon
+nanotubes \cite{Benedict_1995}, which are also shown to be
 geometry-dependent.
 
 In this section we show in detail the polarizability-based theoretical
@@ -589,7 +591,7 @@ $(4\pi \varepsilon_{0})/\alpha^{\parallel}_{\mathrm{2D}}$ (measured in
 \AA{}$^{-1}$) and $E_{\mathrm{g}}$ (measured in eV) as
 $8 \pi^{2} \varepsilon_{0} \AA{} / (e N) \approx 0.436 / N$. From main
 text Figure \ref{main-fig-3}c, we have
-$(4 \pi \varepsilon_{0}\cdot \AA{})/\alpha_{\mathrm{2D}}^{\parallel}
+$(4 \pi \varepsilon_{0}\cdot \text{\AA{}})/\alpha_{\mathrm{2D}}^{\parallel}
 \sim{} 0.183 E_{\mathrm{g}}/ \mathrm{eV}$, corresponding to $N$
 between 2 and 3, which is a reasonable result for the 2D materials
 studied.
@@ -777,15 +779,18 @@ polarizability ellipsoid for a 2D material, is drawn in Figure
 \end{figure}
 
 \subsection{Comparing 2D and 3D Moss relations}
-\label{sec:theory-2}
+\label{ssec:theory-2}
 
-Eq. 9 is the detailed form of Eq. 6 considering wavefunctions in all
-directions are periodic which can be written in the form of Block
-waves. The solution for Eq. 9 in main text is derived as follows. For
-simplicity we consider that the effective mass $m^{*}$ is uniform,
-which is generally a good assumption for bulk materials. Considering
-only one pair of valence-conduction transition, and take the result
-from \cite{Jiang_2017_Eg_Eb}, we get:
+The 2D Moss-like relation $\alpha^{\parallel} \propto E_{g}^{-1}$ is
+similar to the 3D Moss relation $\varepsilon \propto E_{g}^{-1/2}$,
+with a different power law. Such difference in the power law can
+indeed be explained by modern theory of dielectric properties. From
+the 2D material to a bulk covalent semiconductor, the wavefunction
+becomes periodic in all directions. Considering only one pair of
+valence-conduction transition and uniform effective mass $m^{*}$,
+extending the approach Eq. \ref{eq:alpha_perp_RPA} to the bulk
+material, and using the Bloch presentation for wavefunctions in all
+dimensions, we get \cite{Jiang_2017_Eg_Eb}:
 \begin{equation}
   \begin{aligned}
     \label{eq:eps-bulk}
@@ -800,24 +805,24 @@ from \cite{Jiang_2017_Eg_Eb}, we get:
 where $k_{\mathrm{BZ}}$ is the boundary for the Brillouin Zone. The
 last step in Eq. \ref{eq:eps-bulk} assumes the integral within the
 Brillouin Zone is equivalent to integral inside a sphere of
-k-space. Let $\hbar^{2}/(2 m^{*})=A$, the integral becomes:
+k-space. Let $\hbar^{2}/(2 m^{*})=\beta$, the integral becomes:
 \begin{equation}
   \begin{aligned}
     \label{eq:integral-BZ-bulk}
     \varepsilon_{\mathrm{Bulk}} &\propto {\displaystyle \frac{2 \pi
-        \mathrm{arctan}(\sqrt{Ak^{2}/E_{\mathrm{g}}})}{\sqrt{E_{\mathrm{g}}A^{3}}}
-        - \frac{2\pi k}{A(A+E_{\mathrm{g}}k^{2})}
+        \mathrm{arctan}(\sqrt{\beta k^{2}/E_{\mathrm{g}}})}{\sqrt{E_{\mathrm{g}} \beta^{3}}}
+        - \frac{2\pi k}{\beta(\beta +E_{\mathrm{g}}k^{2})}
       } \bigg\rvert_{0}^{k_{\mathrm{BZ}}}\\
       &\propto 1/\sqrt{E_{\mathrm{g}}}
   \end{aligned}
 \end{equation}
 when $\varepsilon_{\mathrm{Bulk}} \gg 1$. since generally
-$\hbar^{2}k_{\mathrm{BZ}}^{2}/(2m^{*}) \gg E_{\mathrm{g}}$. When
-$\varepsilon_{\mathrm{bulk}} \gg 1$ \cite{Finkenrath_1988}, it is the
-Moss relation of bulk semiconductors.
+$\hbar^{2}k_{\mathrm{BZ}}^{2}/(2m^{*}) \gg
+E_{\mathrm{g}}$ \cite{Finkenrath_1988}. The final result $\varepsilon_{\mathrm{Bulk}} \propto E_{\mathrm{g}}^{-1/2}$ recovers the original Moss relation for bulk semiconductors.
+
 
 \subsection{Static 2D polarizability and 2D plasma frequency}
-\label{sec:omega-p}
+\label{ssec:omega-p}
 
 A common approach for describing the bulk dielectric function of bulk
 semiconductors is via the Lorentz oscillator model, where the
@@ -878,6 +883,7 @@ example shows excellently how the quantities in both dimensions are
 related to each other.
 
 \subsection{Comparing dielectric anisotropy}
+\label{ssec:aniso}
 The dielectric anisotropy $\eta$ proposed in the main text is also
 applied to other dimensions. Similar to the case of 2D and bulk
 layered materials, $\epsilon$ is used to compare the anisotropy when
@@ -922,6 +928,10 @@ The following types materials are chosen for comparison:
   polarizabilities are taken from \citenum{Martin_2008}. All these
   materials have isotropic polarizability due to the high symmetry.
 \end{itemize}
+
+\subsubsection{Explanation for the separation between 2D and 3D regimes in main text Figure \ref{main-fig:aniso}}
+\label{sssec:aniso-1}
+
 
 \section{Raw data from first principles calculations}
 \subsection{Quantities from first principles calculation}

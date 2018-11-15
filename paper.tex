@@ -243,16 +243,14 @@ $\boldsymbol{E}_{\mathrm{loc}}^{\perp}=\boldsymbol{E}^{\perp}+\boldsymbol{\mu}_{
 \cite{Meyer_2001_dipole_slab,T_bik_2004}. Combining with
 Eqs. \ref{eq:def-eps-1} and \ref{eq:def-eps-2}, we can relate the 2D polarizabilities,
 $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$ with $\varepsilon_{\mathrm{SL}}^{\parallel}$ and $\varepsilon_{\mathrm{SL}}^{\perp}$, respectively:
-\iffalse
-\begin{subequations}
-\begin{eqnarray}
-  \label{eq:alpha-para-def}
-  &\alpha_{\mathrm{2D}}^{\parallel} &= \varepsilon_{0}(\varepsilon_{\mathrm{SL}}^{\parallel} - 1)L\\
-  \label{eq:alpha-perp-def}
-  &\alpha_{\mathrm{2D}}^{\perp} &= \varepsilon_{0}\left(1 - {\displaystyle \frac{1}{\varepsilon_{\mathrm{SL}}^{\perp}}}\right)L
-\end{eqnarray}
-\end{subequations}
-\fi
+% \begin{subequations}
+% \begin{eqnarray}
+  % \label{eq:alpha-para-def}
+  % &\alpha_{\mathrm{2D}}^{\parallel} &= \varepsilon_{0}(\varepsilon_{\mathrm{SL}}^{\parallel} - 1)L\\
+  % \label{eq:alpha-perp-def}
+  % &\alpha_{\mathrm{2D}}^{\perp} &= \varepsilon_{0}\left(1 - {\displaystyle \frac{1}{\varepsilon_{\mathrm{SL}}^{\perp}}}\right)L
+% \end{eqnarray}
+% \end{subequations}
 \begin{subequations}
 \begin{eqnarray}
   \label{eq:alpha-para-def}
@@ -481,29 +479,13 @@ $\alpha_{\mathrm{2D}}^{\parallel} \propto E_{\mathrm{g}}^{-1}$
 relation for a 2D material naturally transforms to
 $\varepsilon \propto E_{\mathrm{g}}^{-\frac{1}{2}}$ for a bulk
 semiconductor, which is the original Moss relation (details see
-Supplementary Section SXX \todo{note}). In other words, the proposed
-$\alpha_{\mathrm{2D}}^{\parallel}-E_{\mathrm{g}}$ relation is indeed
-the Moss relation in 2D world, while the different power law for
-$E_{\mathrm{g}}$ is caused by the electronic confinement.
-
-% As described in the previous section, the 2D Moss-like relation
-% between $\alpha^{\parallel}$ and $E_{g}$ is similar to the 3D Moss
-% relation between $\varepsilon$ and $E_{g}$, with a different power
-% law. Such difference in the power law can indeed be explained by
-% modern theory of dielectric properties.  Extend the approach
-% Eq. \ref{eq:alpha_perp_RPA} to the bulk material, and use the Bloch
-% presentation for wavefunctions in all dimensions, we derive (detailed
-% procedure see Supplementary Section S4):
-% \begin{equation}
-  % \label{eq:alpha-Eg-3D}
-  % \begin{aligned}[t]
-  % \varepsilon_{\mathrm{bulk}} &= 1 + \frac{2e^{2}}{\varepsilon_{0}(2\pi)^{3}}\int d^{3}\mathbf{k}
-  % \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(k)>|^{2}}
-  % {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
-  % &\propto E_{g}^{-\frac{1}{2}},\ \mathrm{when}\ \varepsilon_{\mathrm{Bulk}} \gg 1
-% \end{aligned}
-% \end{equation}
-% which recovers the 3D Moss relation.
+Supplementary Section \ref{SI-ssec:theory-2}). In other words, the
+proposed $\alpha_{\mathrm{2D}}^{\parallel}-E_{\mathrm{g}}$ relation is
+indeed the Moss relation in 2D world, while the different power law
+for $E_{\mathrm{g}}$ is caused by the electronic confinement.
+\todo[inline]{I shortened this paragraph since the derivation is
+  interesting but not so much related with other stuff like the
+  dielectric anisotropy.}
 
 The dielectric constant $\varepsilon$, although not well-defined for
 monolayer 2D material, becomes applicable when the 2D layers are
@@ -606,7 +588,7 @@ of corresponding 2D layer (details see Supplementary Section SXX
 regimes in the $\eta-E_{\mathrm{g}}$ phase diagram.  For comparison,
 we also superimpose the dielectric anisotropy indices $\eta$ of common
 semiconducting materials in other dimensions (details see
-Supplementary Section S4.5) on the phase diagram in Figure
+Supplementary Section ) on the phase diagram in Figure
 \ref{fig:aniso}. Bulk covalent (3D, e.g. Si, GaN) and 0D (fullerenes)
 semiconductors show isotropic dielectric properties, scattered on the
 line $\eta=1$. On the other hand, reduced dimensionality increases the
