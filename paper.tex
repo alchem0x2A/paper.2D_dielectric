@@ -288,7 +288,7 @@ for $\alpha_{\mathrm{2D}}^{\parallel}$ and
 $\alpha_{\mathrm{2D}}^{\perp}$ using Random Phase Approximation (RPA)
 theory \cite{Adler_1962} with $\mathbf{k} \cdot \mathbf{p}$
 treatment\cite{kittel_2005_introduction} (details see Supplementary
-Section SXX) \todo{note}, we show that
+Section \ref{SI-ssec:theory-1}), we show that
 $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
 have simple relation with the electronic  and structural information of a 2D
 material, respectively:
@@ -303,7 +303,11 @@ material, respectively:
 where $E_{\mathrm{g}}$ is the minimal electronic bandgap of the 2D
 material, and $\delta$ is its intrinsic
 thickness. Eqs. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} are
-the main conclusions of this work.
+the main conclusions of this work.  \todo[inline]{I not sure if we
+  need to show the proportional coefficiens
+  here. $\alpha_{2D}^{\perp}$ is almost certain to be
+  $\varepsilon_{0}\delta$, but $\alpha_{\mathrm{2D}}^{\parallel}$ has
+  a more complex coefficient.}
 
 To validate such relations, we study several types of 2D materials as
 show in Figure \ref{fig-3}a, including transition metal
@@ -331,27 +335,17 @@ descending trend when $E_{\mathrm{g}}$ increases. On the other hand,
 no apparent correlation between $\alpha_{\mathrm{2D}}^{\perp}$ and
 $E_{\mathrm{g}}$ is observed (see Supplementary Section
 \ref{SI-sec:pol-2D-Eg}), which appears to be in good agreement with
-our polarizability-based theoretical model (Supplementary Section SXX
-\todo{note}). We then examine Eqs. \ref{eq:2D-Moss-para} and
-\ref{eq:2D-Moss-perp} using the polarizabilities calculated by first
-principle calculations. Figure \ref{fig-3}b shows
+our polarizability-based theoretical model (Supplementary Section
+\ref{SI-ssec:theory-2}). We then examine Eqs. \ref{eq:2D-Moss-para}
+and \ref{eq:2D-Moss-perp} using the polarizabilities calculated by
+first principle calculations. Figure \ref{fig-3}b shows
 $(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ (in
 \AA{}$^{-1}$) as a function of $E_{\mathrm{g}}$ (in eV) for the 2D
 materials investiaged (circle dots), with a linear regression
 coefficient of regression $R^{2}$ of 0.84, and a slope of 0.18, which
 corresponds well with theoretical investigations (details see
-Supplementary Section SXX \todo{format Jiang's paper into SI}).
-% From Ref. \citenum{Jiang_2017_Eg_Eb}, the slope between
-% $(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ and $E_{g}$ is
-% $8\pi^{2}\varepsilon_{0} \mathrm{\AA}/(eN) \approx 0.436/N$, which
-% yields $N$ betweem 2 and 3, which is reasonable for the 2D materials
-% studied.
-% We observe that materials with lower $E_{\mathrm{g}}$ ($<$4
-% eV) generally lie close to the regression line, while the deviation
-% becomes greater for materials with $E_{\mathrm{g}}>$4 eV, which has
-% also been observed in the $E_{\mathrm{b}}-E_{\mathrm{g}}$ relation of
-% 2D materials \cite{Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}.
-We also discover that the linearity between
+Supplementary Section \ref{SI-sssec:theory-1}).  We also discover that
+the linearity between
 $(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ and
 $E_{\mathrm{g}}$ (measured by the $R^{2}$ value) is higher when the
 bandgap is calculated using the HSE06 hybrid functionals, compared
@@ -390,40 +384,24 @@ is the covalent radius of atom i (Figure \ref{fig-3}c inset). As shown
 in Figure \ref{fig-3}c,
 $\alpha_{\mathrm{2D}}^{\perp}/(4 \pi \varepsilon_{0})$ indeed shows an
 excellent linear correlation with $\delta_{\mathrm{cov}}$, with
-$R^{2}=0.98$, and the slope very close to $1/4\pi$. In other words,
-$\alpha_{\mathrm{2D}}^{\perp} / \varepsilon_{0}$ is almost identical
-to $\delta_{\mathrm{cov}}$, which has its strong physical
-meaning. Similar to the molecular polarizability which characterizes
-the volume of electron cloud of an isolated molecule
-\cite{Israelachvili_2011},
+$R^{2}=0.98$, and the slope very close to $1/4\pi$. In other words, we
+propose
+$\alpha_{\mathrm{2D}}^{\perp} / \varepsilon_{0} \approx
+\delta_{\mathrm{cov}}$, which has its strong physical meaning. Similar
+to the molecular polarizability which characterizes the volume of
+electron cloud of an isolated molecule \cite{Israelachvili_2011},
 $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ is also related to the
 volume of the electron cloud per unit area (from its definition), and
 is naturally proportional to the electron cloud thickness of the 2D
-material (see Supplementary Section SXX \todo{note}). In fact, the universal
-scaling relation for $\alpha_{\mathrm{2D}}^{\perp}$ in Figure \ref{fig-3}c indicates
-that the quantity $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ measurable via
+material (see Supplementary Section \ref{SI-sssec:theory-3}). In fact,
+the universal scaling relation for $\alpha_{\mathrm{2D}}^{\perp}$ in
+Figure \ref{fig-3}c indicates that the quantity
+$\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ measurable via
 electronic approaches
 \cite{Antoine_1999,Cherniavskaya_2003,Krauss_1999_EFM}, is indeed the
 (dielectric) characteristic thickness of a 2D material, and can be
 used to resolve the long-existing controversy about the experimental
 thickness of 2D materials, such as graphene \cite{Shearer_2016}.
-
-\iffalse
-The universal relations for $\alpha_{\mathrm{2D}}^{\parallel}$ and
-$\alpha_{\mathrm{2D}}^{\perp}$ revealed by Eqs. \ref{eq:2D-Moss-para}
-and \ref{eq:2D-Moss-perp} are not coincidence. Combining recent
-theoretical findings of the linear relation between exciton binding
-energy $E_{\mathrm{b}}$ and $E_{\mathrm{g}}$ of 2D materials
-\cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
-fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
-$\alpha_{\mathrm{2D}}^{\parallel}$ \cite{Pulci_2014}, it is reasonable to have a
-general Moss-like relation between $E_{\mathrm{g}}$ and
-$1/\alpha_{\mathrm{2D}}^{\parallel}$. Moreover, the bandgap-independent relation of
-2D $\alpha_{\mathrm{2D}}^{\perp}$ resembles molecular polarizabilities of conjugate
-molecules \cite{Davies_1952}, fullerenes \cite{Sabirov_2014} and
-carbon nanotubes \cite{Benedict_1995}, which are also shown to be
-geometry-dependent.
-\fi
 
 To rule out the possibility that our conclusion is limited by the
 number of materials used, we further validate our proposed 2D
