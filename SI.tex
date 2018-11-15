@@ -884,6 +884,8 @@ related to each other.
 
 \subsection{Comparing dielectric anisotropy}
 \label{ssec:aniso}
+\subsubsection{Choice of materials}
+\label{sssec:aniso-1}
 The dielectric anisotropy $\eta$ proposed in the main text is also
 applied to other dimensions. Similar to the case of 2D and bulk
 layered materials, $\epsilon$ is used to compare the anisotropy when
@@ -930,8 +932,87 @@ The following types materials are chosen for comparison:
 \end{itemize}
 
 \subsubsection{Explanation for the separation between 2D and 3D regimes in main text Figure \ref{main-fig:aniso}}
-\label{sssec:aniso-1}
+\label{sssec:aniso-2}
+In this section we give an analytical explanation for the separation
+between the dielectric anisotropy indices of 2D and their bulk
+counterparts. From main text Eqs. \ref{main-eq:alpha-para-def},
+\ref{main-eq:alpha-perp-def} and \ref{main-eq:anisotropy},
+$\eta_{\mathrm{Bulk}}$ of a bulk layered material is expressed as:
+\begin{equation}
+  \label{eq:eta-bulk}
+  \begin{aligned}[t]
+    \eta_{\mathrm{Bulk}} &= \frac{\varepsilon_{\mathrm{Bulk}}^{\perp}}
+    {\varepsilon_{\mathrm{Bulk}}^{\parallel}}\\
+    &= \frac{1}{\left(1 + {\displaystyle
+          \frac{\alpha_{\mathrm{Bulk}}^{\parallel}}{\varepsilon_{0}L_{\mathrm{Bulk}}}}\right)
+      \left(1 - {\displaystyle \frac{\alpha_{\mathrm{Bulk}}^{\perp}}{\varepsilon_{0}L_{\mathrm{Bulk}}}} \right)}\\
+    &= \frac{1}{ \left[1-\left( {\displaystyle
+            \frac{\alpha_{\mathrm{Bulk}}^{\perp}}{\alpha_{\mathrm{Bulk}}^{\parallel}}}\right)
+        \left(
+          {\displaystyle \frac{\alpha_{\mathrm{Bulk}}^{\parallel}}{\varepsilon_{0}
+            L_{\mathrm{Bulk}}}} \right) \right]
+      \left[ 1 + \left(
+          {\displaystyle \frac{\alpha_{\mathrm{Bulk}}^{\parallel}}{\varepsilon_{0}
+            L_{\mathrm{Bulk}}}} \right)\right]
+    }
+    % &= \frac{\left({\displaystyle \frac{\varepsilon_{0}L_{\mathrm{Bulk}}}{\alpha^{\parallel}_{\mathrm{Bulk}}}}\right)^{2}}
+    % {\left({\displaystyle \frac{\varepsilon_{0}L_{\mathrm{Bulk}}}{\alpha_{\mathrm{Bulk}}^{\parallel}_{\mathrm{2D}}}}\right)^{2}    
+      % -\left({\displaystyle \frac{\alpha_{\mathrm{Bulk}}^{\perp}}{\alpha_{\mathrm{Bulk}}^{\parallel}}}\right)
+      % \left({\displaystyle \frac{\varepsilon_{0} L_{\mathrm{Bulk}}}{\alpha_{\mathrm{Bulk}}^{\parallel}}}\right)
+      % + \left({\displaystyle \frac{\varepsilon_{0} L_{\mathrm{Bulk}}}{\alpha_{\mathrm{Bulk}}^{\parallel}}}\right)
+      % -\left({\displaystyle \frac{\alpha_{\mathrm{Bulk}}^{\perp}}{\alpha_{\mathrm{Bulk}}^{\parallel}}}\right)}
+  \end{aligned}
+\end{equation}
+Name take the fact that
+$\alpha_{\mathrm{Bulk}}^{\parallel} \approx
+\alpha^{\parallel}_{\mathrm{2D}}$ (main text Figure
+\ref{main-fig-4}b), we name
+$\alpha_{\mathrm{Bulk}}^{\parallel} /\epsilon_{0}L_{\mathrm{Bulk}}
+\approx \alpha_{\mathrm{2D}}^{\parallel}/
+\epsilon_{0}L_{\mathrm{Bulk}}$ as $\gamma$. Furthermore we name
+$\alpha_{\mathrm{Bulk}}^{\perp}/\alpha_{\mathrm{Bulk}}^{\parallel}$ as
+$\hat{\eta_{\mathrm{2D}}}$, that
+$\hat{\eta}_{\mathrm{2D}} =
+\alpha_{\mathrm{Bulk}}^{\perp}/\alpha_{\mathrm{Bulk}}^{\parallel} \geq
+\alpha_{\mathrm{2D}}^{\perp}/\alpha_{\mathrm{2D}}^{\parallel}=\eta_{\mathrm{2D}}$,
+and Eq. \ref{eq:eta-bulk} is reduced to:
+\begin{equation}
+  \label{eq:eta-bulk-2}
+  \eta_{\mathrm{Bulk}} = \frac{1}{(1 - \hat{\eta}_{\mathrm{2D}} \gamma) (1 + \gamma)}
+\end{equation}
+The minimal value for $\eta_{\mathrm{Bulk}}$ when $\gamma>0$ is obtained by solving:
+\begin{equation}
+  \label{eq:eta-bulk-min}
+  \frac{\partial \eta_{\mathrm{Bulk}}}{\partial \gamma}
+  = \frac{2 \hat{\eta}_{\mathrm{2D}} \gamma + \hat{\eta}_{\mathrm{2D}} - 1}
+  {(\gamma+1)^{2}(1 - \hat{\eta}_{\mathrm{2D}} \gamma)^{2}} = 0
+\end{equation}
+which gives that
+$\eta_{\mathrm{Bulk}} \geq \frac{4
+  \hat{\eta}_{\mathrm{2D}}}{(\hat{\eta}_{\mathrm{2D}} + 1)^{2}}$,
+where the minimal value is taken at
+$\gamma = \frac{1}{2}(\frac{1}{\hat{\eta}_{\mathrm{2D}}} - 1)$. Since
+$\frac{4 \hat{\eta}_{\mathrm{2D}}}{(\hat{\eta}_{\mathrm{2D}} +
+  1)^{2}}$ monotonically increases when
+$0 < \hat{\eta}_{\mathrm{2D}} < 1$, we get the comparison between the
+dielectric anisotropy indices between 2D materials and their bulk
+counterparts:
+\begin{equation}
+  \label{eq:aniso-final}
+\eta_{\mathrm{Bulk}} \geq \frac{4
+  \eta_{\mathrm{2D}}}{(\eta_{\mathrm{2D}} + 1)^{2}} \geq
+\eta_{\mathrm{2D}} 
+\end{equation}
+Since $\gamma$ is actually $2r_{0}^{\parallel}/L_{\mathrm{Bulk}}$, the
+ratio between the in-plane screening length $r_{0}^{\parallel}$ and
+inter-plane distance $L_{\mathrm{Bulk}}$, and in general
+$r_{0}^{\parallel} \gg L_{\mathrm{Bulk}}$, we can conclude that the
+case when $\eta_{\mathrm{Bulk}} = \eta_{\mathrm{2D}}$ only happens
+when $\eta_{\mathrm{2D}}$ is much smaller than 1. Therefore the
+separation between the 2D and 3D regimes in the Figure
+\ref{main-fig:aniso} is explained.
 
+\section{}
 
 \section{Raw data from first principles calculations}
 \subsection{Quantities from first principles calculation}
