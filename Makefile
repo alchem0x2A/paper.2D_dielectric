@@ -4,7 +4,7 @@ TEX_FILE=paper.tex
 SI_FILE=SI.tex
 GS_TAG= -sDEVICE=pdfwrite -dQUIET -sBATCH -dNOPAUSE
 LATEXMK_TAG= -f -pdf -quiet -view=none -pdflatex='pdflatex -interaction=nonstopmode'
-DIFF_TAG= --exclude-textcmd="section,subsection,figure" --config="PICTUREENV=(?:section|DIFnomarkup)[*]*" --graphics-markup=0 --disable-citation-markup
+DIFF_TAG= --exclude-textcmd="section,subsection,figure,equation,subequation" --config="PICTUREENV=(?:section|DIFnomarkup)[*]*" --graphics-markup=0 --disable-citation-markup
 PDFLATEX_TAG= -interaction=nonstopmode -draftmode
 
 
@@ -20,10 +20,10 @@ SI:
 
 diff:
 	cp ./paper.tex ./paper.tex.bak
-	git checkout 45e0f99 ./paper.tex #old version
+	git checkout 79e4d64 ./paper.tex #old version
 	cp paper.tex paper_old.tex
 	cp ./SI.tex ./SI.tex.bak	
-	git checkout 45e0f99 ./SI.tex
+	git checkout 79e4d64 ./SI.tex
 	cp SI.tex SI_old.tex
 	git checkout HEAD ./paper.tex
 	git checkout HEAD ./SI.tex
@@ -35,8 +35,9 @@ diff:
 	dos2unix SI_change.tex
 	sed -e "s///" paper_change.tex > tmp.tex && mv tmp.tex paper_change.tex
 	sed -e "s///" SI_change.tex > tmp.tex && mv tmp.tex SI_change.tex
-	latexmk $(LATEXMK_TAG) paper_change.tex
-	latexmk $(LATEXMK_TAG) SI_change.tex
+	echo "Now please manually run the compilation for changed LaTeX files!"
+# latexmk $(LATEXMK_TAG) paper_change.tex
+# latexmk $(LATEXMK_TAG) SI_change.tex
 
 compress:
 	gs $(GS_TAG) -sOutputFile="paper-compak.pdf" paper.pdf
