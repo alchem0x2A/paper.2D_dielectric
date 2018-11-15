@@ -280,102 +280,6 @@ and comparison with other methods can be find in Supplementary Section
 \ref{SI-sec:2D-3D-rescale}.
 
 
-\iffalse
-\subsection{Polarizability-Based Theoretical Model}
-\todo[inline]{In case of Nat. Nanotechnol., I would like to move all
-  theoretical information to SI}.
-Based on the 2D polarizability, we
-then theoretically investigate the potential existence of the
-Moss-like relations for 2D materials.  Due to its highly anisotropic
-nature, the wavefunction of an isolated 2D material $\psi(\mathbf{r})$
-can be separated into the in- and out-of-plane components, similar to
-the treatment of quantum wells (QW),\cite{davies_physics_1997} such
-that $\psi^{\parallel}(\boldsymbol{\rho})$ and $\psi^{\perp}(z)$, such
-that $\psi=\psi^{\parallel}\psi^{\perp}$, where
-$\boldsymbol{\rho}=(x, y)$ is the in-plane coordinate. Using the Bloch
-theorem, the periodic $\psi^{\parallel}(\boldsymbol{\rho})$ can be
-further expressed as
-$\psi^{\parallel}(\boldsymbol{\rho})=e^{i\mathbf{k} \cdot
-  \boldsymbol{\rho}}u(\boldsymbol{\rho})$, where $\mathbf{k}$ is the
-in-plane wave vector and $u(\boldsymbol{\rho})$ is periodic function
-in the xy-plane. According to the random phase approximation (RPA)
-theory\cite{Adler_1962}, $\varepsilon_{\mathrm{SL}}$ is the
-$\mathbf{q} \to 0$ and $\omega \to 0$ limits of the non-interacting
-dielectric function $\varepsilon(\mathbf{q}, \omega)$, where
-$\mathbf{q}$ is the momentum transfer and $\omega$ is the frequency:
-\begin{equation}
-  \label{eq:RPA-eps2}
-  \varepsilon_{\mathrm{SL}}
-  = \lim_{\mathbf{q} \to 0} 1 + \frac{2e^{2}}{\varepsilon_{0} |\mathbf{q}|^{2} \Omega}
-  \sum_{\mathrm{k, c, v}}
-  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
-  \left[f(\psi_{\mathrm{c}}) - f(\psi_{\mathrm{v}})\right]
-\end{equation}
-where $e$ is the unit charge, c, v are the conduction and valence
-bands, $E$ is the eigenenergy of individual bands, and $f$ is the
-Fermi-Dirac distribution function. Taking the limit that $L\to\infty$,
-when $\varepsilon^{\perp}_{\mathrm{SL}} \approx 1$, we have
-$1-1/\varepsilon^{\perp}_{\mathrm{SL}} \approx
-(\varepsilon_{\mathrm{SL}}^{\perp} - 1)$. Combine this with
-Eqs. \ref{eq:alpha-para-def}, \ref{eq:alpha-perp-def} and
-\ref{eq:RPA-eps2}, and taking the difference between the properties of
-in-plane and out-of-plane polarizabilities, we derive the expressions
-for $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$ under small perturbation
-(details see Supplementary Section S4):
-\begin{subequations}
-  \begin{eqnarray}
-  \label{eq:alpha_para_RPA}
-  & \alpha_{\mathrm{2D}}^{\parallel} &= \frac{2e^{2}}
-  {(2 \pi)^{2}} \int d^{2}\mathbf{k} \sum_{\mathrm{c, v}}
-  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}}
-                         {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
-  \label{eq:alpha_perp_RPA}
-  & \alpha_{\mathrm{2D}}^{\perp} &= \frac{2e^{2}}{(2 \pi) ^{2}} \int d^{2}\mathbf{k}
-  \sum_{\mathrm{c, v}}
-  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|z|\psi_{\mathrm{c}}(\mathbf{k})>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
-  \end{eqnarray}
-\end{subequations}
-where the integral is performed within the first Brillouin Zone (BZ)
-in the reciprocal $\mathbf{k}$-plane. Although they only differ by the
-numerator inside the integral, the distinct behaviors of $u(\rho)$
-(periodic function) and $\psi(z)$ (confined to the 2D material) give
-rise to the different relations of $\alpha_{\mathrm{2D}}^{\parallel}$ and
-$\alpha_{\mathrm{2D}}^{\perp}$. Using the $\mathbf{k} \cdot \mathbf{p}$ theory,
-Eq. \ref{eq:alpha_para_RPA} is evaluated to be
-$\alpha_{\mathrm{2D}}^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$, where $N$ is the
-degeneracy associated with the minimal bandgap
-\cite{Jiang_2017_Eg_Eb}. On the contrary, $\psi(z)$ is the solution to
-the Schr\"{o}dinger equation with Hamiltonian
-$\mathcal{H} = -\hbar^{2} \nabla^{2}/2m_{e} + V(z)$, where $\hbar$ is
-the reduced Planck constant, $m_{e}$ is electron mass and $V(z)$ is
-the confined Coulombic potential along the z-direction created by the
-nuclei \cite{davies_physics_1997,ihn_semiconductor_2009}. Using a
-simple particle-in-box model, we show that both the numerator and
-denominator parts of Eq. \ref{eq:alpha_perp_RPA} are independent of
-$E_{g}$ but instead modulated by the size of the potential confinement
-(details see Supplementary Section S4). We further prove, using both
-quantum mechanical and fundamental electrostatic models, that
-$\alpha_{\mathrm{2D}}^{\perp}$ is actually proportional to the size of potential
-confinement (details see Supplementary Section S4), which we may
-relate with the thickness $\delta$ of the 2D material. Now we may
-finally propose the 2D analog of the Moss relation with both in- and
-out-of-plane polarizations:
-\begin{subequations}
-\begin{eqnarray}
-\label{eq:2D-Moss-para}
-  &\alpha_{\mathrm{2D}}^{\parallel} &\propto E_{g}^{-1} \\
-  \label{eq:2D-Moss-perp}
-  &\alpha_{\mathrm{2D}}^{\perp} & \propto \delta
-\end{eqnarray}
-\end{subequations}
-which form the main conclusion of this work. Next, we will validate
-the proposed 2D Moss-like relations using first principle
-calculations.
-\fi
-
-
 \subsection{2D Moss-like  Relations}
 \label{sec:first-principles}
 Based on the 2D polarizabilities, we then investigate the potential
@@ -495,7 +399,7 @@ the volume of electron cloud of an isolated molecule
 $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ is also related to the
 volume of the electron cloud per unit area (from its definition), and
 is naturally proportional to the electron cloud thickness of the 2D
-material (see Supplementary Section SXX). In fact, the universal
+material (see Supplementary Section SXX \todo{note}). In fact, the universal
 scaling relation for $\alpha_{\mathrm{2D}}^{\perp}$ in Figure \ref{fig-3}c indicates
 that the quantity $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ measurable via
 electronic approaches
@@ -527,17 +431,18 @@ Moss-like relations on the recently-published C2DB database
 \cite{Haastrup_2018}, from which we extracted the dielectric
 properties of over 230 2D materials calculated at the PBE level, and
 superimpose with our results in Figure \ref{fig-3}b and \ref{fig-3}c
-(details see Supplementary Section S3). Althought the dielectric
-properties may be overestimated at PBE level due to underestimation of
-the bandgap compared with the more accurate HSE06 functionals
-\cite{Van_Dyck_2017}, similar linear trends can be observed for both
-$\alpha^{\parallel}_{\mathrm{2D}}$ and $\alpha_{\mathrm{2D}}^{\perp}$,
-with the linear coefficient very close to the HSE06 results. We have
-also tested the potential relation between the 2D polarizabilities
-with other physical quantities, including the effective carrier mass,
-quantum capacitance and total atomic polarizabilities, while no
-apparent correlations are found (details see Supplementary Section
-S3).
+(details see Supplementary Section \ref{SI-sec:gpaw-1}). Althought the
+dielectric properties may be overestimated at PBE level due to
+underestimation of the bandgap compared with the more accurate HSE06
+functionals \cite{Van_Dyck_2017}, similar linear trends can be
+observed for both $\alpha^{\parallel}_{\mathrm{2D}}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$, with the linear coefficient very close
+to the HSE06 results (details see Supplementary Section
+\ref{SI-sec:gpaw-2}). We have also tested the potential relation
+between the 2D polarizabilities with other physical quantities,
+including the effective carrier mass, quantum capacitance and total
+atomic polarizabilities, while no apparent correlations are found
+(details see Supplementary Section \ref{SI-sec:gpaw-3}).
 
 In short, we have revealed the 2D analog of the Moss relation by both
 theoretical modeling and first principles calculations:
@@ -555,7 +460,8 @@ electrostatic potential $V(r)$ from a point charge in an 2D plane, as
 a function of distance $r$:
 $V(r) = {\displaystyle \frac{e}{4 \alpha_{\mathrm{2D}}^{\parallel}}}
 \left[H_{0}({\displaystyle \frac{2\varepsilon_{0}
-      r}{\alpha_{\mathrm{2D}}^{\parallel}}}) - Y_{0}( {\displaystyle \frac{2
+      r}{\alpha_{\mathrm{2D}}^{\parallel}}}) - Y_{0}( {\displaystyle
+    \frac{2
       \varepsilon_{0}r}{\alpha_{\mathrm{2D}}^{\parallel}}})\right]$
 \cite{Keldysh_1979_eps_multi,Pulci_2014}, where $H_{0}$ is the Struve
 function and $Y_{0}$ is the Bessel function of second kind, is
@@ -574,12 +480,13 @@ $r_{0}^{\parallel} = \alpha_{\mathrm{2D}}^{\parallel}/(2
 $r_{0}^{\perp} = \alpha^{\perp}_{\mathrm{2D}}/(2 \varepsilon_{0})$,
 respectively, analog to the polarizability ellipsoid picture of
 molecules used in spectroscopy \cite{Banwell_1994} (see Supplementary
-Figure S12). The polarizability ellipsoid for a 2D material is in
-general ultra flat, with $r_{0}^{\parallel} \gg r_{0}^{\perp}$, as
-can be seen from the group 6 TMDCs in Table \ref{tbl:radii}.
-Moreover, $r_{0}^{\parallel}$ is generally larger for a smaller
-bandgap semiconductor, which qualitatively explains the inverse
-propotional relation between $\alpha_{\mathrm{2D}}^{\parallel}$ and
+Figure \ref{SI-fig:ellipsoid}). The polarizability ellipsoid for a 2D
+material is in general ultra flat, with
+$r_{0}^{\parallel} \gg r_{0}^{\perp}$, as can be seen from the group 6
+TMDCs in Table \ref{tbl:radii}\todo{Lacks MoSe2}.  Moreover,
+$r_{0}^{\parallel}$ is generally larger for a smaller bandgap
+semiconductor, which qualitatively explains the inverse propotional
+relation between $\alpha_{\mathrm{2D}}^{\parallel}$ and
 $E_{\mathrm{g}}$, a 2D version of the Moss-relation.
 
 

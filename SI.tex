@@ -489,38 +489,103 @@ compared with the bandgap and covalent thickness proposed in the main
 text. 
 
 
-\section{More theoretical analysis}
-\label{eq:MG-effect-1}
-
-\subsection{Detailed derivations for Eq. 5a and 5b}
-\label{sec:theory-1}
-
-Here we will first show how Eq. 5a and 5b in the main text are
-derived. Taking the limit that $L\to\infty$, when
+\section{Theoretical Analysis}
+\label{sec:theory}
+\subsection{Polarizability-Based Theoretical Model}
+\label{ssec:theory-1}
+In this section we show in detail the polarizability-based theoretical
+framework that leads to the 2D Moss-like relations proposed in the
+main text.  Due to its highly anisotropic nature, the wavefunction of
+an isolated 2D material $\psi(\mathbf{r})$ can be separated into the
+in- and out-of-plane components, similar to the treatment of quantum
+wells (QW),\cite{davies_physics_1997} such that
+$\psi^{\parallel}(\boldsymbol{\rho})$ and $\psi^{\perp}(z)$, such that
+$\psi=\psi^{\parallel}\psi^{\perp}$, where $\boldsymbol{\rho}=(x, y)$
+is the in-plane coordinate. Using the Bloch theorem, the periodic
+$\psi^{\parallel}(\boldsymbol{\rho})$ can be further expressed as
+$\psi^{\parallel}(\boldsymbol{\rho})=e^{i\mathbf{k} \cdot
+  \boldsymbol{\rho}}u(\boldsymbol{\rho})$, where $\mathbf{k}$ is the
+in-plane wave vector and $u(\boldsymbol{\rho})$ is periodic function
+in the xy-plane. According to the random phase approximation (RPA)
+theory\cite{Adler_1962}, $\varepsilon_{\mathrm{SL}}$ is the
+$\mathbf{q} \to 0$ and $\omega \to 0$ limits of the non-interacting
+dielectric function $\varepsilon(\mathbf{q}, \omega)$, where
+$\mathbf{q}$ is the momentum transfer and $\omega$ is the frequency:
+\begin{equation}
+  \label{eq:RPA-eps2}
+  \varepsilon_{\mathrm{SL}}
+  = \lim_{\mathbf{q} \to 0} 1 + \frac{2e^{2}}{\varepsilon_{0} |\mathbf{q}|^{2} \Omega}
+  \sum_{\mathrm{k, c, v}}
+  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
+  \left[f(\psi_{\mathrm{c}}) - f(\psi_{\mathrm{v}})\right]
+\end{equation}
+where $e$ is the unit charge, c, v are the conduction and valence
+bands, $E$ is the eigenenergy of individual bands, and $f$ is the
+Fermi-Dirac distribution function. Taking the
+limit that $L\to\infty$, when
 $\varepsilon^{\perp}_{\mathrm{SL}} \approx 1$, we have
 $1-1/\varepsilon^{\perp}_{\mathrm{SL}} \approx
 (\varepsilon_{\mathrm{SL}}^{\perp} - 1)$. Therefore
-$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$ at 0 K can be unified by the
-same equation:
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
+at 0 K can be unified by the same equation:
 \begin{equation}
   \label{eq:alpha-RPA}
   \alpha = \frac{2e^{2}}{|q|^{2}A} \sum_{\mathrm{k,c,v}}
   \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
   {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
 \end{equation}
-where the direction is determined by $\mathbf{q}$.
+where the direction is determined by $\mathbf{q}$. Next we will show
+that the different behavior of $\psi^{\parallel}$ and $\psi^{\perp}$
+give rise to the main text Eqs. \ref{main-eq:2D-Moss-para} and
+\ref{main-eq:2D-Moss-perp}.
 
-For the in-plane component, $\alpha_{\mathrm{2D}}^{\parallel}$, $e^{-i\mathbf{qr}}$
-is independent of $z$, therefore the integral in
+
+\subsubsection{Detailed derivations for main text Eq. \ref{main-eq:2D-Moss-para}}
+\label{sssec:theory-1}
+
+In this section we show how main text Eq. \ref{main-eq:2D-Moss-para}
+is derived from Eq. \ref{eq:alpha-RPA}. For the in-plane component
+$\alpha_{\mathrm{2D}}^{\parallel}$, $e^{-i\mathbf{qr}}$ is independent
+of $z$, therefore the integral in
 $|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}$
-becomes the independent of $\psi^{\perp}$, due to the
-orthogonality. Present the summation of k-space into integral, and further
-combining with the Bloch wave representation and the k-p
-theory\cite{Jiang_2017_Eg_Eb}, we arrive at Eq. 5a.
+becomes the independent of $\psi^{\perp}$, due to the orthogonality
+and normality. The Bloch-wave form of $\psi^{\parallel}$ ensures that
+only the cell-function $u(\mathbf{k})$ contributes to the final result
+of $\alpha^{\parallel}_{\mathrm{2D}}$ \cite{davies_physics_1997}, such
+that:
+\begin{equation}
+  \label{eq:alpha_para_RPA}
+  \alpha_{\mathrm{2D}}^{\parallel} = \frac{2e^{2}}
+  {(2 \pi)^{2}} \int d^{2}\mathbf{k} \sum_{\mathrm{c, v}}
+  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
+\end{equation}
+Present the summation of k-space into integral, and further combining
+with the Bloch wave representation and the
+$\mathbf{k} \cdot \mathbf{p}$ theory\cite{Jiang_2017_Eg_Eb}, we arrive
+at Eq. \ref{main-eq:2D-Moss-para}. Note that from
+Ref. \citenum{Jiang_2017_Eg_Eb}, the coefficient between
+$\alpha^{\parallel}_{\mathrm{2D}}$ and $E_{\mathrm{g}}$ is given by:
+$\alpha_{\mathrm{2D}}^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$,
+where $N$ is the degeneracy associated with the minimal bandgap. Such
+relation predicts the linear correlation coefficient between
+$(4\pi \varepsilon_{0})/\alpha^{\parallel}_{\mathrm{2D}}$ (measured in
+\AA{}$^{-1}$) and $E_{\mathrm{g}}$ (measured in eV) as
+$8 \pi^{2} \varepsilon_{0} \AA{} / (e N) \approx 0.436 / N$. From main
+text Figure \ref{main-fig-3}c, we have
+$(4 \pi \varepsilon_{0}\cdot \AA{})/\alpha_{\mathrm{2D}}^{\parallel}
+\sim{} 0.183 E_{\mathrm{g}}/ \mathrm{eV}$, corresponding to $N$
+between 2 and 3, which is a reasonable result for the 2D materials
+studied.
 
-For Eq. 5b, treating the in-plane wavefunctions as plane wave with
-form $\psi^{\parallel}(\rho) \propto e^{i \mathbf{k \rho}}$, the
-matrix element of
+
+\subsubsection{Detailed derivations for main text Eq. \ref{main-eq:2D-Moss-perp}}
+\label{ssec:theory-2}
+For main text Eq. \ref{main-eq:2D-Moss-perp}, treating the in-plane
+wavefunctions as plane wave with form
+$\psi^{\parallel}(\rho) \propto e^{i \mathbf{k \rho}}$, the matrix
+element of
 $<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{qr}}|\psi_{\mathrm{c}}(\mathbf{k+q})>$,
 when $\mathbf{q}=(0, 0, q_{z})$, becomes\cite{Hybertsen_1987}:
 \begin{equation}
@@ -539,7 +604,7 @@ performing the Taylor expansion of
 $e^{-i\mathbf{qr}} \approx 1 - i\mathbf{qr}$, we get:
 \begin{equation}
   \begin{aligned}
-    \label{eq:matrix-z}
+    \label{eq:matrix-z-2}
     <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|e^{-iq_{z}z}|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>
     &\approx <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})> -
     iq_{z} <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>\\
@@ -548,14 +613,27 @@ $e^{-i\mathbf{qr}} \approx 1 - i\mathbf{qr}$, we get:
 \end{equation}
 plug this into Eq. \ref{eq:alpha-RPA} and express the summation over
 $k_{x}$ and $k_{y}$ in a continuous form within the Brillouin Zone, we
-arrive at Eq. 5b in main text.
+arrive at:
+\begin{equation}
+\label{eq:alpha_perp_RPA}
+\alpha_{\mathrm{2D}}^{\perp} = \frac{2e^{2}}{(2 \pi) ^{2}} \int d^{2}\mathbf{k}
+\sum_{\mathrm{c, v}}
+\frac{|<\psi_{\mathrm{v}}(\mathbf{k})|z|\psi_{\mathrm{c}}(\mathbf{k})>|^{2}}
+{E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
+\end{equation}
+The formalism is slightly different from Eq.\ref{eq:alpha_para_RPA}.
 
-Although the exact form for $\psi^{\perp}$ depends on the exact
-distribution of $V(z)$, without loss of generality we can assume the
-electrons are confined in a potential well of width $\delta$, which is
-the typical treatment for semiconductor QWs
-\cite{ihn_semiconductor_2009}. The allowed bound states inside the
-confined region generally has wave vector
+The out-of-plane wavefunction $\psi^{\perp}(z)$ is the solution to the Schr\"{o}dinger equation with
+Hamiltonian $\mathcal{H} = -\hbar^{2} \nabla^{2}/2m_{e} + V(z)$, where
+$\hbar$ is the reduced Planck constant, $m_{e}$ is electron mass and
+$V(z)$ is the confined Coulombic potential along the z-direction
+created by the nuclei
+\cite{davies_physics_1997,ihn_semiconductor_2009}. Although the exact
+form for $\psi^{\perp}$ depends on the exact distribution of $V(z)$,
+without loss of generality we can assume the electrons are confined in
+a potential well of width $\delta$, which is the typical treatment for
+semiconductor QWs \cite{ihn_semiconductor_2009}. The allowed bound
+states inside the confined region generally has wave vector
 $k_{z} \propto n \pi / \delta$. With the total energy
 $E_{n}(\mathbf{k}) = {\displaystyle \frac{\hbar^{2} (k_{x}^{2} +
     k_{y}^{2})}{2 m^{\parallel}} + \frac{\hbar^{2} n^{2} \pi^{2}}{2
@@ -607,36 +685,36 @@ n_{\mathrm{v}}^{2}) {\displaystyle
   \frac{m^{\parallel}}{m^{\perp}}}$. Note that in the particle-in-box
 model, the energy levels for a sub-nm QW will be at the order of 10
 eV, which allows only few states inside the QW. Combine with the fact
-that the strongest transition comes from the lowest bands
-\cite{davies_physics_1997}, we can finally show:
-\begin{equation}
-  \label{eq:alpha-perp-L}
-  \alpha_{\mathrm{2D}}^{\perp} \propto \delta^{2}
-\end{equation}
-Apart from the power of $\delta$, this explains our observation
-$\alpha_{\mathrm{2D}}^{\perp}$ is related with the thickness of a 2D material. We
-note the power law of $\delta^{2}$ instead of $\delta$ is
-inevitable. The atomic polarizabilities of free particles inside a 1D
-infinite QW, finite QW or harmonic QW all show dependency with
-$\delta^{4}$, where $\delta$ is the length of confinement or effective
-harmonic length of the QW \cite{Fowler_1984,Maize_2011}. Since the 2D
-polarizability is the molecular polarizability divided by the area,
-such approach will always yield $\alpha_{\mathrm{2D}}^{\perp} \propto \delta^{2}$
-regardless of the Hamiltonian used. To accurately model the
-$\alpha_{\mathrm{2D}}^{\perp}$ we need a better model for the confinement in
-z-direction than simple square potential well, which may be
-tedious. Nevertheless the simple model presented here still captures
-the bandgap-indepent and thickness-related feature of
-$\alpha_{\mathrm{2D}}^{\perp}$, supporting our findings in the main text.
+that the strongest transition mostly comes from the lowest bands
+\cite{davies_physics_1997}, $\alpha^{\perp}_{\mathrm{2D}}$ is shown to
+be proportional to $\delta^{p}$, where the power index $p$ is 2. We
+note the different power law comes from the choice of the $V(z)$. The
+atomic polarizabilities of free particles inside a 1D infinite QW,
+finite QW or harmonic QW all show dependency with $\delta^{4}$, where
+$\delta$ is the length of confinement or effective harmonic length of
+the QW \cite{Fowler_1984,Maize_2011}. Since the 2D polarizability is
+the molecular polarizability divided by the area, such approach will
+always yield $\alpha_{\mathrm{2D}}^{\perp} \propto \delta^{2}$. To
+accurately model the $\alpha_{\mathrm{2D}}^{\perp}$ we need a better
+model for the confinement in z-direction than simple square potential
+well, which may be tedious. Nevertheless the simple model presented
+here still captures the bandgap-indepent and thickness-related feature
+of $\alpha_{\mathrm{2D}}^{\perp}$, supporting our findings in the main
+text. In the next section we will provide a simple explanation for the $\alpha \propto \delta$ relation from fundamental electrostatics theory.
 
-The dependency of $\alpha_{\mathrm{2D}}^{\perp}$ on the thickness of a 2D material,
-can also be regarded using fundamental electrostatic model. Consider
-the smallest repeating unit of the 2D material with xy-plane area $A$,
-under small perturbation field $E$ along the z-direction.  Note that
-the surface bound charge $\sigma_{\mathrm{b}}=n e /A$, where $n$ is
-the number of unit charges contributes to the bound charges, comes
-only from the dipoles of the outer-most atoms, since the induced
-charges from inner atoms are cancel out (see Figure \ref{fig:classic-model}).
+\subsubsection{Explanation to main text Eq. \ref{main-eq:2D-Moss-perp}
+  from fundamental electrostatics}
+\label{sssec:theory-3}
+
+The dependency of $\alpha_{\mathrm{2D}}^{\perp}$ on the thickness
+$\delta$ of a 2D material, can also be regarded using fundamental
+electrostatic model. Consider the smallest repeating unit of the 2D
+material with xy-plane area $A$, under small perturbation field $E$
+along the z-direction.  Note that the surface bound charge
+$\sigma_{\mathrm{b}}=n e /A$, where $n$ is the number of unit charges
+contributes to the bound charges, comes only from the dipoles of the
+outer-most atoms, since the induced charges from inner atoms are
+cancel out (see Figure \ref{fig:classic-model}).
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\linewidth]{img/SI-classic.pdf}
@@ -667,12 +745,13 @@ $E = \sigma_{\mathrm{b}}/\varepsilon_{0}$. Therefore we have:
   \alpha_{\mathrm{2D}}^{\perp} = (d_{\mathrm{max}} + r_{\mathrm{cov}}^{i} + r_{\mathrm{cov}}^{j})\varepsilon_{0}
                 = \delta_{\mathrm{cov}} \varepsilon_{0}
 \end{equation}
-which explains the linear relation seen in Figure 3c of main text. We
-can see that such simple model nicely captures the thickness feature
-of $\alpha_{\mathrm{2D}}^{\perp}$, and reproduces the right coefficient between
-$\delta_{\mathrm{cov}}$ and $\alpha_{\mathrm{2D}}^{\perp}$. Finally, the schematic
-drawing of the polarizability ellipsoid for a 2D material, is drawn in
-Figure \ref{fig:ellipsoid}.
+which explains the linear relation seen in main text Figure
+\ref{main-fig-3}d. We can see that such simple model nicely captures
+the thickness feature of $\alpha_{\mathrm{2D}}^{\perp}$, and
+reproduces the right coefficient between $\delta_{\mathrm{cov}}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$. Finally, the schematic drawing of the
+polarizability ellipsoid for a 2D material, is drawn in Figure
+\ref{fig:ellipsoid}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.6\linewidth]{img/SI-ellipsoid.pdf}
@@ -682,7 +761,7 @@ Figure \ref{fig:ellipsoid}.
   \label{fig:ellipsoid}
 \end{figure}
 
-\subsection{Detailed discussion for main text Eq. 9}
+\subsection{}
 \label{sec:theory-2}
 
 Eq. 9 is the detailed form of Eq. 6 considering wavefunctions in all
