@@ -321,17 +321,17 @@ $1-1/\varepsilon^{\perp}_{\mathrm{SL}} \approx
 Eqs. \ref{eq:alpha-para-def}, \ref{eq:alpha-perp-def} and
 \ref{eq:RPA-eps2}, and taking the difference between the properties of
 in-plane and out-of-plane polarizabilities, we derive the expressions
-for $\alpha^{\parallel}$ and $\alpha^{\perp}$ under small perturbation
+for $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$ under small perturbation
 (details see Supplementary Section S4):
 \begin{subequations}
   \begin{eqnarray}
   \label{eq:alpha_para_RPA}
-  & \alpha^{\parallel} &= \frac{2e^{2}}
+  & \alpha_{\mathrm{2D}}^{\parallel} &= \frac{2e^{2}}
   {(2 \pi)^{2}} \int d^{2}\mathbf{k} \sum_{\mathrm{c, v}}
   \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}}
                          {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})} \\
   \label{eq:alpha_perp_RPA}
-  & \alpha^{\perp} &= \frac{2e^{2}}{(2 \pi) ^{2}} \int d^{2}\mathbf{k}
+  & \alpha_{\mathrm{2D}}^{\perp} &= \frac{2e^{2}}{(2 \pi) ^{2}} \int d^{2}\mathbf{k}
   \sum_{\mathrm{c, v}}
   \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|z|\psi_{\mathrm{c}}(\mathbf{k})>|^{2}}
   {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
@@ -341,10 +341,10 @@ where the integral is performed within the first Brillouin Zone (BZ)
 in the reciprocal $\mathbf{k}$-plane. Although they only differ by the
 numerator inside the integral, the distinct behaviors of $u(\rho)$
 (periodic function) and $\psi(z)$ (confined to the 2D material) give
-rise to the different relations of $\alpha^{\parallel}$ and
-$\alpha^{\perp}$. Using the $\mathbf{k} \cdot \mathbf{p}$ theory,
+rise to the different relations of $\alpha_{\mathrm{2D}}^{\parallel}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$. Using the $\mathbf{k} \cdot \mathbf{p}$ theory,
 Eq. \ref{eq:alpha_para_RPA} is evaluated to be
-$\alpha^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$, where $N$ is the
+$\alpha_{\mathrm{2D}}^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$, where $N$ is the
 degeneracy associated with the minimal bandgap
 \cite{Jiang_2017_Eg_Eb}. On the contrary, $\psi(z)$ is the solution to
 the Schr\"{o}dinger equation with Hamiltonian
@@ -357,7 +357,7 @@ denominator parts of Eq. \ref{eq:alpha_perp_RPA} are independent of
 $E_{g}$ but instead modulated by the size of the potential confinement
 (details see Supplementary Section S4). We further prove, using both
 quantum mechanical and fundamental electrostatic models, that
-$\alpha^{\perp}$ is actually proportional to the size of potential
+$\alpha_{\mathrm{2D}}^{\perp}$ is actually proportional to the size of potential
 confinement (details see Supplementary Section S4), which we may
 relate with the thickness $\delta$ of the 2D material. Now we may
 finally propose the 2D analog of the Moss relation with both in- and
@@ -365,9 +365,9 @@ out-of-plane polarizations:
 \begin{subequations}
 \begin{eqnarray}
 \label{eq:2D-Moss-para}
-  &\alpha^{\parallel} &\propto E_{g}^{-1} \\
+  &\alpha_{\mathrm{2D}}^{\parallel} &\propto E_{g}^{-1} \\
   \label{eq:2D-Moss-perp}
-  &\alpha^{\perp} & \propto \delta
+  &\alpha_{\mathrm{2D}}^{\perp} & \propto \delta
 \end{eqnarray}
 \end{subequations}
 which form the main conclusion of this work. Next, we will validate
@@ -391,9 +391,9 @@ material, respectively:
 \begin{subequations}
 \begin{eqnarray}
 \label{eq:2D-Moss-para}
-  &\alpha^{\parallel} &\propto E_{g}^{-1} \\
+  &\alpha_{\mathrm{2D}}^{\parallel} &\propto E_{g}^{-1} \\
   \label{eq:2D-Moss-perp}
-  &\alpha^{\perp} & \propto \delta
+  &\alpha_{\mathrm{2D}}^{\perp} & \propto \delta
 \end{eqnarray}
 \end{subequations}
 where $E_{\mathrm{g}}$ is the minimal electronic bandgap of the 2D
@@ -435,9 +435,8 @@ $(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ (in
 \AA{}$^{-1}$) as a function of $E_{\mathrm{g}}$ (in eV) for the 2D
 materials investiaged (circle dots), with a linear regression
 coefficient of regression $R^{2}$ of 0.84, and a slope of 0.18, which
-corresponds well with theoretical investigations
-\citenum{Jiang_2017_Eg_Eb} (details see Supplementary Section SXX
-\todo{format Jiang's paper into SI}).
+corresponds well with theoretical investigations (details see
+Supplementary Section SXX \todo{format Jiang's paper into SI}).
 % From Ref. \citenum{Jiang_2017_Eg_Eb}, the slope between
 % $(4 \pi \varepsilon_{0})/\alpha^{\parallel}$ and $E_{g}$ is
 % $8\pi^{2}\varepsilon_{0} \mathrm{\AA}/(eN) \approx 0.436/N$, which
@@ -471,7 +470,7 @@ experimentally accessible optical bandgap of 2D materials (details see
 Supplementary Section \ref{SI-sec:gpaw-2} and Supplementary Figure
 \ref{SI-fig:opt}).
 
-We further examine the relation between $\alpha^{\perp}$ and the
+We further examine the relation between $\alpha_{\mathrm{2D}}^{\perp}$ and the
 thickness of a 2D material proposed in
 Eq. \ref{eq:2D-Moss-perp}. Here we choose the ``covalent'' thickness
 $\delta_{\mathrm{cov}}$ of a 2D material, which is defined as the
@@ -497,8 +496,8 @@ $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ is also related to the
 volume of the electron cloud per unit area (from its definition), and
 is naturally proportional to the electron cloud thickness of the 2D
 material (see Supplementary Section SXX). In fact, the universal
-scaling relation for $\alpha^{\perp}$ in Figure \ref{fig-3}c indicates
-that the quantity $\alpha^{\perp}/\varepsilon_{0}$ measurable via
+scaling relation for $\alpha_{\mathrm{2D}}^{\perp}$ in Figure \ref{fig-3}c indicates
+that the quantity $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ measurable via
 electronic approaches
 \cite{Antoine_1999,Cherniavskaya_2003,Krauss_1999_EFM}, is indeed the
 (dielectric) characteristic thickness of a 2D material, and can be
@@ -513,10 +512,10 @@ theoretical findings of the linear relation between exciton binding
 energy $E_{\mathrm{b}}$ and $E_{\mathrm{g}}$ of 2D materials
 \cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
 fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
-$\alpha^{\parallel}$ \cite{Pulci_2014}, it is reasonable to have a
+$\alpha_{\mathrm{2D}}^{\parallel}$ \cite{Pulci_2014}, it is reasonable to have a
 general Moss-like relation between $E_{\mathrm{g}}$ and
-$1/\alpha^{\parallel}$. Moreover, the bandgap-independent relation of
-2D $\alpha^{\perp}$ resembles molecular polarizabilities of conjugate
+$1/\alpha_{\mathrm{2D}}^{\parallel}$. Moreover, the bandgap-independent relation of
+2D $\alpha_{\mathrm{2D}}^{\perp}$ resembles molecular polarizabilities of conjugate
 molecules \cite{Davies_1952}, fullerenes \cite{Sabirov_2014} and
 carbon nanotubes \cite{Benedict_1995}, which are also shown to be
 geometry-dependent.
@@ -554,10 +553,10 @@ $\alpha_{\mathrm{2D}}^{\perp}$ correspond to in- and out-of-plane
 characteristic lengthes, respectively. The in-plane screened
 electrostatic potential $V(r)$ from a point charge in an 2D plane, as
 a function of distance $r$:
-$V(r) = {\displaystyle \frac{e}{4 \alpha^{\parallel}}}
+$V(r) = {\displaystyle \frac{e}{4 \alpha_{\mathrm{2D}}^{\parallel}}}
 \left[H_{0}({\displaystyle \frac{2\varepsilon_{0}
-      r}{\alpha^{\parallel}}}) - Y_{0}( {\displaystyle \frac{2
-      \varepsilon_{0}r}{\alpha^{\parallel}}})\right]$
+      r}{\alpha_{\mathrm{2D}}^{\parallel}}}) - Y_{0}( {\displaystyle \frac{2
+      \varepsilon_{0}r}{\alpha_{\mathrm{2D}}^{\parallel}}})\right]$
 \cite{Keldysh_1979_eps_multi,Pulci_2014}, where $H_{0}$ is the Struve
 function and $Y_{0}$ is the Bessel function of second kind, is
 associated with the in-plane screening radius
@@ -686,7 +685,7 @@ anisotropy. We define the dielectric anisotropy index $\eta$ as:
       \ \mathrm{Bulk\ Materials}\\
       {\displaystyle \min_{i \neq j}}
       {\displaystyle
-        \left(\frac{\alpha^{ii}}{\alpha^{jj}}\right)},
+        \left(\frac{\alpha_{\mathrm{2D}}^{ii}}{\alpha_{\mathrm{2D}}^{jj}}\right)},
       \ \mathrm{2D\ Materials}\\
     \end{cases}
   \end{aligned}
@@ -870,8 +869,8 @@ database are calculated at PBE level with a k-point density of 10
   negative and positive induced charges, respectively. The macroscopic
   $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
   $\varepsilon_{\mathrm{SL}}^{\perp}$ are influenced by the lattice
-  size $L$, while the 2D polarizabilities $\alpha^{\parallel}$ and
-  $\alpha^{\perp}$ are invariant with lattice size \textbf{b}.
+  size $L$, while the 2D polarizabilities $\alpha_{\mathrm{2D}}^{\parallel}$ and
+  $\alpha_{\mathrm{2D}}^{\perp}$ are invariant with lattice size \textbf{b}.
   $\varepsilon^{\parallel}_{\mathrm{SL}}$ (top) and
   $\alpha_{\mathrm{SL}}^{\parallel}$ (bottom) as functions of $L$ for
   the 2H TMDCs. \textbf{c}.  $\varepsilon^{\perp}_{\mathrm{SL}}$ (top)
@@ -897,16 +896,16 @@ database are calculated at PBE level with a k-point density of 10
 \includegraphics[width=0.65\linewidth]{img/fig2_v110418.pdf}
 \caption{\label{fig-3} \textbf{The universal scaling relation of the
     dielectric nature of 2D
-    materials}. \textbf{a}. $\alpha^{\parallel}$, $\alpha^{\perp}$
+    materials}. \textbf{a}. $\alpha_{\mathrm{2D}}^{\parallel}$, $\alpha_{\mathrm{2D}}^{\perp}$
   (bar plots) and $E_{\mathrm{g}}$ (blue dots) for all the 2D
-  materials studied.  $\alpha^{\parallel}$ is observed to descend with
+  materials studied.  $\alpha_{\mathrm{2D}}^{\parallel}$ is observed to descend with
   increasing $E_{\mathrm{g}}$, while no apparent relation between
-  $\alpha^{\perp}$ and $E_{\mathrm{g}}$ is
-  observed. \textbf{b}. $(4\pi \varepsilon_{0})/\alpha^{\parallel}$
+  $\alpha_{\mathrm{2D}}^{\perp}$ and $E_{\mathrm{g}}$ is
+  observed. \textbf{b}. $(4\pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$
   (in \AA{}$^{-1}$) as a function of $E_{\mathrm{g}}$, showing a linear
   correlation between each other. The energy range of visible light is
   shown in the
-  background. \textbf{c}. $\alpha^{\perp}/(4\pi\varepsilon_{0})$ (in
+  background. \textbf{c}. $\alpha_{\mathrm{2D}}^{\perp}/(4\pi\varepsilon_{0})$ (in
   \AA{}) as a function of $\delta_{\mathrm{cov}}$ (definition
   schematically shown in the inset), showing a perfect linear relation
   with slope very close to $1/4\pi$. The universal scaling relation is
@@ -953,9 +952,9 @@ database are calculated at PBE level with a k-point density of 10
   $\varepsilon$ in its bulk counterpart. \textbf{b}
   $\varepsilon_{\mathrm{bulk}}^{\parallel}$ calculated from DFT
   (y-axis) compared with the predicted value from 2D
-  $\alpha^{\parallel}$ (x-axis), showing good correlation. \textbf{c}
+  $\alpha_{\mathrm{2D}}^{\parallel}$ (x-axis), showing good correlation. \textbf{c}
   $\varepsilon_{\mathrm{bulk}}^{\perp}$ calculated from DFT (y-axis)
-  compared with the predicted value from 2D $\alpha^{\parallel}$
+  compared with the predicted value from 2D $\alpha_{\mathrm{2D}}^{\parallel}$
   (x-axis). The predicted value is in good aggreement with the DFT
   calculation when $E_{\mathrm{g}}>4$ eV, due to minimal interlayer
   coupling. The comparisons in \textbf{b} and \textbf{c} are made
