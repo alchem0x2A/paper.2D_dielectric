@@ -5,15 +5,17 @@ SI_FILE=SI.tex
 GS_TAG= -sDEVICE=pdfwrite -dQUIET -sBATCH -dNOPAUSE
 LATEXMK_TAG= -f -pdf -quiet -view=none -pdflatex='pdflatex -interaction=nonstopmode'
 DIFF_TAG= --exclude-textcmd="section,subsection,figure" --config="PICTUREENV=(?:section|DIFnomarkup)[*]*" --graphics-markup=0 --disable-citation-markup
-
+PDFLATEX_TAG= -interaction=nonstopmode -draftmode
 
 
 all: main SI diff
 
 main:
+	pdflatex $(PDFLATEX_TAG) $(SI_FILE) #make SI.aux
 	latexmk $(LATEXMK_TAG) $(TEX_FILE)
 
 SI:
+	pdflatex $(PDFLATEX_TAG) $(TEX_FILE) #make SI.aux	
 	latexmk $(LATEXMK_TAG) $(SI_FILE)
 
 diff:
