@@ -10,12 +10,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="148.26584mm"
+   width="151.26584mm"
    height="213.73993mm"
-   viewBox="0 0 148.26585 213.73993"
+   viewBox="0 0 151.26585 213.73993"
    version="1.1"
    id="svg4091"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="0.92.3 (68fc966a96, 2018-08-01)"
    sodipodi:docname="fig1_v110418i.svg">
   <defs
      id="defs4085"
@@ -97,10 +97,10 @@
     </marker>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 148.50001 : 1"
-       inkscape:vp_y="0 : 999.99997 : 0"
-       inkscape:vp_z="210.00001 : 148.50001 : 1"
-       inkscape:persp3d-origin="105.00001 : 99.000005 : 1"
+       inkscape:vp_x="0 : 148.5 : 1"
+       inkscape:vp_y="0 : 999.99989 : 0"
+       inkscape:vp_z="210.00002 : 148.5 : 1"
+       inkscape:persp3d-origin="105.00001 : 98.999998 : 1"
        id="perspective8997" />
     <marker
        inkscape:stockid="Arrow1Mend"
@@ -3279,63 +3279,63 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="-83.40733"
-     inkscape:cy="458.32981"
+     inkscape:zoom="0.7"
+     inkscape:cx="290.84982"
+     inkscape:cy="527.30826"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="2100"
      inkscape:window-height="1279"
      inkscape:window-x="462"
-     inkscape:window-y="56"
+     inkscape:window-y="34"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="-4.2"
-     fit-margin-right="-3"
+     fit-margin-right="0"
      fit-margin-bottom="0">
     <sodipodi:guide
-       position="2.2725855,89.453561"
+       position="2.2725854,89.453572"
        orientation="-15.741616,0"
        id="guide6375"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="4.9136909,114.88089"
+       position="4.9136908,114.8809"
        orientation="15.741616,0"
        id="guide6379"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="180.13967,118.12864"
+       position="180.13966,118.12865"
        orientation="0,-9.8624027"
        id="guide6381"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="0.39027818,91.487703"
+       position="0.39027818,91.487714"
        orientation="-2.4580173,0"
        id="guide6383"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="2.4490308,92.138053"
+       position="2.4490307,92.138064"
        orientation="2.4580173,0"
        id="guide6387"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="75.641344,118.12864"
+       position="75.641342,118.12865"
        orientation="-13.007813,0"
        id="guide6435"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="75.641344,121.57029"
+       position="75.641342,121.5703"
        orientation="0,11.742188"
        id="guide6437"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="78.748131,121.57029"
+       position="78.748129,121.5703"
        orientation="13.007813,0"
        id="guide6439"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="78.748131,118.12864"
+       position="78.748129,118.12865"
        orientation="0,-11.742188"
        id="guide6441"
        inkscape:locked="false" />
@@ -3348,7 +3348,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3675,7 +3675,11 @@
                  id="text25072"
                  y="184.36008"
                  x="42.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">10</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8088">10</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -3704,7 +3708,11 @@
                  id="text25081"
                  y="184.36008"
                  x="72.456406"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">20</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8090">20</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -3733,7 +3741,11 @@
                  id="text25090"
                  y="184.36008"
                  x="102.6964"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">30</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8092">30</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -3762,7 +3774,11 @@
                  id="text25099"
                  y="184.36008"
                  x="132.9364"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">40</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8094">40</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -3791,7 +3807,11 @@
                  id="text25108"
                  y="184.36008"
                  x="163.17641"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">50</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8096">50</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -3820,7 +3840,11 @@
                  id="text25117"
                  y="184.36008"
                  x="193.41641"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">60</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8098">60</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -3861,7 +3885,11 @@
                  id="text25139"
                  y="174.67004"
                  x="35.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">5</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8086">5</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -3890,7 +3918,11 @@
                  id="text25148"
                  y="148.32458"
                  x="35.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">10</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8084">10</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -4666,7 +4698,11 @@
                  id="text25383"
                  y="110.82292"
                  x="35.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">4</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8082">4</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -4695,7 +4731,11 @@
                  id="text25392"
                  y="91.616302"
                  x="35.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">6</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8080">6</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -4724,7 +4764,11 @@
                  id="text25401"
                  y="72.409676"
                  x="35.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">8</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.11213207px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8078">8</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -4753,7 +4797,11 @@
                  id="text25410"
                  y="53.203056"
                  x="35.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">10</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.11213207px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8076">10</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -4782,7 +4830,11 @@
                  id="text25419"
                  y="33.996429"
                  x="35.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">12</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.11213207px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8074">12</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -4811,7 +4863,11 @@
                  id="text25428"
                  y="14.789808"
                  x="35.216408"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">14</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.11213207px;font-family:arial;-inkscape-font-specification:arial;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8070">14</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -5437,7 +5493,11 @@
                  id="text26076"
                  y="184.36008"
                  x="46.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">10</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8136">10</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -5466,7 +5526,11 @@
                  id="text26085"
                  y="184.36008"
                  x="77.135704"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">20</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8138">20</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -5495,7 +5559,11 @@
                  id="text26094"
                  y="184.36008"
                  x="107.3757"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">30</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8140">30</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -5524,7 +5592,11 @@
                  id="text26103"
                  y="184.36008"
                  x="137.61571"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">40</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8142">40</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -5553,7 +5625,11 @@
                  id="text26112"
                  y="184.36008"
                  x="167.8557"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">50</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8144">50</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -5582,7 +5658,11 @@
                  id="text26121"
                  y="184.36008"
                  x="198.0957"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">60</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8146">60</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -5623,7 +5703,11 @@
                  id="text26143"
                  y="157.80894"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">0.50</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8164">0.50</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -5652,7 +5736,11 @@
                  id="text26152"
                  y="136.73259"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">0.75</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8162">0.75</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -6428,7 +6516,11 @@
                  id="text26387"
                  y="127.01913"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">1.0</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8160">1.0</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -6457,7 +6549,11 @@
                  id="text26396"
                  y="108.08095"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">1.5</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8158">1.5</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -6486,7 +6582,11 @@
                  id="text26405"
                  y="89.142769"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">2.0</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8156">2.0</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -6515,7 +6615,11 @@
                  id="text26414"
                  y="70.204582"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">2.5</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8154">2.5</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -6544,7 +6648,11 @@
                  id="text26423"
                  y="51.266403"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">3.0</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8152">3.0</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -6573,7 +6681,11 @@
                  id="text26432"
                  y="32.32822"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">3.5</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8150">3.5</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -6602,7 +6714,11 @@
                  id="text26441"
                  y="13.390039"
                  x="39.895702"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">4.0</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.13338184px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8148">4.0</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -7528,7 +7644,11 @@
                  id="text6185"
                  y="103.83008"
                  x="22.541407"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">10</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8106">10</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -7557,7 +7677,11 @@
                  id="text6194"
                  y="103.83008"
                  x="52.630157"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">20</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8108">20</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -7586,7 +7710,11 @@
                  id="text6203"
                  y="103.83008"
                  x="82.718903"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">30</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8110">30</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -7615,7 +7743,11 @@
                  id="text6212"
                  y="103.83008"
                  x="112.80766"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">40</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8112">40</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -7644,7 +7776,11 @@
                  id="text6221"
                  y="103.83008"
                  x="142.89641"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">50</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8114">50</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -7673,7 +7809,11 @@
                  id="text6230"
                  y="103.83008"
                  x="172.98515"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">60</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8116">60</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -7714,7 +7854,11 @@
                  id="text6243"
                  y="77.416893"
                  x="15.541406"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">5</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8104">5</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -7743,7 +7887,11 @@
                  id="text6252"
                  y="50.061855"
                  x="15.541406"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">10</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8102">10</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -7772,7 +7920,11 @@
                  id="text6261"
                  y="22.70682"
                  x="15.541406"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">15</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8100">15</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -8355,7 +8507,11 @@
                  id="text6437"
                  y="103.83008"
                  x="196.41016"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">10</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8124">10</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -8384,7 +8540,11 @@
                  id="text6446"
                  y="103.83008"
                  x="226.4989"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">20</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8126">20</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -8413,7 +8573,11 @@
                  id="text6455"
                  y="103.83008"
                  x="256.58765"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">30</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8128">30</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -8442,7 +8606,11 @@
                  id="text6464"
                  y="103.83008"
                  x="286.67639"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">40</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8130">40</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -8471,7 +8639,11 @@
                  id="text6473"
                  y="103.83008"
                  x="316.76517"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">50</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8132">50</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -8500,7 +8672,11 @@
                  id="text6482"
                  y="103.83008"
                  x="346.85391"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">60</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:middle;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8134">60</tspan>
+              </text>
             </g>
           </g>
         </g>
@@ -8533,7 +8709,11 @@
                  id="text6492"
                  y="73.206841"
                  x="189.41016"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">2</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8122">2</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -8562,7 +8742,11 @@
                  id="text6501"
                  y="50.681782"
                  x="189.41016"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">3</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8120">3</tspan>
+              </text>
             </g>
           </g>
           <g
@@ -8591,7 +8775,11 @@
                  id="text6510"
                  y="28.156721"
                  x="189.41016"
-                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">4</text>
+                 style="font-style:normal;font-weight:500;font-size:7.5px;font-family:Helvetica;text-anchor:end;stroke-linecap:butt;stroke-linejoin:round">
+                <tspan
+                   style="font-size:9.07134438px;stroke-linecap:butt;stroke-linejoin:round"
+                   id="tspan8118">4</tspan>
+              </text>
             </g>
           </g>
         </g>
