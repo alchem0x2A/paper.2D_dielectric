@@ -54,8 +54,11 @@ for row in reader:
             eps_x.append(e_xy); eps_z.append(ez)
             alpha_x.append(ax); alpha_z.append(az)
             Eg_HSE.append(E)
-            mol = list(db.select(formula=name, prototype=proto))[0]
-            thick.append(get_thick(mol))
+            if proto == "ABX3":
+                thick.append(10.58)
+            else:
+                mol = list(db.select(formula=name, prototype=proto))[0]
+                thick.append(get_thick(mol))
 
 print(len(alpha_x))
 alpha_x = numpy.array(alpha_x)
@@ -71,16 +74,19 @@ thick = thick[cond]
 
 colors = {"MoS2": "#AA0000", "CdI2": "#2C5AA0",
           "GaS": "#FFCC00", "BN": "#A05A2C",
-          "P": "#447821", "CH": "#FF6600"}
+          "P": "#447821", "CH": "#FF6600",
+          "ABX3": "#6600FF"}
 
+print(materials)
 cs = [colors[mat.split("-")[-1]] for mat in materials]
+print(cs)
 
 img_path = "../../tmp_img/"
 plt.style.use("science")
 
-plt.figure(figsize=(7, 3.5))
-plt.subplot(121)
-plt.scatter(Eg_HSE, alpha_x, marker="o", alpha=0.5, c=cs)
+# plt.figure(figsize=(7, 3.5))
+# plt.subplot(121)
+# plt.scatter(Eg_HSE, alpha_x, marker="o", alpha=0.5, c=cs)
 def fit_func(x, a,b):
     return b / x
 '''
@@ -160,6 +166,7 @@ xx = numpy.linspace(min(gp_data[3]), max(gp_data[3]))
 yy = res.slope * xx + res.intercept
 ax.plot(xx, yy, "--")
 # plt.colorbar()
+ax.set_ylim(0.12, 0.80)
 ax.set_title("$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
 ax.set_xlabel("Thickness ($\\AA$)")
 ax.set_ylabel("$\\alpha_{zz} / \\varepsilon_0$ ($\\AA$)")
