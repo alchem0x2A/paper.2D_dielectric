@@ -4,6 +4,7 @@ import numpy
 from ase.data import covalent_radii
 from ase.dft.bandgap import bandgap
 from ase.io.trajectory import Trajectory
+from ase.io import read
 from gpaw import GPAW
 from ase.dft.bandgap import bandgap
 import os, os.path
@@ -64,8 +65,10 @@ def get_bulk(name, proto):
             d = Trajectory(traj_file)[-1].cell[-1][-1]
         except Exception:
             print(Exception)
-            calc = GPAW(gpw_file)
-            d = calc.get_atoms().cell[-1][-1]
+            c_atoms = read(gpw_file)
+            # calc = GPAW(gpw_file)
+            d = c_atoms.cell[-1][-1]
+            # d = calc.get_atoms().cell[-1][-1]
         f = numpy.load(eps_file)
         eps_xx = f["eps_x"][0].real
         eps_zz = f["eps_z"][0].real
@@ -99,7 +102,11 @@ for row in reader:
         ax = (e_xy - 1) / (4 * pi) * L
         az = (1 - 1/ez) * L / (4 * pi)
         mol = list(db.select(formula=name, prototype=proto))[0]
-        delta, n_2D = get_thick(mol)
+        if proto == "ABX3":     # perovskite?
+            delta = 14.24
+            n_2D = None
+        else:
+            delta, n_2D = get_thick(mol)
         # 3D
         try:
             L_3D, epsx, epsz, E_3D = get_bulk(name, proto)

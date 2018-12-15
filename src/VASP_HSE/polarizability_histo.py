@@ -26,7 +26,7 @@ for entry in data:
 # alpha = numpy.array(alpha)
 # Eg = numpy.array(Eg)
 
-fig = plt.figure(figsize=(6.5, 3.2))
+fig = plt.figure(figsize=(8, 4.0))
 plt.style.use("science")
 
 ax1 = fig.add_subplot(111)
@@ -40,10 +40,10 @@ Eg = [e for e, a, n in res]
 
 xx = numpy.arange(0, len(maters))
 
-for r in numpy.linspace(0.12, 0.20, 100):
-    a_model = model_alpha(numpy.array(Eg), r)
-    ax1.plot(xx +0.5, a_model, color="cyan",
-             alpha=0.2)
+# for r in numpy.linspace(0.12, 0.20, 100):
+    # a_model = model_alpha(numpy.array(Eg), r)
+    # ax1.plot(xx +0.5, a_model, color="cyan",
+             # alpha=0.2)
 
 ax2.plot(Eg, "o-", markersize=6)
 ax1.bar(xx, ax, color="#FFCC00", alpha=0.7)
@@ -51,7 +51,7 @@ ax1.bar(xx, az, color="#FF5555", alpha=0.5)
 ax1.set_xticks(range(0, len(maters)))
 mnames = [n[0] + n[1:].replace("2", "$_{2}$") for n in maters]
 ax1.set_xticklabels(mnames, rotation="vertical")
-ax1.set_ylim(0, 13)
+ax1.set_ylim(0, 11)
 plt.tight_layout()
 plt.savefig("../../tmp_img/all_data.svg")
 
