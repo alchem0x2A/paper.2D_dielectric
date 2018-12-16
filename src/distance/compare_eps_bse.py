@@ -11,8 +11,8 @@ def calc_alpha_freq(L=20,
     base_dir = os.path.join(os.path.dirname(__file__),
                             "../../data/distance/GW/BSE/{0:d}/{1}/".format(L,
                                                                         direction))
-    img_file = os.path.join(base_dir, "{}_imaginary_epsilon.dat".format(direction))
-    real_file = os.path.join(base_dir, "{}_real_epsilon.dat".format(direction))
+    img_file = os.path.join(base_dir, "eps_imaginary_{}.dat".format(direction))
+    real_file = os.path.join(base_dir, "eps_real_{}.dat".format(direction))
     img_data = numpy.genfromtxt(img_file)
     real_data = numpy.genfromtxt(real_file)
     freq = img_data[:, 0]
@@ -38,9 +38,9 @@ def main(method="BSE", direction="in_plane"):
             lim = [13, 17]
     else:
         if direction == "in_plane":
-            lim = [4, 8]
+            lim = [6, 10]
         else:
-            lim = [8, 12]
+            lim = [11, 15]
     # for ax in [ax3, ax4]:
         # ax.set_xlim(6, )
     # Set ylabel
@@ -74,7 +74,8 @@ def main(method="BSE", direction="in_plane"):
 
 if __name__== "__main__":
     plt.style.use("science")
-    main("PBE", "in_plane")
+    main("BSE", "in_plane")
+    main("BSE", "out_of_plane")
     # main("PBE", "out_of_plane")
     # main("GW", "in_plane")
     # main("GW", "out_of_plane")
