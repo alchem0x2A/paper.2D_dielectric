@@ -12,12 +12,10 @@
 \usepackage{footnote}
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 
-%\usepackage{xr}
-%\externaldocument{paper_v112818}
 
 \usepackage{xr-hyper} 
 %\usepackage{xr}
-\externaldocument{paper_v120918fundamental}
+\externaldocument{paper}
 
 \SectionNumbersOn{}
 \renewcommand{\thesection}{S\arabic{section}}
@@ -112,35 +110,79 @@
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[width=0.9\linewidth]{img/Fig-G0W0.pdf}
+ \includegraphics[width=0.9\linewidth]{img/SI-GW-alpha-zero.pdf}
   \caption{Variation of $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
 $\varepsilon^{\perp}_{\mathrm{SL}}$ as a function of $L$ for monolayer BN 
 calculated at the level of PBE and G$_{\rm 0}$W$_{0}$.  
 }
-  \label{fig:S1}
+  \label{fig:GW-PBE-alpha}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
- \includegraphics[width=0.9\linewidth]{img/Fig-GW-frequency.pdf}
+ \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-in_plane.pdf}
   \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
 Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
 many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
 with the only variable quantity being $L$. The systematic shift 
 }
-  \label{fig:S2}
+  \label{fig:GW-omega-in}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-out_of_plane.pdf}
+  \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
+Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
+many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
+with the only variable quantity being $L$. The systematic shift 
+}
+  \label{fig:GW-omega-out}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[width=0.9\linewidth]{img/SI-GW-omega-in_plane.pdf}
+  \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
+Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
+many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
+with the only variable quantity being $L$. The systematic shift 
+}
+  \label{fig:GW-omega-in}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[width=0.9\linewidth]{img/SI-GW-omega-out_of_plane.pdf}
+  \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
+Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
+many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
+with the only variable quantity being $L$. The systematic shift 
+}
+  \label{fig:GW-omega-out}
 \end{figure}
 
 
 \begin{figure}[htbp]
   \centering
- %\includegraphics[width=0.9\linewidth]{img/Fig-GW-frequency.pdf}
+ \includegraphics[width=0.9\linewidth]{img/SI-BSE-in_plane.pdf}
   \caption{Similar as in Fig. \ref{fig:S2} but taking into account electron-hole interactions at the level of 
   the Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE). 
   The shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$, HSE06 and PBE but still present. 
   The magnitudes of Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega \to 0)$ varies inherently with $L$.  
 }
-  \label{fig:S3}
+  \label{fig:BSE-omega-in}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[width=0.9\linewidth]{img/SI-BSE-out_of_plane.pdf}
+  \caption{Similar as in Fig. \ref{fig:S2} but taking into account electron-hole interactions at the level of 
+  the Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE). 
+  The shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$, HSE06 and PBE but still present. 
+  The magnitudes of Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega \to 0)$ varies inherently with $L$.  
+}
+  \label{fig:BSE-omega-out}
 \end{figure}
 
 %\section{$\varepsilon^{\parallel, \perp}_{\mathrm{SL}}$ dependence on $L$}
@@ -1181,7 +1223,7 @@ dimension-dependent and dimension-independent quantities.
 \clearpage{}
 \section*{}
 \label{sec:ref}
-\bibliography{ref1}
+\bibliography{ref}
 
 \end{document}
 
