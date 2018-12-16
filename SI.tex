@@ -12,10 +12,12 @@
 \usepackage{footnote}
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 
-\usepackage{xr}
-\externaldocument[main-]{paper}
+%\usepackage{xr}
+%\externaldocument{paper_v112818}
 
-
+\usepackage{xr-hyper} 
+%\usepackage{xr}
+\externaldocument{paper_v120918fundamental}
 
 \SectionNumbersOn{}
 \renewcommand{\thesection}{S\arabic{section}}
@@ -46,49 +48,119 @@
 
 \date{}
 
-\title{The Unified Nature of the Dielectric Properties of Two-Dimensional Materials}
+\title{Electric polarizability as the fundamental variable in the dielectric properties of two-dimensional materials}
+%\title{The Unified Nature of the Dielectric Properties of Two-Dimensional Materials}
 \begin{document}
 
 \newpage{}
-\section{Further Analysis of the 2D Polarizability Model}
-\label{sec:2D-pol}
+%\section{Further Analysis of the 2D Polarizability Model}
+%\label{sec:2D-pol}
 
-In this section, we discuss further topics about the 2D polarizability
-model proposed in the main text.
+%In this section, we discuss further topics about the 2D polarizability
+%model proposed in the main text.
 
-\subsection{Profile of induced dipoles of 2D material}
-\label{sec:dipole-plot}
-Here we show in detail the
-$\Delta \rho=\rho(\boldsymbol{E}) - \rho(\boldsymbol{E}=0)$ profile of
-the 2H-MoS$_{2}$ slab in main text Figure \ref{main-fig-1}a. The
-density $\rho$ is calculated as the average value in the
-\textit{xy}-plane, and the value is shown in Figure
-\ref{fig:rho-profile}. As can be seen the induced charges on the
-MoS$_{2}$ layer only extends to a width of $\sim{}$12 \AA{}. When the
-SL size $L \gg$12 \AA{} as in the first principle calculations done in
-the main text, the induced dipoles from the periodic images do not
-interact, and thus giving converged values of $\alpha_{\mathrm{2D}}$.
+%\section{Profile of induced dipoles of 2D material}
+%\label{sec:dipole-plot}
+%Here we show in detail the
+%$\Delta \rho=\rho(\boldsymbol{E}) - \rho(\boldsymbol{E}=0)$ profile of
+%the 2H-MoS$_{2}$ slab in main text Figure 1a. The
+%density $\rho$ is calculated as the average value in the
+%\textit{xy}-plane, and the value is shown in Figure
+%\ref{fig:rho-profile}. As can be seen the induced charges on the
+%MoS$_{2}$ layer only extends to a width of $\sim{}$12 \AA{}. When the
+%SL size $L \gg$12 \AA{} as in the first principle calculations done in
+%the main text, the induced dipoles from the periodic images do not
+%interact, and thus giving converged values of $\alpha_{\mathrm{2D}}$.
+%
+%\begin{figure}[htbp]
+%  \centering
+%  \includegraphics[width=0.95\linewidth]{img/SI-dipole-MoS2.pdf}
+%  \caption{Induced dipole profile of a 2H-MoS$_{2}$ slab inside the
+%    superlattice, corresponding to main text Figure
+%    \ref{main-fig-1}a. \textbf{a}. Scheme of the MoS$_{2}$ layer
+%    inside the SL separated by vacuum layer. The dielectric constant
+%    $\varepsilon_{\mathrm{SL}}$ is combined effect of the 2D
+%    polarizability $\alpha_{\mathrm{2D}}$ and the vacuum
+%    layer. \textbf{b}. $\Delta \rho$ as a function of $z$ around the
+%    MoS$_{2}$ layer, green and red parts corresponding to negative and
+%    positive induced charges. The external electric field
+%    $E_{\mathrm{ext}}$ is 0.01 eV/\AA{}.}
+%  \label{fig:rho-profile}
+%\end{figure}
+
+
+\section{Table of Contents}
+
+1. Supplementary Figure \ref{fig:S1}:  Simulations of $\varepsilon_{\mathrm{SL}}$ using many-body $G_{\rm 0}W_{\rm 0}$   \\
+%
+%2. Supplementary Section \ref{epsilon-model}: $\varepsilon^{\parallel, \perp}_{\mathrm{SL}}$ dependence on $L$ \\ 
+%
+2. Supplementary Section \ref{sec:2D-3D-rescale}: Hypothetical 2D ``dielectric constant'' rescaled from 3D dielectric constant \\
+%
+3. Supplementary Section \ref{ssec:theory-1}: Polarizability-Based Theoretical Model  \\ 
+%
+4. Supplementary Section \ref{sec:pol-2D-Eg}: Dependence of $\alpha_{\mathrm{2D}}$ on bandgap \\ 
+%
+5. 
+
+
+
+\pagebreak{}
+
+\section{Calculations using many-body Green function method and frequency-dependent quantities $\alpha_{\mathrm{2D}}(\omega)$ and $\varepsilon_{\mathrm{SL}}(\omega)$} 
+
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.95\linewidth]{img/SI-dipole-MoS2.pdf}
-  \caption{Induced dipole profile of a 2H-MoS$_{2}$ slab inside the
-    superlattice, corresponding to main text Figure
-    \ref{main-fig-1}a. \textbf{a}. Scheme of the MoS$_{2}$ layer
-    inside the SL separated by vacuum layer. The dielectric constant
-    $\varepsilon_{\mathrm{SL}}$ is combined effect of the 2D
-    polarizability $\alpha_{\mathrm{2D}}$ and the vacuum
-    layer. \textbf{b}. $\Delta \rho$ as a function of $z$ around the
-    MoS$_{2}$ layer, green and red parts corresponding to negative and
-    positive induced charges. The external electric field
-    $E_{\mathrm{ext}}$ is 0.01 eV/\AA{}.}
-  \label{fig:rho-profile}
+ \includegraphics[width=0.9\linewidth]{img/Fig-G0W0.pdf}
+  \caption{Variation of $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
+$\varepsilon^{\perp}_{\mathrm{SL}}$ as a function of $L$ for monolayer BN 
+calculated at the level of PBE and G$_{\rm 0}$W$_{0}$.  
+}
+  \label{fig:S1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[width=0.9\linewidth]{img/Fig-GW-frequency.pdf}
+  \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
+Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
+many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
+with the only variable quantity being $L$. The systematic shift 
+}
+  \label{fig:S2}
 \end{figure}
 
 
+\begin{figure}[htbp]
+  \centering
+ %\includegraphics[width=0.9\linewidth]{img/Fig-GW-frequency.pdf}
+  \caption{Similar as in Fig. \ref{fig:S2} but taking into account electron-hole interactions at the level of 
+  the Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE). 
+  The shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$, HSE06 and PBE but still present. 
+  The magnitudes of Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega \to 0)$ varies inherently with $L$.  
+}
+  \label{fig:S3}
+\end{figure}
 
+%\section{$\varepsilon^{\parallel, \perp}_{\mathrm{SL}}$ dependence on $L$}
+%\label{epsilon-model}
+%
+%Under an external electric field $\boldsymbol{E}$ the material forming the layer 
+%polarizes with a polarization $\mathcal{P}_{2D}=\chi_{2D}  \boldsymbol{E} $, where  
+%$\chi_{2D} $ is the electric susceptibility of the sheet. $\mathcal{P}_{2D}$ corresponds to a dipole moment 
+%in the 2D material 
+%of: 
+%
+%\begin{equation}
+%\label{P_2D}
+%\boldsymbol{u}_{2D}= \mathcal{P}_{2D} \Omega = (\chi_{2D}  \boldsymbol{E}) (A L)
+%\end{equation}
+%\\
+%From Eq. \ref{P_2D} we can calculate the dipole moment density  $\boldsymbol{\mu}_{\mathrm{2D}}^{p} =\boldsymbol{u}^{p}/A$ 
 
-\subsection{Hypothetical 2D ``dielectric constant'' rescaled from 3D dielectric constant}
+\pagebreak{}
+\section{Hypothetical 2D ``dielectric constant'' rescaled from 3D dielectric constant}
 \label{sec:2D-3D-rescale}
 From literatures, it is often desired to extract the ``dielectric
 constant'' of a 2D material from the 3D macroscopic dielectric
@@ -116,7 +188,9 @@ $\varepsilon_{\mathrm{SL}}$ of the superlattice:
   &(\varepsilon_{\mathrm{SL}}^{\perp})^{-1} &= f /\varepsilon_{\mathrm{2D}}^{\perp} + (1-f)
 \end{eqnarray}
 where $f=\delta/L$ is the volume fraction of the 2D
-material in the superlattice. The major issue when using such rescale
+material in the superlattice and $\varepsilon_{\mathrm{2D}}^{\parallel}$ and 
+$\varepsilon_{\mathrm{2D}}^{\perp}$ are the corresponding dielectric constants for the 2D layer. 
+The major issue when using such rescale
 relations comes from the determination of $\delta_{\mathrm{2D}}$. To
 eliminate the modeling error caused by the \textit{a priori} parameter
 selection of $\delta$, we perform the calculation of
@@ -235,7 +309,242 @@ nature of 2D materials, including
 \end{enumerate}
 
 
-\subsection{Dependence of $\alpha_{\mathrm{2D}}$ on bandgap}
+%%%%%%\section{Theoretical Analysis}
+%%%%%%\label{sec:theory}
+\section{Polarizability-Based Theoretical Model}
+\label{ssec:theory-1}
+The universal relations for $\alpha_{\mathrm{2D}}^{\parallel}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$ revealed by main text
+Eqs. \ref{main-eq:2D-Moss-para} and \ref{main-eq:2D-Moss-perp} are not
+coincidence. Combining recent theoretical findings of the linear
+relation between exciton binding energy $E_{\mathrm{b}}$ and
+$E_{\mathrm{g}}$ of 2D materials
+\cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
+fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
+$\alpha_{\mathrm{2D}}^{\parallel}$ \cite{Pulci_2014}, it is reasonable
+to have a general Moss-like relation between
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $E_{\mathrm{g}}^{-1}$. Moreover,
+the bandgap-independent relation of 2D $\alpha_{\mathrm{2D}}^{\perp}$
+resembles molecular polarizabilities of conjugate molecules
+\cite{Davies_1952}, fullerenes \cite{Sabirov_2014} and carbon
+nanotubes \cite{Benedict_1995}, which are also shown to be
+geometry-dependent.
+
+In this section we show in detail the polarizability-based theoretical
+framework that leads to the 2D Moss-like relations proposed in the
+main text.  Due to its highly anisotropic nature, the wave function of
+an isolated 2D material $\psi(\mathbf{r})$ can be separated into the
+in- and out-of-plane components, similar to the treatment of quantum
+wells (QW),\cite{davies_physics_1997} such that
+$\psi^{\parallel}(\boldsymbol{\rho})$ and $\psi^{\perp}(z)$, such that
+$\psi=\psi^{\parallel}\psi^{\perp}$, where $\boldsymbol{\rho}=(x, y)$
+is the in-plane coordinate. Using the Bloch theorem, the periodic
+$\psi^{\parallel}(\boldsymbol{\rho})$ can be further expressed as
+$\psi^{\parallel}(\boldsymbol{\rho})=e^{i\mathbf{k} \cdot
+  \boldsymbol{\rho}}u(\boldsymbol{\rho})$, where $\mathbf{k}$ is the
+in-plane wave vector and $u(\boldsymbol{\rho})$ is periodic function
+in the xy-plane. According to the random phase approximation (RPA)
+theory\cite{Adler_1962}, $\varepsilon_{\mathrm{SL}}$ is the
+$\mathbf{q} \to 0$ and $\omega \to 0$ limits of the non-interacting
+dielectric function $\varepsilon(\mathbf{q}, \omega)$, where
+$\mathbf{q}$ is the momentum transfer and $\omega$ is the frequency:
+\begin{equation}
+  \label{eq:RPA-eps2}
+  \varepsilon_{\mathrm{SL}}
+  = \lim_{\mathbf{q} \to 0} 1 + \frac{2e^{2}}{\varepsilon_{0} |\mathbf{q}|^{2} \Omega}
+  \sum_{\mathrm{k, c, v}}
+  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
+  \left[f(\psi_{\mathrm{c}}) - f(\psi_{\mathrm{v}})\right]
+\end{equation}
+where $e$ is the unit charge, c, v are the conduction and valence
+bands, $E$ is the eigenenergy of individual bands, and $f$ is the
+Fermi-Dirac distribution function. Taking the
+limit that $L\to\infty$, when
+$\varepsilon^{\perp}_{\mathrm{SL}} \approx 1$, we have
+$1-1/\varepsilon^{\perp}_{\mathrm{SL}} \approx
+(\varepsilon_{\mathrm{SL}}^{\perp} - 1)$. Therefore
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
+at 0 K can be unified by the same equation:
+\begin{equation}
+  \label{eq:alpha-RPA}
+  \alpha = \frac{2e^{2}}{|q|^{2}A} \sum_{\mathrm{k,c,v}}
+  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
+\end{equation}
+where the direction is determined by $\mathbf{q}$. Next we will show
+that the different behavior of $\psi^{\parallel}$ and $\psi^{\perp}$
+give rise to the main text Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def}. 
+
+{\bf ES:} There is something weird with the cross-referencing for the equations 3a and 3b between the main text and 
+SI. They changed to 2a and 2b in the SI. 
+
+
+\subsection{Detailed derivations for main text Eq. \ref{eq:alpha-para-def} 3a}  %
+\label{sssec:theory-1}
+
+In this section we show how main text Eq. \ref{eq:alpha-para-def}
+is derived from Eq. \ref{eq:alpha-RPA}. For the in-plane component
+$\alpha_{\mathrm{2D}}^{\parallel}$, $e^{-i\mathbf{qr}}$ is independent
+of $z$, therefore the integral in
+$|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}$
+becomes independent of $\psi^{\perp}$, due to the orthogonality
+and normality. The Bloch-wave form of $\psi^{\parallel}$ ensures that
+only the cell-function $u(\mathbf{k})$ contributes to the final result
+of $\alpha^{\parallel}_{\mathrm{2D}}$ \cite{davies_physics_1997}, such
+that:
+\begin{equation}
+  \label{eq:alpha_para_RPA}
+  \alpha_{\mathrm{2D}}^{\parallel} = \frac{2e^{2}}
+  {(2 \pi)^{2}} \int d^{2}\mathbf{k} \sum_{\mathrm{c, v}}
+  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}}
+  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
+\end{equation}
+Present the summation of k-space into integral, and further combining
+with the Bloch wave representation and the
+$\mathbf{k} \cdot \mathbf{p}$ theory\cite{Jiang_2017_Eg_Eb}, we arrive
+at Eq. \ref{eq:alpha-para-def}. Note that from
+Ref. \citenum{Jiang_2017_Eg_Eb}, the coefficient between
+$\alpha^{\parallel}_{\mathrm{2D}}$ and $E_{\mathrm{g}}$ is given by:
+$\alpha_{\mathrm{2D}}^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$,
+where $N$ is the degeneracy associated with the minimal bandgap. Such
+relation predicts the linear correlation coefficient between
+$(4\pi \varepsilon_{0})/\alpha^{\parallel}_{\mathrm{2D}}$ (measured in
+\AA{}$^{-1}$) and $E_{\mathrm{g}}$ (measured in eV) as
+$8 \pi^{2} \varepsilon_{0} \AA{} / (e N) \approx 0.436 / N$. From Figure 2{\bf c}, we have
+$(4 \pi \varepsilon_{0}\cdot \text{\AA{}})/\alpha_{\mathrm{2D}}^{\parallel}
+\sim{} 0.183 E_{\mathrm{g}}/ \mathrm{eV}$, corresponding to $N$
+between 2 and 3, which is a reasonable result for the 2D materials
+studied. 
+
+{\bf ES:} Tian, please include more details in this section on the derivations! 
+
+
+\subsection{Detailed derivations for main text Eq. \ref{eq:alpha-perp-def}}
+\label{ssec:theory-2}
+
+For main text Eq. \ref{eq:alpha-perp-def}, treating the in-plane
+wave functions as plane wave with form
+$\psi^{\parallel}(\rho) \propto e^{i \mathbf{k \rho}}$, the matrix
+element of
+$<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{qr}}|\psi_{\mathrm{c}}(\mathbf{k+q})>$,
+when $\mathbf{q}=(0, 0, q_{z})$, becomes\cite{Hybertsen_1987}:
+\begin{equation}
+  \begin{aligned}
+    \label{eq:matrix-z}
+  <\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{qr}}|\psi_{\mathrm{c}}(\mathbf{k+q})>
+  &= \frac{1}{A} \int dx \int dy
+  e^{i(\mathbf{-k \rho} - \mathbf{q \rho} + \mathbf{(k+q) \rho})}
+  \int (\psi^{\perp})^{*}_{\mathrm{v}}(\mathbf{k})e^{-iq_{z}z}\psi^{\perp}_{\mathrm{c}}(\mathbf{k+q})\\
+  &= <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|e^{-iq_{z}z}|\psi^{\perp}_{\mathrm{c}}(\mathbf{k+q})>
+  \end{aligned}
+\end{equation}
+Note that the states perpendicular are bound, the integral is
+meaningful only when $\mathbf{k=k+q}$ \cite{davies_physics_1997}. By
+performing the Taylor expansion of
+$e^{-i\mathbf{qr}} \approx 1 - i\mathbf{qr}$, we get:
+\begin{equation}
+  \begin{aligned}
+    \label{eq:matrix-z-2}
+    <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|e^{-iq_{z}z}|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>
+    &\approx <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})> -
+    iq_{z} <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>\\
+    &= -iq_{z} <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>
+   \end{aligned}
+\end{equation}
+plug this into Eq. \ref{eq:alpha-RPA} and express the summation over
+$k_{x}$ and $k_{y}$ in a continuous form within the Brillouin Zone, we
+arrive at:
+\begin{equation}
+\label{eq:alpha_perp_RPA}
+\alpha_{\mathrm{2D}}^{\perp} = \frac{2e^{2}}{(2 \pi) ^{2}} \int d^{2}\mathbf{k}
+\sum_{\mathrm{c, v}}
+\frac{|<\psi_{\mathrm{v}}(\mathbf{k})|z|\psi_{\mathrm{c}}(\mathbf{k})>|^{2}}
+{E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
+\end{equation}
+The formalism is slightly different from Eq.\ref{eq:alpha_para_RPA}.
+
+The out-of-plane wave function $\psi^{\perp}(z)$ is the solution to the Schr\"{o}dinger equation with
+Hamiltonian $\mathcal{H} = -\hbar^{2} \nabla^{2}/2m_{e} + V(z)$, where
+$\hbar$ is the reduced Planck constant, $m_{e}$ is electron mass and
+$V(z)$ is the confined Coulomb potential along the z-direction
+created by the nuclei
+\cite{davies_physics_1997,ihn_semiconductor_2009}. Although the exact
+form for $\psi^{\perp}$ depends on the exact distribution of $V(z)$,
+without loss of generality we can assume the electrons are confined in
+a potential well of width $\delta$, which is the typical treatment for
+semiconductor QWs \cite{ihn_semiconductor_2009}. The allowed bound
+states inside the confined region generally have wave vector
+$k_{z} \propto n \pi / \delta$. With the total energy
+$E_{n}(\mathbf{k}) = {\displaystyle \frac{\hbar^{2} (k_{x}^{2} +
+    k_{y}^{2})}{2 m^{\parallel}} + \frac{\hbar^{2} n^{2} \pi^{2}}{2
+    m^{\perp} \delta^{2}}}$, where $m^{\parallel}$ and $m^{\perp}$ are
+the effective masses parallel and perpendicular to the 2D
+plane. Therefore the denominator of Eq. \ref{eq:alpha_perp_RPA} becomes independent of
+$\mathbf{k}$, that
+$E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k}) =
+(n_{\mathrm{c}}^{2} - n_{\mathrm{v}}^{2}) {\displaystyle
+  \frac{\hbar^{2} \pi^{2}}{2 m^{\perp} \delta^{2}}}$. On the other
+hand, the numerator
+$<\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>$
+is proportional to the confinement length $\delta$ which can be seen using
+particle-in-box solution\cite{davies_physics_1997}. In combination,
+the individual terms of the summation in the right hand of Eq. \ref{eq:alpha_perp_RPA} is
+independent of neither $E_{\mathrm{g}}$ nor \textbf{k}, proving that
+$\alpha_{\mathrm{2D}}^{\perp}$ is independent of the band gap.
+
+Finally we will show the $\alpha_{\mathrm{2D}}^{\perp}$ is related to the
+confinement length $\delta$, or equivalent the thickness of the 2D
+material. For simplicity we assume $\psi^{\parallel}$ is the solution
+of a particle confined inside an infinite potential well of width
+$\delta$ with the form $\psi \propto \sin(\frac{n\pi}{\delta})$. At 0
+K, the only non-zero contribution for the transition between band
+$n_{\mathrm{v}}$ and $n_{\mathrm{c}}$ corresponds with in-plane wave
+vector $\mathbf{k}_{\rho}$ within the range of $k_{\mathrm{F}}^{\mathrm{v}}$ to
+$k_{\mathrm{F}}^{\mathrm{c}}$, the Fermi vectors of each band. Therefore we have:
+\begin{equation}
+  \begin{aligned}
+    \alpha_{\mathrm{2D}}^{\perp} &\propto \delta^{4} m^{\perp} \int
+    d^{2}\mathbf{k}_{\rho}
+    \frac{f(\psi_{\mathrm{v}}(\mathbf{k}_{\rho}))
+      -f(\psi_{\mathrm{v}}(\mathbf{k}_{\rho})) }{n_{\mathrm{c}}^{2} -
+      n_{\mathrm{v}}^{2}}\\
+    &= \delta^{4} m^{\perp} \sum_{\mathrm{c, v}}\pi \frac{
+      (k_{\mathrm{F}}^{\mathrm{c}})^{2} -
+        (k_{\mathrm{F}}^{\mathrm{v}})^{2}}{n_{\mathrm{c}}^{2} -
+        n_{\mathrm{v}}^{2}}
+  \end{aligned}
+\end{equation}
+Since the Fermi wave vector for band \textit{i} follows
+${\displaystyle
+  \frac{\hbar^{2}(k_{\mathrm{F}}^{i})^{2}}{2m^{\parallel}}} +
+{\displaystyle \frac{\hbar^{2} n_{i}^{2} \pi^{2}}{2m^{\perp}
+    \delta^{2}}} = E_{\mathrm{F}}$, we have
+$ (k_{\mathrm{F}}^{\mathrm{c}})^{2} -
+(k_{\mathrm{F}}^{\mathrm{v}})^{2} \propto (n_{\mathrm{c}}^{2} -
+n_{\mathrm{v}}^{2}) {\displaystyle
+  \frac{m^{\parallel}}{m^{\perp}}}$. Note that in the particle-in-box
+model, the energy levels for a sub-nm QW will be at the order of 10
+eV, which allows only few states inside the QW. Combine with the fact
+that the strongest transition mostly comes from the lowest bands
+\cite{davies_physics_1997}, $\alpha^{\perp}_{\mathrm{2D}}$ is shown to
+be proportional to $\delta^{p}$, where the power index $p$ is 2. We
+note the different power law comes from the choice of the $V(z)$. The
+atomic polarizabilities of free particles inside a 1D infinite QW,
+finite QW or harmonic QW all show dependency with $\delta^{4}$, where
+$\delta$ is the length of confinement or effective harmonic length of
+the QW \cite{Fowler_1984,Maize_2011}. Since the 2D polarizability is
+the molecular polarizability divided by the area, such approach will
+always yield $\alpha_{\mathrm{2D}}^{\perp} \propto \delta^{2}$. To
+accurately model the $\alpha_{\mathrm{2D}}^{\perp}$ we need a better
+model for the confinement in z-direction than simple square potential
+well, which may be explored further. Nevertheless the simple model presented
+here still captures the bandgap-independent and thickness-related feature
+of $\alpha_{\mathrm{2D}}^{\perp}$, supporting our findings in the main
+text. In the next section we will provide a simple explanation for the $\alpha \propto \delta$ relation from fundamental electrostatics theory.
+
+
+\section{Dependence of $\alpha_{\mathrm{2D}}$ on bandgap}
 \label{sec:pol-2D-Eg}
 
 In this section we further look into the bandgap dependency of the 2D
@@ -258,7 +567,7 @@ apparent correlation.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.5\linewidth]{img/SI-compare_alpha_Eg.pdf}
+  \includegraphics[width=0.6\linewidth]{img/SI-compare_alpha_Eg.pdf}
   \caption{Relation between $1/\alpha_{\mathrm{2D}}^{\parallel}$ and various choices
     of $E_{\mathrm{g}}$: minimal gap from HSE06 (blue), minimal gap
     from PBE (orange) and direct gap from PBE (green). The linear
@@ -490,238 +799,10 @@ quantities have apparent relation with the 2D polarizabilities, as
 compared with the bandgap and covalent thickness proposed in the main
 text. 
 
-
-\section{Theoretical Analysis}
-\label{sec:theory}
-\subsection{Polarizability-Based Theoretical Model}
-\label{ssec:theory-1}
-The universal relations for $\alpha_{\mathrm{2D}}^{\parallel}$ and
-$\alpha_{\mathrm{2D}}^{\perp}$ revealed by main text
-Eqs. \ref{main-eq:2D-Moss-para} and \ref{main-eq:2D-Moss-perp} are not
-coincidence. Combining recent theoretical findings of the linear
-relation between exciton binding energy $E_{\mathrm{b}}$ and
-$E_{\mathrm{g}}$ of 2D materials
-\cite{Choi_linear_2015,Olsen_2016_hydrogen,Jiang_2017_Eg_Eb}, and the
-fact that the $E_{\mathrm{b}}$ is roughly inversely proportional to
-$\alpha_{\mathrm{2D}}^{\parallel}$ \cite{Pulci_2014}, it is reasonable
-to have a general Moss-like relation between
-$\alpha_{\mathrm{2D}}^{\parallel}$ and $E_{\mathrm{g}}^{-1}$. Moreover,
-the bandgap-independent relation of 2D $\alpha_{\mathrm{2D}}^{\perp}$
-resembles molecular polarizabilities of conjugate molecules
-\cite{Davies_1952}, fullerenes \cite{Sabirov_2014} and carbon
-nanotubes \cite{Benedict_1995}, which are also shown to be
-geometry-dependent.
-
-In this section we show in detail the polarizability-based theoretical
-framework that leads to the 2D Moss-like relations proposed in the
-main text.  Due to its highly anisotropic nature, the wave function of
-an isolated 2D material $\psi(\mathbf{r})$ can be separated into the
-in- and out-of-plane components, similar to the treatment of quantum
-wells (QW),\cite{davies_physics_1997} such that
-$\psi^{\parallel}(\boldsymbol{\rho})$ and $\psi^{\perp}(z)$, such that
-$\psi=\psi^{\parallel}\psi^{\perp}$, where $\boldsymbol{\rho}=(x, y)$
-is the in-plane coordinate. Using the Bloch theorem, the periodic
-$\psi^{\parallel}(\boldsymbol{\rho})$ can be further expressed as
-$\psi^{\parallel}(\boldsymbol{\rho})=e^{i\mathbf{k} \cdot
-  \boldsymbol{\rho}}u(\boldsymbol{\rho})$, where $\mathbf{k}$ is the
-in-plane wave vector and $u(\boldsymbol{\rho})$ is periodic function
-in the xy-plane. According to the random phase approximation (RPA)
-theory\cite{Adler_1962}, $\varepsilon_{\mathrm{SL}}$ is the
-$\mathbf{q} \to 0$ and $\omega \to 0$ limits of the non-interacting
-dielectric function $\varepsilon(\mathbf{q}, \omega)$, where
-$\mathbf{q}$ is the momentum transfer and $\omega$ is the frequency:
-\begin{equation}
-  \label{eq:RPA-eps2}
-  \varepsilon_{\mathrm{SL}}
-  = \lim_{\mathbf{q} \to 0} 1 + \frac{2e^{2}}{\varepsilon_{0} |\mathbf{q}|^{2} \Omega}
-  \sum_{\mathrm{k, c, v}}
-  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
-  \left[f(\psi_{\mathrm{c}}) - f(\psi_{\mathrm{v}})\right]
-\end{equation}
-where $e$ is the unit charge, c, v are the conduction and valence
-bands, $E$ is the eigenenergy of individual bands, and $f$ is the
-Fermi-Dirac distribution function. Taking the
-limit that $L\to\infty$, when
-$\varepsilon^{\perp}_{\mathrm{SL}} \approx 1$, we have
-$1-1/\varepsilon^{\perp}_{\mathrm{SL}} \approx
-(\varepsilon_{\mathrm{SL}}^{\perp} - 1)$. Therefore
-$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
-at 0 K can be unified by the same equation:
-\begin{equation}
-  \label{eq:alpha-RPA}
-  \alpha = \frac{2e^{2}}{|q|^{2}A} \sum_{\mathrm{k,c,v}}
-  \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
-\end{equation}
-where the direction is determined by $\mathbf{q}$. Next we will show
-that the different behavior of $\psi^{\parallel}$ and $\psi^{\perp}$
-give rise to the main text Eqs. \ref{main-eq:2D-Moss-para} and
-\ref{main-eq:2D-Moss-perp}.
+%%%%%%pasted in 12/05/2018
 
 
-\subsubsection{Detailed derivations for main text Eq. \ref{main-eq:2D-Moss-para}}
-\label{sssec:theory-1}
-
-In this section we show how main text Eq. \ref{main-eq:2D-Moss-para}
-is derived from Eq. \ref{eq:alpha-RPA}. For the in-plane component
-$\alpha_{\mathrm{2D}}^{\parallel}$, $e^{-i\mathbf{qr}}$ is independent
-of $z$, therefore the integral in
-$|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}$
-becomes the independent of $\psi^{\perp}$, due to the orthogonality
-and normality. The Bloch-wave form of $\psi^{\parallel}$ ensures that
-only the cell-function $u(\mathbf{k})$ contributes to the final result
-of $\alpha^{\parallel}_{\mathrm{2D}}$ \cite{davies_physics_1997}, such
-that:
-\begin{equation}
-  \label{eq:alpha_para_RPA}
-  \alpha_{\mathrm{2D}}^{\parallel} = \frac{2e^{2}}
-  {(2 \pi)^{2}} \int d^{2}\mathbf{k} \sum_{\mathrm{c, v}}
-  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}}
-  {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
-\end{equation}
-Present the summation of k-space into integral, and further combining
-with the Bloch wave representation and the
-$\mathbf{k} \cdot \mathbf{p}$ theory\cite{Jiang_2017_Eg_Eb}, we arrive
-at Eq. \ref{main-eq:2D-Moss-para}. Note that from
-Ref. \citenum{Jiang_2017_Eg_Eb}, the coefficient between
-$\alpha^{\parallel}_{\mathrm{2D}}$ and $E_{\mathrm{g}}$ is given by:
-$\alpha_{\mathrm{2D}}^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$,
-where $N$ is the degeneracy associated with the minimal bandgap. Such
-relation predicts the linear correlation coefficient between
-$(4\pi \varepsilon_{0})/\alpha^{\parallel}_{\mathrm{2D}}$ (measured in
-\AA{}$^{-1}$) and $E_{\mathrm{g}}$ (measured in eV) as
-$8 \pi^{2} \varepsilon_{0} \AA{} / (e N) \approx 0.436 / N$. From main
-text Figure \ref{main-fig-3}c, we have
-$(4 \pi \varepsilon_{0}\cdot \text{\AA{}})/\alpha_{\mathrm{2D}}^{\parallel}
-\sim{} 0.183 E_{\mathrm{g}}/ \mathrm{eV}$, corresponding to $N$
-between 2 and 3, which is a reasonable result for the 2D materials
-studied.
-
-
-\subsubsection{Detailed derivations for main text Eq. \ref{main-eq:2D-Moss-perp}}
-\label{ssec:theory-2}
-For main text Eq. \ref{main-eq:2D-Moss-perp}, treating the in-plane
-wave functions as plane wave with form
-$\psi^{\parallel}(\rho) \propto e^{i \mathbf{k \rho}}$, the matrix
-element of
-$<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{qr}}|\psi_{\mathrm{c}}(\mathbf{k+q})>$,
-when $\mathbf{q}=(0, 0, q_{z})$, becomes\cite{Hybertsen_1987}:
-\begin{equation}
-  \begin{aligned}
-    \label{eq:matrix-z}
-  <\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{qr}}|\psi_{\mathrm{c}}(\mathbf{k+q})>
-  &= \frac{1}{A} \int dx \int dy
-  e^{i(\mathbf{-k \rho} - \mathbf{q \rho} + \mathbf{(k+q) \rho})}
-  \int (\psi^{\perp})^{*}_{\mathrm{v}}(\mathbf{k})e^{-iq_{z}z}\psi^{\perp}_{\mathrm{c}}(\mathbf{k+q})\\
-  &= <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|e^{-iq_{z}z}|\psi^{\perp}_{\mathrm{c}}(\mathbf{k+q})>
-  \end{aligned}
-\end{equation}
-Note that the states perpendicular are bound, the integral is
-meaningful only when $\mathbf{k=k+q}$ \cite{davies_physics_1997}. By
-performing the Taylor expansion of
-$e^{-i\mathbf{qr}} \approx 1 - i\mathbf{qr}$, we get:
-\begin{equation}
-  \begin{aligned}
-    \label{eq:matrix-z-2}
-    <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|e^{-iq_{z}z}|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>
-    &\approx <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})> -
-    iq_{z} <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>\\
-    &= -iq_{z} <\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>
-   \end{aligned}
-\end{equation}
-plug this into Eq. \ref{eq:alpha-RPA} and express the summation over
-$k_{x}$ and $k_{y}$ in a continuous form within the Brillouin Zone, we
-arrive at:
-\begin{equation}
-\label{eq:alpha_perp_RPA}
-\alpha_{\mathrm{2D}}^{\perp} = \frac{2e^{2}}{(2 \pi) ^{2}} \int d^{2}\mathbf{k}
-\sum_{\mathrm{c, v}}
-\frac{|<\psi_{\mathrm{v}}(\mathbf{k})|z|\psi_{\mathrm{c}}(\mathbf{k})>|^{2}}
-{E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
-\end{equation}
-The formalism is slightly different from Eq.\ref{eq:alpha_para_RPA}.
-
-The out-of-plane wave function $\psi^{\perp}(z)$ is the solution to the Schr\"{o}dinger equation with
-Hamiltonian $\mathcal{H} = -\hbar^{2} \nabla^{2}/2m_{e} + V(z)$, where
-$\hbar$ is the reduced Planck constant, $m_{e}$ is electron mass and
-$V(z)$ is the confined Coulomb potential along the z-direction
-created by the nuclei
-\cite{davies_physics_1997,ihn_semiconductor_2009}. Although the exact
-form for $\psi^{\perp}$ depends on the exact distribution of $V(z)$,
-without loss of generality we can assume the electrons are confined in
-a potential well of width $\delta$, which is the typical treatment for
-semiconductor QWs \cite{ihn_semiconductor_2009}. The allowed bound
-states inside the confined region generally has wave vector
-$k_{z} \propto n \pi / \delta$. With the total energy
-$E_{n}(\mathbf{k}) = {\displaystyle \frac{\hbar^{2} (k_{x}^{2} +
-    k_{y}^{2})}{2 m^{\parallel}} + \frac{\hbar^{2} n^{2} \pi^{2}}{2
-    m^{\perp} \delta^{2}}}$, where $m^{\parallel}$ and $m^{\perp}$ are
-the effective masses parallel and perpendicular to the 2D
-plane. Therefore the denominator of Eq. 10 becomes independent of
-$\mathbf{k}$, that
-$E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k}) =
-(n_{\mathrm{c}}^{2} - n_{\mathrm{v}}^{2}) {\displaystyle
-  \frac{\hbar^{2} \pi^{2}}{2 m^{\perp} \delta^{2}}}$. On the other
-hand, the numerator
-$<\psi^{\perp}_{\mathrm{v}}(\mathbf{k})|z|\psi^{\perp}_{\mathrm{c}}(\mathbf{k})>$
-is proportional to the confinement length $\delta$ (can be seen using
-particle-in-box solution\cite{davies_physics_1997}). In combination,
-the individual terms of the summation in the right hand of Eq. 5b is
-independent of neither $E_{\mathrm{g}}$ nor \textbf{k}, proving that
-$\alpha_{\mathrm{2D}}^{\perp}$ is independent of the band gap.
-
-Finally we will show the $\alpha_{\mathrm{2D}}^{\perp}$ is related to the
-confinement length $\delta$, or equivalent the thickness of the 2D
-material. For simplicity we assume $\psi^{\parallel}$ is the solution
-of a particle confined inside an infinite potential well of width
-$\delta$ with the form $\psi \propto \sin(\frac{n\pi}{\delta})$. At 0
-K, the only non-zero contribution for the transition between band
-$n_{\mathrm{v}}$ and $n_{\mathrm{c}}$ corresponds with in-plane wave
-vector $\mathbf{k}_{\rho}$ within the range of $k_{\mathrm{F}}^{\mathrm{v}}$ to
-$k_{\mathrm{F}}^{\mathrm{c}}$, the Fermi vectors of each band. Therefore we have:
-\begin{equation}
-  \begin{aligned}
-    \alpha_{\mathrm{2D}}^{\perp} &\propto \delta^{4} m^{\perp} \int
-    d^{2}\mathbf{k}_{\rho}
-    \frac{f(\psi_{\mathrm{v}}(\mathbf{k}_{\rho}))
-      -f(\psi_{\mathrm{v}}(\mathbf{k}_{\rho})) }{n_{\mathrm{c}}^{2} -
-      n_{\mathrm{v}}^{2}}\\
-    &= \delta^{4} m^{\perp} \sum_{\mathrm{c, v}}\pi \frac{
-      (k_{\mathrm{F}}^{\mathrm{c}})^{2} -
-        (k_{\mathrm{F}}^{\mathrm{v}})^{2}}{n_{\mathrm{c}}^{2} -
-        n_{\mathrm{v}}^{2}}
-  \end{aligned}
-\end{equation}
-Since the Fermi wave vector for band \textit{i} follows
-${\displaystyle
-  \frac{\hbar^{2}(k_{\mathrm{F}}^{i})^{2}}{2m^{\parallel}}} +
-{\displaystyle \frac{\hbar^{2} n_{i}^{2} \pi^{2}}{2m^{\perp}
-    \delta^{2}}} = E_{\mathrm{F}}$, we have
-$ (k_{\mathrm{F}}^{\mathrm{c}})^{2} -
-(k_{\mathrm{F}}^{\mathrm{v}})^{2} \propto (n_{\mathrm{c}}^{2} -
-n_{\mathrm{v}}^{2}) {\displaystyle
-  \frac{m^{\parallel}}{m^{\perp}}}$. Note that in the particle-in-box
-model, the energy levels for a sub-nm QW will be at the order of 10
-eV, which allows only few states inside the QW. Combine with the fact
-that the strongest transition mostly comes from the lowest bands
-\cite{davies_physics_1997}, $\alpha^{\perp}_{\mathrm{2D}}$ is shown to
-be proportional to $\delta^{p}$, where the power index $p$ is 2. We
-note the different power law comes from the choice of the $V(z)$. The
-atomic polarizabilities of free particles inside a 1D infinite QW,
-finite QW or harmonic QW all show dependency with $\delta^{4}$, where
-$\delta$ is the length of confinement or effective harmonic length of
-the QW \cite{Fowler_1984,Maize_2011}. Since the 2D polarizability is
-the molecular polarizability divided by the area, such approach will
-always yield $\alpha_{\mathrm{2D}}^{\perp} \propto \delta^{2}$. To
-accurately model the $\alpha_{\mathrm{2D}}^{\perp}$ we need a better
-model for the confinement in z-direction than simple square potential
-well, which may be tedious. Nevertheless the simple model presented
-here still captures the bandgap-independent and thickness-related feature
-of $\alpha_{\mathrm{2D}}^{\perp}$, supporting our findings in the main
-text. In the next section we will provide a simple explanation for the $\alpha \propto \delta$ relation from fundamental electrostatics theory.
-
-\subsubsection{Explanation to main text Eq. \ref{main-eq:2D-Moss-perp}
+\subsection{Explanation to main text Eq. \ref{main-eq:2D-Moss-perp}
   from fundamental electrostatics}
 \label{sssec:theory-3}
 
@@ -781,8 +862,8 @@ polarizability ellipsoid for a 2D material, is drawn in Figure
 \end{figure}
 
 \subsection{Comparing 2D and 3D Moss relations}
-\label{ssec:theory-2}
-
+\label{ssec:theory-2D}
+%\label{ssec:theory-2}
 The 2D Moss-like relation $\alpha^{\parallel} \propto E_{g}^{-1}$ is
 similar to the 3D Moss relation $\varepsilon \propto E_{g}^{-1/2}$,
 with a different power law. Such difference in the power law can
@@ -1072,6 +1153,11 @@ dimension-dependent and dimension-independent quantities.
   different scaling relation with others quantities.}
 \end{figure}
 
+
+%%%%%%pasted!
+
+
+
 \section{Raw data from first principles calculations}
 \subsection{Quantities from first principles calculation}
 \label{sec:raw}
@@ -1095,7 +1181,7 @@ dimension-dependent and dimension-independent quantities.
 \clearpage{}
 \section*{}
 \label{sec:ref}
-\bibliography{ref}
+\bibliography{ref1}
 
 \end{document}
 
