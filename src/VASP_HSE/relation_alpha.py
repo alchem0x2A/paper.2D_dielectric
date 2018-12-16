@@ -55,7 +55,7 @@ for row in reader:
             alpha_x.append(ax); alpha_z.append(az)
             Eg_HSE.append(E)
             if proto == "ABX3":
-                thick.append(10.58)
+                thick.append(8.0)
             else:
                 mol = list(db.select(formula=name, prototype=proto))[0]
                 thick.append(get_thick(mol))
