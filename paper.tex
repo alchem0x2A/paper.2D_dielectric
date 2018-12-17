@@ -13,7 +13,8 @@
 
 %\usepackage{xr}
 \usepackage{xr-hyper} 
-\externaldocument{SI}
+\externaldocument[SI-]{SI}
+
 
 
 \author{Tian Tian}
@@ -73,13 +74,15 @@
 
 The dielectric constant $\varepsilon$ (also known as the relative
 permittivity) plays a crucial role in bridging various fundamental
-material properties, such as bandgaps, optical absorption, and
-conductivities.  \todo{Add more citations} $\varepsilon$ characterizes
-the ability to screen an electric field $\boldsymbol{E}$ which
-classifies metals, semiconductors and insulators.  \todo[inline]{I
-  shortened the sentences. However, can we really "classify" the
-  material only by $varepsilon$? For instance HfO2 has large
-  $\varepsilon$ but also large bandgap}
+material properties, such as bandgaps
+\cite{Moss_1950_relation,Moss_1985_n_Eg}, optical absorption
+\cite{kittel_2005_introduction}, and conductivities
+\cite{Dressel_2001_electrodynamics}. $\varepsilon$ characterizes the
+ability to screen an electric field $\boldsymbol{E}$ which classifies
+metals, semiconductors and insulators.  \todo[inline]{I shortened the
+  sentences. However, can we really "classify" the material only by
+  $\varepsilon$? For instance HfO2 has large $\varepsilon$ but also
+  large bandgap}
 % Such definitions determine a broad range of
 % condensed matter physics, as well as in related fields in chemistry
 % and materials science.
@@ -151,12 +154,12 @@ dipoles along the \textit{z}-direction as the charge density
 difference, $\Delta \rho=\rho(\boldsymbol{E}) - \rho(0)$, at zero and
 finite electric fields
 ($|\boldsymbol{E}_{}|=0.01 \mathrm{V\cdot \AA}^{-1}$) extends to
-$\sim{}$12 \AA{} deeply into the vacuum (Figure \ref{fig-1}{\bf
-  a}). When $L$ is large enough, the induced dipoles $\boldsymbol{u}$
-from the periodic images do not interact mutually as the integral in
-Eq. \ref{eq:def-eps-2} depends only locally on the atomic charge
-density at the layer.  However, we can see from
-Eqs. \ref{eq:def-eps-1} that both
+$\sim{}$12 \AA{} deeply into the vacuum (Figure \ref{fig-1}{\bf a} and
+Supplementary Figure \ref{SI-fig:rho-profile}). When $L$ is large
+enough, the induced dipoles $\boldsymbol{u}$ from the periodic images
+do not interact mutually as the integral in Eq. \ref{eq:def-eps-2}
+depends only locally on the atomic charge density at the layer.
+However, we can see from Eqs. \ref{eq:def-eps-1} that both
 $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
 $\varepsilon^{\perp}_{\mathrm{SL}}$ depend on $L$ via the volume of
 the cell $\Omega$.  Therefore, any calculation performed using such
@@ -164,7 +167,7 @@ definition will intrinsically depend on the magnitude of $L$ as an
 additional parameter.  This dependence can be clearly demonstrated by
 plotting $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
 $\varepsilon^{\perp}_{\mathrm{SL}}$ calculated from density functional
-theory (DFT) using hybrid functionals (see {\it Methods} for details)
+theory (DFT) using hybrid functionals (see {\it Theoretical Methods} for details)
 as a function of $L$ for P$\bar{6}$m2 transitional metal
 dichalcogenides (TMDCs), 2H-MX$_{2}$, where M=Mo, W and X=S, Se, Te
 (top panels of Figure \ref{fig-1}{\bf b} and \ref{fig-1}{\bf c},
@@ -173,19 +176,20 @@ the dielectric constant change systematically without a clear
 convergence.
 %
 Simulations performed at higher levels of theory using many-body
-techniques, G$_{\rm 0}$W$_{0}$ (Supplementary Figure \ref{fig:S1}),
-and also taking into account electron-hole excitations at the level of
-the Bethe-Salpeter equation (BSE) for the frequency-dependent
+techniques, G$_{\rm 0}$W$_{0}$, and also taking into account
+electron-hole excitations at the level of the Bethe-Salpeter equation
+(BSE) for the frequency-dependent
 $\varepsilon^{\parallel}_{\mathrm{SL}}(\omega)$ and
 $\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$ invariably give alike
-results (Supplementary Figure \ref{fig:S2}). Moreover, due to the long
-range Coulomb interaction, variations of the quasi-particle energy
-(and corresponding peak positions) with lattice constant $L$ at the
-G$_{0}$W$_{0}$ level is observed (details see Supplementary Section
-SXX). Such results implicate that several other related quantities,
-including the optical absorption and optical conductivity, suffer the
-same deficiencies, which should be avoided in a fully first principles
-theory.
+results(details see Supplementary Section \ref{SI-ssec:gw}).
+% Moreover, due to the long range Coulomb
+% interaction, variations of the quasi-particle energy (and
+% corresponding peak positions) with lattice constant $L$ at the
+% G$_{0}$W$_{0}$ level is observed (details see Supplementary Section
+% SXX). Such results implicate that several other related quantities,
+% including the optical absorption and optical conductivity, suffer the
+% same deficiencies, which should be avoided in a fully first principles
+% theory.
 %
 %
 %
@@ -209,7 +213,7 @@ extract information for the real part of the dielectric functions.  We
 argue that such procedure may induce inevitably variations of the
 results as the thickness is normally chosen by the interlayer spacing
 of the respective bulk materials (details see Supplementary Section
-\ref{sec:2D-3D-rescale}).
+\ref{SI-sec:2D-3D-rescale}).
 %
 %%%
 %
@@ -285,7 +289,7 @@ and $\alpha_{\mathrm{2D}}^{\perp}$ (Fig. \ref{fig-1}{\bf d-e}).
 Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def} can also be used to remove 
 the dependence of $L$ on $\varepsilon^{\parallel}_{\mathrm{SL}}(\omega)$ and
 $\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$ via $\alpha^{\parallel}_{\mathrm{SL}}(\omega)$ and
-$\alpha^{\perp}_{\mathrm{SL}}(\omega)$, respectively (Supplementary Figure \ref{fig:S3}). 
+$\alpha^{\perp}_{\mathrm{SL}}(\omega)$, respectively (Supplementary Section \ref{SI-ssec:gw}). 
 %
 % 
 % 
@@ -296,7 +300,7 @@ of layered materials as the microscopic quantity in describing the
 atomic interactions present in the layers. Its local nature removes any dependence on size effects 
 present in the calculations.  
 More discussions about the choice of the 2D polarizability
-and comparison with other methods can be found in Supplementary Section \ref{sec:2D-3D-rescale}. 
+and comparison with other methods can be found in Supplementary Section \ref{SI-sec:2D-3D-rescale}. 
 
 %\subsection*{Polarizability as the fundamental variable}
 %\label{sec:first-principles}
@@ -308,7 +312,7 @@ that other quantities are intrinsically related to the polarizability.
 Using random phase approximation (RPA)
 theory \cite{Adler_1962} within the $\mathbf{k} \cdot \mathbf{p}$
 formalism\cite{kittel_2005_introduction} (see Supplementary
-Section \ref{sssec:theory-1} and  \ref{ssec:theory-2} for details), 
+Section \ref{SI-sssec:theory-1} and  \ref{SI-ssec:theory-2} for details), 
 we can show that
 $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
 can be written as: 
@@ -374,7 +378,7 @@ $\alpha_{\mathrm{2D}}/(4 \pi \varepsilon_{0})$, which has unit of
 descending trend when $E_{\mathrm{g}}$ increases, while no apparent
 correlation between $\alpha_{\mathrm{2D}}^{\perp}$ and
 $E_{\mathrm{g}}$ is observed (see Supplementary Section
-\ref{sec:pol-2D-Eg}). It is worth mentioning that materials with
+\ref{SI-sec:pol-2D-Eg}). It is worth mentioning that materials with
 elements having large polarizabilities, such as Hf and Zr in
 1T-HfO$_2$ or 1T-ZrO$_2$, respectively, also transfer alike features
 for the layers with slightly variations between 1T and 2H phases. The
@@ -402,14 +406,14 @@ $(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ and
 $E_{\mathrm{g}}$ (measured by the $R^{2}$ value) is higher when the
 bandgap is calculated using the HSE06 hybrid functional\cite{Heyd_2005} compared
 with that from Perdew--Burk--Ernzerhof (PBE) %exchange correlation functional
-(see Supplementary Section \ref{sec:pol-2D-Eg} and
+(see Supplementary Section \ref{SI-sec:pol-2D-Eg} and
 Supplementary Figure \ref{fig:alpha-Eg-diff}) which suggests that higher levels 
 of theory are needed to predict bandgaps as it is normally the case.   
 We also show
 that the proposed Eq. \ref{eq:2D-Moss-para}
 behaves equivalently well when using the
 experimentally accessible optical bandgap of 2D materials (details see
-Supplementary Section \ref{sec:gpaw-2} and Supplementary Figure
+Supplementary Section \ref{SI-sec:gpaw-2} and Supplementary Figure
 \ref{fig:opt}). 
 
 We further examine the relation between $\alpha_{\mathrm{2D}}^{\perp}$ and the
@@ -440,7 +444,7 @@ cloud of an isolated molecule \cite{Israelachvili_2011},
 $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ is also related to the
 volume of the electron cloud per unit area (from its definition), and
 is naturally proportional to the electron cloud thickness of the 2D
-material (see Supplementary Section \ref{sssec:theory-3}). Indeed, the
+material (see Supplementary Section \ref{SI-sssec:theory-3}). Indeed, the
 universal scaling relation for $\alpha_{\mathrm{2D}}^{\perp}$ in
 Figure \ref{fig-3}{\bf d} indicates that the quantity
 $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ measurable via
@@ -458,19 +462,19 @@ database\cite{Haastrup_2018}, from which we extracted the dielectric
 properties of over 230 compounds calculated at the PBE level, and
 superimpose with our results in Figure \ref{fig-3}{\bf c} and
 \ref{fig-3}{\bf d} (see details in Supplementary Section
-\ref{sec:gpaw-1}). Although the dielectric properties may be
+\ref{SI-sec:gpaw-1}). Although the dielectric properties may be
 overestimated at PBE level due to underestimation of the bandgap
 compared with the more accurate HSE06 functionals
 \cite{Van_Dyck_2017}, similar linear trends can be observed for both
 $\alpha^{\parallel}_{\mathrm{2D}}$ and $\alpha_{\mathrm{2D}}^{\perp}$
 with the linear coefficient very close to the HSE06 results (see
-details in Supplementary Section \ref{sec:gpaw-2}).
+details in Supplementary Section \ref{SI-sec:gpaw-2}).
 
 We have also searched for additional relations between the 2D
 polarizabilities with other physical quantities, including the
 effective carrier mass, quantum capacitance (density of states) and
 total atomic polarizabilities with no apparent correlations being
-found (Supplementary Section \ref{sec:gpaw-3}).  We found however that
+found (Supplementary Section \ref{SI-sec:gpaw-3}).  We found however that
 Eqs. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} have a natural
 connection with the screening properties of the layer.
 %
@@ -630,11 +634,11 @@ $\eta_{\mathrm{Bulk}} \geq {\displaystyle \frac{4
     \eta_{\mathrm{2D}}}{(\eta_{\mathrm{2D}}+1)^{2}}} \geq
 \eta_{\mathrm{2D}}$, where $\eta_{\mathrm{2D}}$ is the anisotropy
 index of corresponding 2D layer (see additional details in Supplementary Section
-\ref{sssec:aniso-2}), which is the basis for the separation of bulk
+\ref{SI-sssec:aniso-2}), which is the basis for the separation of bulk
 and 2D regimes in the $\eta-E_{\mathrm{g}}$ phase diagram.  For
 comparison, we also superimpose the dielectric anisotropy indices
 $\eta$ of common semiconducting materials in other dimensions 
-(Supplementary Section \ref{sssec:aniso-1}) on the phase diagram in Figure
+(Supplementary Section \ref{SI-sssec:aniso-1}) on the phase diagram in Figure
 \ref{fig:aniso}. Bulk covalent (3D, e.g. Si, GaN) and 0D (fullerenes)
 semiconductors show isotropic dielectric properties, scattered on the
 line $\eta=1$. On the other hand, reduced dimensionality increases the

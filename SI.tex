@@ -10,12 +10,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{ltablex}
 \usepackage{footnote}
+\usepackage{braket}
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 
 
 \usepackage{xr-hyper} 
 %\usepackage{xr}
-\externaldocument{paper}
+\externaldocument[main-]{paper}
 
 \SectionNumbersOn{}
 \renewcommand{\thesection}{S\arabic{section}}
@@ -51,43 +52,10 @@
 \begin{document}
 
 \newpage{}
-%\section{Further Analysis of the 2D Polarizability Model}
-%\label{sec:2D-pol}
-
-%In this section, we discuss further topics about the 2D polarizability
-%model proposed in the main text.
-
-%\section{Profile of induced dipoles of 2D material}
-%\label{sec:dipole-plot}
-%Here we show in detail the
-%$\Delta \rho=\rho(\boldsymbol{E}) - \rho(\boldsymbol{E}=0)$ profile of
-%the 2H-MoS$_{2}$ slab in main text Figure 1a. The
-%density $\rho$ is calculated as the average value in the
-%\textit{xy}-plane, and the value is shown in Figure
-%\ref{fig:rho-profile}. As can be seen the induced charges on the
-%MoS$_{2}$ layer only extends to a width of $\sim{}$12 \AA{}. When the
-%SL size $L \gg$12 \AA{} as in the first principle calculations done in
-%the main text, the induced dipoles from the periodic images do not
-%interact, and thus giving converged values of $\alpha_{\mathrm{2D}}$.
-%
-%\begin{figure}[htbp]
-%  \centering
-%  \includegraphics[width=0.95\linewidth]{img/SI-dipole-MoS2.pdf}
-%  \caption{Induced dipole profile of a 2H-MoS$_{2}$ slab inside the
-%    superlattice, corresponding to main text Figure
-%    \ref{main-fig-1}a. \textbf{a}. Scheme of the MoS$_{2}$ layer
-%    inside the SL separated by vacuum layer. The dielectric constant
-%    $\varepsilon_{\mathrm{SL}}$ is combined effect of the 2D
-%    polarizability $\alpha_{\mathrm{2D}}$ and the vacuum
-%    layer. \textbf{b}. $\Delta \rho$ as a function of $z$ around the
-%    MoS$_{2}$ layer, green and red parts corresponding to negative and
-%    positive induced charges. The external electric field
-%    $E_{\mathrm{ext}}$ is 0.01 eV/\AA{}.}
-%  \label{fig:rho-profile}
-%\end{figure}
 
 
-\section{Table of Contents}
+
+\section*{Table of Contents}
 
 1. Supplementary Figure \ref{fig:S1}:  Simulations of $\varepsilon_{\mathrm{SL}}$ using many-body $G_{\rm 0}W_{\rm 0}$   \\
 %
@@ -105,82 +73,184 @@
 
 \pagebreak{}
 
-\section{Calculations using many-body Green function method and frequency-dependent quantities $\alpha_{\mathrm{2D}}(\omega)$ and $\varepsilon_{\mathrm{SL}}(\omega)$} 
+\section{Further analysis on the dielectric properties of 2D materials}
 
+In this section we provide more analysis on the dielectric properties
+of 2D materials, with focus on the dielectric properties calculated
+using many-body Green function method (G$_0$W$_0$) and the
+frequency-dependency of the superlattice dielectric functions and 2D
+polarizabilities.
 
+\subsection{Profile of induced dipoles of 2D material}
+\label{sec:dipole-plot}
+Here we show in detail the
+$\Delta \rho=\rho(\boldsymbol{E}) - \rho(\boldsymbol{E}=0)$ profile of
+the 2H-MoS$_{2}$ slab in main text Figure 1a. The
+density $\rho$ is calculated as the average value in the
+\textit{xy}-plane, and the value is shown in Figure
+\ref{fig:rho-profile}. As can be seen the induced charges on the
+MoS$_{2}$ layer only extends to a width of $\sim{}$12 \AA{}. When the
+SL size $L \gg$12 \AA{} as in the first principle calculations done in
+the main text, the induced dipoles from the periodic images do not
+interact, and thus giving converged values of $\alpha_{\mathrm{2D}}$.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.5\linewidth]{img/SI-dipole-MoS2.pdf}
+ \caption{$\Delta \rho$ as a function of $z$ around the
+   MoS$_{2}$ layer, corresponding to main text Figure
+   \ref{main-fig-1}a. Green and red parts corresponding to negative and
+   positive induced charges. The external electric field
+   $E_{\mathrm{ext}}$ is 0.01 eV/\AA{}.}
+ \label{fig:rho-profile}
+\end{figure}
+
+\subsection{Dielectric properties calculated using many-body Green function method and frequency dependency}
+\label{ssec:gw}
+
+Here we will show the results of dielectric properties calculated
+using higher level of many-body Green function method (G$_0$W$_{0}$)
+and with electron-hole interaction. We first compare the case of a
+layer of hBN within an superlattice with varying size with the
+dielectric properties calculated using PBE and G$_{0}$W$_{0}$ methods,
+as shown in Figure
+\ref{fig:GW-PBE-alpha}. $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
+$\varepsilon_{\mathrm{SL}}^{\perp}$ as functions of $L$, shown in
+Figure \ref{fig:GW-PBE-alpha}a and \ref{fig:GW-PBE-alpha}b,
+respectively, do not converge with $L$, while the corresponding 2D
+polarizabilities in Figure \ref{fig:GW-PBE-alpha}c and
+\ref{fig:GW-PBE-alpha}d are almost $L$-independent. It is worthnoting
+that since the G$_{0}$W$_{0}$ method has better estimation of the bandgap, $\varepsilon_{\mathrm{SL}}$ and $\alpha_{\mathrm{2D}}$ are smaller using G$_{0}$W$_{0}$ than PBE method.
 \begin{figure}[htbp]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-alpha-zero.pdf}
-  \caption{Variation of $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
-$\varepsilon^{\perp}_{\mathrm{SL}}$ as a function of $L$ for monolayer BN 
-calculated at the level of PBE and G$_{\rm 0}$W$_{0}$.  
-}
+ \caption{Variation of dielectric properties and
+   $\varepsilon^{\perp}_{\mathrm{SL}}$ as a function of $L$ for
+   monolayer BN calculated at the level of PBE and G$_{\rm 0}$W$_{0}$.
+   \textbf{a}. $\varepsilon_{\mathrm{SL}}^{\parallel}$ as function of
+   $L$. \textbf{a}. $\alpha_{\mathrm{2D}}^{\parallel}$ as function of
+   $L$ corresponding to
+   \textbf{b}. \textbf{c}. $\varepsilon_{\mathrm{SL}}^{\perp}$ as
+   function of $L$.  \textbf{d}. $\alpha_{\mathrm{2D}}^{\perp}$ as
+   function of $L$. In all cases the values obtained using
+   G$_{0}$W$_{0}$ method is smaller than that using PBE method due to
+   better estimation of the bandgap.}
   \label{fig:GW-PBE-alpha}
 \end{figure}
 
-\begin{figure}[htbp]
+Next we will investigate the frequency-dependent dielectric properties of the 2D materials using various methods. The imaginary part of the frequency-dependent dielectric function of an periodic system is calculated using the following relation:
+
+\begin{equation}
+\begin{aligned}
+  \label{eq:dft-dielectric}
+\varepsilon_{\alpha\beta}^{(2)}(\omega)=\frac{4\pi e^2}{\Omega}\lim\limits_{q\rightarrow 0}\frac{1}{q^2}\sum_{v,c,\mathbf{k}}&2\omega_\mathbf{k}\delta(\epsilon_{c\mathbf{k}}-\epsilon_{v\mathbf{k}}-\omega) \\
+&\times\braket{u_{c\mathbf{k}+q\mathbf{e}_\alpha}|u_{v\mathbf{k}}}\braket{u_{v\mathbf{k}}|u_{c\mathbf{k}+q\mathbf{e}_\beta}}
+\end{aligned}
+\end{equation}
+Through the Kramers-Kronig transformation the real part of the dielectric function can be obtained as: 
+
+\begin{equation}
+  \varepsilon_{\alpha\beta}^{(1)}(\omega)=1+\frac{2}{\pi}\int_0^\infty\frac{\varepsilon_{\alpha\beta}^{(2)}(\omega')\omega'}{\omega'^2-\omega^2}d\omega'
+\end{equation}
+
+We calculate the frequency-dependent dielectric properties of hBN with
+varying supperlattice $L$ at PBE, G$_{0}$W$_{0}$, and G$_{0}$W$_{0}$
+with electron-hole interaction (G$_{0}$W$_{0}$+BSE). As shown in
+Figure \ref{fig:PBE-omega-in} and \ref{fig:PBE-omega-out}, the
+intensities of $\varepsilon_{\mathrm{SL}}^{\parallel}(\omega)$ and
+$\varepsilon_{\mathrm{SL}}^{\perp}(\omega)$ reduce with increasing $L$
+throughout the whole frequency range. The $L$-dependency can also be
+removed using Eqs. \ref{main-eq:alpha-para-def} and
+\ref{main-eq:alpha-perp-ref}, yielding lattice-independent
+polarizabilities throughout the frequency domain.
+
+\begin{figure}[H]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-in_plane.pdf}
-  \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
-Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
-many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
-with the only variable quantity being $L$. The systematic shift 
-}
-  \label{fig:GW-omega-in}
+ \caption{Dependence of in-plane dielectric properties on $L$ for
+   monolayer BN calculated using PBE method: \textbf{a} Real part of
+   $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{b} Real part of
+   $\alpha_{\mathrm{2D}}^{\parallel}$, \textbf{c} Imaginary part of
+   $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{d} Imaginary part of
+   $\alpha_{\mathrm{2D}}^{\parallel}$.  The same {\bf k}-sampling is used
+   in all simulations with the only variable quantity being $L$. }
+  \label{fig:PBE-omega-in}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
- \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-out_of_plane.pdf}
-  \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
-Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
-many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
-with the only variable quantity being $L$. The systematic shift 
-}
-  \label{fig:GW-omega-out}
+  \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-out_of_plane.pdf}
+   \caption{Dependence of out-of-plane dielectric properties on $L$ for
+   monolayer BN calculated using PBE method: \textbf{a} Real part of
+   $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{b} Real part of
+   $\alpha_{\mathrm{2D}}^{\perp}$, \textbf{c} Imaginary part of
+   $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{d} Imaginary part of
+   $\alpha_{\mathrm{2D}}^{\perp}$.  The same {\bf k}-sampling is used
+   in all simulations with the only variable quantity being $L$. }
+  \label{fig:PBE-omega-out}
 \end{figure}
 
-\begin{figure}[htbp]
+We note that the result may change slightly when G$_{0}$W$_{0}$ method
+is used. As shown in Figures \ref{fig:GW-omega-in} and
+\ref{fig:GW-omega-out}, not only do the intensity of the dielectric
+functions change with $L$, but also the peak positions. As a result
+the obtained polarizabilities also show $L$-dependent peak shift. This
+can be explained by the long-range nature of Coulomb interactions. In
+fact the self-energy of the G$_{0}$W$_{0}$ system $\Sigma$, is determined by:
+\begin{equation}
+  \label{eq:GW-formula}
+  \Sigma = i G_{0} W_{0} = i G_{0} \varepsilon^{-1} \nu
+\end{equation}
+where $G$ is the non-interacting Green function, and $\nu$ is the
+Coulomb interaction. Since the dielectric constant $\varepsilon$
+changes with $L$, the self energy as well quasi-particle energies of
+the G$_{0}$W$_{0}$ method also varies with $L$. As a result we get
+higher peak energy of the dielectric spectrum when $L$ increases. Such
+peculiar $L$-dependency can be minimized when adding electron-hole
+interaction through the Bethe-Salpethe equation (BSE), as shown in
+Figures \ref{fig:BSE-omega-in} and \ref{fig:BSE-omega-out}. The
+polarizabilities again becomes lattice-independent due to the
+localization of excitons within the 2D material layer, which corrects the energy shift of G$_{0}$W$_{0}$ method.
+
+Combining the accuray of bandgap estimation, reproducible results of
+frequency-dependent dielectric properties and calculation efforts, the
+choice of HSE06 hybrid functional seems used in the main text provides
+best tradeoff between all aspects.
+
+\begin{figure}[H]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-omega-in_plane.pdf}
-  \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
-Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
-many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
-with the only variable quantity being $L$. The systematic shift 
+  \caption{Similar to Figure \ref{fig:PBE-omega-in} but calculated using G$_{0}$W$_{0}$ method. Peak shift can be observed in the dielectric function spectra.
 }
   \label{fig:GW-omega-in}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-omega-out_of_plane.pdf}
-  \caption{Dependence of Im $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ and
-Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega)$ on $L$ for monolayer BN calculated using 
-many-body G$_{\rm 0}$W$_{0}$ technique. The same {\bf k}-sampling is used in all simulations 
-with the only variable quantity being $L$. The systematic shift 
-}
+ \caption{Similar to Figure \ref{fig:PBE-omega-out} but calculated
+   using G$_{0}$W$_{0}$ method. Peak shift can be observed in the
+   dielectric function spectra.}
   \label{fig:GW-omega-out}
 \end{figure}
 
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-BSE-in_plane.pdf}
-  \caption{Similar as in Fig. \ref{fig:S2} but taking into account electron-hole interactions at the level of 
+  \caption{Similar as in Fig. \ref{fig:GW-omega-in} but taking into account electron-hole interactions at the level of 
   the Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE). 
-  The shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$, HSE06 and PBE but still present. 
-  The magnitudes of Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega \to 0)$ varies inherently with $L$.  
+  The peak shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$.
 }
   \label{fig:BSE-omega-in}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-BSE-out_of_plane.pdf}
-  \caption{Similar as in Fig. \ref{fig:S2} but taking into account electron-hole interactions at the level of 
+  \caption{Similar as in Fig. \ref{fig:GW-omega-out} but taking into account electron-hole interactions at the level of 
   the Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE). 
-  The shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$, HSE06 and PBE but still present. 
-  The magnitudes of Re $\varepsilon^{\parallel,\perp}_{\mathrm{SL}}(\omega \to 0)$ varies inherently with $L$.  
+  The peak shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$, HSE06 and PBE but still present. 
 }
   \label{fig:BSE-omega-out}
 \end{figure}
