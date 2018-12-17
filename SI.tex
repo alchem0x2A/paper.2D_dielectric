@@ -176,39 +176,29 @@ $\varepsilon_{\mathrm{SL}}^{\perp}(\omega)$ reduce with increasing $L$
 throughout the whole frequency range. The $L$-dependency can also be
 removed using Eqs. \ref{main-eq:alpha-para-def} and
 \ref{main-eq:alpha-perp-def}, yielding lattice-independent
-polarizabilities throughout the frequency domain.
+polarizabilities throughout the frequency domain. Note when extracting
+the frequency-dependent 2D polarizabilities from
+Eqs. \ref{main-eq:alpha-para-def} and \ref{main-eq:alpha-perp-def},
+the peak position from $\varepsilon_{\mathrm{SL}}$ is preserved. This
+is explained by the fact that the local extrema from spectra of
+$\varepsilon_{\mathrm{SL}}$ is also the local extrema in corresponding
+$\alpha_{\mathrm{2D}}$, since when
+$\partial \varepsilon_{\mathrm{SL}}(\omega) / \partial \omega = 0 $,
+we have
+\begin{subequations}
+\begin{eqnarray}
+  \label{eq:extrema-para}
+  \frac{\partial \alpha_{\mathrm{2D}}^{\parallel}(\omega)}{\partial \omega}
+  &= \varepsilon_{0}L {\displaystyle \frac{\partial \varepsilon_{\mathrm{SL}}^{\parallel}}{\partial \omega}} = 0   \\
+  \label{eq:extrema-perp}
+  \frac{\partial \alpha_{\mathrm{2D}}^{\perp}(\omega)}{\partial \omega}
+  &= \varepsilon_{0}L {\displaystyle \frac{1}{\varepsilon_{\mathrm{SL}}^{2}}\frac{\partial \varepsilon_{\mathrm{SL}}^{\parallel}}{\partial \omega}} = 0
+\end{eqnarray}
+\end{subequations}
+which indicates that the peak position is perserved when transforming
+$\varepsilon_{\mathrm{SL}}(\omega)$ to $\alpha_{\mathrm{2D}}(\omega)$.
 
-\begin{figure}[H]
-  \centering
- \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-in_plane.pdf}
- \caption{Dependence of in-plane dielectric properties on $L$ for
-   monolayer BN calculated using PBE method: \textbf{a} Real part of
-   $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{b} Real part of
-   $\alpha_{\mathrm{2D}}^{\parallel}$, \textbf{c} Imaginary part of
-   $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{d} Imaginary part
-   of $\alpha_{\mathrm{2D}}^{\parallel}$.  The same {\bf k}-sampling
-   is used in all simulations with the only variable quantity being
-   $L$. Clearly, the $L$-dependency of the superlattice dielectric
-   function is removed using 2D polarizabilities.}
-  \label{fig:PBE-omega-in}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-out_of_plane.pdf}
-  \caption{Dependence of out-of-plane dielectric properties on $L$ for
-    monolayer BN calculated using PBE method: \textbf{a} Real part of
-    $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{b} Real part of
-    $\alpha_{\mathrm{2D}}^{\perp}$, \textbf{c} Imaginary part of
-    $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{d} Imaginary part of
-    $\alpha_{\mathrm{2D}}^{\perp}$.  The same {\bf k}-sampling is used
-    in all simulations with the only variable quantity being
-    $L$. Clearly, the $L$-dependency of the superlattice dielectric
-    function is removed using 2D polarizabilities.}
-  \label{fig:PBE-omega-out}
-\end{figure}
-
-We note that the result may change slightly when G$_{0}$W$_{0}$ method
+We note that the result change slightly when G$_{0}$W$_{0}$ method
 is used. As shown in Figures \ref{fig:GW-omega-in} and
 \ref{fig:GW-omega-out}, not only do the intensity of the dielectric
 functions change with $L$, but also the peak positions. As a result
@@ -230,12 +220,46 @@ Figures \ref{fig:BSE-omega-in} and \ref{fig:BSE-omega-out}. The
 polarizabilities again becomes lattice-independent due to the
 localization of excitons within the 2D material layer, which corrects the energy shift of G$_{0}$W$_{0}$ method.
 
+
+
 Combining the accuray of bandgap estimation, reproducible results of
 frequency-dependent dielectric properties and calculation efforts, the
 choice of HSE06 hybrid functional seems used in the main text provides
 best tradeoff between all aspects.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
+  \centering
+ \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-in_plane.pdf}
+ \caption{Dependence of in-plane dielectric properties on $L$ for
+   monolayer BN calculated using PBE method: \textbf{a} Real part of
+   $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{b} Real part of
+   $\alpha_{\mathrm{2D}}^{\parallel}$, \textbf{c} Imaginary part of
+   $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{d} Imaginary part
+   of $\alpha_{\mathrm{2D}}^{\parallel}$.  The same {\bf k}-sampling
+   is used in all simulations with the only variable quantity being
+   $L$. Clearly, the $L$-dependency of the superlattice dielectric
+   function is removed using 2D polarizabilities.}
+  \label{fig:PBE-omega-in}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-out_of_plane.pdf}
+  \caption{Dependence of out-of-plane dielectric properties on $L$ for
+    monolayer BN calculated using PBE method: \textbf{a} Real part of
+    $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{b} Real part of
+    $\alpha_{\mathrm{2D}}^{\perp}$, \textbf{c} Imaginary part of
+    $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{d} Imaginary part of
+    $\alpha_{\mathrm{2D}}^{\perp}$.  The same {\bf k}-sampling is used
+    in all simulations with the only variable quantity being
+    $L$. Clearly, the $L$-dependency of the superlattice dielectric
+    function is removed using 2D polarizabilities.}
+  \label{fig:PBE-omega-out}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-omega-in_plane.pdf}
  \caption{Similar to Figure \ref{fig:PBE-omega-in} but calculated
@@ -246,7 +270,7 @@ best tradeoff between all aspects.
   \label{fig:GW-omega-in}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-omega-out_of_plane.pdf}
  \caption{Similar to Figure \ref{fig:PBE-omega-out} but calculated
@@ -258,7 +282,7 @@ best tradeoff between all aspects.
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-BSE-in_plane.pdf}
  \caption{Similar as in Fig. \ref{fig:GW-omega-in} but taking into
@@ -270,7 +294,7 @@ best tradeoff between all aspects.
   \label{fig:BSE-omega-in}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-BSE-out_of_plane.pdf}
  \caption{Similar as in Fig. \ref{fig:GW-omega-out} but taking into
@@ -1323,7 +1347,7 @@ inter-plane distance $L_{\mathrm{Bulk}}$, and in general
 $r_{0}^{\parallel} \gg L_{\mathrm{Bulk}}$, we can conclude that the
 case when $\eta_{\mathrm{Bulk}} = \eta_{\mathrm{2D}}$ only happens
 when $\eta_{\mathrm{2D}}$ is much smaller than 1. Therefore the
-separation between the 2D and 3D regimes in the Figure
+separation between the 2D and 3D regimes in  main text Figure
 \ref{main-fig:aniso} is explained.
 
 
@@ -1336,9 +1360,13 @@ separation between the 2D and 3D regimes in the Figure
 \section{Raw data from first principles calculations}
 \subsection{Quantities from first principles calculation}
 \label{sec:raw}
-\todo[inline]{I think showing the $\alpha$ values is enough since
-  whoever interested in calculating the $r_{0}$ values can simply
-  multiply them by $2 \pi$. }
+Table S2 shows the parameters and results from the
+first principles calculations for the 2D materials studied. The 2D
+screening lengthes $r_{0}^{\parallel}$ and $r_{0}^{\perp}$ can be
+obtained by multiplying $2 \pi$ to the columns
+$\alpha_{\mathrm{2D}}^{\parallel}/(4\pi \varepsilon_{0})$ and
+$\alpha_{\mathrm{2D}}^{\perp}/(4\pi \varepsilon_{0})$, respectively.
+
 \input{raw_data}
 
 \subsection{Density of States (DOS) plots for the materials studied}
