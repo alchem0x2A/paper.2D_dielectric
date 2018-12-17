@@ -57,23 +57,37 @@
 
 \section*{Table of Contents}
 
-1. Supplementary Figure \ref{fig:S1}:  Simulations of $\varepsilon_{\mathrm{SL}}$ using many-body $G_{\rm 0}W_{\rm 0}$   \\
-%
-%2. Supplementary Section \ref{epsilon-model}: $\varepsilon^{\parallel, \perp}_{\mathrm{SL}}$ dependence on $L$ \\ 
-%
-2. Supplementary Section \ref{sec:2D-3D-rescale}: Hypothetical 2D ``dielectric constant'' rescaled from 3D dielectric constant \\
-%
-3. Supplementary Section \ref{ssec:theory-1}: Polarizability-Based Theoretical Model  \\ 
-%
-4. Supplementary Section \ref{sec:pol-2D-Eg}: Dependence of $\alpha_{\mathrm{2D}}$ on bandgap \\ 
-%
-5. 
+\begin{itemize}
+\item Supplementary Section \ref{sec:polarizability-analysis}: Further analysis on the dielectric properties of 2D materials
+  
+\item Supplementary Section \ref{sec:2D-3D-rescale}: Hypothetical 2D ``dielectric constant'' rescaled from 3D dielectric constant
+
+  
+\item Supplementary Section \ref{sec:theory-1}: Polarizability-Based Theoretical Model
+
+  
+\item Supplementary Section \ref{sec:pol-2D-Eg}: Dependence of $\alpha_{\mathrm{2D}}$ on bandgap
+
+  
+\item Supplementary Section \ref{sec:gpaw}: Validation on the C2DB 2D materials database
+
+\item Supplementary Section \ref{sec:2D-3D}: More discussion about the
+  relation between 2D and 3D properties
+
+  \item Supplementary Section \ref{sec:aniso}: More discussions about the dielectric anisotropy
+  
+\item Supplementary Section \ref{sec:raw}: Raw data from first
+  principles calculations
+
+  
+\end{itemize}
 
 
 
 \pagebreak{}
 
 \section{Further analysis on the dielectric properties of 2D materials}
+\label{sec:polarizability-analysis}
 
 In this section we provide more analysis on the dielectric properties
 of 2D materials, with focus on the dielectric properties calculated
@@ -85,7 +99,7 @@ polarizabilities.
 \label{sec:dipole-plot}
 Here we show in detail the
 $\Delta \rho=\rho(\boldsymbol{E}) - \rho(\boldsymbol{E}=0)$ profile of
-the 2H-MoS$_{2}$ slab in main text Figure 1a. The
+the 2H-MoS$_{2}$ slab in main text Figure \ref{main-fig-1}. The
 density $\rho$ is calculated as the average value in the
 \textit{xy}-plane, and the value is shown in Figure
 \ref{fig:rho-profile}. As can be seen the induced charges on the
@@ -99,7 +113,7 @@ interact, and thus giving converged values of $\alpha_{\mathrm{2D}}$.
  \includegraphics[width=0.5\linewidth]{img/SI-dipole-MoS2.pdf}
  \caption{$\Delta \rho$ as a function of $z$ around the
    MoS$_{2}$ layer, corresponding to main text Figure
-   \ref{main-fig-1}a. Green and red parts corresponding to negative and
+   \ref{main-fig-1}\textbf{a}. Green and red parts corresponding to negative and
    positive induced charges. The external electric field
    $E_{\mathrm{ext}}$ is 0.01 eV/\AA{}.}
  \label{fig:rho-profile}
@@ -161,7 +175,7 @@ intensities of $\varepsilon_{\mathrm{SL}}^{\parallel}(\omega)$ and
 $\varepsilon_{\mathrm{SL}}^{\perp}(\omega)$ reduce with increasing $L$
 throughout the whole frequency range. The $L$-dependency can also be
 removed using Eqs. \ref{main-eq:alpha-para-def} and
-\ref{main-eq:alpha-perp-ref}, yielding lattice-independent
+\ref{main-eq:alpha-perp-def}, yielding lattice-independent
 polarizabilities throughout the frequency domain.
 
 \begin{figure}[H]
@@ -171,22 +185,26 @@ polarizabilities throughout the frequency domain.
    monolayer BN calculated using PBE method: \textbf{a} Real part of
    $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{b} Real part of
    $\alpha_{\mathrm{2D}}^{\parallel}$, \textbf{c} Imaginary part of
-   $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{d} Imaginary part of
-   $\alpha_{\mathrm{2D}}^{\parallel}$.  The same {\bf k}-sampling is used
-   in all simulations with the only variable quantity being $L$. }
+   $\varepsilon_{\mathrm{SL}}^{\parallel}$, \textbf{d} Imaginary part
+   of $\alpha_{\mathrm{2D}}^{\parallel}$.  The same {\bf k}-sampling
+   is used in all simulations with the only variable quantity being
+   $L$. Clearly, the $L$-dependency of the superlattice dielectric
+   function is removed using 2D polarizabilities.}
   \label{fig:PBE-omega-in}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\linewidth]{img/SI-PBE-omega-out_of_plane.pdf}
-   \caption{Dependence of out-of-plane dielectric properties on $L$ for
-   monolayer BN calculated using PBE method: \textbf{a} Real part of
-   $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{b} Real part of
-   $\alpha_{\mathrm{2D}}^{\perp}$, \textbf{c} Imaginary part of
-   $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{d} Imaginary part of
-   $\alpha_{\mathrm{2D}}^{\perp}$.  The same {\bf k}-sampling is used
-   in all simulations with the only variable quantity being $L$. }
+  \caption{Dependence of out-of-plane dielectric properties on $L$ for
+    monolayer BN calculated using PBE method: \textbf{a} Real part of
+    $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{b} Real part of
+    $\alpha_{\mathrm{2D}}^{\perp}$, \textbf{c} Imaginary part of
+    $\varepsilon_{\mathrm{SL}}^{\perp}$, \textbf{d} Imaginary part of
+    $\alpha_{\mathrm{2D}}^{\perp}$.  The same {\bf k}-sampling is used
+    in all simulations with the only variable quantity being
+    $L$. Clearly, the $L$-dependency of the superlattice dielectric
+    function is removed using 2D polarizabilities.}
   \label{fig:PBE-omega-out}
 \end{figure}
 
@@ -220,8 +238,11 @@ best tradeoff between all aspects.
 \begin{figure}[H]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-omega-in_plane.pdf}
-  \caption{Similar to Figure \ref{fig:PBE-omega-in} but calculated using G$_{0}$W$_{0}$ method. Peak shift can be observed in the dielectric function spectra.
-}
+ \caption{Similar to Figure \ref{fig:PBE-omega-in} but calculated
+   using G$_{0}$W$_{0}$ method. A shift of peak position (frequency)
+   in the dielectric function spectra is observed, resulted from the
+   change of quasi-particle energy in G$_{0}$W$_{0}$ calculations
+   invloving the 2D slab.}
   \label{fig:GW-omega-in}
 \end{figure}
 
@@ -229,8 +250,10 @@ best tradeoff between all aspects.
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-omega-out_of_plane.pdf}
  \caption{Similar to Figure \ref{fig:PBE-omega-out} but calculated
-   using G$_{0}$W$_{0}$ method. Peak shift can be observed in the
-   dielectric function spectra.}
+   using G$_{0}$W$_{0}$ method.  A shift of peak position (frequency)
+   in the dielectric function spectra is observed, resulted from the
+   change of quasi-particle energy in G$_{0}$W$_{0}$ calculations
+   invloving the 2D slab.}
   \label{fig:GW-omega-out}
 \end{figure}
 
@@ -238,20 +261,23 @@ best tradeoff between all aspects.
 \begin{figure}[H]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-BSE-in_plane.pdf}
-  \caption{Similar as in Fig. \ref{fig:GW-omega-in} but taking into account electron-hole interactions at the level of 
-  the Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE). 
-  The peak shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$.
-}
+ \caption{Similar as in Fig. \ref{fig:GW-omega-in} but taking into
+   account electron-hole interactions at the level of the
+   Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE).  The peak shift
+   in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$. As a
+   result the polarizabilities becomes almost independent of $L$,
+   consistent to results obtained by the PBE method.}
   \label{fig:BSE-omega-in}
 \end{figure}
 
 \begin{figure}[H]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-BSE-out_of_plane.pdf}
-  \caption{Similar as in Fig. \ref{fig:GW-omega-out} but taking into account electron-hole interactions at the level of 
-  the Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE). 
-  The peak shift in energies are reduced in comparison with G$_{\rm 0}$W$_{0}$, HSE06 and PBE but still present. 
-}
+ \caption{Similar as in Fig. \ref{fig:GW-omega-out} but taking into
+   account electron-hole interactions at the level of the
+   Bethe-Salpeter equation (G$_{\rm 0}$W$_{0}$ - BSE).  As a result
+   the polarizabilities becomes almost independent of $L$, consistent
+   to results obtained by the PBE method.  }
   \label{fig:BSE-omega-out}
 \end{figure}
 
@@ -424,7 +450,7 @@ nature of 2D materials, including
 %%%%%%\section{Theoretical Analysis}
 %%%%%%\label{sec:theory}
 \section{Polarizability-Based Theoretical Model}
-\label{ssec:theory-1}
+\label{sec:theory-1}
 The universal relations for $\alpha_{\mathrm{2D}}^{\parallel}$ and
 $\alpha_{\mathrm{2D}}^{\perp}$ revealed by main text
 Eqs. \ref{main-eq:2D-Moss-para} and \ref{main-eq:2D-Moss-perp} are not
@@ -486,16 +512,17 @@ at 0 K can be unified by the same equation:
 \end{equation}
 where the direction is determined by $\mathbf{q}$. Next we will show
 that the different behavior of $\psi^{\parallel}$ and $\psi^{\perp}$
-give rise to the main text Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def}. 
+give rise to the main text Eqs. \ref{main-eq:2D-Moss-para} and
+\ref{main-eq:2D-Moss-perp}.
 
-{\bf ES:} There is something weird with the cross-referencing for the equations 3a and 3b between the main text and 
-SI. They changed to 2a and 2b in the SI. 
+% {\bf ES:} There is something weird with the cross-referencing for the equations 3a and 3b between the main text and 
+% SI. They changed to 2a and 2b in the SI. 
 
 
-\subsection{Detailed derivations for main text Eq. \ref{eq:alpha-para-def} 3a}  %
-\label{sssec:theory-1}
+\subsection{Detailed derivations for main text Eq. \ref{main-eq:2D-Moss-para}}  %
+\label{ssec:theory-1-para}
 
-In this section we show how main text Eq. \ref{eq:alpha-para-def}
+In this section we show how main text Eq. \ref{main-eq:alpha-para-def}
 is derived from Eq. \ref{eq:alpha-RPA}. For the in-plane component
 $\alpha_{\mathrm{2D}}^{\parallel}$, $e^{-i\mathbf{qr}}$ is independent
 of $z$, therefore the integral in
@@ -509,33 +536,53 @@ that:
   \label{eq:alpha_para_RPA}
   \alpha_{\mathrm{2D}}^{\parallel} = \frac{2e^{2}}
   {(2 \pi)^{2}} \int d^{2}\mathbf{k} \sum_{\mathrm{c, v}}
-  \frac{|<u_{\mathrm{v}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}}
+  \frac{|<u_{\mathrm{c}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}}
   {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
 \end{equation}
-Present the summation of k-space into integral, and further combining
-with the Bloch wave representation and the
-$\mathbf{k} \cdot \mathbf{p}$ theory\cite{Jiang_2017_Eg_Eb}, we arrive
-at Eq. \ref{eq:alpha-para-def}. Note that from
-Ref. \citenum{Jiang_2017_Eg_Eb}, the coefficient between
-$\alpha^{\parallel}_{\mathrm{2D}}$ and $E_{\mathrm{g}}$ is given by:
-$\alpha_{\mathrm{2D}}^{\parallel} = N e^{2}/(2\pi E_{\mathrm{g}})$,
-where $N$ is the degeneracy associated with the minimal bandgap. Such
-relation predicts the linear correlation coefficient between
+Following the method of $\mathbf{k} \cdot \mathbf{p}$ theory from
+Ref. \citenum{Jiang_2017_Eg_Eb}, the matrix element in the numerator
+of Eq. \ref{eq:alpha_para_RPA} is approximated by:
+
+\begin{equation}
+\label{eq:matrix-approx}
+|<u_{\mathrm{c}}(\mathbf{k})|\nabla|u_{\mathrm{v}}(\mathbf{k})>|^{2}
+\approx {\displaystyle \frac{\hbar^{2}}{2 m^{*}}
+  \frac{1}{E_{\mathrm{g}} + \frac{\hbar^{2} k^{2}}{2 m^{*}}}}
+\end{equation}
+plug it into Eq. \ref{eq:alpha_para_RPA} and integrate within the 2D Brillouin Zone from $|k|=0$ to $|k|= k_{\mathrm{BZ}}$, where $k_{\mathrm{BZ}}$ is the wavevector at the boundary of the 2D Brillouin Zone, we get:
+\begin{equation}
+  \label{eq:derivation-2D-Moss-para}
+  \begin{aligned}
+\alpha_{\mathrm{2D}}^{\parallel} &= N\cdot -\frac{e^{2}}{2 \pi}
+\frac{1}{E_{g} + \beta} \Biggr\vert_{\beta=0}^{\beta=\frac{\hbar^{2} k^{2}_{\mathrm{BZ}}}{m^{*}}} \\
+&\approx N e^{2}/(2\pi E_{\mathrm{g}}) = C^{\parallel} E_{g}^{-1}
+\end{aligned}
+\end{equation}
+where $N$ is de degeneracy of bands associated with $E_{g}$. The
+approximation in Eq. \ref{eq:derivation-2D-Moss-para} is due to the
+fact that $\frac{\hbar^{2} k^{2}_{\mathrm{BZ}}}{m^{*}} \gg E_{g}$, and
+we arrive at main text Eq. \ref{main-eq:2D-Moss-para}.
+
+The coefficient of $C^{\parallel}$ adapted from
+Ref. \citenum{Jiang_2017_Eg_Eb} $C^{\parallel} = N e^{2}/(2\pi)$
+predicts linear correlation between $\alpha^{\parallel}_{\mathrm{2D}}$
+and $E_{\mathrm{g}}^{-1}$. We validate this by examining the
+DFT-calculated
 $(4\pi \varepsilon_{0})/\alpha^{\parallel}_{\mathrm{2D}}$ (measured in
-\AA{}$^{-1}$) and $E_{\mathrm{g}}$ (measured in eV) as
-$8 \pi^{2} \varepsilon_{0} \AA{} / (e N) \approx 0.436 / N$. From Figure 2{\bf c}, we have
-$(4 \pi \varepsilon_{0}\cdot \text{\AA{}})/\alpha_{\mathrm{2D}}^{\parallel}
-\sim{} 0.183 E_{\mathrm{g}}/ \mathrm{eV}$, corresponding to $N$
-between 2 and 3, which is a reasonable result for the 2D materials
-studied. 
+\AA{}$^{-1}$) and $E_{\mathrm{g}}$ (measured in eV) in main text
+Figure \ref{main-fig-3}\textbf{c}. The coefficient $C^{\parallel}$
+becomes
+$8 \pi^{2} \varepsilon_{0} \AA{} / (e N) \approx 0.436 / N = 0.183$,
+corresponding to $N$ between 2 and 3, which is a reasonable result for
+the 2D materials studied.
 
-{\bf ES:} Tian, please include more details in this section on the derivations! 
+% {\bf ES:} Tian, please include more details in this section on the derivations! 
 
 
-\subsection{Detailed derivations for main text Eq. \ref{eq:alpha-perp-def}}
-\label{ssec:theory-2}
+\subsection{Detailed derivations for main text Eq. \ref{main-eq:2D-Moss-perp}}
+\label{ssec:theory-1-perp}
 
-For main text Eq. \ref{eq:alpha-perp-def}, treating the in-plane
+For main text Eq. \ref{main-eq:2D-Moss-perp}, treating the in-plane
 wave functions as plane wave with form
 $\psi^{\parallel}(\rho) \propto e^{i \mathbf{k \rho}}$, the matrix
 element of
@@ -650,10 +697,61 @@ the molecular polarizability divided by the area, such approach will
 always yield $\alpha_{\mathrm{2D}}^{\perp} \propto \delta^{2}$. To
 accurately model the $\alpha_{\mathrm{2D}}^{\perp}$ we need a better
 model for the confinement in z-direction than simple square potential
-well, which may be explored further. Nevertheless the simple model presented
-here still captures the bandgap-independent and thickness-related feature
-of $\alpha_{\mathrm{2D}}^{\perp}$, supporting our findings in the main
-text. In the next section we will provide a simple explanation for the $\alpha \propto \delta$ relation from fundamental electrostatics theory.
+well, which may be explored further. Nevertheless the simple model
+presented here still captures the bandgap-independent and
+thickness-related feature of $\alpha_{\mathrm{2D}}^{\perp}$,
+supporting our findings in the main text. In the next section we will
+provide a simple explanation for the $\alpha \propto \delta$ relation
+from fundamental electrostatics theory.
+
+\subsection{Explanation to main text Eq. \ref{main-eq:2D-Moss-perp}
+  from fundamental electrostatics}
+\label{ssec:theory-1-perp-fundamental}
+
+The dependency of $\alpha_{\mathrm{2D}}^{\perp}$ on the thickness
+$\delta$ of a 2D material, can also be regarded using fundamental
+electrostatic model. Consider the smallest repeating unit of the 2D
+material with xy-plane area $A$, under small perturbation field $E$
+along the z-direction.  Note that the surface bound charge
+$\sigma_{\mathrm{b}}=n e /A$, where $n$ is the number of unit charges
+contributes to the bound charges, comes only from the dipoles of the
+outer-most atoms, since the induced charges from inner atoms are
+cancel out (see Figure \ref{fig:classic-model}).
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\linewidth]{img/SI-classic.pdf}
+  \caption{Fundamental electrostatic model for the
+    thickness-dependency of $\alpha_{\mathrm{2D}}^{\perp}$, using 2H-MoS2 as an
+    example. Left: induced dipoles from individual atoms along the
+    z-direction. The positive and negative induced charges from inner
+    atoms cancel out. Right: simplified model for the thickness
+    dependency of $\alpha_{\mathrm{2D}}^{\perp}$, where the surface dipole density
+    $\boldsymbol{\mu}$ comes only from the outer-most atoms.}
+  \label{fig:classic-model}
+\end{figure}
+From the definition of
+$\alpha_{\mathrm{2D}}^{\perp}$, we have:
+\begin{equation}
+  \label{eq:alpha-classic}
+  \alpha_{\mathrm{2D}}^{\perp} = \frac{\boldsymbol{u}_{z}}{E_{\mathrm{loc}} A}
+  = \frac{(d_{\mathrm{max}} + r_{\mathrm{cov}}^{i} + r_{\mathrm{cov}}^{j}) \sigma_{\mathrm{b}}}{E}
+\end{equation}
+where $r_{\mathrm{cov}}^{i}$ and $r_{\mathrm{cov}}^{j}$ are the
+covalent radii of the outer-most atoms, the characteristic length of
+the dipole extension in z-direction, and $d_{\mathrm{max}}$ is the
+z-distance between the nuclei of such atoms.  The field $E$
+counterbalances the field from the surface bound charges and equals
+$E = \sigma_{\mathrm{b}}/\varepsilon_{0}$. Therefore we have:
+\begin{equation}
+  \label{eq:alpha-classic-2}
+  \alpha_{\mathrm{2D}}^{\perp} = (d_{\mathrm{max}} + r_{\mathrm{cov}}^{i} + r_{\mathrm{cov}}^{j})\varepsilon_{0}
+                = \delta_{\mathrm{cov}} \varepsilon_{0}
+\end{equation}
+which explains the linear relation seen in main text Figure
+\ref{main-fig-3}d. We can see that such simple model nicely captures
+the thickness feature of $\alpha_{\mathrm{2D}}^{\perp}$, and
+reproduces the right coefficient between $\delta_{\mathrm{cov}}$ and
+$\alpha_{\mathrm{2D}}^{\perp}$.
 
 
 \section{Dependence of $\alpha_{\mathrm{2D}}$ on bandgap}
@@ -713,6 +811,7 @@ analysis of the Computational 2D Materials Database (C2DB)
 
 
 \section{Validation on the C2DB 2D materials database}
+\label{sec:gpaw}
 \subsection{Validation of the universal description of 2D polarizabilities}
 \label{sec:gpaw-1}
 
@@ -911,67 +1010,9 @@ quantities have apparent relation with the 2D polarizabilities, as
 compared with the bandgap and covalent thickness proposed in the main
 text. 
 
-%%%%%%pasted in 12/05/2018
-
-
-\subsection{Explanation to main text Eq. \ref{main-eq:2D-Moss-perp}
-  from fundamental electrostatics}
-\label{sssec:theory-3}
-
-The dependency of $\alpha_{\mathrm{2D}}^{\perp}$ on the thickness
-$\delta$ of a 2D material, can also be regarded using fundamental
-electrostatic model. Consider the smallest repeating unit of the 2D
-material with xy-plane area $A$, under small perturbation field $E$
-along the z-direction.  Note that the surface bound charge
-$\sigma_{\mathrm{b}}=n e /A$, where $n$ is the number of unit charges
-contributes to the bound charges, comes only from the dipoles of the
-outer-most atoms, since the induced charges from inner atoms are
-cancel out (see Figure \ref{fig:classic-model}).
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.7\linewidth]{img/SI-classic.pdf}
-  \caption{Fundamental electrostatic model for the
-    thickness-dependency of $\alpha_{\mathrm{2D}}^{\perp}$, using 2H-MoS2 as an
-    example. Left: induced dipoles from individual atoms along the
-    z-direction. The positive and negative induced charges from inner
-    atoms cancel out. Right: simplified model for the thickness
-    dependency of $\alpha_{\mathrm{2D}}^{\perp}$, where the surface dipole density
-    $\boldsymbol{\mu}$ comes only from the outer-most atoms.}
-  \label{fig:classic-model}
-\end{figure}
-From the definition of
-$\alpha_{\mathrm{2D}}^{\perp}$, we have:
-\begin{equation}
-  \label{eq:alpha-classic}
-  \alpha_{\mathrm{2D}}^{\perp} = \frac{\boldsymbol{u}_{z}}{E_{\mathrm{loc}} A}
-  = \frac{(d_{\mathrm{max}} + r_{\mathrm{cov}}^{i} + r_{\mathrm{cov}}^{j}) \sigma_{\mathrm{b}}}{E}
-\end{equation}
-where $r_{\mathrm{cov}}^{i}$ and $r_{\mathrm{cov}}^{j}$ are the
-covalent radii of the outer-most atoms, the characteristic length of
-the dipole extension in z-direction, and $d_{\mathrm{max}}$ is the
-z-distance between the nuclei of such atoms.  The field $E$
-counterbalances the field from the surface bound charges and equals
-$E = \sigma_{\mathrm{b}}/\varepsilon_{0}$. Therefore we have:
-\begin{equation}
-  \label{eq:alpha-classic-2}
-  \alpha_{\mathrm{2D}}^{\perp} = (d_{\mathrm{max}} + r_{\mathrm{cov}}^{i} + r_{\mathrm{cov}}^{j})\varepsilon_{0}
-                = \delta_{\mathrm{cov}} \varepsilon_{0}
-\end{equation}
-which explains the linear relation seen in main text Figure
-\ref{main-fig-3}d. We can see that such simple model nicely captures
-the thickness feature of $\alpha_{\mathrm{2D}}^{\perp}$, and
-reproduces the right coefficient between $\delta_{\mathrm{cov}}$ and
-$\alpha_{\mathrm{2D}}^{\perp}$. Finally, the schematic drawing of the
-polarizability ellipsoid for a 2D material, is drawn in Figure
-\ref{fig:ellipsoid}.
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.6\linewidth]{img/SI-ellipsoid.pdf}
-  \caption{Polarizability ellipsoid of a 2D material, the long axis
-    equals $\alpha_{\mathrm{2D}}^{\parallel}/2\varepsilon_{0}$ and the short axis
-    equals  $\alpha_{\mathrm{2D}}^{\perp}/2\varepsilon_{0}$}
-  \label{fig:ellipsoid}
-\end{figure}
+%%%%%% pasted in 12/05/2018
+\section{More discussion about the relation between 2D and 3D properties}
+\label{sec:2D-3D}
 
 \subsection{Comparing 2D and 3D Moss relations}
 \label{ssec:theory-2D}
@@ -1077,10 +1118,87 @@ oversimplification of single Lorentz oscillator. Nevertheless, this
 example shows excellently how the quantities in both dimensions are
 related to each other.
 
-\subsection{Comparing dielectric anisotropy}
-\label{ssec:aniso}
-\subsubsection{Choice of materials}
-\label{sssec:aniso-1}
+
+
+\subsection{The relation between 2D and 3D physical quantities}
+As schematically shown in Figure \ref{fig-2D-3D}, the physical
+quantities related to the dielectric properties can be categorized
+into (i) strictly 2D (microscopic), (ii) strictly 3D (macroscopic) and
+(iii) valid both 2D and 3D.  $\alpha_{\mathrm{2D}}$ and $\varepsilon$ are the
+starting point for the strictly 2D and 3D quantities, which require
+distinct definitions when dimensionality changes. Such quantities
+include (but not limited to):
+\begin{enumerate}
+\item The densities $n_{\mathrm{2D}}$ and $n_{\mathrm{3D}}$ for
+  charge, polarization, electronic states, etc.
+  
+\item The plasma frequencies $\omega^{\mathrm{p}}_{\mathrm{2D}}$ and
+  $\omega^{\mathrm{p}}_{\mathrm{2D}}$\cite{Nazarov_2015_2D_3D} (see
+  Section \ref{ssec:omega-p} and Figure \ref{fig:plasma}).
+
+\item The optical conductivity $\sigma_{\mathrm{2D}}$ and
+  $\sigma_{\mathrm{3D}}$\cite{Bechstedt_2012,Matthes_2016}.
+\end{enumerate}
+These quantities have distinct units in both dimensions, and related
+by $L$ (for density and optical conductivity) or $\sqrt{L}$ (for
+plasma frequency), which requires prudent interpretation of
+theoretical and experimental results. For instance, the experimentally
+observed ``dielectric constant'' of monolayer 2D materials
+\cite{Ning_2015,Li_2014,Yao_2014,Wu_2015} would be questionable
+without considering the effect of mix ted medium. Instead, the 2D slab
+polarizability, either transformed from the vacuum-containing
+macroscopic dielectric constant, or predicted from the bandgap and
+geometry as proposed here, will be a better descriptor for the true 2D
+dielectric nature. On the other hand, there are also
+dimension-independent quantities that valid for both 2D and 3D
+systems, for instance the bandgap $E_{\mathrm{g}}$, exciton binding
+energy $E_{\mathrm{b}}$, Bohr radius $r_{\mathrm{B}}$ of the exciton
+as well as the Hamaker constant of van der Waals interaction
+$A_{\mathrm{H}}$. All these quantities are well-defined and can be
+measured in both dimensions, while their relation with the dielectric
+property varies with dimensionality. The well-known examples are the
+different Wannier-Mott laws for exciton binding energy
+\cite{Olsen_2016_hydrogen}, the dielectric-bandgap relation
+proposed here, and the distinct power laws for van der Waals
+interactions \cite{Gobre_2013}. To get a accuracy description of
+dielectric-related properties of the 2D materials and their
+heterostructures, one has to distinguish between the 2D and 3D
+properties, and choose a suitable relation with the
+dimension-dependent and dimension-independent quantities.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\linewidth]{img/fig-2D-vs-3D.pdf}
+\caption{\label{fig-2D-3D} Dielectric-related physical quantities in
+  both 2D (red circle) and 3D (cyan circle) systems. The
+  dimension-dependent quantities can be related with $\alpha_{\mathrm{2D}}$ and
+  $\varepsilon$, respectively. The intersection between the circles
+  present the quantities are well-defined in both dimensions, but may have a
+  different scaling relation with others quantities.}
+\end{figure}
+
+
+\section{More discussions about the dielectric anisotropy}
+\label{sec:aniso}
+\subsection{The 2D screening length}
+\label{ssec:2D-screening}
+Here we show a schematic drawing of the polarizability ellipsoid for a
+2D material in Figure \ref{fig:ellipsoid}. As can be seen the
+polarizability ellipsoid is ultraflat, with
+$r_{0}^{\parallel} \gg r_{0}^{\perp}$, which is the origin of the high
+dielectric anisotropy of 2D materials.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{img/SI-ellipsoid.pdf}
+  \caption{Polarizability ellipsoid of a 2D material, the long axis
+    equals $\alpha_{\mathrm{2D}}^{\parallel}/2\varepsilon_{0}$ and the short axis
+    equals  $\alpha_{\mathrm{2D}}^{\perp}/2\varepsilon_{0}$}
+  \label{fig:ellipsoid}
+\end{figure}
+
+\subsection{Choice of materials for main text Figure \ref{main-fig:aniso}}
+\label{ssec:aniso-materials}
 The dielectric anisotropy $\eta$ proposed in the main text is also
 applied to other dimensions. Similar to the case of 2D and bulk
 layered materials, $\epsilon$ is used to compare the anisotropy when
@@ -1127,7 +1245,7 @@ The following types materials are chosen for comparison:
   materials have isotropic polarizability due to the high symmetry.
 \end{itemize}
 
-\subsubsection{Explanation for the separation between 2D and 3D regimes in main text Figure \ref{main-fig:aniso}}
+\subsection{Explanation for the separation between 2D and 3D regimes in main text Figure \ref{main-fig:aniso}}
 \label{sssec:aniso-2}
 In this section we give an analytical explanation for the separation
 between the dielectric anisotropy indices of 2D and their bulk
@@ -1208,62 +1326,7 @@ when $\eta_{\mathrm{2D}}$ is much smaller than 1. Therefore the
 separation between the 2D and 3D regimes in the Figure
 \ref{main-fig:aniso} is explained.
 
-\subsection{The relation between 2D and 3D physical quantities}
-As schematically shown in Figure \ref{fig-2D-3D}, the physical
-quantities related to the dielectric properties can be categorized
-into (i) strictly 2D (microscopic), (ii) strictly 3D (macroscopic) and
-(iii) valid both 2D and 3D.  $\alpha_{\mathrm{2D}}$ and $\varepsilon$ are the
-starting point for the strictly 2D and 3D quantities, which require
-distinct definitions when dimensionality changes. Such quantities
-include (but not limited to):
-\begin{enumerate}
-\item The densities $n_{\mathrm{2D}}$ and $n_{\mathrm{3D}}$ for
-  charge, polarization, electronic states, etc.
-  
-\item The plasma frequencies $\omega^{\mathrm{p}}_{\mathrm{2D}}$ and
-  $\omega^{\mathrm{p}}_{\mathrm{2D}}$\cite{Nazarov_2015_2D_3D} (see
-  Section \ref{ssec:omega-p} and Figure \ref{fig:plasma}).
 
-\item The optical conductivity $\sigma_{\mathrm{2D}}$ and
-  $\sigma_{\mathrm{3D}}$\cite{Bechstedt_2012,Matthes_2016}.
-\end{enumerate}
-These quantities have distinct units in both dimensions, and related
-by $L$ (for density and optical conductivity) or $\sqrt{L}$ (for
-plasma frequency), which requires prudent interpretation of
-theoretical and experimental results. For instance, the experimentally
-observed ``dielectric constant'' of monolayer 2D materials
-\cite{Ning_2015,Li_2014,Yao_2014,Wu_2015} would be questionable
-without considering the effect of mix ted medium. Instead, the 2D slab
-polarizability, either transformed from the vacuum-containing
-macroscopic dielectric constant, or predicted from the bandgap and
-geometry as proposed here, will be a better descriptor for the true 2D
-dielectric nature. On the other hand, there are also
-dimension-independent quantities that valid for both 2D and 3D
-systems, for instance the bandgap $E_{\mathrm{g}}$, exciton binding
-energy $E_{\mathrm{b}}$, Bohr radius $r_{\mathrm{B}}$ of the exciton
-as well as the Hamaker constant of van der Waals interaction
-$A_{\mathrm{H}}$. All these quantities are well-defined and can be
-measured in both dimensions, while their relation with the dielectric
-property varies with dimensionality. The well-known examples are the
-different Wannier-Mott laws for exciton binding energy
-\cite{Olsen_2016_hydrogen}, the dielectric-bandgap relation
-proposed here, and the distinct power laws for van der Waals
-interactions \cite{Gobre_2013}. To get a accuracy description of
-dielectric-related properties of the 2D materials and their
-heterostructures, one has to distinguish between the 2D and 3D
-properties, and choose a suitable relation with the
-dimension-dependent and dimension-independent quantities.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.75\linewidth]{img/fig-2D-vs-3D.pdf}
-\caption{\label{fig-2D-3D} Dielectric-related physical quantities in
-  both 2D (red circle) and 3D (cyan circle) systems. The
-  dimension-dependent quantities can be related with $\alpha_{\mathrm{2D}}$ and
-  $\varepsilon$, respectively. The intersection between the circles
-  present the quantities are well-defined in both dimensions, but may have a
-  different scaling relation with others quantities.}
-\end{figure}
 
 
 %%%%%%pasted!
