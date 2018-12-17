@@ -20,10 +20,10 @@ SI:
 
 diff:
 	cp ./paper.tex ./paper.tex.bak
-	git checkout 79e4d64 ./paper.tex #old version
+	git checkout 14a1fb ./paper.tex #old version
 	cp paper.tex paper_old.tex
 	cp ./SI.tex ./SI.tex.bak	
-	git checkout 79e4d64 ./SI.tex
+	git checkout 14a1fb ./SI.tex
 	cp SI.tex SI_old.tex
 	git checkout HEAD ./paper.tex
 	git checkout HEAD ./SI.tex
