@@ -101,11 +101,13 @@ for row in reader:
         e_xy = numpy.sqrt(ex * ey)
         ax = (e_xy - 1) / (4 * pi) * L
         az = (1 - 1/ez) * L / (4 * pi)
-        mol = list(db.select(formula=name, prototype=proto))[0]
+        
         if proto == "ABX3":     # perovskite?
             delta = 14.24
             n_2D = None
+            mol = None
         else:
+            mol = list(db.select(formula=name, prototype=proto))[0]
             delta, n_2D = get_thick(mol)
         # 3D
         try:
