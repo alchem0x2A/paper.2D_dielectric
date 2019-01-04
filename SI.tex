@@ -90,9 +90,10 @@
 \label{sec:polarizability-analysis}
 
 In this section we provide more analysis on the dielectric properties
-of 2D materials calculated using many-body Green function method 
-(G$_0$W$_0$), including electron-hole interactions at the level of the 
-Bethe-Salpeter equation (G$_0$W$_0$--BSE), and at the frequency-dependent regime.  
+of 2D materials calculated using many-body Green function
+method (G$_0$W$_0$), including electron-hole interactions at the level
+of the Bethe-Salpeter equation (G$_0$W$_0$--BSE), and at the
+frequency-dependent regime.
 
 
 \subsection{Profile of induced dipoles of 2D material}
@@ -103,12 +104,13 @@ the 2H-MoS$_{2}$ slab in main text Figure \ref{main-fig-1}. The
 density $\Delta \rho$ is calculated via $\Delta \rho(z) = \frac{1}{S} \int_{S} \Delta \rho (x,y;z) dx dy $, 
 where $S$ is the surface of the unit cell perpendicular to the given direction, in this case $z$. 
 %
-As can be seen in Figure \ref{fig:rho-profile} the induced charges on the
-MoS$_{2}$ layer only extends to a width of $\sim{}$12 \AA{} centered at the middle of the layer. This corresponds to about 6 \AA ~from each side. 
-When the
-SL size $L \gg$12 \AA{} as in the first principle calculations done in
-the main text, the induced dipoles from the periodic images do not
-interact, and thus give the converged values of $\alpha_{\mathrm{2D}}$.
+As can be seen in Figure \ref{fig:rho-profile} the induced charges on
+the MoS$_{2}$ layer only extends to a width of $\sim{}$12 \AA{}
+centered at the middle of the layer. This corresponds to about 5-6 \AA
+from each side.  When the SL size $L \gg$12 \AA{} as in the first
+principle calculations done in the main text, the induced dipoles from
+the periodic images do not interact, and thus give the converged
+values of $\alpha_{\mathrm{2D}}$.
 
 \begin{figure}[htbp]
  \centering
@@ -173,15 +175,15 @@ Figure \ref{fig:PBE-omega-in} and \ref{fig:PBE-omega-out} show the
 magnitudes of $\varepsilon_{\mathrm{SL}}^{\parallel}(\omega)$ and
 $\varepsilon_{\mathrm{SL}}^{\perp}(\omega)$ reduce with increasing $L$
 throughout the whole frequency range at PBE level. The $L$-dependency can also be
-removed using Eqs. \ref{main-eq:alpha-para-def} and
+removed using main text Eqs. \ref{main-eq:alpha-para-def} and
 \ref{main-eq:alpha-perp-def}, yielding lattice-independent
 polarizabilities throughout the frequency domain (Figure \ref{fig:PBE-omega-in}{\bf b}-{\bf d} and \ref{fig:PBE-omega-out}{\bf b}-{\bf d}). 
 %
-Note that when extracting
-the frequency-dependent 2D polarizabilities from
-Eqs. \ref{main-eq:alpha-para-def} and \ref{main-eq:alpha-perp-def},
-the peak position in energy $\omega (eV)$ from $\varepsilon_{\mathrm{SL}}$ is preserved. This
-is explained by the fact that the local extrema from spectra of
+Note that when extracting the frequency-dependent 2D polarizabilities
+from main text Eqs. \ref{main-eq:alpha-para-def} and
+\ref{main-eq:alpha-perp-def}, the peak position in energy
+$\hbar \omega$ from $\varepsilon_{\mathrm{SL}}$ is preserved. This is
+explained by the fact that the local extrema from spectra of
 $\varepsilon_{\mathrm{SL}}$ is also the local extrema in corresponding
 $\alpha_{\mathrm{2D}}$, since when
 $\partial \varepsilon_{\mathrm{SL}}(\omega) / \partial \omega = 0 $,
@@ -199,28 +201,87 @@ we have
 which indicates that no corrections in energy are present 
 when transforming
 $\varepsilon_{\mathrm{SL}}(\omega)$ to $\alpha_{\mathrm{2D}}(\omega)$.
+Performing the simulations at the level of G$_{0}$W$_{0}$
+we observe shifts in energy in $\varepsilon_{\mathrm{SL}}(\omega)$ 
+as a function of $L$. Figures \ref{fig:GW-omega-in} and
+\ref{fig:GW-omega-out} show that not only the magnitude of the dielectric
+functions change with $L$ but also the peak positions. As a result
+the obtained polarizabilities also show $L$-dependent peak 
+shift (Figures \ref{fig:GW-omega-in} {\bf b}-{\bf d} and
+\ref{fig:GW-omega-out}{\bf b}-{\bf d}). This
+can be explained by the long-range nature of Coulomb interactions into the self-energy 
+$\Sigma=iGW$. 
 
-We note that the result change slightly when G$_{0}$W$_{0}$ method
-is used. As shown in Figures \ref{fig:GW-omega-in} and
-\ref{fig:GW-omega-out}, not only do the intensity of the dielectric
-functions change with $L$, but also the peak positions. As a result
-the obtained polarizabilities also show $L$-dependent peak shift. This
-can be explained by the long-range nature of Coulomb interactions. In
-fact the self-energy of the G$_{0}$W$_{0}$ system $\Sigma$, is determined by:
+%%%%%%%%%%%%%%%%%%%%%%%
+The non-interacting Green's function can be constructed as:
+
 \begin{equation}
-  \label{eq:GW-formula}
-  \Sigma = i G_{0} W_{0} = i G_{0} \varepsilon^{-1} \nu
+    G^{(0)}(\mathbf{r},\mathbf{r}',\omega)=\sum_n\frac{\phi_{\mathrm{n}\mathbf{k}}^{(0)}(\mathbf{r})\phi_{\mathrm{n}\mathbf{k}}^{*(0)}(\mathbf{r'})}{\omega-\epsilon_\mathrm{n}-+i\eta\mathrm{sgn}(\epsilon_\mathrm{n}-\epsilon_\mathrm{F})}
 \end{equation}
-where $G$ is the non-interacting Green function, and $\nu$ is the
-Coulomb interaction. Since the dielectric constant $\varepsilon$
-changes with $L$, the self energy as well quasi-particle energies of
-the G$_{0}$W$_{0}$ method also varies with $L$. As a result we get
-higher peak energy of the dielectric spectrum when $L$ increases. Such
-peculiar $L$-dependency can be minimized when adding electron-hole
-interaction through the Bethe-Salpethe equation (BSE), as shown in
-Figures \ref{fig:BSE-omega-in} and \ref{fig:BSE-omega-out}. The
-polarizabilities again becomes lattice-independent due to the
-localization of excitons within the 2D material layer, which corrects the energy shift of G$_{0}$W$_{0}$ method.
+
+Here $\epsilon_n(\mathbf{k})$ are the DFT eigenenergies at \textbf{k}, $\epsilon_F$ the Fermi energy, $\omega$ the frequency, $\ket{u_{n\mathbf{k}}}$ the cell periodic Bloch functions, $\phi_{n\mathbf{k}}$ are the one-electron orbitals and $\eta$ is an infintesimal complex shift. It can be seen from equation \ref{eq:dft-dielectric} there is a clear volume dependence on $\Omega$ of the dielectric function from the preceding DFT calculation. Thus, when carrying out a calculation on a slab, the dielectric function will vary with the vacuum spacing used.
+
+Using the dielectric function we can calculate the screened Coulomb interaction:
+\begin{equation}
+    W=\epsilon^{-1}\nu
+\end{equation}
+where $\nu$ is the bare Coulomb interaction given by
+$e^2$/$|\mathbf{r}-\mathbf{r}'|$. Due to the
+1/$|\mathbf{r}-\mathbf{r}'|$ term, images in the non-periodic
+direction have a long-range spurious interaction which varies with
+vacuum spacing. From the screened Coulomb interaction and
+non-interacting Green's function it is possible to calculate the
+self-energy of the system:
+\begin{equation}\label{self}
+\Sigma=iGW
+\end{equation}
+and the quasi-particle eigenenergies are found using:
+\begin{equation}\label{quasi}
+E^{\mathrm{QP}}_{\mathrm{n}\mathbf{k}}=\Re\Big[\braket{\phi_{\mathrm{n}\mathbf{k}}|-\frac{1}{2}\Delta+V_{\mathrm{ext}}+V_\mathrm{H}+\Sigma(\epsilon_{\mathrm{n}\mathbf{k}}^{\mathrm{DFT}})|\phi_{\mathrm{n}\mathbf{k}}}\Big]
+\end{equation}
+Therefore a new set of eigenergies, E$_{n\mathbf{k}}^{QP}$ are found. Using E$_{n\mathbf{k}}^{QP}$ it is then possible to recalculate the dielectric function using the quasi-particle eigenergies as well as the DFT eigenfunctions. 
+
+Due to the volume dependence of $\Sigma$ in equations \ref{self} and
+\ref{quasi}, increasing the vacuum spacing leads to a change in the
+calculated quasi-particle eigenergies. This, along with the volume
+dependence in the calculation of the dielectric function, leads to an
+increase in energy of the peak position and a decrease in its
+magnitude with increasing vacuum spacing.  Including excitonic effects
+on top of a G$_0$W$_0$ calculation through solving the Bethe--Salpeter
+equation corrects for this energy shift by localizing the exciton
+within the slab (Figures \ref{fig:BSE-omega-in} and
+\ref{fig:BSE-omega-out}). However, the decrease in the magnitude of
+the dielectric function on both components of
+$\varepsilon_{\mathrm{SL}}(\omega)$ with increasing vacuum spacing is
+still observed.  Using main text Eqs. \ref{main-eq:alpha-para-def} and
+\ref{main-eq:alpha-perp-def} we can remove the dependence on $L$ as
+plotted in Figures \ref{fig:BSE-omega-in}{\bf b}-{\bf d} and
+\ref{fig:BSE-omega-out}{\bf b}-{\bf d} with few variations on
+$\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We note that the result change slightly when G$_{0}$W$_{0}$ method                                               %
+% is used. As shown in Figures \ref{fig:GW-omega-in} and                                                           %
+% \ref{fig:GW-omega-out}, not only do the intensity of the dielectric                                              %
+% functions change with $L$, but also the peak positions. As a result                                              %
+% the obtained polarizabilities also show $L$-dependent peak shift. This                                           %
+% can be explained by the long-range nature of Coulomb interactions. In                                            %
+% fact the self-energy of the G$_{0}$W$_{0}$ system $\Sigma$, is determined by:                                    %
+% \begin{equation}                                                                                                 %
+%   \label{eq:GW-formula}                                                                                          %
+%   \Sigma = i G_{0} W_{0} = i G_{0} \varepsilon^{-1} \nu                                                          %
+% \end{equation}                                                                                                   %
+% where $G$ is the non-interacting Green function, and $\nu$ is the                                                %
+% Coulomb interaction. Since the dielectric constant $\varepsilon$                                                 %
+% changes with $L$, the self energy as well quasi-particle energies of                                             %
+% the G$_{0}$W$_{0}$ method also varies with $L$. As a result we get                                               %
+% higher peak energy of the dielectric spectrum when $L$ increases. Such                                           %
+% peculiar $L$-dependency can be minimized when adding electron-hole                                               %
+% interaction through the Bethe-Salpethe equation (BSE), as shown in                                               %
+% Figures \ref{fig:BSE-omega-in} and \ref{fig:BSE-omega-out}. The                                                  %
+% polarizabilities again becomes lattice-independent due to the                                                    %
+% localization of excitons within the 2D material layer, which corrects the energy shift of G$_{0}$W$_{0}$ method. %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -545,7 +606,7 @@ give rise to the main text Eqs. \ref{main-eq:2D-Moss-para} and
 % SI. They changed to 2a and 2b in the SI. 
 
 
-\subsection{Detailed derivations of Eq. \ref{main-eq:2D-Moss-para}}  %
+\subsection{Detailed derivations of main text Eq. \ref{main-eq:2D-Moss-para}}  %
 \label{ssec:theory-1-para}
 
 In this section we show how Eq. \ref{main-eq:alpha-para-def}
@@ -566,7 +627,7 @@ that:
   {E_{\mathrm{c}}(\mathbf{k}) - E_{\mathrm{v}}(\mathbf{k})}
 \end{equation}
 Following the method of $\mathbf{k} \cdot \mathbf{p}$ theory from
-Ref. \citenum{Jiang_2017_Eg_Eb}, the matrix element in the numerator
+Ref.~\citenum{Jiang_2017_Eg_Eb}, the matrix element in the numerator
 of Eq. \ref{eq:alpha_para_RPA} is approximated by:
 
 \begin{equation}
@@ -590,7 +651,7 @@ fact that $\frac{\hbar^{2} k^{2}_{\mathrm{BZ}}}{m^{*}} \gg E_{g}$, and
 we arrive at Eq. \ref{main-eq:2D-Moss-para}.
 
 The coefficient of $C^{\parallel}$ adapted from
-Ref. \citenum{Jiang_2017_Eg_Eb} $C^{\parallel} = N e^{2}/(2\pi)$
+Ref.~\citenum{Jiang_2017_Eg_Eb} $C^{\parallel} = N e^{2}/(2\pi)$
 predicts linear correlation between $\alpha^{\parallel}_{\mathrm{2D}}$
 and $E_{\mathrm{g}}^{-1}$. We validate this by examining the
 DFT-calculated
@@ -605,10 +666,10 @@ the 2D materials studied.
 % {\bf ES:} Tian, please include more details in this section on the derivations! 
 
 
-\subsection{Detailed derivation of Eq. \ref{main-eq:2D-Moss-perp}}
+\subsection{Detailed derivation of main text Eq. \ref{main-eq:2D-Moss-perp}}
 \label{ssec:theory-1-perp}
 
-For Eq. \ref{main-eq:2D-Moss-perp}, treating the in-plane
+For main text Eq. \ref{main-eq:2D-Moss-perp}, treating the in-plane
 wave functions as plane wave with form
 $\psi^{\parallel}(\rho) \propto e^{i \mathbf{k \rho}}$, the matrix
 element of
@@ -732,7 +793,7 @@ In the next section we will
 provide a simple explanation for the $\alpha \propto \delta$ relation
 from fundamental electrostatics theory.
 
-\subsection{Explanation of Eq. \ref{main-eq:2D-Moss-perp}
+\subsection{Explanation of main text Eq. \ref{main-eq:2D-Moss-perp}
   from fundamental electrostatics}
 \label{ssec:theory-1-perp-fundamental}
 
@@ -775,7 +836,7 @@ $E = \sigma_{\mathrm{b}}/\varepsilon_{0}$. Therefore we have:
   \alpha_{\mathrm{2D}}^{\perp} = (d_{\mathrm{max}} + r_{\mathrm{cov}}^{i} + r_{\mathrm{cov}}^{j})\varepsilon_{0}
                 = \delta_{\mathrm{cov}} \varepsilon_{0}
 \end{equation}
-which explains the linear relation seen in Figure
+which explains the linear relation seen in main text Figure
 \ref{main-fig-3}d. We can see that such simple model nicely captures
 the thickness feature of $\alpha_{\mathrm{2D}}^{\perp}$, and
 reproduces the right coefficient between $\delta_{\mathrm{cov}}$ and
@@ -850,7 +911,7 @@ as will be discussed in the following sections.
     $1/\alpha_{\mathrm{2D}}^{\parallel}-E_{\mathrm{g}}(\mathrm{HSE})$
     and \textbf{b,}
     $\alpha_{\mathrm{2D}}^{\perp}-\delta_{\mathrm{cov}}$ from 
-    Ref.\cite{Haastrup_2018} corresponding to Figure \ref{main-fig-3}{\bf c}
+    Ref.~\citenum{Haastrup_2018} corresponding to main text Figure \ref{main-fig-3}{\bf c}
     and \ref{main-fig-3}{\bf d}.}
   \label{fig:gpaw-alpha-relation}
 \end{figure}
@@ -860,7 +921,7 @@ memory overload, high-accurate calculations at hybrid HSE06 level is limited
 to about 56 compounds. 
 It is desirable to validate our proposed
 relations on an even larger scale database. We select over 230
-semiconducting 2D materials from Ref.\cite{Haastrup_2018} 
+semiconducting 2D materials from Ref.~\citenum{Haastrup_2018} 
 with a GW bandgap
 larger than 0.05 eV and extracted the 2D polarizabilities calculated
 on the PBE level. The proposed linear relations between
@@ -880,7 +941,7 @@ response at the HSE06 level.
 Next we investigate the influence of choice of $E_{\mathrm{g}}$ on the
 regression of $\alpha_{\mathrm{2D}}^{\parallel}-E_{\mathrm{g}}$ relation. Figure
 \ref{fig:SI-gpaw-alpha-Eg-all} shows $1/\alpha_{\mathrm{2D}}^{\parallel}$ from 
-Ref.\cite{Haastrup_2018} as a function of minimal and direct bandgap calculated
+Ref.~\citenum{Haastrup_2018} as a function of minimal and direct bandgap calculated
 on PBE, HSE06 and GW levels. We observe,
 although the regression $R^{2}$ coefficient in all cases are around
 0.9, the $\alpha_{\mathrm{2D}}^{\parallel}-E_{\mathrm{g}}$ is better described using
@@ -899,7 +960,7 @@ more accurate theory level for bandgap is used (for instance, HSE and GW).
   \includegraphics[width=1.05\linewidth]{img/SI-gpaw-alpha_Eg_all.pdf}
   \caption{$\alpha_{\mathrm{2D}}^{\parallel}$ as function of minimal and direct
     $E_{\mathrm{g}}$ calculated on different theoretical levels:
-    \textbf{a,} PBE, \textbf{b,} HSE and \textbf{c,} GW of Ref.\cite{Haastrup_2018}.}
+    \textbf{a,} PBE, \textbf{b,} HSE and \textbf{c,} GW of Ref.~\citenum{Haastrup_2018}.}
   \label{fig:SI-gpaw-alpha-Eg-all}
 \end{figure}
 
@@ -913,7 +974,7 @@ exciton binding energy $E_{\mathrm{b}}$, which is at the 10$^{-1}$ to
 10$^{1}$ eV for different 2D materials due to the attenuated
 dielectric screening. Next we examine the relation between
 $\alpha_{\mathrm{2D}}^{\parallel}$ and $E_{\mathrm{g}}^{\mathrm{opt}}$
-from Ref.\cite{Haastrup_2018} with
+from Ref.~\citenum{Haastrup_2018} with
 $E_{\mathrm{g}}^{\mathrm{opt}}=E_{\mathrm{g}}^{\mathrm{dir,QP}}-E_{\mathrm{b}}^{\mathrm{BSE}}$,
 where $E_{\mathrm{g}}^{\mathrm{dir,QP}}$ is the direct quasi-particle
 bandgap calculated using G$_0$W$_0$ method and
@@ -944,14 +1005,14 @@ bandgap.
   \centering
   \includegraphics[width=0.70\linewidth]{img/SI-alphax-Eg-opt.pdf}
   \caption{$(4\pi\varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ as a function of
-    $E_{\mathrm{g}}^{\mathrm{opt}}$ from Ref.\cite{Haastrup_2018}.}
+    $E_{\mathrm{g}}^{\mathrm{opt}}$ from Ref.~\citenum{Haastrup_2018}.}
   \label{fig:opt}
 \end{figure}
 
 \subsection{Relation between 2D polarizabilities and other physical quantities}
 \label{sec:gpaw-3}
 
-The relatively large size of Ref.\cite{Haastrup_2018} database allows us
+The relatively large size of Ref.~\citenum{Haastrup_2018} database allows us
 to examine the relation between 2D polarizabilities and other physical
 quantities. We choose the following quantities for comparison,
 corresponding to Figures \ref{fig:gpaw-2D-quantities-1} to
@@ -970,7 +1031,7 @@ corresponding to Figures \ref{fig:gpaw-2D-quantities-1} to
   \centering
   \includegraphics[width=0.99\linewidth]{img/SI-gpaw-alpha-emass.pdf}
   \caption{Relation between 2D polarizabilities and the effective
-    carrier mass from Ref.\cite{Haastrup_2018}. 
+    carrier mass from Ref.~\citenum{Haastrup_2018}. 
     \textbf{a}. $\alpha_{\mathrm{2D}}^{\parallel}$ as a function of the
     electron mass $m_{e}^{*}$.  \textbf{b}. $\alpha_{\mathrm{2D}}^{\parallel}$ as a
     function of the hole mass
@@ -1101,7 +1162,7 @@ where
 $\omega_{\mathrm{3D}}^{\mathrm{p}} = {\displaystyle \sqrt{\frac{e^{2}
       n_{\mathrm{3D}}}{\varepsilon_{0} m_{e}}}}$, where
 $n_{\mathrm{3D}}$ is the 3D number density of valence
-electrons. Combine Eq. \ref{eq:eps-plas-3D} with 
+electrons. Combine Eq. \ref{eq:eps-plas-3D} with main text
 Eq. \ref{main-eq:alpha-para-def}, we get:
 \begin{equation}
   \begin{aligned}
@@ -1123,12 +1184,12 @@ $\varepsilon_{\mathrm{3D}}$ is dependent on $L$. By defining the 2D
 valence charge density
 $\sigma_{\mathrm{2D}}^{\mathrm{v}}=n_{\mathrm{2D}}e$, we have also
 calculated $\alpha_{\mathrm{2D}}^{\parallel}$ as a function of
-$\sigma_{\mathrm{2D}}^{\mathrm{v}}/E_{\mathrm{g}}^{2}$ using Ref.\cite{Haastrup_2018} database, as shown in Figure \ref{fig:plasma}.
+$\sigma_{\mathrm{2D}}^{\mathrm{v}}/E_{\mathrm{g}}^{2}$ using Ref.~\citenum{Haastrup_2018} database, as shown in Figure \ref{fig:plasma}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\linewidth]{img/SI-lorentz-model.pdf}
   \caption{Calculated $\alpha_{\mathrm{2D}}^{\parallel}$ as a function of
-    $\sigma_{\mathrm{2D}}^{\mathrm{v}}/E_{\mathrm{g}}^{2}$ using data from Ref.\cite{Haastrup_2018}. The broken line shows the theoretical prediction
+    $\sigma_{\mathrm{2D}}^{\mathrm{v}}/E_{\mathrm{g}}^{2}$ using data from Ref.~\citenum{Haastrup_2018}. The broken line shows the theoretical prediction
     from single-oscillator model.}
   \label{fig:plasma}
 \end{figure}
@@ -1221,7 +1282,7 @@ dielectric anisotropy of 2D materials.
   \label{fig:ellipsoid}
 \end{figure}
 
-\subsection{Choice of materials for Figure \ref{main-fig:aniso}}
+\subsection{Choice of materials for main text Figure \ref{main-fig:aniso}}
 \label{ssec:aniso-materials}
 The dielectric anisotropy $\eta$ proposed in the main text is also
 applied to other dimensions. Similar to the case of 2D and bulk
@@ -1269,11 +1330,11 @@ The following types materials are chosen for comparison:
   materials have isotropic polarizability due to the high symmetry.
 \end{itemize}
 
-\subsection{Explanation for the separation between 2D and 3D regimes in Figure \ref{main-fig:aniso}}
+\subsection{Explanation for the separation between 2D and 3D regimes in main text Figure \ref{main-fig:aniso}}
 \label{sssec:aniso-2}
 In this section we give an analytical explanation for the separation
 between the dielectric anisotropy indices of 2D and their bulk
-counterparts. From Eqs. \ref{main-eq:alpha-para-def},
+counterparts. From main text Eqs. \ref{main-eq:alpha-para-def},
 \ref{main-eq:alpha-perp-def} and \ref{main-eq:anisotropy},
 $\eta_{\mathrm{Bulk}}$ of a bulk layered material is expressed as:
 \begin{equation}
@@ -1303,7 +1364,7 @@ $\eta_{\mathrm{Bulk}}$ of a bulk layered material is expressed as:
 \end{equation}
 Name take the fact that
 $\alpha_{\mathrm{Bulk}}^{\parallel} \approx
-\alpha^{\parallel}_{\mathrm{2D}}$ (Figure
+\alpha^{\parallel}_{\mathrm{2D}}$ (main text Figure
 \ref{main-fig-4}b), we name
 $\alpha_{\mathrm{Bulk}}^{\parallel} /\epsilon_{0}L_{\mathrm{Bulk}}
 \approx \alpha_{\mathrm{2D}}^{\parallel}/
@@ -1347,7 +1408,7 @@ inter-plane distance $L_{\mathrm{Bulk}}$, and in general
 $r_{0}^{\parallel} \gg L_{\mathrm{Bulk}}$, we can conclude that the
 case when $\eta_{\mathrm{Bulk}} = \eta_{\mathrm{2D}}$ only happens
 when $\eta_{\mathrm{2D}}$ is much smaller than 1. Therefore the
-separation between the 2D and 3D regimes in Figure
+separation between the 2D and 3D regimes in main text Figure
 \ref{main-fig:aniso} is explained.
 
 
