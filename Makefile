@@ -36,8 +36,8 @@ diff:
 	sed -e "s///" paper_change.tex > tmp.tex && mv tmp.tex paper_change.tex
 	sed -e "s///" SI_change.tex > tmp.tex && mv tmp.tex SI_change.tex
 	echo "Now please manually run the compilation for changed LaTeX files!"
-# latexmk $(LATEXMK_TAG) paper_change.tex
-# latexmk $(LATEXMK_TAG) SI_change.tex
+	latexmk $(LATEXMK_TAG) paper_change.tex
+	latexmk $(LATEXMK_TAG) SI_change.tex
 
 compress:
 	gs $(GS_TAG) -sOutputFile="paper-compak.pdf" paper.pdf
