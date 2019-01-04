@@ -15,8 +15,8 @@
    viewBox="0 0 147.76512 129.97424"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="fig4_v111618ii.svg">
+   inkscape:version="0.92.3 (68fc966a96, 2018-08-01)"
+   sodipodi:docname="fig4.svg">
   <defs
      id="defs2"
      style="stroke-linecap:butt;stroke-linejoin:round">
@@ -1868,15 +1868,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.011465"
-     inkscape:cx="122.82453"
-     inkscape:cy="277.45568"
+     inkscape:cx="234.3521"
+     inkscape:cy="230.92569"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
-     inkscape:window-width="1214"
-     inkscape:window-height="862"
+     inkscape:window-width="1948"
+     inkscape:window-height="1202"
      inkscape:window-x="77"
-     inkscape:window-y="17"
+     inkscape:window-y="23"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -1890,7 +1890,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2877,7 +2877,7 @@
    id="tspan4465"
    style="font-size:64.99999762%;baseline-shift:super;stroke-linecap:butt;stroke-linejoin:round">‖    </tspan>(     ,L<tspan
    id="tspan4467"
-   style="font-size:64.99999762%;baseline-shift:sub;stroke-linecap:butt;stroke-linejoin:round">Bulk</tspan>)</tspan></tspan></text>
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-linecap:butt;stroke-linejoin:round;-inkscape-font-specification:arial;font-family:arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Bulk</tspan>)</tspan></tspan></text>
       <text
          id="text4380"
          y="51.246201"
@@ -2935,7 +2935,7 @@
    id="tspan4493"
    style="font-size:64.99999762%;baseline-shift:super;stroke-linecap:butt;stroke-linejoin:round">    </tspan>(     ,L<tspan
    id="tspan4495"
-   style="font-size:64.99999762%;baseline-shift:sub;stroke-linecap:butt;stroke-linejoin:round">Bulk</tspan>)</tspan></tspan></text>
+   style="font-size:64.99999762%;baseline-shift:sub;stroke-linecap:butt;stroke-linejoin:round;-inkscape-font-specification:arial;font-family:arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Bulk</tspan>)</tspan></tspan></text>
     <text
        id="text4506"
        y="53.054852"
@@ -7269,7 +7269,7 @@
          id="tspan3210"
          style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:round"
          x="-83.841103"
-         y="78.062531"></tspan></text>
+         y="78.062531" /></text>
     <text
        inkscape:transform-center-y="-0.97028479"
        inkscape:transform-center-x="5.2672702"
