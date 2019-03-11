@@ -132,9 +132,12 @@ $\boldsymbol{u}$ is the total dipole moments within the SL, $\rho$ is
 the spatial charge density, $\Omega=AL$ is the volume of the
 supercell, $A$ is the \textit{xy}-plane area of the SL and
 $\varepsilon_{0}$ is vacuum permittivity. Here we only study the
-electronic contribution to the dielectric constant where the dipole
-$\boldsymbol{P}$ comes from the displacement of electron cloud under
-external electric field. For the majority of the 2D nanosheets, the
+electronic contribution to the macroscopic dielectric constant where
+the dipole $\boldsymbol{P}$ comes from the displacement of electron
+cloud under external electric field, while the ionic contribution
+\cite{Laturia_2018} ($\boldsymbol{P}$ comes from the displacement of
+nuclei) to the static $\varepsilon$ is considered.
+For the majority of the 2D nanosheets, the
 off-diagonal elements of the dielectric tensor ($p \neq q$) tend to be
 negligible.  Considering that the 2D material is placed in vacuum
 ($\kappa^{pp} = 1$ and $\kappa^{pq} = 0$), we can distinguish two
@@ -278,6 +281,10 @@ $\varepsilon_{\mathrm{SL}}^{\perp}$, respectively:
   &\varepsilon_{\mathrm{SL}}^{\perp} &= \left(1 - {\displaystyle \frac{\alpha_{\mathrm{2D}}^{\perp}}{\varepsilon_{\mathrm{0}} L}} \right)^{-1}
 \end{eqnarray}
 \end{subequations}
+Note due to the choice of $\varepsilon$ is limited to the electronic
+macroscopic dielectric constant, $\alpha_{\mathrm{2D}}$ naturally
+refers to the electronic polarizability (the polarizability of the
+electron cloud \cite{Israelachvili_2011}).
 %
 %
 The bottom panels of Figure \ref{fig-1}b and \ref{fig-1}c show the
@@ -665,11 +672,10 @@ of 2D materials as well as rational device design and optimization.
 \label{sec:org8457dbb}
 
 Simulations were carried out using plane-wave density functional
-theory package VASP
-\cite{Kresse_1993,Kresse_1996_1,Kresse_1996_2} using the projector
-augmented wave (PAW) approach with GW pseudopotentials
-\cite{Kresse_1999_pseudopotentials}. Band gaps were calculated using
-the Heyd-Scuseria-Ernzerhof hybrid functional (HSE06)
+theory package VASP \cite{Kresse_1993,Kresse_1996_1,Kresse_1996_2}
+using the projector augmented wave (PAW) approach with GW
+pseudopotentials \cite{Kresse_1999_pseudopotentials}. Band gaps were
+calculated using the Heyd-Scuseria-Ernzerhof hybrid functional (HSE06)
 \cite{Heyd_2003,HSE_2006}, with spin orbit coupling (SOC) explicitly
 included. The geometries were converged both in cell parameters and
 ionic positions, with forces below 0.04 eV/\AA. To ensure the accuracy
@@ -682,12 +688,14 @@ exchange-correlation functional level and a subsequent relaxation
 carried out at HSE06 level, allowing both cell parameters and ionic
 positions to relax each time. In VASP, the tag PREC=High was used,
 giving a plane wave kinetic energy cutoff of 30\% greater than the
-highest given in the pseudopotentials used in each material. This 
-guarantees that absolute energies were converged to a few meV and
-the stress tensor to within 0.01 kBar.  Calculation of the
-macroscopic ion-clamped dielectric tensor were carried out with an
+highest given in the pseudopotentials used in each material. This
+guarantees that absolute energies were converged to a few meV and the
+stress tensor to within 0.01 kBar.  Calculation of the macroscopic
+ion-clamped dielectric tensor were carried out with an
 18$\times$18$\times$1 k-grid and electric field strength of 0.001
-eV/\AA. The materials from Ref.\citenum{Haastrup_2018} for comparison
+eV/\AA.  Local field effect corrections are included at the
+exchange-correlation potential $V_{\mathrm{xc}}$ at both PBE and HSE06
+levels. The materials from Ref.\citenum{Haastrup_2018} for comparison
 were choses with the GW bandgap larger than 0.05 eV. Bulk layered
 materials were constructed by relaxing the c-axis length of
 corresponding monolayer material with the interlayer van der Waals
@@ -695,8 +703,10 @@ corresponding monolayer material with the interlayer van der Waals
 functional\cite{Lee_2010_vdFD2}.  The dielectric properties of bulk
 layered materials using VASP were calculated at HSE06 level with
 18$\times$18$\times$6 k-grid with same parameter as for monolayer,
-while the dielectric properties of bulk counterparts of Ref.~\citenum{Haastrup_2018}
-are calculated at PBE level with a k-point density of 10~\AA$^{-1}$.
+while the dielectric properties of bulk counterparts of
+Ref.~\citenum{Haastrup_2018} are calculated at PBE level with a
+k-point density of 10~\AA$^{-1}$. Local field effect corrections are
+also used for the dielectric properties of bulk systems.
 
 \section{Data Availability}
 The data that support the findings of this study are available from
