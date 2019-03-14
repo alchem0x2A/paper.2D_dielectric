@@ -25,19 +25,32 @@ def convert_pdf(infile, outdir="./img"):
     base_name = os.path.basename(infile)
     infile = os.path.join(PATH, base_name)
     outfile = os.path.join(os.path.abspath(outdir), base_name)
-    outfile = outfile.replace(".svg", ".pdf")
+    outfile = outfile.replace(".svg", ".png")
     print(outfile)
-    program = "inkscape"
+    program = "/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
     params = ["--without-gui", "--export-area-page",
     ]
     io = ["--file={}".format(infile),
-          "--export-pdf={}".format(outfile)]
+          "--export-png={}".format(outfile),
+          "--export-dpi=600"]
     success = subprocess.call([program, *params, *io])
+    
     if success != 0:
         warnings.warn(TColors.FAIL + "File {} cannot be converted!".format(infile) + TColors.ENDC)
     else:
         print(TColors.OKGREEN +
               "File {} converted successfully on thread {}.".format(infile, multiprocessing.current_process())
+              +TColors.ENDC)
+    program = "convert"
+    infile = outfile
+    outfile = infile.replace(".png", ".pdf")
+    io = [infile, outfile]
+    success = subprocess.call([program, *io])
+    if success != 0:
+        warnings.warn(TColors.FAIL + "File {} cannot be converted!".format(infile) + TColors.ENDC)
+    else:
+        print(TColors.OKGREEN +
+              "File {} converted to pdf on thread {}.".format(infile, multiprocessing.current_process())
               +TColors.ENDC)
 
 # Convert all the pdf files
