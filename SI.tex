@@ -127,17 +127,29 @@ values of $\alpha_{\mathrm{2D}}$.
 \label{ssec:gw}
 
 Here we will show the results of dielectric properties calculated
-using many-body Green function method (G$_0$W$_{0}$)
-and with electron-hole interactions at the level of the Bethe-Salpeter 
-equation (G$_0$W$_{0}$--BSE). We first compare the case of a
-monolayer of BN within a varying superlattice $L$ 
-calculated using PBE and G$_{0}$W$_{0}$ as shown in Figure \ref{fig:GW-PBE-alpha}. 
-%
-%
-Both $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
-$\varepsilon_{\mathrm{SL}}^{\perp}$ do not converge as a function of $L$ 
-despite of the separation utilized in the simulations (Figure \ref{fig:GW-PBE-alpha}{\bf a}-{\bf c}). However, corresponding 2D polarizabilities are almost $L$-independent (Figure \ref{fig:GW-PBE-alpha}{\bf b}-{\bf d}). It is worth noting
-that since the G$_{0}$W$_{0}$ method has better estimation of the bandgap, $\varepsilon_{\mathrm{SL}}$ and $\alpha_{\mathrm{2D}}$ are smaller using G$_{0}$W$_{0}$ than in PBE functionals.
+using many-body Green function method (G$_0$W$_{0}$) and with
+electron-hole interactions at the level of the Bethe-Salpeter equation
+(G$_0$W$_{0}$--BSE). Frequency-dependent dielectric functions
+$\varepsilon_{\mathrm{SL}}(\omega)$ at both G0W0 and G0W0--BSE levels
+are calculated using VASP, with a cutoff energy of XXX and k point
+density of YYY. Local field effect is included in both cases: local
+field correction is applied to independent-particle energies in G0W0
+at RPA level with VASP TAG \texttt{LRPA=.TRUE.}, while the full
+polarizability is calculated using BSE in G0W0-BSE
+\todo[inline]{@Declan, could you help modify this part?}
+
+We first compare the case of a monolayer of BN within a varying
+superlattice $L$ calculated using PBE and G$_{0}$W$_{0}$ as shown in
+Figure \ref{fig:GW-PBE-alpha}.  Both
+$\varepsilon_{\mathrm{SL}}^{\parallel}$ and
+$\varepsilon_{\mathrm{SL}}^{\perp}$ do not converge as a function of
+$L$ despite of the separation utilized in the simulations (Figure
+\ref{fig:GW-PBE-alpha}{\bf a}-{\bf c}). However, corresponding 2D
+polarizabilities are almost $L$-independent (Figure
+\ref{fig:GW-PBE-alpha}{\bf b}-{\bf d}). It is worth noting that since
+the G$_{0}$W$_{0}$ method has better estimation of the bandgap,
+$\varepsilon_{\mathrm{SL}}$ and $\alpha_{\mathrm{2D}}$ are smaller
+using G$_{0}$W$_{0}$ than in PBE functionals.
 \begin{figure}[htbp]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-alpha-zero.pdf}
@@ -202,8 +214,8 @@ which indicates that no corrections in energy are present
 when transforming
 $\varepsilon_{\mathrm{SL}}(\omega)$ to $\alpha_{\mathrm{2D}}(\omega)$.
 Performing the simulations at the level of G$_{0}$W$_{0}$
-we observe shifts in energy in $\varepsilon_{\mathrm{SL}}(\omega)$ 
-as a function of $L$. Figures \ref{fig:GW-omega-in} and
+we observe blue shifts in energy in $\varepsilon_{\mathrm{SL}}(\omega)$ 
+with increasing $L$. Figures \ref{fig:GW-omega-in} and
 \ref{fig:GW-omega-out} show that not only the magnitude of the dielectric
 functions change with $L$ but also the peak positions. As a result
 the obtained polarizabilities also show $L$-dependent peak 
@@ -246,17 +258,20 @@ Due to the volume dependence of $\Sigma$ in equations \ref{self} and
 calculated quasi-particle eigenergies. This, along with the volume
 dependence in the calculation of the dielectric function, leads to an
 increase in energy of the peak position and a decrease in its
-magnitude with increasing vacuum spacing.  Including excitonic effects
-on top of a G$_0$W$_0$ calculation through solving the Bethe--Salpeter
-equation corrects for this energy shift by localizing the exciton
-within the slab (Figures \ref{fig:BSE-omega-in} and
+magnitude with increasing vacuum spacing. Such effect is also
+discussed in several other studies
+\cite{Rozzi_2006,Hueser_2013_2Dvs3D}, when full Coulomb interaction is
+used in a supercell. Including excitonic effects on top of a
+G$_0$W$_0$ calculation through solving the Bethe--Salpeter equation
+corrects for this energy shift by localizing the exciton within the
+slab (Figures \ref{fig:BSE-omega-in} and
 \ref{fig:BSE-omega-out}). However, the decrease in the magnitude of
 the dielectric function on both components of
 $\varepsilon_{\mathrm{SL}}(\omega)$ with increasing vacuum spacing is
 still observed.  Using main text Eqs. \ref{main-eq:alpha-para-def} and
 \ref{main-eq:alpha-perp-def} we can remove the dependence on $L$ as
 plotted in Figures \ref{fig:BSE-omega-in}{\bf b}-{\bf d} and
-\ref{fig:BSE-omega-out}{\bf b}-{\bf d} with few variations on
+\ref{fig:BSE-omega-out}{\bf b}-{\bf d} with fewer variations on
 $\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -385,24 +400,32 @@ best tradeoff between all aspects.
 %From Eq. \ref{P_2D} we can calculate the dipole moment density  $\boldsymbol{\mu}_{\mathrm{2D}}^{p} =\boldsymbol{u}^{p}/A$ 
 
 \pagebreak{}
-\section{Hypothetical 2D ``dielectric constant'' rescaled from 3D dielectric constant}
+\section{Comment on the hypothetical ``dielectric constant'' in the effective medium theory (EMT)}
 \label{sec:2D-3D-rescale}
 From literatures, it is often desired to extract the ``dielectric
 constant'' of a 2D material from the 3D macroscopic dielectric
 constant of the superlattice, where the layers are periodic along of
 x,y directions but separated by a vacuum layer between its images
-\cite{Matthes_2016,Laturia_2018}. As discussed in the main text, the
-definition of the 2D ``dielectric constant'' (in particular, its
-in-plane components) is questionable, due to the locality of
-electrostatic screening of the 2D materials
-\cite{Cudazzo_2010_screen2D,Cudazzo_2011_screening_2D}. Here we show
+\cite{Matthes_2016,Laturia_2018}. Such method makes use of the
+effective medium theory (EMT), and as discussed in the main text, the
+definition of the 2D ``dielectric constant'' is questionable, due to
+the locality of electrostatic screening of the 2D materials
+\cite{Cudazzo_2010_screen2D,Cudazzo_2011_screening_2D}. Moreover, the
+EMT approach assumes that the 2D material has an effective thickness
+$\delta$ and effective dielectric constant
+$\varepsilon_{\mathrm{2D}}$, while the exact value of $\delta$ is
+unknown due to the ambiguity of the reference planes. Here we show
 that, in addition to the ambiguous definition of the 2D dielectric
 constant, such approach requires the precise determination of the 2D
-layer thickness $\delta_{\mathrm{2D}}$, which makes it impractical.
+layer thickness $\delta_{\mathrm{2D}}$, which makes it impractical. On
+the contrary, the 2D polarizability approach presented in the main
+text is independent of the choice of the parameter $\delta$, as well
+as the volume fraction of the 2D material, and can correctly capture
+the dielectric properties of the 2D material. 
 
 In brief, the hypothetical 2D dielectric constant
 $\varepsilon$ comes from the planar limit of the
-Maxwell-Garnett effective medium theory \cite{Markel_2016}, and can be
+effective medium theory \cite{Markel_2016,Aspnes_1982}, and can be
 expressed by means of the macroscopic dielectric constant
 $\varepsilon_{\mathrm{SL}}$ of the superlattice:
 
@@ -478,7 +501,7 @@ of 2D materials.
 \label{tab:delta-L-DFt}
 \end{table}
 
-Another drawback of the 2D dielectric constant approach is the
+Another drawback of the 2D EMT approach is the
 overestimation of the out-of-plane dielectric response. As can be seen
 in Figure \ref{fig:rescale-prb}, the extracted
 $\varepsilon_{\mathrm{2D}}^{\perp}$ values for the TMDCs studied
@@ -524,11 +547,11 @@ advantages of using the polarizability $\alpha$ for describing the dielectric
 nature of 2D materials, including
 \begin{enumerate}
 \item $\alpha_{\mathrm{2D}}$ can be used to describe both the local and macroscopic dielectric properties, while $\epsilon_{\mathrm{2D}}$ can't.
-\item Calculating $\alpha_{\mathrm{2D}}$ only requires to calculate the dielectric response at single superlattice length, while $\epsilon_{\mathrm{2D}}$ requires calculation with varied superlattice length.
-\item $\alpha_{\mathrm{2D}}$ correctly represents the screening length of 2D material, while $\epsilon_{\mathrm{2D}}$ does not.
-\item $\alpha_{\mathrm{2D}}$ correctly represents the different degree of screening in/out-of-plane, while $\epsilon_{\mathrm{2D}}$ does not.
+\item Calculating $\alpha_{\mathrm{2D}}$ only requires to calculate the dielectric response at single superlattice length, while $\epsilon_{\mathrm{2D}}$ in EMT requires calculation with varied superlattice length.
+\item $\alpha_{\mathrm{2D}}$ correctly represents the screening length of 2D material, while $\epsilon_{\mathrm{2D}}$ calculated from EMT does not.
+\item $\alpha_{\mathrm{2D}}$ correctly represents the different degree of screening in/out-of-plane, while $\epsilon_{\mathrm{2D}}$ calculated from EMT does not.
   
-\item The value of $\epsilon_{\mathrm{2D}}$ hugely depends on the
+\item The value of $\epsilon_{\mathrm{2D}}$ in EMT hugely depends on the
   choice of the thickness of 2D material, while such information is
   intrinsically embedded in $\alpha_{\mathrm{2D}}$.
 \end{enumerate}
