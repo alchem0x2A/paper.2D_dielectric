@@ -1,6 +1,10 @@
 % Created 2018-09-26 Wed 21:07
 % Intended LaTeX compiler: pdflatex
-\documentclass[journal=ancac3,manuscript=article,email=true,hyperref=true,keywords=false]{achemso}
+% \documentclass[journal=ancac3,manuscript=article,email=true,hyperref=true,keywords=false]{achemso}
+\documentclass[9pt,twocolumn,twoside,lineno]{pnas-new}
+% Use the lineno option to display guide line numbers if required.
+
+\templatetype{pnasresearcharticle} % Choose template 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{float}
@@ -15,42 +19,44 @@
 \usepackage{xr-hyper} 
 \externaldocument[SI-]{SI}
 
-
-
-\author{Tian Tian}
-\affiliation{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
-\altaffiliation{T. T. and D. S. contributed equally to this work}
-\author{Declan Scullion}
-\affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
-\altaffiliation{T. T. and D. S. contributed equally to this work}
-\author{Dale Hughes}
-\affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
-\author{Lu Hua Li}
-\affiliation{Institute for Frontier Materials, Deakin University, Waurn Ponds, Victoria, Australia}
-\author{Chih-Jen Shih}
-\affiliation{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
-\author{Jonathan Coleman}
-\affiliation{School of Physics, Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) and Advanced Materials and BioEngineering Research (AMBER), Trinity College Dublin, Dublin 2, Ireland.}
-\author{Manish Chhowalla}
-%% \affiliation{Materials Science and Engineering, Rutgers University, 607 Taylor Road, Piscataway, New Jersey 08854, USA.}
-\affiliation{Department of Materials Science \& Metallurgy, University of Cambridge, CB3 0FS, United Kingdom}
-\author{Elton J. G. Santos}
-\email{e.santos@qub.ac.uk}
-\affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
-\date{}
 \title{Electronic polarizability as the fundamental variable in the dielectric properties of two-dimensional materials}
-%\title{The Unified Nature of the Dielectric Properties of Two-Dimensional Materials}
-% \title{Unified Understanding of the Dielectric Nature of Two-Dimensional Materials}
-\begin{document}
 
-\newpage{}
+\author[a,1]{Tian Tian}
+\author[b, 1]{Declan Scullion}
+\author[b]{Dale Hughes}
+\author[c]{Lu Hua Li}
+
+\author[a]{Chih-Jen Shih}
+\author[d]{Jonathan Coleman}
+\author[e]{Manish Chhowalla}
+%% \affiliation{Materials Science and Engineering, Rutgers University, 607 Taylor Road, Piscataway, New Jersey 08854, USA.}
+
+\author[b, 2]{Elton J. G. Santos}
+
+\leadauthor{Tian}
+
+\affil[a]{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
+\affil[b]{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
+\affil[c]{Institute for Frontier Materials, Deakin University, Waurn Ponds, Victoria, Australia}
+\affil[d]{School of Physics, Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) and Advanced Materials and BioEngineering Research (AMBER), Trinity College Dublin, Dublin 2, Ireland.}
+\affil[e]{Department of Materials Science \& Metallurgy, University of Cambridge, CB3 0FS, United Kingdom}
 
 
-% \section{Introduction}
-% \label{sec:org2ea169d}
-\linenumbers{}
 
-{\bfseries The dielectric constant, which defines the polarization of
+\authorcontributions{E.J.G.S. designed the scope of research. T.T.,
+  D.S. and D.H. performed first-principles calculations. T.T. and
+  D.S. performed the analysis of data. T.T., D.S. and E.J.G.S. wrote
+  the paper. L.H.L., C.J.S., J.C. amd M.C. participated in discussion of manuscript.}
+\authordeclaration{The authors declare no conflict of interest.}
+\equalauthors{\textsuperscript{1}T.T. and D.S. contributed equally to this work}
+\correspondingauthor{\textsuperscript{2}To whom correspondence should be addressed. E-mail: e.santos@qub.ac.uk}
+
+% \significancestatement{
+
+% }
+
+\begin{abstract}
+  The dielectric constant, which defines the polarization of
   the media, is a key quantity in condensed matter. It determines
   several electronic and optoelectronic properties important for a
   plethora of modern technologies from computer memory to field effect
@@ -70,10 +76,26 @@
   covalent thickness of a layer. We unify the concept of dielectric
   properties in any material dimension finding a global dielectric
   anisotropy index defining their controllability through
-  dimensionality.  }
+  dimensionality.  
+\end{abstract}
+
+\dates{This manuscript was compiled on \today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{firststyle}
+\ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
 
-The dielectric constant $\varepsilon$ (also known as the relative permittivity) 
+
+% \section{Introduction}
+% \label{sec:org2ea169d}
+% \linenumbers{}
+
+
+
+\dropcap{T}he dielectric constant $\varepsilon$ (also known as the relative permittivity) 
 plays a crucial role in bridging various fundamental material
 properties, such as bandgaps\cite{Moss_1950_relation,Moss_1985_n_Eg}, 
 optical absorption\cite{kittel_2005_introduction} and 
@@ -101,6 +123,34 @@ additional parameter from the bulk-counterparts.
 
 %%
 %%
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{img/fig1.pdf}
+\caption{\label{fig-1} \textbf{2D polarizability as the true
+    descriptor of the dielectric nature of 2D materials.}
+  \textbf{a}. 3D illustration of the spatial distribution of the
+  charge density change $\Delta \rho(z)$ along the z-direction for
+  monolayer 2H-MoS$_{2}$ in a periodic superlattice under external
+  eletric field of 0.01 V/\AA{}.  The green and red regions represent
+  negative and positive induced charges, respectively. The macroscopic
+  $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
+  $\varepsilon_{\mathrm{SL}}^{\perp}$ are influenced by the lattice
+  size $L$, while the 2D polarizabilities $\alpha_{\mathrm{2D}}^{\parallel}$ and
+  $\alpha_{\mathrm{2D}}^{\perp}$ are invariant with lattice size \textbf{b}.
+  $\varepsilon^{\parallel}_{\mathrm{SL}}$ (top) and
+  $\alpha_{\mathrm{2D}}^{\parallel}$ (bottom) as functions of $L$ for
+  the 2H TMDCs. \textbf{c}.  $\varepsilon^{\perp}_{\mathrm{SL}}$ (top)
+  and $\alpha_{\mathrm{2D}}^{\perp}$ (bottom) as functions of $L$ for
+  the 2H TMDCs. The polarizabilities in \textbf{b} and \textbf{c} are
+  constant when $L>$15 \AA{}, compared with the $L$-dependence of
+  $\varepsilon_{\mathrm{SL}}$. \textbf{d} and \textbf{e}: modeled
+  $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
+  $\varepsilon_{\mathrm{SL}}^{\perp}$ corresponding with \textbf{b}
+  and \textbf{c}, from Eqs. \ref{eq:alpha-para-def} and
+  \ref{eq:alpha-perp-def}, respectively.
+  % HSE06 functional is used in all plots.
+}
+\end{figure}
 We approach this problem showing that the current definition of
 $\varepsilon$ used in layered materials is ill defined as illustrated
 in Figure \ref{fig-1}.  From the theoretical point of view, an
@@ -413,6 +463,33 @@ of theory are needed to predict bandgaps. See Supplementary Section
 \ref{eq:2D-Moss-perp} using different bandgaps, databases, and levels
 of calculation.
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=9cm]{img/fig2.pdf}
+\caption{\label{fig-3} \textbf{The universal scaling relation of the
+    dielectric nature of 2D materials}. \textbf{a}. The structures of
+  the 2D materials investigated in this
+  study. \textbf{b}. $\alpha_{\mathrm{2D}}^{\parallel}$,
+  $\alpha_{\mathrm{2D}}^{\perp}$ (bar plots) and $E_{\mathrm{g}}$
+  (blue dots) for all the 2D materials studied.
+  $\alpha_{\mathrm{2D}}^{\parallel}$ is observed to descend with
+  increasing $E_{\mathrm{g}}$, while no apparent relation between
+  $\alpha_{\mathrm{2D}}^{\perp}$ and $E_{\mathrm{g}}$ is
+  observed. HSE06 functional is used to obtain the data. \textbf{c}.
+  $(4\pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ (in
+  \AA{}$^{-1}$) as a function of $E_{\mathrm{g}}$, showing a linear
+  correlation between each other. The energy range of visible light is
+  shown in the background. \textbf{d}.
+  $\alpha_{\mathrm{2D}}^{\perp}/(4\pi\varepsilon_{0})$ (in \AA{}) as a
+  function of $\delta_{\mathrm{cov}}$ (definition schematically shown
+  in the inset), showing a perfect linear relation with slope very
+  close to $1/4\pi$ (i.e.
+  $\alpha_{\mathrm{2D}}^{\perp} \approx \varepsilon_{0}
+  \delta_{\mathrm{cov}}$ ). The universal scaling relation is also
+  revealed using the data from Ref.~\citenum{Haastrup_2018} (squares),
+  as superimposed on \textbf{c} and \textbf{d}.}
+\end{figure}
+
 
 We further examine the relation between $\alpha_{\mathrm{2D}}^{\perp}$ and the
 thickness of a 2D material proposed in
@@ -518,21 +595,53 @@ qualitatively explains the inverse proportional relation between
 $\alpha_{\mathrm{2D}}^{\parallel}$ and $E_{\mathrm{g}}$ seen in
 Eq. \ref{eq:2D-Moss-para}.  This gives a geometrical interpretation of
 the bandgap in terms of the screening radius of the layer.
+\begin{table}
+  \centering
+  \caption{In-plane ($r_{0}^{\parallel}$) and out-of-plane
+    ($r_{0}^{\perp}$) radii of the polarizability ellipsoid of
+    selected 2D materials calculated from first principles
+    simulations. $r_{0}^{\parallel}$ is in general much larger than
+    $r_{0}^{\perp}$, which accounts for the highly anisotropic
+    dielectric nature of 2D materials.}
+  \label{tbl:radii}  
+  \begin{tabular}{lcc}
+    \hline
+    Material & $r_{0}^{\parallel} = \alpha_{\mathrm{2D}}^{\parallel}/2\varepsilon_{0}$ (\AA{}) &  $r_{0}^{\perp} = \alpha_{\mathrm{2D}}^{\perp}/2\varepsilon_{0}$ (\AA{})\\
+    \hline
+    2H-MoS$_{2}$ & 40.0 & 2.50 \\
+    2H-MoSe$_{2}$ & 45.5 & 2.72  \\
+    2H-MoTe$_{2}$ & 58.1 & 3.07  \\
+    2H-WS$_{2}$ & 35.7 & 2.46  \\
+    2H-WSe$_{2}$ & 41.0 & 2.71 \\
+    2H-WTe$_{2}$ & 53.5 &  3.17\\
+    \hline
+  \end{tabular}
+\end{table}
 
 
 %\subsection{Bridging the 2D and 3D Dielectric Properties}
 %\label{sec:2D-3D}
-
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{img/fig4.pdf}
+\caption{\label{fig-4} \textbf{Transition of dielectric properties
+    from 2D to 3D systems}. \textbf{a}. Scheme for the 2D-3D
+  transition. $\alpha$ in the 2D material is essentially equivalent to
+  $\varepsilon$ in its bulk counterpart. \textbf{b}
+  $\varepsilon_{\mathrm{bulk}}^{\parallel}$ calculated from DFT
+  (y-axis) compared with the predicted value from 2D
+  $\alpha_{\mathrm{2D}}^{\parallel}$ (x-axis), showing good correlation. \textbf{c}
+  $\varepsilon_{\mathrm{bulk}}^{\perp}$ calculated from DFT (y-axis)
+  compared with the predicted value from 2D $\alpha_{\mathrm{2D}}^{\parallel}$
+  (x-axis). The predicted value is in good aggreement with the DFT
+  calculation when $E_{\mathrm{g}}>4$ eV, due to minimal interlayer
+  coupling. The comparisons in \textbf{b} and \textbf{c} are made
+  based on both HSE06 (circles) and PBE (squares) functionals.}
+\end{figure}
 We next show that the underlying physical mechanism linking 
 polarizability to bandgaps allows us to further bridge 
 the dielectric properties between 2D materials and 
 their 3D bulk counterparts in a remarkable way. 
-%The dielectric constant $\varepsilon$, although not well-defined for
-%a monolayer 2D material, becomes applicable when the 2D layers are
-%stacked. 
-%
-%
-%
 In a bulk layered material stacked by layers with equilibrium
 inter-layer distance $L_{\mathrm{Bulk}}$, we define the polarizability
 of individual layer $\alpha_{\mathrm{2D}}(L=L_{\mathrm{Bulk}})$ as
@@ -587,6 +696,27 @@ dipoles\cite{Andersen_2015_dielec_vdWH,Laturia_2018}.
 %the degree of interlayer coupling, the dielectric transition from 2D
 %to 3D would be smoothly described.
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{img/fig5.pdf}
+  \caption{\textbf{Phase diagram of dielectric anisotropy $\eta$ as
+      function of bandgap $E_{\mathrm{g}}$}. The
+    $\eta$-$E_{\mathrm{g}}$ values of 2D materials (blue triangle) and
+    their bulk counterparts (orange square) can be distinguished by
+    the line $\eta=0.048(E_{\mathrm{g}}/\mathrm{eV})+0.087$. $\eta-E_{\mathrm{g}}$ values of
+    semiconducting materials in other dimensions are also superimposed
+    for comparison. Isotropic dielectric property is observed for bulk
+    covalent materials (3D, red triangle) and fullerenes (0D, green
+    star), while reduced dimensional materials, including planar
+    organic semiconductor(OSc, 1D-2D, brown triangle), carbon nanotube
+    (CNT, magenta circle) and linear OSc (0D-1D, violet pentagon) are
+    scattered along the boundary line. The dimensionality and
+    structure of typical materials are shown along the axis on the
+    right. Compared with other materials, 2D materials and their bulk
+    counterparts provide more flexibility of controlling the
+    dielectric anisotropy.}
+  \label{fig:aniso}
+\end{figure}
 Finally, we show that a general picture of the dielectric properties in
 any dimension can be drawn by studying the dielectric
 anisotropy. We define the dielectric anisotropy index $\eta$ as:
@@ -679,9 +809,7 @@ principles presented here will benefit both fundamental understanding
 of 2D materials as well as rational device design and optimization.
 
 
-\section{Theoretical Methods}
-\label{sec:org8457dbb}
-
+\matmethods{
 Simulations were carried out using plane-wave density functional
 theory package VASP \cite{Kresse_1993,Kresse_1996_1,Kresse_1996_2}
 using the projector augmented wave (PAW) approach with GW
@@ -717,21 +845,27 @@ layered materials using VASP were calculated at HSE06 level with
 while the dielectric properties of bulk counterparts of
 Ref.~\citenum{Haastrup_2018} are calculated at PBE level with a
 k-point density of 10~\AA$^{-1}$. Local field effect corrections are
-also used for the dielectric properties of bulk systems.
+also used for the dielectric properties of bulk systems.}
+\showmatmethods{}
 
-\section{Data Availability}
-The data that support the findings of this study are available from
-the corresponding author upon reasonable request.
+% FOR ES
+\acknow{T.T. and C.J. are thankful for the ETH start funding.}
+\showacknow{}
+
+% \subsection*{Data Availability}
+% The data that support the findings of this study are available from
+% the corresponding author upon reasonable request.
 
 
 
 \bibliography{ref}
 
 % \section{Figures}
-\label{sec:org34cbe74}
-\begin{figure}[H]
+
+\iffalse
+\begin{figure}
 \centering
-\includegraphics[width=0.75\linewidth]{img/fig1.pdf}
+\includegraphics[width=\linewidth]{img/fig1.pdf}
 \caption{\label{fig-1} \textbf{2D polarizability as the true
     descriptor of the dielectric nature of 2D materials.}
   \textbf{a}. 3D illustration of the spatial distribution of the
@@ -765,9 +899,9 @@ the corresponding author upon reasonable request.
   % materials investigated in this study.}
 % \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
-\includegraphics[width=0.7\linewidth]{img/fig2.pdf}
+\includegraphics[width=\linewidth]{img/fig2.pdf}
 \caption{\label{fig-3} \textbf{The universal scaling relation of the
     dielectric nature of 2D materials}. \textbf{a}. The structures of
   the 2D materials investigated in this
@@ -793,7 +927,7 @@ the corresponding author upon reasonable request.
 \end{figure}
 
 
-\begin{table}[H]
+\begin{table}
   \centering
   \caption{In-plane ($r_{0}^{\parallel}$) and out-of-plane
     ($r_{0}^{\perp}$) radii of the polarizability ellipsoid of
@@ -816,9 +950,9 @@ the corresponding author upon reasonable request.
   \end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
-\includegraphics[width=0.9\linewidth]{img/fig4.pdf}
+\includegraphics[width=\linewidth]{img/fig4.pdf}
 \caption{\label{fig-4} \textbf{Transition of dielectric properties
     from 2D to 3D systems}. \textbf{a}. Scheme for the 2D-3D
   transition. $\alpha$ in the 2D material is essentially equivalent to
@@ -834,9 +968,9 @@ the corresponding author upon reasonable request.
   based on both HSE06 (circles) and PBE (squares) functionals.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[width=1.01\linewidth]{img/fig5.pdf}
+  \includegraphics[width=\linewidth]{img/fig5.pdf}
   \caption{\textbf{Phase diagram of dielectric anisotropy $\eta$ as
       function of bandgap $E_{\mathrm{g}}$}. The
     $\eta$-$E_{\mathrm{g}}$ values of 2D materials (blue triangle) and
@@ -855,5 +989,6 @@ the corresponding author upon reasonable request.
     dielectric anisotropy.}
   \label{fig:aniso}
 \end{figure}
+\fi
 
 \end{document}
