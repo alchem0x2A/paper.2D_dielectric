@@ -32,7 +32,7 @@ def convert_pdf(infile, outdir="./img"):
     ]
     io = ["--file={}".format(infile),
           "--export-png={}".format(outfile),
-          "--export-dpi=600"]
+          "--export-dpi=150"]
     success = subprocess.call([program, *params, *io])
     
     if success != 0:
