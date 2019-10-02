@@ -366,4 +366,5 @@ img/*.pdf
 *_tmp*
 *.gpw
 data/distance/*/*.svg
-/PNAS/SI.pdf
+PNAS/
+tmp_img/

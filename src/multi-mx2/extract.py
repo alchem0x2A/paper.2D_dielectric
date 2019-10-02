@@ -52,7 +52,7 @@ def get_lattice_L(mater, n):
     return L
 
 
-fig = plt.figure(figsize=(5, 2.5))
+fig = plt.figure(figsize=(4.8, 2.4))
 ax1 = fig.add_subplot(121)
 ax2 = fig.add_subplot(122)
 
@@ -75,17 +75,22 @@ for m in ["Mo", "W"]:
             alpha_perp.append(alpha_perp_)
         alpha_para = numpy.array(alpha_para)
         alpha_perp = numpy.array(alpha_perp)
-        k_para, b_para, *_ = linregress(x=n_range, y=alpha_para)
-        k_perp, b_perp, *_  = linregress(x=n_range, y=alpha_perp)
-        l1, = ax1.plot(n_range, alpha_para, "o", markersize=4, label=mater)
-        l2, = ax2.plot(n_range, alpha_perp, "o", markersize=4, label=mater)
+        k_para, b_para, *_1 = linregress(x=n_range, y=alpha_para)
+        k_perp, b_perp, *_2  = linregress(x=n_range, y=alpha_perp)
+        print(b_para, _1, b_perp, _2)
+        l1, = ax1.plot(n_range, alpha_para, "o", markersize=5, label="2H-" + mater.replace("2", "$_{2}$"))
+        l2, = ax2.plot(n_range, alpha_perp, "o", markersize=5, label="2H-" + mater.replace("2", "$_{2}$"))
         ax1.plot(ext_n, k_para * ext_n + b_para, "--", color=l1.get_c())
         ax2.plot(ext_n, k_perp * ext_n + b_perp, "--", color=l2.get_c())
 
 ax1.set_xlabel("Number of Layers ($N$)")
-ax1.set_ylabel("$\\alpha_{\\rm{2D}}^{\\parallel}/(4 \\pi \\varepsilon_0)$ ($\\mathrm{\\AA}$)")
+ax1.set_ylabel("$\\alpha_{\\rm{NL}}^{\\parallel}/(4 \\pi \\varepsilon_0)$ ($\\mathrm{\\AA}$)")
 ax2.set_xlabel("Number of Layers ($N$)")
-ax2.set_ylabel("$\\alpha_{\\rm{2D}}^{\\perp} / (4 \\pi \\varepsilon_0)$ ($\\mathrm{\\AA}$)")
+ax2.set_ylabel("$\\alpha_{\\rm{NL}}^{\\perp} / (4 \\pi \\varepsilon_0)$ ($\\mathrm{\\AA}$)")
+ax1.text(x=0.5, y=0.5, s="$\\alpha_{\\rm{NL}}^{\\parallel} = N \\alpha_{\\mathrm{2D}}^{\\parallel}$",
+         transform=ax1.transAxes)
+ax2.text(x=0.5, y=0.5, s="$\\alpha_{\\rm{NL}}^{\\perp} = N \\alpha_{\\mathrm{2D}}^{\\perp}$",
+         transform=ax2.transAxes)
 ax1.legend()
 ax2.legend()
 
