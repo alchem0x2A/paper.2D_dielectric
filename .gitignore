@@ -1,3 +1,14 @@
+*.tar.gz
+*.docx
+*.ods
+data/EPFL-data/selected_structures/*.png
+data/EPFL-data/selected_structures/*.xsf
+data/EPFL-data/*/*.png
+*.xsf
+ltximg/
+*_change*
+*-compak*
+*-change*
 *old*
 *bak*
 img/*.ps
