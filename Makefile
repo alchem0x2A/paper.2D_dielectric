@@ -10,6 +10,9 @@ PDFLATEX_TAG= -interaction=nonstopmode -draftmode
 
 all: main SI diff
 
+convert:
+	python3 convert.py
+
 main:
 	pdflatex $(PDFLATEX_TAG) $(SI_FILE) #make SI.aux
 	latexmk $(LATEXMK_TAG) $(TEX_FILE)
@@ -20,10 +23,10 @@ SI:
 
 diff:
 	cp ./paper.tex ./paper.tex.bak
-	git checkout 9d1ba1b9 ./paper.tex #old version
+	git checkout 0ca1340 ./paper.tex #old version
 	cp paper.tex paper_old.tex
 	cp ./SI.tex ./SI.tex.bak	
-	git checkout 9d1ba1b9 ./SI.tex
+	git checkout 0ca1340 ./SI.tex
 	cp SI.tex SI_old.tex
 	git checkout HEAD ./paper.tex
 	git checkout HEAD ./SI.tex

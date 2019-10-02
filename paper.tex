@@ -758,6 +758,25 @@ the corresponding author upon reasonable request.
 }
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\linewidth]{img/fig-emt-uncertainty.pdf}
+  \caption{\label{fig-emt} \textbf{Failure of the effective 2D
+      ``dielectric constant'' picture based on the effective medium
+      theory (EMT)}. \textbf{a}.  Scheme of the EMT picture where an
+    effective 2D ``dielectric constant'' $\varepsilon_{\mathrm{2D}}$
+    is extracted from $\varepsilon_{\mathrm{SL}}$, which depends on
+    the thickness $\delta_{\mathrm{2D}}$ of the 2D material that is
+    not well-defined. \textbf{b}.  Estimation error between
+    $\delta_{\mathrm{2D}}^{\parallel, \text{fit}}$ and
+    $\delta_{\mathrm{2D}}^{\perp, \text{fit}}$ from non-linear fitting
+    of /ab initio/ $\varepsilon_{\mathrm{SL}} - L$ data for selected
+    2D metal dichacolgenides. The uncertainty of
+    $\delta_{\mathrm{2D}}$ causes considerable variation of estimated
+    $\varepsilon_{\mathrm{2D}}^{\parallel}$ (\textbf{c}.) and in
+    particular $\varepsilon_{\mathrm{2D}}^{\perp}$ (\textbf{d}.).  }
+\end{figure}
+
 % \begin{figure}[htbp]
 % \centering
 % \includegraphics[width=0.8\linewidth]{./img/fig2.pdf}
@@ -789,50 +808,83 @@ the corresponding author upon reasonable request.
   $\alpha_{\mathrm{2D}}^{\perp} \approx \varepsilon_{0}
   \delta_{\mathrm{cov}}$ ). The universal scaling relation is also
   revealed using the data from Ref.~\citenum{Haastrup_2018} (squares),
-  as superimposed on \textbf{c} and \textbf{d}.}
+  and Ref.~\cite{Mounet_2018} (triangles) as superimposed on
+  \textbf{c} and \textbf{d}.}
 \end{figure}
 
 
-\begin{table}[H]
-  \centering
-  \caption{In-plane ($r_{0}^{\parallel}$) and out-of-plane
-    ($r_{0}^{\perp}$) radii of the polarizability ellipsoid of
-    selected 2D materials calculated from first principles
-    simulations. $r_{0}^{\parallel}$ is in general much larger than
-    $r_{0}^{\perp}$, which accounts for the highly anisotropic
-    dielectric nature of 2D materials.}
-  \label{tbl:radii}  
-  \begin{tabular}{lcc}
-    \hline
-    Material & $r_{0}^{\parallel} = \alpha_{\mathrm{2D}}^{\parallel}/2\varepsilon_{0}$ (\AA{}) &  $r_{0}^{\perp} = \alpha_{\mathrm{2D}}^{\perp}/2\varepsilon_{0}$ (\AA{})\\
-    \hline
-    2H-MoS$_{2}$ & 40.0 & 2.50 \\
-    2H-MoSe$_{2}$ & 45.5 & 2.72  \\
-    2H-MoTe$_{2}$ & 58.1 & 3.07  \\
-    2H-WS$_{2}$ & 35.7 & 2.46  \\
-    2H-WSe$_{2}$ & 41.0 & 2.71 \\
-    2H-WTe$_{2}$ & 53.5 &  3.17\\
-    \hline
-  \end{tabular}
-\end{table}
+
+
+% \begin{table}[H]
+%   \centering
+%   \caption{In-plane ($r_{0}^{\parallel}$) and out-of-plane
+%     ($r_{0}^{\perp}$) radii of the polarizability ellipsoid of
+%     selected 2D materials calculated from first principles
+%     simulations. $r_{0}^{\parallel}$ is in general much larger than
+%     $r_{0}^{\perp}$, which accounts for the highly anisotropic
+%     dielectric nature of 2D materials.}
+%   \label{tbl:radii}  
+%   \begin{tabular}{lcc}
+%     \hline
+%     Material & $r_{0}^{\parallel} = \alpha_{\mathrm{2D}}^{\parallel}/2\varepsilon_{0}$ (\AA{}) &  $r_{0}^{\perp} = \alpha_{\mathrm{2D}}^{\perp}/2\varepsilon_{0}$ (\AA{})\\
+%     \hline
+%     2H-MoS$_{2}$ & 40.0 & 2.50 \\
+%     2H-MoSe$_{2}$ & 45.5 & 2.72  \\
+%     2H-MoTe$_{2}$ & 58.1 & 3.07  \\
+%     2H-WS$_{2}$ & 35.7 & 2.46  \\
+%     2H-WSe$_{2}$ & 41.0 & 2.71 \\
+%     2H-WTe$_{2}$ & 53.5 &  3.17\\
+%     \hline
+%   \end{tabular}
+% \end{table}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth]{img/fig4.pdf}
-\caption{\label{fig-4} \textbf{Transition of dielectric properties
-    from 2D to 3D systems}. \textbf{a}. Scheme for the 2D-3D
+\caption{\label{fig-4} \textbf{Application of 2D polarizability to
+    multilayer and 3D systems}.  \textbf{a}. Scheme for the 2D-3D
   transition. $\alpha$ in the 2D material is essentially equivalent to
-  $\varepsilon$ in its bulk counterpart. \textbf{b}
+  $\varepsilon$ in its bulk counterpart.  By applying the concept of
+  electronic polarizability to multilayer 2D materials, the multilayer
+  polarizabilities $\alpha_{\mathrm{NL}}^{\parallel}$ and
+  $\alpha_{\mathrm{NL}}^{\perp}$ of selected 2D metal dichacolgenides
+  as functions of number of layers $N$ are shown in \textbf{a} and
+  \textbf{b}, respectively. Both $\alpha_{\mathrm{NL}}^{\parallel}$
+  and $\alpha_{\mathrm{NL}}^{\perp}$ linearly scales with $N$ and the
+  electronic polarizabilities of monolayer, indicating that
+  $\alpha_{\mathrm{2D}}$ is an additive quantity under weak
+  interacting regime. The 2D to 3D transition is further studied in
+  \textbf{c} and \textbf{d}, where $\alpha_{\mathrm{2D}}$ of an
+  monolayer 2D material is compared with its bulk counterpart
+  $\varepsilon_{\mathrm{Bulk}}$. \textbf{c}
   $\varepsilon_{\mathrm{bulk}}^{\parallel}$ calculated from DFT
   (y-axis) compared with the predicted value from 2D
-  $\alpha_{\mathrm{2D}}^{\parallel}$ (x-axis), showing good correlation. \textbf{c}
-  $\varepsilon_{\mathrm{bulk}}^{\perp}$ calculated from DFT (y-axis)
-  compared with the predicted value from 2D $\alpha_{\mathrm{2D}}^{\parallel}$
-  (x-axis). The predicted value is in good aggreement with the DFT
-  calculation when $E_{\mathrm{g}}>4$ eV, due to minimal interlayer
-  coupling. The comparisons in \textbf{b} and \textbf{c} are made
-  based on both HSE06 (circles) and PBE (squares) functionals.}
+  $\alpha_{\mathrm{2D}}^{\parallel}$ (x-axis), showing good
+  correlation. \textbf{d} $\varepsilon_{\mathrm{bulk}}^{\perp}$
+  calculated from DFT (y-axis) compared with the predicted value from
+  2D $\alpha_{\mathrm{2D}}^{\parallel}$ (x-axis). The predicted value
+  is in good aggreement with the DFT calculation when
+  $E_{\mathrm{g}}>4$ eV, due to minimal interlayer coupling. The
+  comparisons in \textbf{b} and \textbf{c} are made based on both
+  HSE06 (circles) and PBE (squares) functionals.}
 \end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width-0.8\linewdith]{img/fig-ellipsoid.pdf}
+  \caption{\label{fig-ellip} \textbf{Geometric representation of the
+      2D polarizability}. \textbf{a}. Scheme of the polarizability
+    ellipsoid of a 2D material, with its in-plane
+    ($r_{0}^{\parallel}$) and out-of-plane radii
+    ($r_{\mathrm{0}}^{\perp}$) proportional to
+    $\alpha_{\mathrm{2D}}^{\parallel}$ and
+    $\alpha_{\mathrm{2D}}^{\perp}$, respectively.  The values of
+    $r_{0}^{\parallel}$ and $r_{0}^{\perp}$ for selected 2D metal
+    dichalcogenides are shown in \textbf{b} and \textbf{c},
+    respectively.  }
+\end{figure}
+
+
 
 \begin{figure}[H]
   \centering

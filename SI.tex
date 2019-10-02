@@ -127,16 +127,32 @@ values of $\alpha_{\mathrm{2D}}$.
 \label{ssec:gw}
 
 Here we will show the results of dielectric properties calculated
-using many-body Green function method (G$_0$W$_{0}$) and with
+using many-body Green function method (G$_{0}$W$_{0}$) and with
 electron-hole interactions at the level of the Bethe-Salpeter equation
-(G$_0$W$_{0}$--BSE). Frequency-dependent dielectric functions
-$\varepsilon_{\mathrm{SL}}(\omega)$ at both G0W0 and G0W0--BSE levels
-are calculated using VASP, with a cutoff energy of XXX and k point
-density of YYY. Local field effect is included in both cases: local
-field correction is applied to independent-particle energies in G0W0
-at RPA level with VASP TAG \texttt{LRPA=.TRUE.}, while the full
-polarizability is calculated using BSE in G0W0-BSE
-\todo[inline]{@Declan, could you help modify this part?}
+(G$_{0}$W$_{0}$–BSE). Frequency-dependent dielectric functions,
+$\varepsilon_{\mathrm{SL}}(L)$, were calculated at the level of
+G$_{0}$W$_{0}$ and G$_{0}$W$_{0}$+BSE levels using VASP. For the
+calculations on G$_{0}$W$_{0}$, a 12$\times$12$\times$1 $\Gamma$-centered k-grid was
+used along with an 800 eV energy cutoff in the plane waves and in
+calculation of the response function. 120 bands (4 occupied and 116
+unoccupied) were used in the calculation of
+$\varepsilon_{\mathrm{SL}}(\omega)$ of monolayer BN, with local-field
+effects being included on the RPA level. For the calculation of the
+Bethe-Salpeter equation, the Tamm-Dancoff approximation was used with
+two occupied and two unoccupied bands being included in the
+calculation.
+
+% Here we will show the results of dielectric properties calculated
+% using many-body Green function method (G$_0$W$_{0}$) and with
+% electron-hole interactions at the level of the Bethe-Salpeter equation
+% (G$_0$W$_{0}$--BSE). Frequency-dependent dielectric functions
+% $\varepsilon_{\mathrm{SL}}(\omega)$ at both G0W0 and G0W0--BSE levels
+% are calculated using VASP, with a cutoff energy of XXX and k point
+% density of YYY. Local field effect is included in both cases: local
+% field correction is applied to independent-particle energies in G0W0
+% at RPA level with VASP TAG \texttt{LRPA=.TRUE.}, while the full
+% polarizability is calculated using BSE in G0W0-BSE
+% \todo[inline]{@Declan, could you help modify this part?}
 
 We first compare the case of a monolayer of BN within a varying
 superlattice $L$ calculated using PBE and G$_{0}$W$_{0}$ as shown in
