@@ -33,14 +33,14 @@ def main(method="BSE", direction="in_plane"):
         ax.set_xlabel("Energy (eV)")
     if method == "GW":
         if direction == "in_plane":
-            lim = [8, 12]
+            lim = [0, 12]
         else:
-            lim = [13, 17]
+            lim = [0, 17]
     else:
         if direction == "in_plane":
-            lim = [6, 10]
+            lim = [0, 10]
         else:
-            lim = [11, 15]
+            lim = [0, 15]
     # for ax in [ax3, ax4]:
         # ax.set_xlim(6, )
     # Set ylabel
