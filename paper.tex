@@ -42,7 +42,7 @@
 %\title{The Unified Nature of the Dielectric Properties of Two-Dimensional Materials}
 % \title{Unified Understanding of the Dielectric Nature of Two-Dimensional Materials}
 
-\keywords{Dielectric property, electronic polarizability, two-dimensional material, scaling relation, first principles simulations, dielectric anisotropy}
+\keywords{Dielectric screening, electronic polarizability, two-dimensional material, scaling relation, first principles simulations, dielectric anisotropy}
 
 \begin{tocentry}
   \centering
@@ -62,26 +62,35 @@
   The dielectric constant, which defines the polarization of
   the media, is a key quantity in condensed matter. It determines
   several electronic and optoelectronic properties important for a
-  plethora of modern technologies from computer memory to field effect
-  transistors and communication circuits. Moreover, the importance of
-  the dielectric constant in describing electromagnetic interactions
-  through screening plays a critical role in understanding fundamental
-  molecular interactions. Here we show that despite its fundamental
+  plethora of modern technologies, and its importance of 
+  % from computer memory to field effect
+  % transistors and communication circuits. Moreover, the importance of
+  % the dielectric constant in
+  describing electromagnetic interactions through screening plays a
+  critical role in understanding fundamental molecular
+  interactions. Here we show that despite its fundamental
   transcendence, the dielectric constant does not define unequivocally
   the dielectric properties of two-dimensional (2D) materials due to
-  the locality of their electrostatic screening. Instead, the electric
-  polarizability correctly captures the dielectric nature of a 2D
-  material which is united to other physical quantities in an
-  atomically thin layer. We reveal a long-sought universal formalism
-  where electronic, geometrical and dielectric properties are
-  intrinsically correlated through the polarizability opening the door
-  to probe quantities yet not directly measurable including the real
-  covalent thickness of a layer. We unify the concept of dielectric
-  properties in any material dimension finding a global dielectric
-  anisotropy index defining their controllability through
-  dimensionality.
+  the locality of their electrostatic screening. Instead, the
+  electronic polarizability correctly captures the dielectric nature
+  of a 2D material which is united to other physical quantities in an
+  atomically thin layer. Being a quantity with unique definition, the
+  electronic polarizability overcomes the disadvantage of uncertainty
+  posed by the effective dielectric constant model conventionally used
+  to described screening in 2D material systems.  Furthermore, we
+  reveal a long-sought universal formalism where electronic,
+  geometrical and dielectric properties are intrinsically correlated
+  through the polarizability opening the door to probe quantities yet
+  not directly measurable including the real covalent thickness of a
+  layer. Lastly, we unify the concept of dielectric properties in any
+  material dimension finding a global dielectric anisotropy index
+  defining their controllability through dimensionality.
 \end{abstract}
 
+\pagebreak{}
+
+\section{Introduction}
+\label{sec:introduction}
 
 The dielectric constant $\varepsilon$ (also known as the relative permittivity) 
 plays a crucial role in bridging various fundamental material
@@ -94,40 +103,75 @@ where is common to classify a material accordingly to its ability to screen an
 electric field $\boldsymbol{E}$ in terms of insulators, metals and semiconductors. Such definitions determine a broad range of 
 condensed matter physics, as well as in related fields in chemistry and materials science. 
 The ability to compute and measure $\varepsilon$ in bulk materials is well established via different 
-theoretical and experimental techniques of distinct flavors where the probe of the dielectric properties 
-is made through an external electric field. 
+theoretical \cite{Adler_1962,Hybertsen_1987} and experimental techniques \cite{palik_1998handbook} of distinct flavors
+% where the probe of the dielectric properties 
+% is made through an external electric field. 
 %
 Despite its obvious appeal, however, it is still unknown whether such quantity can determine the 
-electronic and dielectric properties of two-dimensional (2D) materials \cite{Novoselov_2016}.  
+% electronic and
+dielectric properties of two-dimensional (2D) materials \cite{Novoselov_2016}.  
 %
-The confined nature of the electrons in such atomically thin space associated with the 
-attenuated and anisotropic character of the dielectric screening of 2D crystals 
+The confined nature of such atomically-thin 2D crystals associated
+with the attenuated and anisotropic character of the dielectric
+screening
 \cite{Keldysh_1979_eps_multi,Sharma_1985,Low_2014_screening_BP,Cudazzo_2011_screening_2D,Bechstedt_2012,Cudazzo_2010_screen2D,Nazarov_2015_2D_3D}
-have generated long-standing debates whether the dielectric constant 
-may represent their dielectric features or it can be used only as an 
-additional parameter from the bulk-counterparts. 
-
+have generated long-standing debates whether the dielectric constant
+truly represents dielectric features of such low-dimensional systems,
+% or it can be used only as an
+% additional parameter from the bulk-counterparts.
+The controversy of
+$\varepsilon$ values reported by both theoretical and experimental
+approaches can be widely seen throughput literature\cite{Li_2016},
+where the variation of $\varepsilon$ can be more than one order of
+magnitude. As a consequence, several key physical parameters that
+scales with $\varepsilon$, such as the exciton binding energy and
+Debye screening length, cannot be reliably estimated due to the
+discrepancy of reported $\varepsilon$ values. In this letter, we give
+a thorough study of the underlying issue. Using \textbf{ab initio}
+simulations of a model system, we demonstrate that the macroscopic
+dielectric constant strongly depends on the size of the superlattice,
+making it unsuitable to describe the screening of a 2D material. On
+the contrary, by analyzing the formalism of dielectric tensors, we
+propose that the electronic polarizability is the true descriptor
+which uniquely captures the dielectric nature of 2D materials. The 2D
+electronic polarizability has unique definition, which overcomes the
+disadvantage of ambiguity compared with the conventionally used
+effective dielectric medium model for 2D materials. Moreover, we show
+the universal scaling relations for in- and out-of-plane 2D electronic
+polarizabilities with the electronic and geometric information of the
+2D material. The concept of electronic polarizabilities bridges the
+gap between the dielectric properties of 2D and 3D systems, and can be
+extended to characterize the dielectric anisotropy for any material
+dimensions.
 
 
 %%
 %%
-We approach this problem showing that the current definition of
-$\varepsilon$ used in layered materials is ill defined as illustrated
-in Figure \ref{fig-1}.  From the theoretical point of view, an
-isolated 2D material is placed in the \textit{xy}-plane of a
-periodically repeating superlattice (SL) with a length $L$ along the
-\textit{z}-direction separating the cell images. The static macroscopic
-dielectric tensor from the superlattice
+
+\section{Results and discussions}
+\label{sec:results-discussions}
+
+\subsection{Lattice-dependency of macroscopic dielectric constant}
+\label{sec:latt-depend-macr}
+
+We first approach the discrepancy of macroscopic dielectric constant
+of 2D materials, by showing that the current definition of
+$\varepsilon$ used in layered materials is ill defined.  This can be
+viewed in a model system as illustrated
+in Figure \ref{fig-1}, where an isolated 2D material is placed in
+the \textit{xy}-plane of a periodically repeating superlattice (SL)
+with a length $L$ along the \textit{z}-direction separating the cell
+images. The static macroscopic dielectric tensor from the superlattice
 $\varepsilon_{\mathrm{SL}}^{pq}$, is determined through fundamental
 electrostatics by the response of the polarization density
 $\boldsymbol{P}^{p}$ under small perturbative external field
 $\boldsymbol{E}^{q}$, where $p$, $q$ are the directions of
 polarization and electric field,
-respectively\cite{Dressel_2001_electrodynamics}:
+respectively~\cite{Dressel_2001_electrodynamics}:
 \begin{subequations}
   \begin{eqnarray}
       \label{eq:def-eps-1}
-    &\varepsilon^{pq} &= \kappa^{pq} +
+    &\varepsilon_{\mathrm{SL}}^{pq} &= \kappa^{pq} +
                                  {\displaystyle \frac{\partial \boldsymbol{P}^{p}}
                                  {\varepsilon_{0} \partial \boldsymbol{E}^{q}}} \\
           \label{eq:def-eps-2}
@@ -138,95 +182,93 @@ respectively\cite{Dressel_2001_electrodynamics}:
   \end{eqnarray}
 \end{subequations}
 where $\kappa$ is the dielectric tensor of the environment,
-$\boldsymbol{u}$ is the total dipole moments within the SL, $\rho$ is
+$\boldsymbol{u}$ is the total dipole moment within the SL, $\rho$ is
 the spatial charge density, $\Omega=AL$ is the volume of the
 supercell, $A$ is the \textit{xy}-plane area of the SL and
-$\varepsilon_{0}$ is vacuum permittivity. Here we only study the
-electronic contribution to the macroscopic dielectric constant where
-the dipole $\boldsymbol{P}$ comes from the displacement of electron
-cloud under external electric field, while the ionic contribution
-\cite{Laturia_2018} ($\boldsymbol{P}$ comes from the displacement of
-nuclei) to the static $\varepsilon$ is not considered.
-For the majority of the 2D nanosheets, the
-off-diagonal elements of the dielectric tensor ($p \neq q$) tend to be
-negligible.  Considering that the 2D material is placed in vacuum
-($\kappa^{pp} = 1$ and $\kappa^{pq} = 0$), we can distinguish two
-components of $\varepsilon$, namely the in-plane
-($\varepsilon_{\mathrm{SL}}^{\parallel}$) and out-of-plane
+$\varepsilon_{0}$ is vacuum permittivity. Here we limit out study on
+the electronic contribution to the macroscopic dielectric constant
+where the dipole $\boldsymbol{P}$ comes from the displacement of
+electrons under external field.  On the other hand, the ionic
+contribution to $\varepsilon_{\mathrm{SL}}$ that comes from
+displacement of atomic nuclei is not covered in this due to its
+complex dependency on several factors including phonon
+dispersion~\cite{Sohier_2017} as well as lattice
+symmetry~\cite{Laturia_2018}, which requires separated discussions.
+The symmetry of 2D materials lead to the negligible off-diagonal
+elements of the dielectric tensor ($p \neq q$), while and diagonal
+elements $\varepsilon_{\mathrm{SL}}^{xx}$,
+$\varepsilon_{\mathrm{SL}}^{yy}$ and $\varepsilon_{\mathrm{SL}}^{zz}$
+can be different \cite{Sohier_2016}.  Considering that the 2D material
+is placed in vacuum ($\kappa^{pp} = 1$ and $\kappa^{pq} = 0$), we can
+distinguish two components of $\varepsilon_{\mathrm{SL}}$, namely the
+in-plane ($\varepsilon_{\mathrm{SL}}^{\parallel}$) and out-of-plane
 ($\varepsilon_{\mathrm{SL}}^{\perp}$) dielectric constants, where
 $\varepsilon_{\mathrm{SL}}^{\parallel} =
 (\varepsilon_{\mathrm{SL}}^{xx} + \varepsilon_{\mathrm{SL}}^{yy})/2$
 and
 $\varepsilon_{\mathrm{SL}}^{\perp} = \varepsilon_{\mathrm{SL}}^{zz}$.
 The absence of bonding perpendicular to the plane confines the induced
-dipoles along the \textit{z}-direction in a range of 
-$\sim{}$5--6 \AA{} into the vacuum (Figure \ref{fig-1}{\textbf a} and
-Supplementary Figure \ref{SI-fig:rho-profile}). 
+dipoles along the \textit{z}-direction within a range of $\sim{}$5--6
+\AA{} into the vacuum (Figure \ref{fig-1}{\textbf a} and Supplementary
+Figure \ref{SI-fig:rho-profile}).
 %
 %
-When $L$ is large
-enough, the induced dipoles $\boldsymbol{u}$ from the periodic images
-do not interact mutually as the integral in Eq. \ref{eq:def-eps-2}
-depends only locally on the atomic charge density at the layer.
-However, we can see from Eq. \ref{eq:def-eps-1} that both
+Under a certain external field, when $L$ increases, the confinement of
+the induced dipole moment $\boldsymbol{u}$ causes the integral in the
+numerator of Eq.~\ref{eq:def-eps-2} to be saturated, when the
+separation is large enough such that dipole moment from periodic
+images do not mutually interfere. On the other hand, the increase of
+$L$ in the denominator of Eq.~\ref{eq:def-eps-2} dilutes the polarization density, and in turn makes both
 $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
-$\varepsilon^{\perp}_{\mathrm{SL}}$ depend on $L$ via the volume of
-the cell $\Omega$. In the case of bulk materials such physical dependence 
-is well described given the periodicity of the 3D crystal throughout the space.  
+$\varepsilon^{\perp}_{\mathrm{SL}}$ dropping to
+unity when $L$ is infinitely large.
+% In the case of bulk materials
+% such physical dependence is well described given the periodicity of
+% the 3D crystal throughout the space.
 %
 %since this volume is used to represent the crystal 
 %periodically throughout the space.  
 %
 %
-In the case of 2D materials, however, such repetition is artificial along the direction 
-perpendicular to the plane. Despite of the simplicity of this argument,  
-any calculation performed using such
-definition will intrinsically depend on the magnitude of $L$ as an
-additional parameter. This dependence can be clearly demonstrated by
-plotting $\varepsilon^{\parallel}_{\mathrm{SL}}$ and
+% In the case of 2D materials, however, such repetition is artificial along the direction 
+% perpendicular to the plane.
+Despite of the simplicity of this argument, any calculation performed
+using such definition will intrinsically depend on the magnitude of
+$L$, an artificial parameter introduced by simulation system. This
+dependence can be clearly demonstrated by plotting
+$\varepsilon^{\parallel}_{\mathrm{SL}}$ and
 $\varepsilon^{\perp}_{\mathrm{SL}}$ calculated from density functional
-theory (DFT) using hybrid functionals (see {\it Theoretical Methods} for details)
-as a function of $L$ for P$\bar{6}$m2 transition metal
-dichalcogenides (TMDCs), 2H-MX$_{2}$, where M=Mo, W and X=S, Se, Te
-(top panels of Figure \ref{fig-1}{\textbf b} and \ref{fig-1}{\textbf c},
-respectively). Both components of the dielectric constant 
-change systematically with $L$ without a clear convergence. 
-%
-Simulations performed at higher levels of theory using many-body
-techniques, G$_{\rm 0}$W$_{0}$, invariably give alike results (see
-Supplementary Figure \ref{SI-fig:GW-PBE-alpha}).  We have also
-undertaken similar analysis into the frequency ($\omega$) regime for
+theory (DFT) (see {\it Theoretical Methods} for details) as a function
+of $L$ for P\={6}m2 transition metal dichalcogenides (TMDCs),
+2H-MX$_{2}$, where M=Mo, W and X=S, Se, Te (top panels of Figure
+\ref{fig-1}{\textbf b} and \ref{fig-1}{\textbf c}, respectively). To
+get a better description of the electronic band structure, the
+calculations of dielectric properties were performed at the level of
+Heyd-Scuseria-Ernzerhof (HSE06) hybrid functional
+\cite{Heyd_2003,Heyd_2006}.  Both components of the dielectric
+constant decreases with $L$ as excepted. To rule out the possibility
+that the result is affected by the choice of \textbf{ab initio}
+methods, we also performed simulations at higher levels of theory
+using many-body techniques (G$_{0}$W$_{0}$), which invariably give
+alike results (see Supplementary Figure \ref{SI-fig:GW-PBE-alpha}).
+The lattice-size dependency also exists for dielectric function in the
+frequency ($\omega$) domain. We carried out similar analysis for
+frequency-dependent $\varepsilon^{\parallel}_{\mathrm{SL}}(\omega)$
+and $\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$, as seen in
+Supplementary Section \ref{SI-ssec:gw}. Despite the different levels
+of techniques used (Perdew-Burke-Ernzerhof (PBE) exchange-correlation
+functional \cite{Perdew_1996,Ernzerhof_1999,Paier_2005}, HSE06 hybrid
+functionals or G\textsubscript{0}W\textsubscript{0} method), the
+magnitude of dielectric functions calculated universally decreases
+with $L$ over the frequency domain.  These results indicate that
+quantities that depend on
 $\varepsilon^{\parallel}_{\mathrm{SL}}(\omega)$ and
-$\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$ where the $L$-dependence
-remains present despite various methods utilized (see Supplementary
-Section \ref{SI-ssec:gw} for a systematic study).  These results
-indicate that quantities that depend on
-$\varepsilon^{\parallel}_{\mathrm{SL}}(\omega)$ and
-$\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$, for instance, the optical
-absorption, suffer the same deficiencies.
-%
-% Moreover, due to the long range Coulomb
-% interaction, variations of the quasi-particle energy (and
-% corresponding peak positions) with lattice constant $L$ at the
-% G$_{0}$W$_{0}$ level is observed (details see Supplementary Section
-% SXX). Such results implicate that several other related quantities,
-% including the optical absorption and optical conductivity, suffer the
-% same deficiencies, which should be avoided in a fully first principles
-% theory.
-%
-%
-%
-%as the computation of the dielectric function is based on alike formalism\cite{Ehrenreich-Cohen paper}
-% We can understand this behavior in terms of the electrostatic of the problem. 
-%
-%
-%
-%This result indicates that the use of the dielectric constant to represent 
-%dielectric properties at the static limit of a 2D material is 
-%ambiguous as the long-range correlations between the layers would only 
-%be negligible at the limit of $L \rightarrow \infty$, which incidentally modify the magnitudes of 
-%$\varepsilon^{\parallel, \perp}_{\mathrm{SL}}$ in the convergence. 
-%
+$\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$, including the optical
+absorption and electron energy loss spectrum (EELS), suffers the same
+deficiencies as $\varepsilon_{\mathrm{SL}}$ for 2D materials. This
+simple model system explains the origin of the discrepancy of dielectric constant values reported in previous literature~\cite{Li_2016}.
+
+{\color{magenta}
 It is worth mentioning that experimental dielectric results of 2D
 materials generally need to define an ``effective thickness'' of the sheet
 to interpret ellipsometry data
@@ -237,6 +279,7 @@ argue that such procedure may induce inevitably variations of the
 results as the thickness is normally chosen by the interlayer spacing
 of the respective bulk materials (see Supplementary Section
 \ref{SI-sec:2D-3D-rescale}).
+}
 %
 %%%
 %
@@ -254,32 +297,41 @@ of the respective bulk materials (see Supplementary Section
 %layer must always be considered. 
 %
 
-To solve this problem, we need to find the $L$-independent alternative
-of $\varepsilon_{\mathrm{SL}}$, which is related to both electrostatic
-and optical properties of a 2D material \cite{Matthes_2016}. As
-described before, by multiplying Eq.~\ref{eq:def-eps-2} with $L$ we
-obtain the sheet polarization density
-$\boldsymbol{\mu}_{\mathrm{2D}}$, that is,
-$\boldsymbol{\mu}_{\mathrm{2D}}^{p} =\boldsymbol{u}^{p}/A$, which is
-independent of $L$ due to the locality of $\boldsymbol{u}$ and $A$.
+\subsection{The electronic polarizability of 2D materials}
+\label{sec:electr-polar-2d}
+
+To solve the problem described above, we need to find the
+$L$-independent alternative of $\varepsilon_{\mathrm{SL}}$, which is
+related to both electrostatic and optical properties of a 2D
+material~\cite{Matthes_2016}. By multiplying Eq.~\ref{eq:def-eps-2}
+with $L$, we obtain the sheet polarization density that is,
+$\boldsymbol{\mu}_{\mathrm{2D}}^{p} =\boldsymbol{u}^{p}/A$, in
+direction $p$. Following the discussion in the previous section,
+$\boldsymbol{\mu}_{\mathrm{2D}}^{p}$ becomes independent of lattice
+size when $L$ is large enough, due to the saturation of
+$\boldsymbol{u}^{p}$.
 %
-Similar to the definition of molecular polarizability
-\cite{Israelachvili_2011}, $\boldsymbol{\mu}_{\mathrm{2D}}$ is
-associated with the 2D polarizability $\alpha_{\mathrm{2D}}$ through:
+Similar to the molecular polarizability \cite{Israelachvili_2011}, we
+can define a 2D electronic polarizability $\alpha_{\mathrm{2D}}$ which
+characterizes the ability to induce dipole moment of a 2D material. It
+is associated with $\boldsymbol{\mu}_{\mathrm{2D}}$ through:
 $\boldsymbol{\mu}_{\mathrm{2D}}^{p} = \sum_{q}
 \alpha_{\mathrm{2D}}^{pq} \boldsymbol{E}_{\mathrm{loc}}^{q}$
 \cite{T_bik_2004}, where $\boldsymbol{E}_{\mathrm{loc}}$ is the local
-electric field. Using electrostatic boundary conditions, the
-continuity of the electric field along the in-plane direction gives
-$\boldsymbol{E}^{\parallel}_{\mathrm{loc}}=\boldsymbol{E}^{\parallel}$
-\cite{Markel_2016}. For the out-of-plane component, the dipole
-screening yields
+electric field causing the polarization. At $L \rightarrow \infty$
+limit, $E_{\mathrm{loc}}$ can be solved using electrostatic boundary
+conditions of slab geometry \cite{Markel_2016}. The continuity of the
+electric field along the in-plane direction gives
+$\boldsymbol{E}^{\parallel}_{\mathrm{loc}}=\boldsymbol{E}^{\parallel}$,
+while for the out-of-plane component, the dipole screening yields
 $\boldsymbol{E}_{\mathrm{loc}}^{\perp}=\boldsymbol{E}^{\perp}+\boldsymbol{\mu}_{\mathrm{2D}}^{\perp}/L$
-\cite{Meyer_2001_dipole_slab,T_bik_2004}. Combining with
-Eqs. \ref{eq:def-eps-1} and \ref{eq:def-eps-2}, we can relate the 2D
-polarizabilities, $\alpha_{\mathrm{2D}}^{\parallel}$ and
-$\alpha_{\mathrm{2D}}^{\perp}$ with
-$\varepsilon_{\mathrm{SL}}^{\parallel}$ and
+\cite{Meyer_2001_dipole_slab,T_bik_2004}, where
+$\boldsymbol{E}^{\parallel}$ and $\boldsymbol{E}^{\perp}$ are the
+external field in the in-plane and out-of-plane directions,
+respectively. Combining with Eqs. \ref{eq:def-eps-1} and
+\ref{eq:def-eps-2},
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
+can be related with $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
 $\varepsilon_{\mathrm{SL}}^{\perp}$, respectively:
 %
 %
@@ -291,10 +343,11 @@ $\varepsilon_{\mathrm{SL}}^{\perp}$, respectively:
   &\varepsilon_{\mathrm{SL}}^{\perp} &= \left(1 - {\displaystyle \frac{\alpha_{\mathrm{2D}}^{\perp}}{\varepsilon_{\mathrm{0}} L}} \right)^{-1}
 \end{eqnarray}
 \end{subequations}
-Note due to the choice of $\varepsilon$ is limited to the electronic
-macroscopic dielectric constant, $\alpha_{\mathrm{2D}}$ naturally
-refers to the electronic polarizability (the polarizability of the
-electron cloud \cite{Israelachvili_2011}). We also note that such
+% 20191003-16:00
+% As pointed before, as we limit the discussion on electronic contributions to the dielectric properties, $\alpha_{\mathrm{2D}}$ characterizes the polarizability of electron cloud of a 2D materials.
+% refers to the electronic polarizability (the polarizability of the
+% electron cloud \cite{Israelachvili_2011}).
+{\color{magenta} We also note that such
 approach is essentially different from the effective medium theory
 \cite{Aspnes_1982,Markel_2016} (EMT) treatment of 2D materials, in
 which the hypothetical effective dielectric constant of 2D materials
@@ -306,14 +359,20 @@ approach, and $\alpha_{\mathrm{2D}}$ has an umambiguous physical
 meaning. Detailed discussions about the different between the 2D
 polarizability and the EMT approach, can be found in Supplementary
 Section \ref{SI-sec:2D-3D-rescale}.
+}
 %
 %
-The bottom panels of Figure \ref{fig-1}b and \ref{fig-1}c show the
+Using these relations, we show the calculated
 $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
-of the selected TMDCs as a function of $L$, calculated using
-Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def}. We observe
-that both $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$ reached 
-convergence in a much shorter vacuum length within 10 \AA ~and 15 \AA, respectively. 
+of the selected TMDCs as a function of $L$ in the bottom panels of
+Figure \ref{fig-1}b and \ref{fig-1}c, respectively.  In contrast to
+$\varepsilon_{\mathrm{SL}}^{\parallel}$ and
+$\varepsilon_{\mathrm{SL}}^{\perp}$, We observe that both
+$\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
+reach convergence when $L$ exceeds 10 \AA and 15 \AA, respectively.
+{\color{red} Convergence plot in SI} Such result is in good agreement
+with the spatially localized induced dipole moment of a 2D materials
+as shown in Supplementary Figure~\ref{SI-fig:rho-profile}. 
 %
 %
 Interestingly, we can use Eqs.\ref{eq:alpha-para-def} and
@@ -328,23 +387,25 @@ $\alpha_{\mathrm{2D}}^{\perp}$
 % abrupt variation of $\varepsilon_{\mathrm{SL}}^{\perp}$ with $L$ which is due to 
 % interlayer interactions.
 %\todo[inline]{The original claim of this sentence, that $\varepsilon_{\mathrm{SL}}^{\perp}$ varies more due to interlayer interactions is not 100\% true. I think it is better not to explicitly mention this.}
-Eqs. \ref{eq:alpha-para-def} and \ref{eq:alpha-perp-def} can also be used to remove 
-the dependence of $L$ on $\varepsilon^{\parallel}_{\mathrm{SL}}(\omega)$ and
-$\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$ via $\alpha^{\parallel}_{\mathrm{SL}}(\omega)$ and
-$\alpha^{\perp}_{\mathrm{SL}}(\omega)$, respectively (Supplementary Section \ref{SI-ssec:gw}). 
+Such relations can also be used to remove the dependence on $L$ for
+frequency-dependent $\varepsilon^{\parallel}_{\mathrm{SL}}(\omega)$
+and $\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$, generating
+lattice-independent electronic polarizability
+$\alpha^{\parallel}_{\mathrm{SL}}(\omega)$ and
+$\alpha^{\perp}_{\mathrm{SL}}(\omega)$ in the frequency domain,
+respectively (details see Supplementary Section \ref{SI-ssec:gw}).
 %
 % 
 % 
 % 
 % 
-These findings provide that the 2D polarizability captures the essence
-of the dielectric properties of layered materials as the microscopic
-quantity in describing the atomic interactions present in the
-layers. Its local nature removes the dependence on size effects
-present in the calculations.  More discussions about the choice of the
+These findings indicate that the electronic polarizability $\alpha_{\mathrm{2D}}$ captures the essence
+of the dielectric properties of 2D materials. In contrast to the ill-defined macroscopic $\varepsilon_{\mathrm{SL}}$, $\alpha_{\mathrm{2D}}$ has unique definition, and does not suffer from the dependency on the lattice size.
+More discussions about the choice of the
 2D polarizability, comparison with other methods, simulations at the
 frequency-dependent domain can be found in Supplementary Section
 \ref{SI-ssec:gw}.
+
 
 %\subsection*{Polarizability as the fundamental variable}
 %\label{sec:first-principles}
