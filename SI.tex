@@ -267,7 +267,29 @@ and the quasi-particle eigenenergies are found using:
 \begin{equation}\label{quasi}
 E^{\mathrm{QP}}_{\mathrm{n}\mathbf{k}}=\Re\Big[\braket{\phi_{\mathrm{n}\mathbf{k}}|-\frac{1}{2}\Delta+V_{\mathrm{ext}}+V_\mathrm{H}+\Sigma(\epsilon_{\mathrm{n}\mathbf{k}}^{\mathrm{DFT}})|\phi_{\mathrm{n}\mathbf{k}}}\Big]
 \end{equation}
-Therefore a new set of eigenergies, E$_{n\mathbf{k}}^{QP}$ are found. Using E$_{n\mathbf{k}}^{QP}$ it is then possible to recalculate the dielectric function using the quasi-particle eigenergies as well as the DFT eigenfunctions. 
+Therefore a new set of eigenergies, E$_{n\mathbf{k}}^{QP}$ are found. Using E$_{n\mathbf{k}}^{QP}$ it is then possible to recalculate the dielectric function using the quasi-particle eigenergies as well as the DFT eigenfunctions.
+
+For bulk systems, the accuracy of optical properties calculated
+generally ranks by PBE $<$ G\textsubscript{0}W\textsubscript{0} $<$
+BSE. This is because the calculation of the frequency-dependent
+optical properties of a material involves a summation over the valence
+and conduction states. Thus, the accuracy of these states determines
+the calculated optical properties. Within Kohn-Sham density functional
+theory (KS-DFT), the many-body effects are given by the
+exchange-correlation energy which is approximated by functionals based
+on the homogenous electron gas. This generally leads to an
+underestimation of the bandgap and results in the first optical peak
+being lower in energy in comparison to experiment. To go beyond
+KS-DFT, the G\textsubscript{0}W\textsubscript{0} approximation
+replaces the exchange-correlation energy with the self-energy in a bid
+to include many-body effects through the interacting Green's function,
+$G$, and the screened Coulomb potential, $W$. This generally leads to
+an overestimation of the first optical peak as electron-hole coupling
+is not taken into account. This can be remedied by solving the
+Bethe-Salpeter equation using the eigenvalues obtained from
+G\textsubscript{0}W\textsubscript{0}
+(G\textsubscript{0}W\textsubscript{0} + BSE) which generally gives
+good agreement with experiment.
 
 Due to the volume dependence of $\Sigma$ in equations \ref{self} and
 \ref{quasi}, increasing the vacuum spacing leads to a change in the
