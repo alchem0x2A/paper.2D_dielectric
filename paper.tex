@@ -267,19 +267,6 @@ $\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$, including the optical
 absorption and electron energy loss spectrum (EELS), suffers the same
 deficiencies as $\varepsilon_{\mathrm{SL}}$ for 2D materials. This
 simple model system explains the origin of the discrepancy of dielectric constant values reported in previous literature~\cite{Li_2016}.
-
-{\color{magenta}
-It is worth mentioning that experimental dielectric results of 2D
-materials generally need to define an ``effective thickness'' of the sheet
-to interpret ellipsometry data
-\cite{graphene-epsilon10,Duesberg14,Chiang13,Kong14}, reflectance or
-transmission spectra \cite{Li_2014, Yoffe-Wilson69} in order to
-extract information for the real part of the dielectric functions.  We
-argue that such procedure may induce inevitably variations of the
-results as the thickness is normally chosen by the interlayer spacing
-of the respective bulk materials (see Supplementary Section
-\ref{SI-sec:2D-3D-rescale}).
-}
 %
 %%%
 %
@@ -347,19 +334,7 @@ $\varepsilon_{\mathrm{SL}}^{\perp}$, respectively:
 % As pointed before, as we limit the discussion on electronic contributions to the dielectric properties, $\alpha_{\mathrm{2D}}$ characterizes the polarizability of electron cloud of a 2D materials.
 % refers to the electronic polarizability (the polarizability of the
 % electron cloud \cite{Israelachvili_2011}).
-{\color{magenta} We also note that such
-approach is essentially different from the effective medium theory
-\cite{Aspnes_1982,Markel_2016} (EMT) treatment of 2D materials, in
-which the hypothetical effective dielectric constant of 2D materials
-$\varepsilon_{\mathrm{2D}}$ are extracted from the macroscopic
-dielectric constant \cite{Matthes_2016,Laturia_2018}, from
-pre-determined 2D layer thickness $\delta$. The 2D electronic
-polarizability approach solves the issue of overestimation in the EMT
-approach, and $\alpha_{\mathrm{2D}}$ has an umambiguous physical
-meaning. Detailed discussions about the different between the 2D
-polarizability and the EMT approach, can be found in Supplementary
-Section \ref{SI-sec:2D-3D-rescale}.
-}
+
 %
 %
 Using these relations, we show the calculated
@@ -406,11 +381,105 @@ More discussions about the choice of the
 frequency-dependent domain can be found in Supplementary Section
 \ref{SI-ssec:gw}.
 
+\subsection{Comparison with effective dielectric model}
+\label{sec:comp-with-effect}
+
+Apart from the 2D electronic polarizability proposed here, it is worth
+mentioning that a widely-used approach in literature is to treat the
+2D material as a slab with an effective dielectric tensor
+$\varepsilon_{\mathrm{2D}}$ and thickness $\delta_{\mathrm{2D}}$. Such
+method can be found in both experimental and theoretical studies, such
+as to interpret ellipsometry data
+\cite{graphene-epsilon10,Duesberg14,Chiang13,Kong14}, reflectance /
+transmission spectra \cite{Li_2014, Yoffe-Wilson69}, optical
+conductance \cite{Matthes_2016} and many-body interactions
+\cite{Sohier_2016,Meckbach_2018} of 2D materials. The effective
+dielectric model allowing applying physical laws of bulk systems
+directly to 2D materials using $\varepsilon_{\mathrm{2D}}$. However,
+there are several drawbacks of such approach, first of all, the
+wavevector($q$)-dependency of dielectric screening in 2D
+sheets~\cite{Cudazzo_2011_screening_2D,Olsen_2016_hydrogen,Trolle_2017_eps_subst}
+is not captured. More severely, here we show that, due to the
+uncertainty of $\delta_{\mathrm{2D}}$, the calculated
+$\varepsilon_{\mathrm{2D}}$, in particular its out-of-plane component,
+is extremely sensitive to the choice of $\delta_{\mathrm{2D}}$, making
+such model questionable.
+
+The basic assumption of the effective dielectric model (EDM) can be
+seen in Figure~\ref{fig-emt}\textbf{a}, where the macroscopic
+$\varepsilon_{\mathrm{SL}}$ is considered to be contributed by (i) a
+2D slab with effective dielectric constant $\varepsilon_{\mathrm{2D}}$
+and thickness $\delta_{\mathrm{2D}}$ and (ii) vacuum spacing with
+distance $L-\delta_{\mathrm{2D}}$. Using the effective medium theory
+(EMT)~\cite{Aspnes_1982,Markel_2016}, the relation between
+$\varepsilon_{\mathrm{SL}}$ and $\varepsilon_{\mathrm{2D}}$ can be
+expressed using capacitance-like
+equations~\cite{Matthes_2016,Laturia_2018} :
+\begin{subequations}
+  \begin{eqnarray}
+    \label{eq:emt-1}
+    {\displaystyle \varepsilon_{\mathrm{SL}}^{\parallel}} &= {\displaystyle \frac{\delta_{\mathrm{2D}}}{L} \varepsilon_{\mathrm{2D}}^{\parallel} + \left(1 - \frac{\delta_{\mathrm{2D}}}{L} \right)}\\
+     \label{eq:emt-2}
+    {\displaystyle \frac{1}{\varepsilon_{\mathrm{SL}}^{\perp}}} &= {\displaystyle \frac{\delta_{\mathrm{2D}}}{L} \frac{1}{\varepsilon_{\mathrm{2D}}^{\perp}} + \left(1 - \frac{\delta_{\mathrm{2D}}}{L} \right)}
+  \end{eqnarray}
+\end{subequations}
+In principle, both the values of $\varepsilon_{\mathrm{2D}}$ and
+$\delta_{\mathrm{2D}}$ are unknown for a certain 2D material. To
+minimize the modeling error, we used non-linear least-square fitting
+to extract $\varepsilon_{\mathrm{2D}}$ and $\delta_{\mathrm{2D}}$ of
+selected 2H TMDCs simultaneously from \textit{ab initio}
+$\varepsilon_{\mathrm{SL}}$ -- $L$ data in
+Figure~\ref{fig-1}\textbf{b} and \ref{fig-1}\textbf{b} (details see
+Supplementary Figure~\ref{SI-fig:rescale-prb}). The fitted values of
+the slab thickness, $\delta_{\mathrm{2D}}^{\parallel, \mathrm{fit}}$
+and $\delta_{\mathrm{2D}}^{\perp, \mathrm{fit}}$ from in-plane and
+out-of-plane data, respectively, are shown in Supplementary
+Table~\ref{SI-tab:delta-L-DFt}. As seen in Figure
+\ref{fig-emt}\textbf{b}, the estimation error of the thickness
+estimated from different directions is around 0.06$\sim{}$0.27
+\AA{}. Although such uncertainty only corresponds to about
+1$\sim{}$4\% of the interlayer spacing in the bulk counterparts of
+these 2D materials, its influence on the calculated values
+$\varepsilon_{\mathrm{2D}}^{\parallel}$ and
+$\varepsilon_{\mathrm{2D}}^{\perp}$ is significant. We estimated the
+dispersion of $\varepsilon_{\mathrm{2D}}^{\parallel}$ and
+$\varepsilon_{\mathrm{2D}}^{\perp}$ if $\delta_{\mathrm{2D}}$ deviates
+from the best fitted value by $\pm{}$2.5 \AA{}, as shown in Figures
+\ref{fig-emt}\textbf{c} and \ref{fig-emt}\textbf{d},
+respectively. $\varepsilon_{\mathrm{2D}}^{\parallel}$ decays linearly
+with $\delta_{\mathrm{2D}}$ with a uncertainty of $\sim{}$10\%, while
+strikingly, the value $\varepsilon_{\mathrm{2D}}^{\perp}$ spans over
+more than one order of magnitude. The sensitivity of
+$\varepsilon_{\mathrm{2D}}^{\perp}$ to $\delta_{\mathrm{2D}}$ explains
+the discrepancy in literature that both isotropic~\cite{Sohier_2016}
+and highly anisotropic~\cite{Matthes_2016,Laturia_2018}
+$\varepsilon_{\mathrm{2D}}$ tensors for 2D materials under the EDM are
+reported. As a consequence, the estimated values of
+$\varepsilon_{\mathrm{2D}}$, in particular its out-of-plane component,
+is highly questionable.
+
+On the contrary, the proposed $\alpha_{\mathrm{2D}}$ approach does not
+suffer from such deficiencies, despite its relatively simple
+formalism. The relative uncertainty of $\alpha_{\mathrm{2D}}$ is
+generally at the order of 10\textsuperscript{-4} (Supplementary Figure
+{\color{red} XX}). In addition, the calculation of
+$\alpha_{\mathrm{2D}}$ technically simpler than
+$\varepsilon_{\mathrm{2D}}$: (i) $\alpha_{\mathrm{2D}}$ can be
+achieved using single-point calculation of macroscopic dielectric
+tensor, while $\varepsilon_{\mathrm{2D}}$ requires non-linear fitting
+of multiple $\varepsilon_{\mathrm{SL}}$ -- $L$ data points; (ii) the
+values of $\alpha_{\mathrm{2D}}$ typically converge well for large $L$
+($>$20 \AA{}), while $\varepsilon_{\mathrm{2D}}$ suffers from the
+uncertainty as described above. 
 
 %\subsection*{Polarizability as the fundamental variable}
 %\label{sec:first-principles}
 
 %We consider 
+
+\subsection{Universal scaling laws of $\alpha_{\mathrm{2D}}$}
+\label{sec:univ-scal-laws}
+
 
 As a consequence of Eqs. \ref{eq:alpha-para-def} and
 \ref{eq:alpha-perp-def}, we demonstrate that other quantities are
