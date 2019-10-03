@@ -352,12 +352,12 @@ as shown in Supplementary Figure~\ref{SI-fig:rho-profile}.
 %
 Interestingly, we can use Eqs.\ref{eq:alpha-para-def} and
 \ref{eq:alpha-perp-def} to reproduce the trends noticed in the top
-panels in Fig.\ref{fig-1}{\textbf b} and \ref{fig-1}{\textbf c} for
+panels in Figure\ref{fig-1}{\textbf b} and \ref{fig-1}{\textbf c} for
 $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
 $\varepsilon_{\mathrm{SL}}^{\perp}$ as a function of $L$ around a
 centered magnitude of $\alpha_{\mathrm{2D}}^{\parallel}$ and
 $\alpha_{\mathrm{2D}}^{\perp}$
-(Fig. \ref{fig-1}\textbf{d}-\textbf{e}).
+(Figure \ref{fig-1}\textbf{d}-\textbf{e}).
 % A similar curve profile is obtained in both components of the dielectric constant including the much 
 % abrupt variation of $\varepsilon_{\mathrm{SL}}^{\perp}$ with $L$ which is due to 
 % interlayer interactions.
@@ -381,7 +381,7 @@ More discussions about the choice of the
 frequency-dependent domain can be found in Supplementary Section
 \ref{SI-ssec:gw}.
 
-\subsection{Comparison with effective dielectric model}
+\subsection{Comparison with effective dielectric model (EDM)}
 \label{sec:comp-with-effect}
 
 Apart from the 2D electronic polarizability proposed here, it is worth
@@ -480,78 +480,96 @@ uncertainty as described above.
 \subsection{Universal scaling laws of $\alpha_{\mathrm{2D}}$}
 \label{sec:univ-scal-laws}
 
-
-As a consequence of Eqs. \ref{eq:alpha-para-def} and
-\ref{eq:alpha-perp-def}, we demonstrate that other quantities are
-intrinsically related to the polarizability.  Using random phase
-approximation (RPA) theory \cite{Adler_1962} within the
-$\mathbf{k} \cdot \mathbf{p}$ formalism\cite{kittel_2005_introduction}
-(see Supplementary Section \ref{SI-sec:theory-1} for details), we show
-that $\alpha_{\mathrm{2D}}^{\parallel}$ and
-$\alpha_{\mathrm{2D}}^{\perp}$ can be written as:
+For bulk materials, pioneering works from the 1950s have demonstrated
+empirical equations between $\varepsilon$ and the bandgap
+$E_{\mathrm{g}}$, including the
+Moss~\cite{Moss_1950_relation,Moss_1985_n_Eg,Finkenrath_1988} or
+Ravindra~\cite{Ravindra_1980_model,Ravindra_1979_eps_Eg} relations.
+Such universal relations, if exist in the context of
+$\alpha_{\mathrm{2D}}$, would be of high importance for studying and
+predicting the screening of 2D materials.  Inspired by the random
+phase approximation (RPA) theory \cite{Adler_1962} within the
+$\mathbf{k} \cdot \mathbf{p}$
+formalism\cite{kittel_2005_introduction,Jiang_2017_Eg_Eb}, we propose the universal relations for $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$,
+depending on the electronic and geometric information of a 2D material (see
+Supplementary Section \ref{SI-sec:theory-1} for details):
+% \begin{subequations}
+% \begin{eqnarray}
+% \label{eq:2D-Moss-para}
+  % &\alpha_{\mathrm{2D}}^{\parallel} &=C^{\parallel} E_{g}^{-1} \\
+  % \label{eq:2D-Moss-perp}
+  % &\alpha_{\mathrm{2D}}^{\perp} & =C^{\perp} \hat{\delta}_{\mathrm{2D}}
+% \end{eqnarray}
+% \end{subequations}
 \begin{subequations}
 \begin{eqnarray}
 \label{eq:2D-Moss-para}
-  &\alpha_{\mathrm{2D}}^{\parallel} &=C^{\parallel} E_{g}^{-1} \\
+  &E_{\mathrm{g}} &= C^{\parallel} \alpha_{\mathrm{2D}}^{\parallel} \\
   \label{eq:2D-Moss-perp}
-  &\alpha_{\mathrm{2D}}^{\perp} & =C^{\perp} \delta
+  &\hat{\delta}_{\mathrm{2D}} & = C^{\perp} \alpha_{\mathrm{2D}}^{\perp} 
 \end{eqnarray}
 \end{subequations}
-where $E_{\mathrm{g}}$ is the minimal electronic bandgap, $\delta$ is
-the intrinsic thickness of the layer (Fig. \ref{fig-1}{\textbf a}), and
-$C^{\parallel} = {\displaystyle \frac{Ne^2}{2 \pi}}$ \cite{Jiang_2017_Eg_Eb}, where
-$N$ corresponds to the degeneracy of the bands associated with
-$E_{\mathrm{g}}$, and $C^{\perp} = {\varepsilon_{0}}$.
-% \todo[inline]{The previous expressions for the coefficients are
-  % wrong. Please see the version in SI}
-Despite of the simplicity of Eqs. \ref{eq:2D-Moss-para} and
-\ref{eq:2D-Moss-perp}, they generalize a direct relationship between
-the polarizability and the electronic and structural properties for
-any 2D material in a new framework.  We show that these equations are
-valid for the current library of known layered materials involving
-different lattice symmetry, element composition, optical and
-electronic properties.
+where $E_{\mathrm{g}}$ is the fundamental electronic bandgap and
+$\hat{\delta}_{\mathrm{2D}}$ is the intrinsic thickness of the 2D
+layer, with coefficients
+$C^{\parallel} = {\displaystyle \frac{2 \pi}{Ne^2}}$
+\cite{Jiang_2017_Eg_Eb}, where $N$ is a pre-factor associated with the
+band degeneracy, and $C^{\perp} = {\varepsilon_{0}}^{-1}$. It is worth
+noting, unlike the parameter $\delta_{\mathrm{2D}}$ that is
+artificially assigned within the EDM picture (see previous section),
+$\hat{\delta_{\mathrm{2D}}}$ can be uniquely defined by
+$\alpha_{\mathrm{2D}}^{\parallel}$, a quantity that can be
+computationally and experimentally determined. Despite of the
+simplicity of Eqs. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp},
+they generalize direct relationships between the electronic polarizability and
+the electronic / structural properties for any 2D material in a new
+framework.
+
+Next, we show that these equations are valid for the current
+library of known layered materials involving different lattice
+symmetry, element composition, optical and electronic properties.
 %
 A high-throughput screening performed on different families of TMDCs
 (MX\(_{\text{2}}\), where M is a metal in groups 4, 6, 10, and X=O, S,
-Se, Te) and phases (P\(\bar{6}\)m2, P3m1), metal monochalcogenides
-(Ga$_{2}$S$_{2}$, Ga$_{2}$Se$_{2}$), cadmium halides (CdX$_2$, X=Cl,
-I), hexagonal boron nitride (BN), graphene derivatives (fluorographene
-(C$_{2}$F$_{2}$), graphane (C$_{2}$H$_{2}$)), phosphorene (P$_{4}$)
-and thin layer organic-inorganic perovskites (ABX$_{3}$)
-(Fig. \ref{fig-3}{\textbf a}) shows that our method enables full
-correlation between these disparate variables.  Figure
-\ref{fig-3}{\textbf b} compares the calculated fundamental bandgap
-$E_{\mathrm{g}}$ (blue dots) and 2D electronic polarizabilities (bar
-plots) of all the 2D materials investigated, covering a wide spectrum
-range from far-infrared to ultraviolet.  Note from dimension analysis,
-it is more intuitive to express the polarizability as
-$\alpha_{\mathrm{2D}}/(4 \pi \varepsilon_{0})$, which has unit of
-\AA. We find that $\alpha_{\mathrm{2D}}^{\parallel}$ has a general
-descending trend when $E_{\mathrm{g}}$ increases, while no apparent
-correlation between $\alpha_{\mathrm{2D}}^{\perp}$ and
-$E_{\mathrm{g}}$ is observed (see Supplementary Section
-\ref{SI-sec:pol-2D-Eg}).  We then examine Eqs. \ref{eq:2D-Moss-para}
-and \ref{eq:2D-Moss-perp} using the polarizabilities by
-first-principle calculations.  Figure \ref{fig-3}{\textbf c} shows
+Se, Te) and phases (P\={6}m2, P3m1), metal monochalcogenides
+(Ga\textsubscript{2}S\textsubscript{2},
+Ga\textsubscript{2}Se\textsubscript{2}), cadmium halides (CdX$_2$,
+X=Cl, I), hexagonal boron nitride (BN), graphene derivatives
+(fluorographene (C\textsubscript{2}F\textsubscript{2}), graphane
+(C\textsubscript{2}H\textsubscript{2})), phosphorene
+(P\textsubscript{4}) and thin layer organic-inorganic perovskites
+(ABX\textsubscript{3}) (Figure \ref{fig-3}{\textbf a}) shows that our
+method enables full correlation between these disparate variables.
+Figure \ref{fig-3}{\textbf b} compares the calculated fundamental
+bandgap $E_{\mathrm{g}}$ (blue dots) and 2D electronic
+polarizabilities (bar plots) of all the 2D materials investigated,
+covering a wide spectrum range from far-infrared to ultraviolet.  Note
+from dimension analysis, it is more intuitive to express the
+polarizability as $\alpha_{\mathrm{2D}}/(4 \pi \varepsilon_{0})$,
+which has unit of \AA{}. We find that
+$\alpha_{\mathrm{2D}}^{\parallel}$ has a general descending trend when
+$E_{\mathrm{g}}$ increases, while no apparent correlation between
+$\alpha_{\mathrm{2D}}^{\perp}$ and $E_{\mathrm{g}}$ is observed (see
+Supplementary Section \ref{SI-sec:pol-2D-Eg}).  We then examine
+Eqs. \ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} using the
+polarizabilities by first-principle calculations.  Figure
+\ref{fig-3}\textbf{c} shows
 $(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ (in
 \AA{}$^{-1}$) as a function of $E_{\mathrm{g}}$ (in eV) for the 2D
-materials investigated (circle dots).  A linear regression coefficient
-of $R^{2}=0.84$ indicates a strong correlation between bandgaps and
-polarizabilities as predicted in Eq. \ref{eq:2D-Moss-para}.  We also
-discover that the linearity between
-$(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ and
+materials investigated (circle dots) at HSE06 level.  A linear
+regression coefficient of $R^{2}=0.84$ indicates a strong correlation
+between bandgaps and polarizabilities as predicted in
+Eq. \ref{eq:2D-Moss-para}.  We also discover that the linearity
+between $(4 \pi \varepsilon_{0})/\alpha_{\mathrm{2D}}^{\parallel}$ and
 $E_{\mathrm{g}}$ (measured by the $R^{2}$ value) is higher when the
-bandgap is calculated using the HSE06 hybrid
-functional\cite{Heyd_2005} compared with that from
-Perdew--Burk--Ernzerhof (PBE)
-functional%exchange correlation functional
-(see Supplementary Section \ref{SI-sec:pol-2D-Eg} and Supplementary
-Figure \ref{SI-fig:alpha-Eg-diff}) which suggests that higher levels
-of theory are needed to predict bandgaps. See Supplementary Section
-\ref{SI-sec:gpaw} for a benchmark of Eqs.~\ref{eq:2D-Moss-para} and
-\ref{eq:2D-Moss-perp} using different bandgaps, databases, and levels
-of calculation.
+bandgap is calculated using the HSE06 hybrid functional compared with
+that from PBE exchange-correlation functional (see Supplementary
+Section \ref{SI-sec:pol-2D-Eg} and Supplementary Figure
+\ref{SI-fig:alpha-Eg-diff}) which suggests that higher levels of
+theory are needed to precisely predict bandgaps.  A detailed benchmark
+of Eqs.~\ref{eq:2D-Moss-para} and \ref{eq:2D-Moss-perp} using
+different bandgaps, databases, and levels of calculation can be seen
+in Supplementary Section~\ref{SI-sec:gpaw}.
 
 
 We further examine the relation between $\alpha_{\mathrm{2D}}^{\perp}$ and the
@@ -880,7 +898,7 @@ the corresponding author upon reasonable request.
     descriptor of the dielectric nature of 2D materials.}
   \textbf{a}. 3D illustration of the spatial distribution of the
   charge density change $\Delta \rho(z)$ along the z-direction for
-  monolayer 2H-MoS$_{2}$ in a periodic superlattice under external
+  monolayer 2H-MoS\textsubscript{2} in a periodic superlattice under external
   eletric field of 0.01 V/\AA{}.  The green and red regions represent
   negative and positive induced charges, respectively. The macroscopic
   $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
