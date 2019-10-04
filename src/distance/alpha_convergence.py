@@ -20,13 +20,11 @@ g = os.walk(root)
 names = next(g)[1]
 # print(names)
 # names = sorted(names)
-gs = GridSpec(7, 1, hspace=0.3)
-fig1 = plt.figure(figsize=(3, 3.2))
-fig2 = plt.figure(figsize=(3, 3.2))
-ax1_r = fig1.add_subplot(gs[5:])
-ax1 = fig1.add_subplot(gs[:5 ])
-ax2_r = fig2.add_subplot(gs[5:])
-ax2 = fig2.add_subplot(gs[:5 ])
+fig1 = plt.figure(figsize=(4.5, 2))
+ax1_r = fig1.add_subplot(121)
+# ax1 = fig1.add_subplot(gs[:5 ])
+ax2_r = fig1.add_subplot(122)
+# ax2 = fig2.add_subplot(gs[:5 ])
 
 colors = {"mos2": "#1f77b4",
           "mose2": "#ff7f0e",
@@ -58,50 +56,47 @@ for i, item in enumerate(g):
         if "parallel.agr" in f_path:
             alpha_SL = L * (data[:, 1] - 1)  / (4 * pi)
             error_alpha = numpy.abs(alpha_SL - alpha_SL[-1]) / alpha_SL[-1] 
-            l, *_ = ax1.plot(L, eps_SL, "o",
-                             label=names[i],
-                             markersize=4,
-                             color=colors[names[i]]
-            )
+            # l, *_ = ax1.plot(L, eps_SL, "o",
+            #                  label=names[i],
+            #                  markersize=4,
+            #                  color=colors[names[i]]
+            # )
             ax1_r.plot(L, error_alpha, "o",
-                       markersize=4,
-                       color=l.get_c())
+                       markersize=4,)
         elif "perpendicular.agr" in f_path:
             alpha_SL = L * (data[:, 1] - 1) / (data[:, 1]) / (4 * pi)
             error_alpha = numpy.abs(alpha_SL - alpha_SL[-1]) / alpha_SL[-1] / 10
-            l, *_ = ax2.plot(L, eps_SL, "o-",
-                             label=names[i],
-                             markersize=4,
-                             color=colors[names[i]]
-            )
+            # l, *_ = ax2.plot(L, eps_SL, "o-",
+            #                  label=names[i],
+            #                  markersize=4,
+            #                  color=colors[names[i]]
+            # )
             ax2_r.plot(L, error_alpha, "o",
                        markersize=4,
-                       color=l.get_c())
+                       label=names[i])
 
 ax1_r.set_xlabel("$L$ ($\\AA$)")
 ax1_r.set_title("parallel")
-ax1.set_ylabel("$\\epsilon^{\\parallel}_{\mathrm{SL}}$")
+# ax1.set_ylabel("$\\epsilon^{\\parallel}_{\mathrm{SL}}$")
 ax1_r.set_ylabel("$\\alpha^{\\parallel}/(4\\pi\\varepsilon_0) (\\AA)$")
 ax1_r.set_yscale("log")
-ax1.set_xticklabels([])
+# ax1.set_xticklabels([])
 # ax1_r.set_ylim(min(alpha_SL) * 0.75, max(alpha_SL)* 1.25)
 
     # ax.plot(LL, fit_vert(LL, *param), "--")
 ax2_r.set_xlabel("$L$ ($\\AA$)")
-ax2.set_ylabel("$\\epsilon^{\\perp}_{\mathrm{SL}}$")
+# ax2.set_ylabel("$\\epsilon^{\\perp}_{\mathrm{SL}}$")
 ax2_r.set_ylabel("$\\alpha^{\\perp}/(4\\pi \\varepsilon_0) (\\AA)$")
 ax2_r.set_title("perp")
 ax2_r.set_yscale("log")
-ax2.set_ylim(1, 4)
+# ax2.set_ylim(1, 4)
     # ax.set_title("{2}, ${{\\epsilon_{{2D}}^{{\\perp}} }}={1:.3f}$ ${{d}}={0:.3f}$".format(*param, names[i]))
 # ax2_r.set_ylim(0.3, 0.8)
-ax2.set_xticklabels([])
+# ax2.set_xticklabels([])
 # ax2.set_ylim(min(alpha_SL) * 0.75, max(alpha_SL)* 1.25)
 
-ax1.legend()
-ax2.legend()
+ax2_r.legend()
+# ax2.legend()
 
 fig1.tight_layout()
-fig2.tight_layout()
 fig1.savefig(os.path.join("../../tmp_img/", "all-para-error.svg"))
-fig2.savefig(os.path.join("../../tmp_img/", "all-perp-error.svg"))

@@ -145,19 +145,19 @@ fig.savefig(os.path.join(img_path, "alpha_xx_1_Eg_HSE.svg"))
 fig = plt.figure(figsize=(2.5, 2.5))
 ax = fig.add_subplot(111)
 # gpaw
-ax.scatter(gp_data[3], gp_data[1], marker="s", alpha=0.1,
+ax.scatter(gp_data[3], gp_data[1] * 4 * pi, marker="s", alpha=0.1,
            c="#cca384", label="$\\alpha_{\\mathrm{2D}}^{\\perp}$ Ref. xx")
 
-ax.scatter(qe_data[-1], qe_data[1], marker="^", alpha=0.1,
+ax.scatter(qe_data[-1], qe_data[1] * 4 * pi, marker="^", alpha=0.1,
            c="#cca384", label="$\\alpha_{\\mathrm{2D}}^{\\perp}$ Ref. xx")
 # [ax.text(x=qe_data[-1][i], y=qe_data[1][i], s=materials_qe[i],
          # ha="left", va="top", size="x-small", alpha=0.5) \
          # for i in range(len(materials_qe)) if qe_data[1][i] < 0.8 * qe_data[-1][i] * 0.078]
 # hse
-ax.scatter(thick, alpha_z, marker="o",
+ax.scatter(thick, alpha_z * 4 * pi, marker="o",
             edgecolors=None,
             alpha=0.5, c=cs)
-res = linregress(x=thick, y=alpha_z)
+res = linregress(x=thick, y=alpha_z * 4 * pi)
 # res = linregress(x=numpy.hstack([thick, gp_data[3], qe_data[-1]]),
                  # y=numpy.hstack([alpha_z, gp_data[1], qe_data[1]]))
 # res = linregress(x=gp_data[3], y=gp_data[1])
@@ -165,12 +165,13 @@ print(res)
 xx = numpy.linspace(1.5, 10.5)
 yy = res.slope * xx + res.intercept
 ax.plot(xx, yy, "--")
+ax.plot(xx, xx, "--")
 # plt.colorbar()
 ax.set_xlim(1.5, 10.5)
-ax.set_ylim(0.08, numpy.max(yy))
+# ax.set_ylim(0.08, numpy.max(yy))
 # ax.set_title("$y={0:.2f}x+{1:.2f},\ R^2={2:.2f}$".format(res.slope, res.intercept, res.rvalue))
 ax.set_xlabel("$\\delta_{\\mathrm{cov}}$ ($\\mathrm{\\AA}$)")
-ax.set_ylabel("$\\alpha_{\\mathrm{2D}}^{\\perp} / (4 \\pi \\varepsilon_0)$ ($\\mathrm{\\AA}$)")
+ax.set_ylabel("$\\alpha_{\\mathrm{2D}}^{\\perp} / \\varepsilon_0$ ($\\mathrm{\\AA}$)")
 ax.legend()
 fig.tight_layout()
 fig.savefig(os.path.join(img_path, "alpha_zz_thick_HSE.svg"))
