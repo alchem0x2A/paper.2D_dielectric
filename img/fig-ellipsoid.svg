@@ -123,8 +123,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="420.98782"
-     inkscape:cy="160.24196"
+     inkscape:cx="165.9243"
+     inkscape:cy="321.86637"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1-3"
      showgrid="false"
@@ -133,10 +133,10 @@
      fit-margin-left="0.5"
      fit-margin-right="0.5"
      fit-margin-bottom="0.5"
-     inkscape:window-width="2560"
-     inkscape:window-height="1309"
-     inkscape:window-x="192"
-     inkscape:window-y="79"
+     inkscape:window-width="1440"
+     inkscape:window-height="878"
+     inkscape:window-x="78"
+     inkscape:window-y="26"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata2526">
@@ -146,7 +146,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -160,17 +160,17 @@
        id="layer1-3"
        inkscape:label="Layer 1">
       <image
-         width="196.51768"
-         height="110.5412"
-         preserveAspectRatio="none"
-         style="image-rendering:optimizeQuality"
-         xlink:href="file:///Users/tiantian/polybox/Research/12-2D-dielectric/tmp_img/polarizability_ellipsoid.png"
-         id="image823"
-         x="-0.15568192"
-         y="0.37551335"
-         sodipodi:absref="/Users/tiantian/polybox/Research/12-2D-dielectric/tmp_img/polarizability_ellipsoid.png"
+         sodipodi:absref="/Users/ttian/polybox/Research/12-bak/img/../tmp_img/polarizability_ellipsoid.png"
+         xlink:href="../tmp_img/polarizability_ellipsoid.png"
+         transform="translate(1.5754989)"
          clip-path="url(#clipPath13343)"
-         transform="translate(1.5754989)" />
+         y="0.37551335"
+         x="-0.15568192"
+         id="image823"
+         style="white-space:pre;stroke-linecap:butt;stroke-linejoin:round;image-rendering:optimizeQuality"
+         preserveAspectRatio="none"
+         height="110.5412"
+         width="196.51768" />
       <path
          inkscape:connector-curvature="0"
          id="path826"
