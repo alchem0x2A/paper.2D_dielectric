@@ -34,6 +34,14 @@ colors = {"mos2": "#1f77b4",
           "wte2": "#8c564b",
 }
 
+symbs = {"mos2": "MoS$_{2}$",
+          "mose2": "MoSe$_{2}$",
+          "mote2": "MoTe$_{2}$",
+          "ws2": "WS$_{2}$",
+          "wse2": "WSe$_{2}$",
+          "wte2": "WTe$_{2}$",
+}
+
 # plot_eps_para(ax1, alpha_0=8.5, dev=4)
 # plot_eps_perp(ax2, alpha_0=0.47, dev=0.15)
 
@@ -65,7 +73,7 @@ for i, item in enumerate(g):
                        markersize=4,)
         elif "perpendicular.agr" in f_path:
             alpha_SL = L * (data[:, 1] - 1) / (data[:, 1]) / (4 * pi)
-            error_alpha = numpy.abs(alpha_SL - alpha_SL[-1]) / alpha_SL[-1] / 10
+            error_alpha = numpy.abs(alpha_SL - alpha_SL[-1]) / alpha_SL[-1]
             # l, *_ = ax2.plot(L, eps_SL, "o-",
             #                  label=names[i],
             #                  markersize=4,
@@ -73,7 +81,7 @@ for i, item in enumerate(g):
             # )
             ax2_r.plot(L, error_alpha, "o",
                        markersize=4,
-                       label=names[i])
+                       label=symbs[names[i]])
 
 ax1_r.set_xlabel("$L$ ($\\AA$)")
 ax1_r.set_title("parallel")

@@ -83,7 +83,7 @@ combine_data()
 
 print(fit_all_para, fit_all_perp)
 
-fig, ax = plt.subplots(1, 3, figsize=(8, 2.5))
+fig, ax = plt.subplots(1, 3, figsize=(8.5, 2.4))
 
 def plot_diff():
 # ax 0: diff
@@ -94,12 +94,13 @@ def plot_diff():
         delta_perp, _ = fit_all_perp[n]
         name_disp.append("2H-" + name)
         # diff.append(delta_para / delta_perp)
-        diff.append(delta_para - delta_perp)
+        diff.append((delta_para - delta_perp) / delta_perp * 100)
     ax[0].axhline(y=0, alpha=0.8)
     ax[0].bar(range(len(name_disp)), diff, width=0.6)
     ax[0].set_xticks(range(len(name_disp)))
     ax[0].set_xticklabels(name_disp, rotation=-30)
-    ax[0].set_ylabel("Estimation Error $\\delta_{\\mathrm{2D}}^{{\parallel}, \\mathrm{fit}}  - \\delta_{\\mathrm{2D}}^{\\perp, \\mathrm{fit}}$ ($\\mathrm{\\AA{}}$)")
+    ax[0].set_ylabel("Estimation Error (%) of $\\delta_{\\mathrm{2D}}$")
+# ""between $\\delta_{\\mathrm{2D}}^{{\parallel}, \\mathrm{fit}}$  and $\\delta_{\\mathrm{2D}}^{\\perp, \\mathrm{fit}}$ ($\\mathrm{\\AA{}}$)")
 
 
 def plot_type1():
@@ -153,12 +154,16 @@ def plot_type2():
         delta_perp, _ = fit_all_perp[n]
         delta_avg = (delta_para + delta_perp) / 2
         name_disp.append("2H-" + name)
-        xx = numpy.linspace(-0.25, 0.25, 256)
-        dd_ = xx + delta_avg
+        # xx = numpy.linspace(-0.25, 0.25, 256)
+        # dd_ = xx + delta_avg
+        diff = 7.5
+        xx = numpy.linspace(-diff / 100, diff / 100, 256)
+        dd_ = (1 + xx) * delta_avg
         f = dd_ / L
         eps_2D_para = (eps_para + f - 1) / f
 
-        ax[1].plot(xx, eps_2D_para, label="2H-" + name)
+        l, = ax[1].plot(xx * 100, eps_2D_para, label="2H-" + name)
+        ax[1].plot(xx[::20] * 100, eps_2D_para[::20], "o", markersize=4, color=l.get_c())
 
 
     for n, name in tags.items():
@@ -171,18 +176,24 @@ def plot_type2():
         delta_avg = delta_perp
         name_disp.append("2H-" + name)
         name_disp.append("2H-" + name)
-        xx = numpy.linspace(-0.25, 0.25, 256)
-        dd_ = xx + delta_avg
+        diff = 7.5
+        xx = numpy.linspace(-diff / 100, diff / 100, 256)
+        dd_ = (1 + xx) * delta_avg
+        # xx = numpy.linspace(-0.25, 0.25, 256)
+        # dd_ = xx + delta_avg
         f = dd_ / L
         eps_2D_perp = f / (1 / eps_perp + f - 1)
         cond = numpy.where((eps_2D_perp > 0) & (eps_2D_perp < 1000))
-        ax[2].plot(xx[cond], eps_2D_perp[cond], label="2H-" + name)
+        l, = ax[2].plot(xx[cond] * 100, eps_2D_perp[cond], label="2H-" + name)
+        ax[2].plot(xx[::20] * 100, eps_2D_perp[::20], "o", markersize=4, color=l.get_c())
 
-ax[1].set_ylim(14, 23)
-ax[1].set_xlabel("Uncertainty of $\\delta_{\\mathrm{2D}}$ ($\\mathrm{\\AA}$)")
+# ax[1].set_ylim(14, 23)
+ax[1].set_xlabel("Uncertainty of $\\delta^{*}_{\\mathrm{2D}}$ (%)")
 ax[1].set_ylabel("Estimated $\\varepsilon_{\\mathrm{2D}}^{\\parallel}$")
 
-ax[2].set_xlabel("Uncertainty of $\\delta_{\\mathrm{2D}}$ ($\\mathrm{\\AA}$)")
+ax[2].set_xlim(-7.5, 7.5)
+ax[2].set_ylim(15, 500)
+ax[2].set_xlabel("Uncertainty of $\\delta^{*}_{\\mathrm{2D}}$ (%)")
 ax[2].set_ylabel("Estimated $\\varepsilon_{\\mathrm{2D}}^{\\perp}$")
 
 plot_diff()
