@@ -438,52 +438,29 @@ best tradeoff between all aspects.
 %From Eq. \ref{P_2D} we can calculate the dipole moment density  $\boldsymbol{\mu}_{\mathrm{2D}}^{p} =\boldsymbol{u}^{p}/A$ 
 
 \pagebreak{}
-\section{Comment on the hypothetical ``dielectric constant'' in the effective medium theory (EMT)}
+\section{Further Data Concerning the Comparison with EDM}
 \label{sec:2D-3D-rescale}
-From literatures, it is often desired to extract the ``dielectric
-constant'' of a 2D material from the 3D macroscopic dielectric
-constant of the superlattice, where the layers are periodic along of
-x,y directions but separated by a vacuum layer between its images
-\cite{Matthes_2016,Laturia_2018}. Such method makes use of the
-effective medium theory (EMT), and as discussed in the main text, the
-definition of the 2D ``dielectric constant'' is questionable, due to
-the locality of electrostatic screening of the 2D materials
-\cite{Cudazzo_2010_screen2D,Cudazzo_2011_screening_2D}. Moreover, the
-EMT approach assumes that the 2D material has an effective thickness
-$\delta$ and effective dielectric constant
-$\varepsilon_{\mathrm{2D}}$, while the exact value of $\delta$ is
-unknown due to the ambiguity of the reference planes. Here we show
-that, in addition to the ambiguous definition of the 2D dielectric
-constant, such approach requires the precise determination of the 2D
-layer thickness $\delta_{\mathrm{2D}}$, which makes it impractical. On
-the contrary, the 2D polarizability approach presented in the main
-text is independent of the choice of the parameter $\delta$, as well
-as the volume fraction of the 2D material, and can correctly capture
-the dielectric properties of the 2D material. 
 
-In brief, the hypothetical 2D dielectric constant
-$\varepsilon$ comes from the planar limit of the
-effective medium theory \cite{Markel_2016,Aspnes_1982}, and can be
-expressed by means of the macroscopic dielectric constant
-$\varepsilon_{\mathrm{SL}}$ of the superlattice:
-
-\begin{eqnarray}
-  \label{eq:MG-effect-1}
-  &\varepsilon_{\mathrm{SL}}^{\parallel} &= f \varepsilon_{\mathrm{2D}}^{\parallel} + (1 - f)\\
-  \label{eq:MG-effect-2}
-  &(\varepsilon_{\mathrm{SL}}^{\perp})^{-1} &= f /\varepsilon_{\mathrm{2D}}^{\perp} + (1-f)
-\end{eqnarray}
-where $f=\delta/L$ is the volume fraction of the 2D
-material in the superlattice and $\varepsilon_{\mathrm{2D}}^{\parallel}$ and 
-$\varepsilon_{\mathrm{2D}}^{\perp}$ are the corresponding dielectric constants for the 2D layer. 
 The major issue when using such rescale
-relations comes from the determination of $\delta_{\mathrm{2D}}$. To
+relations comes from the determination of $\delta_{\mathrm{2D}}^{*}$. To
 eliminate the modeling error caused by the \textit{a priori} parameter
 selection of $\delta$, we perform the calculation of
 $\varepsilon_{\mathrm{SL}}$ of group 6 TMDCs against different $L$,
 and use least-square fitting to extract both
 $\varepsilon$ and $\delta$, as shown in
 Figure \ref{fig:rescale-prb}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{img/SI-alpha-convergence.pdf}
+  \caption{Convergence of electronic polarizabilities
+    $\Delta \varepsilon_{\mathrm{2D}}^{\parallel}$ (\textbf{a}) and
+    $\Delta \varepsilon_{\mathrm{2D}}^{\perp}$ (\textbf{b}) as
+    functions of $L$ for the selected TMDCs, respectively. For both
+    in- and out-of-plane polarizabilities, convergence is achieved
+    when $L >$15 \AA{}}
+  \label{fig:alpha-converg}
+\end{figure}
 
 \begin{figure}[htbp]
   \centering
@@ -499,14 +476,14 @@ Figure \ref{fig:rescale-prb}.
 \end{figure}
 
 As can be seen from the fitted results in Figure
-\ref{fig:rescale-prb}, the values of $\delta_{\mathrm{2D}}$ extracted
+\ref{fig:rescale-prb}, the values of $\delta_{\mathrm{2D}}^{*}$ extracted
 from both $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
 $\varepsilon_{\mathrm{SL}}^{\perp}$ are close when $L> 15$
-{\AA}. Notably, the $\delta_{\mathrm{2D}}$ values are generally 10\%
+{\AA}. Notably, the $\delta_{\mathrm{2D}}^{*}$ values are generally 10\%
 smaller than the interlayer distance in corresponding bulk materials
 $L_{\mathrm{bulk}}$ , as shown in Table \ref{tab:delta-L-DFt}. On the
-other hand, the extracted $\delta_{\mathrm{2D}}$ values are closer to
-the covalent thickness $\delta_{\mathrm{2D}}^{\mathrm{cov}}$ as
+other hand, the extracted $\delta_{\mathrm{2D}}^{*}$ values are closer to
+the covalent thickness $\delta_{cov}$ as
 described in the main text, with a difference generally smaller than
 5\%. Our results indicate that the conventional estimation of the 2D
 layer thickness by its bulk interlayer distance
@@ -519,7 +496,7 @@ of 2D materials.
   \centering
   \begin{tabular}[htbp]{lccccc}
   \hline{}
-  Material & $\delta_{\mathrm{2D}}$ from $\varepsilon_{\mathrm{SL}}^{\parallel}$ ({\AA}) & $\delta_{\mathrm{2D}}$ from $\varepsilon_{\mathrm{SL}}^{\perp}$ ({\AA})& $L_{\mathrm{bulk}}$ ({\AA}) & $\delta_{\mathrm{2D}}^{\mathrm{cov}}$ ({\AA}) & $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ ({\AA})\\
+  Material & $\delta_{\mathrm{2D}}^{\parallel, \mathrm{fit}}$ (\AA) & $\delta_{\mathrm{2D}}^{\perp, \mathrm{fit}}$ ({\AA})& $L_{\mathrm{Bulk}}$ ({\AA}) & $\delta_{\mathrm{cov}}$ ({\AA}) & $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ ({\AA})\\
   \hline{}
   2H-MoS$_{2}$ & 5.76 & 5.49 & 6.15 & 5.22 & 4.98\\
   2H-MoSe$_{2}$ & 5.98 & 5.92 & 6.46 &  5.73 & 5.60\\
@@ -530,16 +507,18 @@ of 2D materials.
   \hline{}
 \end{tabular}
 
-\caption{Calculated $\delta_{\mathrm{2D}}$ from
-  $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
-  $\varepsilon_{\mathrm{SL}}^{\perp}$, compared with the interlayer
-  distance of corresponding bulk material $L_{\mathrm{SL}}$, the
-  covalent thickness $\delta_{\mathrm{2D}}^{\mathrm{cov}}$, and
-  $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ for 2H TMDC materials.}
+\caption{Fitted effective thickness
+  $\delta_{\mathrm{2D}}^{\parallel, \mathrm{fit}}$ and
+  $\delta_{\mathrm{2D}}^{\perp, \mathrm{fit}}$ from in- and
+  out-of-plane dielectric data, compared with the interlayer distance
+  of corresponding bulk material $L_{\mathrm{Bulk}}$, the covalent
+  thickness $\delta_{\mathrm{cov}}$, and
+  $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ for 2H TMDC
+  materials.}
 \label{tab:delta-L-DFt}
 \end{table}
 
-Another drawback of the 2D EMT approach is the
+One main drawback of the EDM approach is the
 overestimation of the out-of-plane dielectric response. As can be seen
 in Figure \ref{fig:rescale-prb}, the extracted
 $\varepsilon_{\mathrm{2D}}^{\perp}$ values for the TMDCs studied
@@ -558,21 +537,21 @@ have:
   \centering
   \includegraphics[width=0.6\linewidth]{img/SI-eps-alpha-error.pdf}
   \caption{Calculated $\varepsilon_{\mathrm{2D}}^{\perp}$ value as a
-    function of the difference between $\delta_{\mathrm{2D}}$ and
+    function of the difference between $\delta_{\mathrm{2D}}^{*}$ and
     $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$. A small change of
     $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ chosen may lead to divergence of
     the $\varepsilon_{\mathrm{2D}}^{\perp}$ or even negative values,
-    which is apparently unphysical}
+    which is apparently nonphysical.}
   \label{fig:eps-alpha-error}
 \end{figure}
 
 which indicate that the characteristic length
 $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$, is very close but slightly smaller
-than $\delta_{\mathrm{2D}}$ estimated by the effective medium theory,
+than $\delta_{\mathrm{2D}}^{*}$ estimated by the effective medium theory,
 if $\varepsilon^{\perp}_{\mathrm{2D}} \gg 1$. Moreover, from
-Eq. \ref{eq:eps-alpha-perp}, when $\delta_{\mathrm{2D}}$ and
+Eq. \ref{eq:eps-alpha-perp}, when $\delta_{\mathrm{2D}}^{*}$ and
 $\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ are close, slight change of the
-$\delta_{\mathrm{2D}}$ chosen may lead to divergence of
+$\delta_{\mathrm{2D}}^{*}$ chosen may lead to divergence of
 $\varepsilon_{\mathrm{2D}}^{\perp}$, as shown in Figure
 \ref{fig:eps-alpha-error}. Therefore cautions must to taken when
 treating the dielectric response of the 2D material using effective
@@ -581,7 +560,7 @@ the guess of the thickness, and therefore is the true descriptor of
 the 2D dielectric nature.
 
 To conclude, based on theoretical and technical considerations, there are several
-advantages of using the polarizability $\alpha$ for describing the dielectric
+advantages of using the electronic polarizability for describing the dielectric
 nature of 2D materials, including
 \begin{enumerate}
 \item $\alpha_{\mathrm{2D}}$ can be used to describe both the local and macroscopic dielectric properties, while $\epsilon_{\mathrm{2D}}$ can't.
@@ -1326,22 +1305,6 @@ dimension-dependent and dimension-independent quantities.
 
 \section{More discussions about the dielectric anisotropy}
 \label{sec:aniso}
-\subsection{The 2D screening length}
-\label{ssec:2D-screening}
-Here we show a schematic drawing of the polarizability ellipsoid for a
-2D material in Figure \ref{fig:ellipsoid}. As can be seen the
-polarizability ellipsoid is ultraflat, with
-$r_{0}^{\parallel} \gg r_{0}^{\perp}$, which is the origin of the high
-dielectric anisotropy of 2D materials.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\linewidth]{img/SI-ellipsoid.pdf}
-  \caption{Polarizability ellipsoid of a 2D material, the long axis
-    equals $\alpha_{\mathrm{2D}}^{\parallel}/2\varepsilon_{0}$ and the short axis
-    equals  $\alpha_{\mathrm{2D}}^{\perp}/2\varepsilon_{0}$}
-  \label{fig:ellipsoid}
-\end{figure}
 
 \subsection{Choice of materials for main text Figure \ref{main-fig:aniso}}
 \label{ssec:aniso-materials}
@@ -1512,3 +1475,8 @@ $\alpha_{\mathrm{2D}}^{\perp}/(4\pi \varepsilon_{0})$, respectively.
 
 \end{document}
 
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
