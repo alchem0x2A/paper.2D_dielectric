@@ -15,8 +15,11 @@
    viewBox="0 0 149.99133 226.88063"
    version="1.1"
    id="svg4091"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="fig1.svg">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="fig1.svg"
+   inkscape:export-filename="Y:\polybox\Research\12-dielectric\img\fig1.png"
+   inkscape:export-xdpi="300.01999"
+   inkscape:export-ydpi="300.01999">
   <defs
      id="defs4085"
      style="white-space:pre;stroke-linecap:butt;stroke-linejoin:round">
@@ -4045,7 +4048,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5968532"
-     inkscape:cx="357.36625"
+     inkscape:cx="78.403182"
      inkscape:cy="446.84417"
      inkscape:document-units="mm"
      inkscape:current-layer="layer4"
@@ -4114,7 +4117,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -10782,7 +10785,7 @@
              inkscape:path-effect="#path-effect38842-8"
              inkscape:connector-curvature="0"
              id="path38840"
-             d="m 344.7196,-37.663603 v -39.642855"
+             d="M 344.7196,-37.663603 V -77.306458"
              style="white-space:pre;fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker38953-6);marker-end:url(#marker38999-4)" />
           <g
              id="g24785"
