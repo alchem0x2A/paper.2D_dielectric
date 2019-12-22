@@ -1,13 +1,12 @@
 % Created 2017-10-05 Thu 16:11
 % Intended LaTeX compiler: pdflatex
-\documentclass[journal=ancac3,email=true,hyperref=true,keywords=false]{achemso}
+\documentclass[journal=ancac3,email=true,hyperref=true,keywords=false,manuscript=suppinfo ]{achemso}
 %manuscript=suppinfo 
 \usepackage{times}
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage{ltablex}
 \usepackage{footnote}
@@ -16,12 +15,15 @@
 
 
 %\usepackage{xr}
-\usepackage{xr-hyper} 
+\usepackage{xr} 
 \externaldocument[main-]{paper}
 
 \SectionNumbersOn{}
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\theequation}{S\arabic{equation}}
+% \makeatletter
+% \renewcommand\@biblabel[1]{S#1}
+% \makeatother
 
 
 
@@ -47,8 +49,7 @@
 
 \date{}
 
-\title{Supplementary Information: \\ 
-Electronic polarizability as the fundamental variable in the dielectric properties of two-dimensional materials}
+\title{Electronic polarizability as the fundamental variable in the dielectric properties of two-dimensional materials}
 %\title{The Unified Nature of the Dielectric Properties of Two-Dimensional Materials}
 \begin{document}
 

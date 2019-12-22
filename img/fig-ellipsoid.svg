@@ -15,8 +15,11 @@
    viewBox="0 0 144.36581 141.88033"
    version="1.1"
    id="svg2529"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="fig-ellipsoid_v102519.svg">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="fig-ellipsoid.svg"
+   inkscape:export-filename="Y:\polybox\Research\12-dielectric\img\fig-ellipsoid.png"
+   inkscape:export-xdpi="150.02"
+   inkscape:export-ydpi="150.02">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="461.78782"
+     inkscape:cx="377.69262"
      inkscape:cy="226.11243"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1-3"
@@ -36,10 +39,10 @@
      fit-margin-right="0.5"
      fit-margin-bottom="0.5"
      inkscape:window-width="1440"
-     inkscape:window-height="878"
-     inkscape:window-x="215"
-     inkscape:window-y="7"
-     inkscape:window-maximized="0"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-grids="true"
@@ -176,7 +179,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
