@@ -1,6 +1,7 @@
 % Created 2017-10-05 Thu 16:11
 % Intended LaTeX compiler: pdflatex
-\documentclass[manuscript=suppinfo,email=true,hyperref=true,keywords=false]{achemso}
+\documentclass[journal=ancac3,email=true,hyperref=true,keywords=false]{achemso}
+%manuscript=suppinfo 
 \usepackage{times}
 \usepackage{float}
 \usepackage{amsmath}
@@ -14,9 +15,9 @@
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 
 
-\usepackage{xr-hyper} 
 %\usepackage{xr}
-\externaldocument[main-]{paper}
+\usepackage{xr-hyper} 
+\externaldocument[main-]{paper_v120719}
 
 \SectionNumbersOn{}
 \renewcommand{\thesection}{S\arabic{section}}
@@ -33,13 +34,12 @@
 \author{Dale Hughes}
 \affiliation{School of Mathematics and Physics, Queen's University Belfast, BT7 1NN, United Kingdom}
 \author{Lu Hua Li}
-\affiliation{Institute for Frontier Materials, Deakin University, Waurn Ponds, Victoria, Australia}
+\affiliation{Institute for Frontier Materials, Deakin University, Victoria, VIC 3216, Australia}
 \author{Chih-Jen Shih}
 \affiliation{Institute for Chemical and Bioengineering, ETH Z{\"{u}}rich,  Vladimir Prelog Weg 1, CH-8093 Z{\"{u}}rich, Switzerland}
 \author{Jonathan Coleman}
 \affiliation{School of Physics, Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) and Advanced Materials and BioEngineering Research (AMBER), Trinity College Dublin, Dublin 2, Ireland.}
 \author{Manish Chhowalla}
-% \affiliation{Materials Science and Engineering, Rutgers University, 607 Taylor Road, Piscataway, New Jersey 08854, USA.}
 \affiliation{Department of Materials Science \& Metallurgy, University of Cambridge, CB3 0FS, United Kingdom}
 \author{Elton J. G. Santos}
 \email{e.santos@qub.ac.uk}
@@ -47,7 +47,8 @@
 
 \date{}
 
-\title{Electric polarizability as the fundamental variable in the dielectric properties of two-dimensional materials}
+\title{Supplementary Information: \\ 
+Electronic polarizability as the fundamental variable in the dielectric properties of two-dimensional materials}
 %\title{The Unified Nature of the Dielectric Properties of Two-Dimensional Materials}
 \begin{document}
 
@@ -102,14 +103,14 @@ Here we show in detail the
 $\Delta {\rho}=\rho(\boldsymbol{E}) - \rho(\boldsymbol{E}=0)$ profile of
 the 2H-MoS$_{2}$ slab in main text Figure \ref{main-fig-1}. The
 density $\Delta \rho$ is calculated via $\Delta \rho(z) = \frac{1}{S} \int_{S} \Delta \rho (x,y;z) dx dy $, 
-where $S$ is the surface of the unit cell perpendicular to the given direction, in this case $z$. 
+where $S$ is the surface of the unit cell perpendicular to a given direction, in this case $z$. 
 %
 As can be seen in Figure \ref{fig:rho-profile} the induced charges on
 the MoS$_{2}$ layer only extends to a width of $\sim{}$12 \AA{}
-centered at the middle of the layer. This corresponds to about 5-6 \AA
+centered at the middle of the layer. This corresponds to about 5-6 \AA~
 from each side.  When the SL size $L \gg$12 \AA{} as in the first
-principle calculations done in the main text, the induced dipoles from
-the periodic images do not interact, and thus give the converged
+principle calculations shown in the main text, the induced dipoles from
+the periodic images do not interact thus giving the converged
 values of $\alpha_{\mathrm{2D}}$.
 
 \begin{figure}[htbp]
@@ -129,18 +130,17 @@ values of $\alpha_{\mathrm{2D}}$.
 Here we will show the results of dielectric properties calculated
 using many-body Green function method (G$_{0}$W$_{0}$) and with
 electron-hole interactions at the level of the Bethe-Salpeter equation
-(G$_{0}$W$_{0}$–BSE). Frequency-dependent dielectric functions,
-$\varepsilon_{\mathrm{SL}}(L)$, were calculated at the level of
+(G$_{0}$W$_{0}$-BSE). Frequency-dependent dielectric functions,
+$\varepsilon_{\mathrm{SL}}(\omega)$, were calculated at the level of
 G$_{0}$W$_{0}$ and G$_{0}$W$_{0}$+BSE levels using VASP. For the
 calculations on G$_{0}$W$_{0}$, a 12$\times$12$\times$1 $\Gamma$-centered k-grid was
-used along with an 800 eV energy cutoff in the plane waves and in
+used along with a 800 eV energy cutoff in the plane waves and in
 calculation of the response function. 120 bands (4 occupied and 116
 unoccupied) were used in the calculation of
 $\varepsilon_{\mathrm{SL}}(\omega)$ of monolayer BN, with local-field
-effects being included on the RPA level. For the calculation of the
+effects being included. For the calculation of the
 Bethe-Salpeter equation, the Tamm-Dancoff approximation was used with
-two occupied and two unoccupied bands being included in the
-calculation.
+two occupied and two unoccupied bands being included. 
 
 % Here we will show the results of dielectric properties calculated
 % using many-body Green function method (G$_0$W$_{0}$) and with
@@ -163,9 +163,10 @@ $L$ despite of the separation utilized in the simulations (Figure
 \ref{fig:GW-PBE-alpha}{\bf a}-{\bf c}). However, corresponding 2D
 polarizabilities are almost $L$-independent (Figure
 \ref{fig:GW-PBE-alpha}{\bf b}-{\bf d}). It is worth noting that since
-the G$_{0}$W$_{0}$ method has better estimation of the bandgap,
+the G$_{0}$W$_{0}$ method has better estimation of the electronic bandgap,
 $\varepsilon_{\mathrm{SL}}$ and $\alpha_{\mathrm{2D}}$ are smaller
 using G$_{0}$W$_{0}$ than in PBE functionals.
+%%%
 \begin{figure}[htbp]
   \centering
  \includegraphics[width=0.9\linewidth]{img/SI-GW-alpha-zero.pdf}
@@ -182,7 +183,7 @@ using G$_{0}$W$_{0}$ than in PBE functionals.
   \label{fig:GW-PBE-alpha}
 \end{figure}
 
-Next we will investigate the frequency-dependent dielectric properties of the 2D materials using various methods. The imaginary part of the frequency-dependent dielectric function of an periodic system is calculated using the following relation:
+Next we will investigate the frequency-dependent dielectric properties of the 2D materials using various methods. The imaginary part of the frequency-dependent dielectric function of a periodic system is calculated using the following relation:
 
 \begin{equation}
 \begin{aligned}
@@ -194,12 +195,13 @@ Next we will investigate the frequency-dependent dielectric properties of the 2D
 Through the Kramers-Kronig transformation the real part of the dielectric function can be obtained as: 
 
 \begin{equation}
+\label{eq:dft-dielectric-real}
   \varepsilon_{\alpha\beta}^{(1)}(\omega)=1+\frac{2}{\pi}\int_0^\infty\frac{\varepsilon_{\alpha\beta}^{(2)}(\omega')\omega'}{\omega'^2-\omega^2}d\omega'
 \end{equation}
 
 We calculate the frequency-dependent dielectric properties of BN with
-varying supperlattice $L$ at PBE, G$_{0}$W$_{0}$, and G$_{0}$W$_{0}$--BSE. 
-Figure \ref{fig:PBE-omega-in} and \ref{fig:PBE-omega-out} show the
+varying superlattice $L$ at PBE, G$_{0}$W$_{0}$, and G$_{0}$W$_{0}$--BSE. 
+Figure \ref{fig:PBE-omega-in} and \ref{fig:PBE-omega-out} show that the
 magnitudes of $\varepsilon_{\mathrm{SL}}^{\parallel}(\omega)$ and
 $\varepsilon_{\mathrm{SL}}^{\perp}(\omega)$ reduce with increasing $L$
 throughout the whole frequency range at PBE level. The $L$-dependency can also be
@@ -208,7 +210,7 @@ removed using main text Eqs. \ref{main-eq:alpha-para-def} and
 polarizabilities throughout the frequency domain (Figure \ref{fig:PBE-omega-in}{\bf b}-{\bf d} and \ref{fig:PBE-omega-out}{\bf b}-{\bf d}). 
 %
 Note that when extracting the frequency-dependent 2D polarizabilities
-from main text Eqs. \ref{main-eq:alpha-para-def} and
+from Eqs. \ref{main-eq:alpha-para-def} and
 \ref{main-eq:alpha-perp-def}, the peak position in energy
 $\hbar \omega$ from $\varepsilon_{\mathrm{SL}}$ is preserved. This is
 explained by the fact that the local extrema from spectra of
@@ -232,16 +234,17 @@ $\varepsilon_{\mathrm{SL}}(\omega)$ to $\alpha_{\mathrm{2D}}(\omega)$.
 Performing the simulations at the level of G$_{0}$W$_{0}$
 we observe blue shifts in energy in $\varepsilon_{\mathrm{SL}}(\omega)$ 
 with increasing $L$. Figures \ref{fig:GW-omega-in} and
-\ref{fig:GW-omega-out} show that not only the magnitude of the dielectric
+\ref{fig:GW-omega-out} show that not only the magnitudes of the dielectric
 functions change with $L$ but also the peak positions. As a result
 the obtained polarizabilities also show $L$-dependent peak 
 shift (Figures \ref{fig:GW-omega-in} {\bf b}-{\bf d} and
-\ref{fig:GW-omega-out}{\bf b}-{\bf d}). This
-can be explained by the long-range nature of Coulomb interactions into the self-energy 
+\ref{fig:GW-omega-out}{\bf b}-{\bf d}). This 
+can be explained by the long-range nature of the 
+Coulomb interactions into the self-energy 
 $\Sigma=iGW$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%
-The non-interacting Green's function can be constructed as:
+The non-interacting Green's function can be constructed as: 
 
 \begin{equation}
     G^{(0)}(\mathbf{r},\mathbf{r}',\omega)=\sum_n\frac{\phi_{\mathrm{n}\mathbf{k}}^{(0)}(\mathbf{r})\phi_{\mathrm{n}\mathbf{k}}^{*(0)}(\mathbf{r'})}{\omega-\epsilon_\mathrm{n}-+i\eta\mathrm{sgn}(\epsilon_\mathrm{n}-\epsilon_\mathrm{F})}
@@ -269,26 +272,42 @@ E^{\mathrm{QP}}_{\mathrm{n}\mathbf{k}}=\Re\Big[\braket{\phi_{\mathrm{n}\mathbf{k
 \end{equation}
 Therefore a new set of eigenergies, E$_{n\mathbf{k}}^{QP}$ are found. Using E$_{n\mathbf{k}}^{QP}$ it is then possible to recalculate the dielectric function using the quasi-particle eigenergies as well as the DFT eigenfunctions.
 
-For bulk systems, the accuracy of optical properties calculated
-generally ranks by PBE $<$ G\textsubscript{0}W\textsubscript{0} $<$
-BSE. This is because the calculation of the frequency-dependent
-optical properties of a material involves a summation over the valence
-and conduction states. Thus, the accuracy of these states determines
-the calculated optical properties. Within Kohn-Sham density functional
-theory (KS-DFT), the many-body effects are given by the
-exchange-correlation energy which is approximated by functionals based
-on the homogenous electron gas. This generally leads to an
-underestimation of the bandgap and results in the first optical peak
-being lower in energy in comparison to experiment. To go beyond
-KS-DFT, the G\textsubscript{0}W\textsubscript{0} approximation
-replaces the exchange-correlation energy with the self-energy in a bid
+In general terms excitonic effects are not taken into account at the level of PBE or 
+G\textsubscript{0}W\textsubscript{0}. 
+%
+%
+%
+%For bulk systems, the most accurate simulations are based on BSE approach for 
+%the optical properties. As excitonic effects including electron-hole interactions are taken 
+%into account 
+% 
+%This is because the calculation of the frequency-dependent
+%optical properties of a material involves a summation over the valence
+%and conduction states. 
+%
+%Thus, the accuracy of these states determines
+%the calculated optical properties. 
+%
+%Within Kohn-Sham density functional
+%theory (KS-DFT), the many-body effects are given by the
+%exchange-correlation energy which is approximated by functionals based
+%on the homogenous electron gas. 
+%% 
+For the former, this generally leads to an 
+underestimation of the electronic bandgap and results in the first optical peak
+being lower in energy in comparison to more accurate methods. 
+To go beyond
+PBE, the G\textsubscript{0}W\textsubscript{0} approximation
+replaces the exchange-correlation energy by the self-energy 
 to include many-body effects through the interacting Green's function,
-$G$, and the screened Coulomb potential, $W$. This generally leads to
+$G$, and the screened Coulomb potential, $W$. 
+%
+This generally leads to
 an overestimation of the first optical peak as electron-hole coupling
 is not taken into account. This can be remedied by solving the
 Bethe-Salpeter equation using the eigenvalues obtained from
 G\textsubscript{0}W\textsubscript{0}
-(G\textsubscript{0}W\textsubscript{0} + BSE) which generally gives
+(G\textsubscript{0}W\textsubscript{0} - BSE) which generally gives
 good agreement with experiment.
 
 Due to the volume dependence of $\Sigma$ in equations \ref{self} and
@@ -301,7 +320,7 @@ discussed in several other studies
 \cite{Rozzi_2006,Hueser_2013_2Dvs3D}, when full Coulomb interaction is
 used in a supercell. Including excitonic effects on top of a
 G$_0$W$_0$ calculation through solving the Bethe--Salpeter equation
-corrects for this energy shift by localizing the exciton within the
+correct this energy shift by localizing the exciton within the
 slab (Figures \ref{fig:BSE-omega-in} and
 \ref{fig:BSE-omega-out}). However, the decrease in the magnitude of
 the dielectric function on both components of
@@ -340,8 +359,8 @@ $\varepsilon^{\perp}_{\mathrm{SL}}(\omega)$.
 
 Combining the accuray of bandgap estimation, reproducible results of
 frequency-dependent dielectric properties and calculation efforts, the
-choice of HSE06 hybrid functional seems used in the main text provides
-best tradeoff between all aspects.
+choice of HSE06 hybrid functional used in the main text provides
+best trade off between all aspects.
 
 \begin{figure}[htbp]
   \centering
@@ -437,19 +456,6 @@ best tradeoff between all aspects.
 %\\
 %From Eq. \ref{P_2D} we can calculate the dipole moment density  $\boldsymbol{\mu}_{\mathrm{2D}}^{p} =\boldsymbol{u}^{p}/A$ 
 
-\pagebreak{}
-\section{Further Data Concerning the Comparison with EDM}
-\label{sec:2D-3D-rescale}
-
-The major issue when using such rescale
-relations comes from the determination of $\delta_{\mathrm{2D}}^{*}$. To
-eliminate the modeling error caused by the \textit{a priori} parameter
-selection of $\delta$, we perform the calculation of
-$\varepsilon_{\mathrm{SL}}$ of group 6 TMDCs against different $L$,
-and use least-square fitting to extract both
-$\varepsilon$ and $\delta$, as shown in
-Figure \ref{fig:rescale-prb}.
-
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\linewidth]{img/SI-alpha-convergence.pdf}
@@ -462,6 +468,20 @@ Figure \ref{fig:rescale-prb}.
   \label{fig:alpha-converg}
 \end{figure}
 
+
+\pagebreak{}
+\section{Further Data Concerning the Comparison with EDM}
+\label{sec:2D-3D-rescale}
+
+The major issue when using rescale
+relations \ref{main-Response:1}$-$\ref{main-eq:emt-2} comes from the determination of $\delta_{\mathrm{2D}}^{*}$. To
+eliminate the modeling error caused by the \textit{a priori} selection of this parameter, 
+we perform the calculation of
+$\varepsilon_{\mathrm{SL}}$ of group 6 TMDCs against different $L$,
+and use least-square fitting to extract both
+$\varepsilon$ and $\delta$, as shown in
+Figure \ref{fig:rescale-prb}.
+%
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\linewidth]{img/SI-rescale-PRB.pdf}
@@ -474,22 +494,21 @@ Figure \ref{fig:rescale-prb}.
     $\delta$ are shown in each subfigure.}
   \label{fig:rescale-prb}
 \end{figure}
-
-As can be seen from the fitted results in Figure
-\ref{fig:rescale-prb}, the values of $\delta_{\mathrm{2D}}^{*}$ extracted
+%
+The values of $\delta_{\mathrm{2D}}^{*}$ extracted
 from both $\varepsilon_{\mathrm{SL}}^{\parallel}$ and
 $\varepsilon_{\mathrm{SL}}^{\perp}$ are close when $L> 15$
 {\AA}. Notably, the $\delta_{\mathrm{2D}}^{*}$ values are generally 10\%
 smaller than the interlayer distance in corresponding bulk materials
-$L_{\mathrm{bulk}}$ , as shown in Table \ref{tab:delta-L-DFt}. On the
+$L_{\mathrm{\rm Bulk}}$, as shown in Table \ref{tab:delta-L-DFt}. On the
 other hand, the extracted $\delta_{\mathrm{2D}}^{*}$ values are closer to
-the covalent thickness $\delta_{cov}$ as
+the covalent thickness $\delta_{\rm cov}$ as
 described in the main text, with a difference generally smaller than
 5\%. Our results indicate that the conventional estimation of the 2D
 layer thickness by its bulk interlayer distance
 \cite{Matthes_2016,Laturia_2018}, will always lead to
 overestimation. On the contrary, the out-of-plane polarizability
-$\alpha_{\mathrm{2D}}^{\perp}$ correctly captures the thickness nature
+$\alpha_{\mathrm{2D}}^{\perp}$ correctly captures the thickness 
 of 2D materials.
 
 \begin{table}[htbp]
@@ -522,16 +541,30 @@ One main drawback of the EDM approach is the
 overestimation of the out-of-plane dielectric response. As can be seen
 in Figure \ref{fig:rescale-prb}, the extracted
 $\varepsilon_{\mathrm{2D}}^{\perp}$ values for the TMDCs studied
-are comparable or even larger than
+are comparable (within a range of 8-13\%) or even larger than
 $\varepsilon_{\mathrm{2D}}^{\parallel}$, which does not agree with the
 physical picture that electrostatic screening of 2D materials are much
 smaller perpendicular to the 2D plane. In fact, combining
-Eq. \ref{eq:MG-effect-1} and the definition of $\alpha_{\mathrm{2D}}^{\perp}$, we
+Eq. \ref{main-eq:emt-2} and the definition of $\alpha_{\mathrm{2D}}^{\perp}$, we
 have:
 \begin{equation}
   \label{eq:eps-alpha-perp}
-  \frac{\alpha_{\mathrm{2D}}^{\perp}}{\varepsilon_{0}} = \delta_{\mathrm{2D}}(1 - (\varepsilon_{\mathrm{2D}}^{\perp})^{-1})
+  \frac{\alpha_{\mathrm{2D}}^{\perp}}{\varepsilon_{0}} = \delta^{*}_{\mathrm{2D}}(1 - (\varepsilon_{\mathrm{2D}}^{\perp})^{-1})
 \end{equation}
+%
+%
+which indicates that the characteristic length
+$\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$, is very close but slightly smaller
+than $\delta_{\mathrm{2D}}^{*}$ estimated by the effective medium theory,
+if $\varepsilon^{\perp}_{\mathrm{2D}} \gg 1$. Moreover, from
+Eq. \ref{eq:eps-alpha-perp}, when $\delta_{\mathrm{2D}}^{*}$ and
+$\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ are close, slight change of the
+$\delta_{\mathrm{2D}}^{*}$ chosen may lead to divergence of
+$\varepsilon_{\mathrm{2D}}^{\perp}$, as shown in Figure
+\ref{fig:eps-alpha-error}. Therefore cautions must be taken when
+treating the dielectric response of the 2D material using effective
+medium theory. In comparison, the 2D polarizability does not require
+the initial guess of the thickness.  
 
 \begin{figure}[htbp]
   \centering
@@ -545,41 +578,105 @@ have:
   \label{fig:eps-alpha-error}
 \end{figure}
 
-which indicate that the characteristic length
-$\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$, is very close but slightly smaller
-than $\delta_{\mathrm{2D}}^{*}$ estimated by the effective medium theory,
-if $\varepsilon^{\perp}_{\mathrm{2D}} \gg 1$. Moreover, from
-Eq. \ref{eq:eps-alpha-perp}, when $\delta_{\mathrm{2D}}^{*}$ and
-$\alpha_{\mathrm{2D}}^{\perp}/\varepsilon_{0}$ are close, slight change of the
-$\delta_{\mathrm{2D}}^{*}$ chosen may lead to divergence of
-$\varepsilon_{\mathrm{2D}}^{\perp}$, as shown in Figure
-\ref{fig:eps-alpha-error}. Therefore cautions must to taken when
-treating the dielectric response of the 2D material using effective
-medium theory. In comparison, the 2D polarizability does not require
-the guess of the thickness, and therefore is the true descriptor of
-the 2D dielectric nature.
-
 To conclude, based on theoretical and technical considerations, there are several
 advantages of using the electronic polarizability for describing the dielectric
-nature of 2D materials, including
+nature of 2D materials, including:
+%
 \begin{enumerate}
-\item $\alpha_{\mathrm{2D}}$ can be used to describe both the local and macroscopic dielectric properties, while $\epsilon_{\mathrm{2D}}$ can't.
-\item Calculating $\alpha_{\mathrm{2D}}$ only requires to calculate the dielectric response at single superlattice length, while $\epsilon_{\mathrm{2D}}$ in EMT requires calculation with varied superlattice length.
-\item $\alpha_{\mathrm{2D}}$ correctly represents the screening length of 2D material, while $\epsilon_{\mathrm{2D}}$ calculated from EMT does not.
-\item $\alpha_{\mathrm{2D}}$ correctly represents the different degree of screening in/out-of-plane, while $\epsilon_{\mathrm{2D}}$ calculated from EMT does not.
+\item $\alpha_{\mathrm{2D}}$ can be used to describe both the local and macroscopic dielectric properties, while $\epsilon_{\mathrm{2D}}$ is unable. 
+
+\item Calculating $\alpha_{\mathrm{2D}}$ only requires to calculate the dielectric response at single superlattice length at relative small $L$, while $\epsilon_{\mathrm{2D}}$ requires calculation with varied superlattice length. This is a big advantage on the computational side since the larger the supercell the larger the computational cost. 
+
+\item $\alpha_{\mathrm{2D}}$ correctly represents the screening length of 2D material, while $\epsilon_{\mathrm{2D}}$ calculated from EMT does not. 
+
+\item $\alpha_{\mathrm{2D}}$ correctly represents the different degree of screening in/out-of-plane, while $\epsilon_{\mathrm{2D}}$ does not.
   
-\item The value of $\epsilon_{\mathrm{2D}}$ in EMT hugely depends on the
+\item The value of $\epsilon_{\mathrm{2D}}$ hugely depends on the
   choice of the thickness of 2D material, while such information is
   intrinsically embedded in $\alpha_{\mathrm{2D}}$.
 \end{enumerate}
+%
+%
+
+
+%%%%%%%%%%%%%%%%
+
+\subsection{Derivation of Eqs.\ref{main-eq:alpha-para-def} and \ref{main-eq:alpha-perp-def}}
+
+To show that Eqs. \ref{main-eq:alpha-para-def} and \ref{main-eq:alpha-perp-def} do not use any arguments based on EMT but rather basic electrostatics, we show the derivation of both equations in the following. 
+
+\subsubsection{Parallel to the surface}
+
+For in-plane electric field, the electrostatic boundary conditions gives the continuity of the applied electric field as  
+${E}^{\parallel}_{\mathrm{loc}}={E}^{\parallel}$\cite{Markel_2016}, which resulted in 
+${P}^{p}=\frac{1}{L} {\mu}^{p}_{\mathrm{2D}}$. Indeed, ${\mu}^{p}_{\mathrm{2D}}$ can be written in terms of the local electric field ${E}_{\mathrm{loc}}^{p}$ and the 2D polarizability $\alpha_{\mathrm{2D}}$ as:
+
+\begin{equation}
+{\mu}^{p}_{\mathrm{2D}} = \alpha^{\parallel}_{\mathrm{2D}} {E}^{\parallel}_{\mathrm{loc}} 
+\end{equation}
+%
+This gives for the in-plane polarization:  
+
+\begin{equation}
+{P}^{p}=\frac{1}{L} \alpha^{\parallel}_{\mathrm{2D}} {E}^{\parallel}_{\mathrm{loc}} = \frac{1}{L} \alpha^{\parallel}_{\mathrm{2D}} {E}^{\parallel} 
+\end{equation}
+%
+The derivative of this equation relative to the external field ${E}^{\parallel}$ resulted in:  
+
+\begin{equation}
+\frac{\partial {P}^{p}}{\partial {E}^{\parallel}} =\frac{1}{L} \alpha^{\parallel}_{\mathrm{2D}} 
+\label{parallel}
+\end{equation}
+%
+Inserting this equation \ref{parallel} into Eq.\ref{main-eq:def-eps-1} with $p=q=\parallel$: 
+
+\begin{equation}
+\varepsilon_{\mathrm{SL}}^{\parallel} =  1 + \frac{\alpha_{\mathrm{2D}}^{\parallel}}{\varepsilon_0 L}
+\end{equation}
+
+\subsubsection{Perpendicular to the surface}
+
+The same procedure can be used along the out-of-plane component but using ${E}_{\mathrm{loc}}^{\perp}={E}^{\perp}+{\mu}_{\mathrm{2D}}^{\perp}/\varepsilon_0 L$ for the local field. We can write this field as: 
+
+\begin{equation}
+{E}_{\mathrm{loc}}^{\perp}={E}^{\perp}+\frac{\alpha^{\perp}_{\mathrm{2D}} {E}_{\mathrm{loc}}^{\perp}}{\varepsilon_0 L}
+\end{equation}
+%
+If we re-arrange the terms for ${E}_{\mathrm{loc}}^{\perp}$, we can ended up with:  
+
+\begin{equation}
+{E}_{\mathrm{loc}}^{\perp}= \frac{{E}^{\perp}}{ 1-\frac{\alpha^{\perp}_{\mathrm{2D}}}{\varepsilon_0 L} }
+\end{equation}
+%
+We can write the polarization ${P}^{\perp}$ as: 
+
+\begin{equation}
+{P}^{\perp} = \frac{\alpha^{\perp}_{\mathrm{2D}}} {L}(\frac{{E}^{\perp}} {1-\alpha^{\perp}_{\mathrm{2D}}/\varepsilon_0 L})
+\end{equation} 
+%
+%
+Taking the derivative of this equation relative to ${E}^{\perp}$ and inserting in Eq.\ref{main-eq:def-eps-1} with $p=q=\perp$ resulted in: 
+%
+\begin{equation}
+\varepsilon_{\mathrm{SL}}^{\perp} = 1 +  \frac{\alpha^{\perp}_{\mathrm{2D}}} {\varepsilon_0 L}(\frac{1} {1-\alpha^{\perp}_{\mathrm{2D}}/\varepsilon_0 L})
+\end{equation}
+%
+Re-arranging the terms, it ended up as: 
+
+\begin{equation}
+\varepsilon_{\mathrm{SL}}^{\perp} =\frac{\varepsilon_0 L - \alpha^{\perp}_{\mathrm{2D}} + \alpha^{\perp}_{\mathrm{2D}}}{  \varepsilon_0 L - \alpha^{\perp}_{\mathrm{2D}}} = (1 - \frac{\alpha_{\mathrm{2D}}^{\perp}}{\varepsilon_0 L})^{-1} 
+\end{equation}
+
 
 
 %%%%%%\section{Theoretical Analysis}
 %%%%%%\label{sec:theory}
 \section{Polarizability-Based Theoretical Model}
 \label{sec:theory-1}
+%
+%
 The universal relations for $\alpha_{\mathrm{2D}}^{\parallel}$ and
-$\alpha_{\mathrm{2D}}^{\perp}$ revealed by main text
+$\alpha_{\mathrm{2D}}^{\perp}$ revealed by 
 Eqs. \ref{main-eq:2D-Moss-para} and \ref{main-eq:2D-Moss-perp} are not
 coincidental. Combining recent theoretical findings of the linear
 relation between exciton binding energy $E_{\mathrm{b}}$ and
@@ -633,7 +730,7 @@ $\alpha_{\mathrm{2D}}^{\parallel}$ and $\alpha_{\mathrm{2D}}^{\perp}$
 at 0 K can be unified by the same equation:
 \begin{equation}
   \label{eq:alpha-RPA}
-  \alpha = \frac{2e^{2}}{|q|^{2}A} \sum_{\mathrm{k,c,v}}
+  \alpha_{\rm 2D} = \frac{2e^{2}}{|q|^{2}A} \sum_{\mathrm{k,c,v}}
   \frac{|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}}
   {E_{\mathrm{c}}(\mathbf{k+q}) - E_{\mathrm{v}}(\mathbf{k})}
 \end{equation}
@@ -655,7 +752,7 @@ $\alpha_{\mathrm{2D}}^{\parallel}$, $e^{-i\mathbf{qr}}$ is independent
 of $z$, therefore the integral in
 $|<\psi_{\mathrm{v}}(\mathbf{k})|e^{-i\mathbf{q}\mathbf{r}}|\psi_{\mathrm{c}}(\mathbf{k+q})>|^{2}$
 becomes independent of $\psi^{\perp}$, due to the orthogonality
-and normality. The Bloch-wave form of $\psi^{\parallel}$ ensures that
+and normalization. The Bloch-wave form of $\psi^{\parallel}$ ensures that
 only the cell-function $u(\mathbf{k})$ contributes to the final result
 of $\alpha^{\parallel}_{\mathrm{2D}}$ \cite{davies_physics_1997}, such
 that:
@@ -685,7 +782,7 @@ plug it into Eq. \ref{eq:alpha_para_RPA} and integrate within the 2D Brillouin z
 &\approx N e^{2}/(2\pi E_{\mathrm{g}}) = C^{\parallel} E_{g}^{-1}
 \end{aligned}
 \end{equation}
-where $N$ is de degeneracy of bands associated with $E_{g}$. The
+where $N$ is degeneracy of bands associated with $E_{g}$. The
 approximation in Eq. \ref{eq:derivation-2D-Moss-para} is due to the
 fact that $\frac{\hbar^{2} k^{2}_{\mathrm{BZ}}}{m^{*}} \gg E_{g}$, and
 we arrive at Eq. \ref{main-eq:2D-Moss-para}.
@@ -960,7 +1057,7 @@ Due to time-consuming simulations and significant increment in
 memory overload, high-accurate calculations at hybrid HSE06 level is limited 
 to about 55 compounds. 
 It is desirable to validate our proposed
-relations on an even larger scale database. We select over 230
+relations on an even larger scale database. We select over 248
 semiconducting 2D materials from Ref.~\citenum{Haastrup_2018} 
 with a GW bandgap
 larger than 0.05 eV and extracted the 2D polarizabilities calculated
@@ -1006,8 +1103,7 @@ more accurate theory level for bandgap is used (for instance, HSE and GW).
 
 For 2D materials, the exciton effect plays an important role in
 determining the experimentally accessible bandgap
-\cite{Arnaud_2006_exc_hBN,Pulci_2014,Ramasubramaniam_2012,Chernikov_2014_EB_MoS2_2D3D}. The
-experimentally observed optical bandgap
+\cite{Arnaud_2006_exc_hBN,Pulci_2014,Ramasubramaniam_2012,Chernikov_2014_EB_MoS2_2D3D}. The experimentally observed optical bandgap
 $E_{\mathrm{g}}^{\mathrm{opt}}$, is usually lower than the direct
 bandgap from band structure $E_{\mathrm{g}}^{\mathrm{dir}}$ by the
 exciton binding energy $E_{\mathrm{b}}$, which is at the 10$^{-1}$ to
